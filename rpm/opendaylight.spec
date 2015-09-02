@@ -64,7 +64,7 @@ cp ../../BUILD/opendaylight-systemd-%{commit}/opendaylight.service $RPM_BUILD_RO
 %postun
 # When the RPM is removed, the subdirs containing new files wouldn't normally
 #   be deleted. Manually clean them up.
-#   Warning: This does assume there's no data there that should be persevered
+#   Warning: This does assume there's no data there that should be preserved
 rm -rf $RPM_BUILD_ROOT/opt/%name
 
 %files
