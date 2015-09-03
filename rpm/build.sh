@@ -31,6 +31,7 @@ unitfile_tarball="opendaylight-systemd-$sysd_commit.tar.gz"
 # Common paths used in this script
 odl_tb_cache_path="$cache_dir/$odl_tarball"
 unitfile_cache_path="$cache_dir/$unitfile_tarball"
+specfile_path="$cache_dir/opendaylight.spec"
 srpm_out_path="$HOME/rpmbuild/SRPMS/$odl_srpm"
 rpm_out_path="$HOME/rpmbuild/RPMS/noarch/$odl_rpm"
 odl_tb_url="https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/$odl_version/$odl_tarball"
@@ -72,7 +73,7 @@ fi
 cp $unitfile_cache_path $rpmbuild_src_dir
 
 # Put ODL RPM .spec file in rpmbuild's SPECS dir
-cp opendaylight.spec $rpmbuild_spec_dir
+cp $specfile_path $rpmbuild_spec_dir
 
 # Build ODL SRPM and noarch RPM
 # Override disttag from .el7.centos to .el7 per best-practices/expected norms
