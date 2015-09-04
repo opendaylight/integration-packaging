@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a79b1b5_8dde6e3e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2015-09-04T02:11:52Z",
+      "side": 1,
+      "message": "A good commit message should just stick to the details. No need to describe your feelings about the change as that\u0027s just superflous. I\u0027d just mention that chef/centos-7.0 no longer exists and we\u0027re changing to boxcutter as it seems like a good alternative.",
+      "revId": "caf821a01db245460a330acdef7db6bd3fba9991",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
