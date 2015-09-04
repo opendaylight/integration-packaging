@@ -16,6 +16,24 @@
       "revId": "caf821a01db245460a330acdef7db6bd3fba9991",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a79b1b5_ae1a4115",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-09-04T16:51:38Z",
+      "side": 1,
+      "message": "\u003e seems like a good alternative\n\nThat\u0027s what I meant my phrasing to mean, but I see what you mean and how it could be phrased better.",
+      "parentUuid": "3a79b1b5_8dde6e3e",
+      "revId": "caf821a01db245460a330acdef7db6bd3fba9991",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
