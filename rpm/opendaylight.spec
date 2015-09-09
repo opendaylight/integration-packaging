@@ -1,35 +1,48 @@
-# jar_repack step takes a long time and doesn't seem to be necessary, so skip
+# ODL is a noarch package, so this isn't necessary. It's also very slow.
 %define __jar_repack 0
 
+# Override the %define macros below build multiple versions of ODL's RPM
+# Default values are for the latest supported ODL release
+
+# Version of ODL systemd unitfile to download and package in ODL RPM
 # Update this commit if systemd unit file is updated
-%global commit 4a872270893f0daeebcbbcc0ff0014978e3c5f68
-%global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global odl_version 0.3.0-Lithium
+%define commit 4a872270893f0daeebcbbcc0ff0014978e3c5f68
+%define shortcommit %(c=%{commit}; echo ${c:0:7})
+
+# ODL version variables
+# Note that the RPM is shifting ODL's version to the left by one value
+#   to be consistent with the major.minor.patch scheme used universally
+#   by RPMs. ODL's version is currently prefixed with a static, useless
+#   leading 0, which is widely ignored in practice. For now the version
+#   translation happens here. This will likely be fixed as ODL moves to
+#   a continuous release model.
+%define odl_codename Lithium
+%define odl_version_major 3
+%define odl_version_minor 0
+%define odl_version_patch 0
+%define odl_version 0.%{odl_version_major}.%{odl_version_minor}
+%define odl_rpm_version %{odl_version_major}.%{odl_version_minor}.%{odl_version_patch}
+%define odl_rpm_release 2
+%define java_version >= 1:1.7.0
 
 Name:       opendaylight
-# Shifting ODL's current versioning to make room for patch versions.
-#   The leading 0 is unused, so no info loss. ODL's TSC has had
-#   initial discussions about adopting this scheme for all artifacts,
-#   but the RPM needs it now to support deplying daily/weekly/etc builds.
-Version:    3.0.0
+Version:    %{odl_rpm_version}
 # The Fedora/CentOS packaging guidelines *require* the use of a disttag. ODL's
-#   RPM build doesn't do anything Fedora/CentOS spicific, so the disttag is
+#   RPM build doesn't do anything Fedora/CentOS specific, so the disttag is
 #   unnecessary and unused in our case, but both the docs and the pros (apevec)
 #   agree that we should include it.
 # See: https://fedoraproject.org/wiki/Packaging:DistTag
-Release:    2%{?dist}
+Release:    %{odl_rpm_release}%{dist}
+BuildArch:  noarch
 Summary:    OpenDaylight SDN Controller
-
 Group:      Applications/Communications
 License:    EPL-1.0
 URL:        http://www.opendaylight.org
-BuildArch:  noarch
-Source0:    https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/%{odl_version}/distribution-karaf-%{odl_version}.tar.gz
+Source0:    https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/%{odl_version}-%{odl_codename}/distribution-karaf-%{odl_version}-%{odl_codename}.tar.gz
 Source1:    https://github.com/dfarrell07/opendaylight-systemd/archive/%{shortcommit}/opendaylight-systemd-%{shortcommit}.tar.gz
 Buildroot:  /tmp
-
 # Required for ODL at run time
-Requires:   java >= 1:1.7.0
+Requires:   java %{java_version}
 # Required for creating odl group
 Requires(pre): shadow-utils
 # Required for configuring systemd
@@ -43,11 +56,11 @@ getent passwd odl > /dev/null || useradd odl -M -d $RPM_BUILD_ROOT/opt/%name
 getent group odl > /dev/null || groupadd odl
 
 %description
-OpenDaylight Lithium
+OpenDaylight %{odl_codename}
 
 %prep
 # Extract Source0 (ODL archive)
-%autosetup -n distribution-karaf-0.3.0-Lithium
+%autosetup -n distribution-karaf-%{odl_version}-%{odl_codename}
 # Extract Source1 (systemd config)
 %autosetup -T -D -b 1 -n opendaylight-systemd-%{commit}
 
@@ -55,7 +68,7 @@ OpenDaylight Lithium
 # Create directory in build root for ODL
 mkdir -p $RPM_BUILD_ROOT/opt/%name
 # Move ODL from archive to its dir in build root
-cp -r ../distribution-karaf-0.3.0-Lithium/* $RPM_BUILD_ROOT/opt/%name
+cp -r ../distribution-karaf-%{odl_version}-%{odl_codename}/* $RPM_BUILD_ROOT/opt/%name
 # Create directory in build root for systemd .service file
 mkdir -p $RPM_BUILD_ROOT/%{_unitdir}
 # Move ODL's systemd .service file to correct dir in build root
