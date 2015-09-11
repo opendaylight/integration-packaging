@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a79b1b5_5a14719f",
+        "filename": "rpm/opendaylight.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2015-09-11T22:00:26Z",
+      "side": 1,
+      "message": "comment says move, cmd says copy.  it\u0027s a large-ish download so maybe mv is better if it\u0027s not anti-packaging-technique (which I\u0027m not expert in)",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 2
+      },
+      "revId": "85c0aac97f8968992fd40ccf2cf8fb67c7fa2423",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a79b1b5_7a17eda3",
+        "filename": "rpm/opendaylight.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2015-09-11T22:00:26Z",
+      "side": 1,
+      "message": "same comment.",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 3
+      },
+      "revId": "85c0aac97f8968992fd40ccf2cf8fb67c7fa2423",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
