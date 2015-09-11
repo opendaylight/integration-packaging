@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3a79b1b5_7a7e0de6",
+        "filename": "rpm/opendaylight.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-09-11T22:10:34Z",
+      "side": 1,
+      "message": "It needs to be a copy to allow caching of the artifact between builds (precisely because it\u0027s such a large artifact). But you\u0027re right about the inconsistency, fixed the docs in the next patchset.",
+      "parentUuid": "3a79b1b5_5a14719f",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 2
+      },
+      "revId": "85c0aac97f8968992fd40ccf2cf8fb67c7fa2423",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a79b1b5_7a17eda3",
         "filename": "rpm/opendaylight.spec",
         "patchSetId": 1
