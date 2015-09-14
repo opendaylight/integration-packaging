@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
-# Build the ODL SRPM and noarch RPM described in opendaylight.spec
-# This is designed to be run in the included Vagrant environment.
+# Reads build info from build_vars files to build ODL RPMs and SRPMs
+# This is designed to be run in the included Vagrant environment
 
 # Echo commands as they are run
 set -x
@@ -8,8 +8,6 @@ set -x
 build()
 {
     # Common names used in this script
-    odl_version="0.$version_major.$version_minor"
-    rpm_version="$version_major.$version_minor.$version_patch"
     odl_srpm="opendaylight-$rpm_version-$rpm_release.$rpm_disttag.src.rpm"
     odl_rpm="opendaylight-$rpm_version-$rpm_release.$rpm_disttag.noarch.rpm"
     odl_tarball="distribution-karaf-$odl_version-$codename.tar.gz"
@@ -63,10 +61,19 @@ build()
     cp $specfile_path $rpmbuild_spec_dir
 
     # Build ODL SRPM and noarch RPM
-    # Override disttag from .el7.centos to .el7 per best-practices/expected norms
-    #   See: https://bugs.centos.org/view.php?id=9098
+    # Override specfile macros with values that define the build
     cd $rpmbuild_spec_dir
-    rpmbuild -ba --define "dist .$rpm_disttag" opendaylight.spec
+    rpmbuild -ba --define "dist .$rpm_disttag" \
+                 --define "codename $codename" \
+                 --define "version_major $version_major" \
+                 --define "version_minor $version_minor" \
+                 --define "version_patch $version_patch" \
+                 --define "rpm_release $rpm_release" \
+                 --define "odl_version $odl_version" \
+                 --define "rpm_version $rpm_version" \
+                 --define "java_version $java_version" \
+                 --define "sysd_commit $sysd_commit" \
+                 opendaylight.spec
 
     # Confirm SRPM found in expected location
     if [ -f  $srpm_out_path ]; then
@@ -96,7 +103,7 @@ build()
 # Accept path to build vars file as a param, build all if absent
 if [[ $# -eq 0 ]]; then
   # If no build vars file passed, do all builds described in build_vars dir
-  for vars_file in /vagrant/build_vars/*; do
+  for vars_file in /vagrant/build_vars/vars_*; do
     source $vars_file
     build
   done

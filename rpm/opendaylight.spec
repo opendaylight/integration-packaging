@@ -1,45 +1,21 @@
 # ODL is a noarch package, so this isn't necessary. It's also very slow.
 %define __jar_repack 0
 
-# Override the %define macros below build multiple versions of ODL's RPM
-# Default values are for the latest supported ODL release
-
-# Version of ODL systemd unitfile to download and package in ODL RPM
-# Update this commit if systemd unit file is updated
-%define commit 4a872270893f0daeebcbbcc0ff0014978e3c5f68
-%define shortcommit %(c=%{commit}; echo ${c:0:7})
-
-# ODL version variables
-# Note that the RPM is shifting ODL's version to the left by one value
-#   to be consistent with the major.minor.patch scheme used universally
-#   by RPMs. ODL's version is currently prefixed with a static, useless
-#   leading 0, which is widely ignored in practice. For now the version
-#   translation happens here. This will likely be fixed as ODL moves to
-#   a continuous release model.
-%define odl_codename Lithium
-%define odl_version_major 3
-%define odl_version_minor 0
-%define odl_version_patch 0
-%define odl_version 0.%{odl_version_major}.%{odl_version_minor}
-%define odl_rpm_version %{odl_version_major}.%{odl_version_minor}.%{odl_version_patch}
-%define odl_rpm_release 2
-%define java_version >= 1:1.7.0
-
 Name:       opendaylight
-Version:    %{odl_rpm_version}
+Version:    %{rpm_version}
 # The Fedora/CentOS packaging guidelines *require* the use of a disttag. ODL's
 #   RPM build doesn't do anything Fedora/CentOS specific, so the disttag is
 #   unnecessary and unused in our case, but both the docs and the pros (apevec)
 #   agree that we should include it.
 # See: https://fedoraproject.org/wiki/Packaging:DistTag
-Release:    %{odl_rpm_release}%{dist}
+Release:    %{rpm_release}%{dist}
 BuildArch:  noarch
 Summary:    OpenDaylight SDN Controller
 Group:      Applications/Communications
 License:    EPL-1.0
 URL:        http://www.opendaylight.org
-Source0:    https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/%{odl_version}-%{odl_codename}/distribution-karaf-%{odl_version}-%{odl_codename}.tar.gz
-Source1:    https://github.com/dfarrell07/opendaylight-systemd/archive/%{shortcommit}/opendaylight-systemd-%{shortcommit}.tar.gz
+Source0:    https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/%{odl_version}-%{codename}/distribution-karaf-%{odl_version}-%{codename}.tar.gz
+Source1:    https://github.com/dfarrell07/opendaylight-systemd/archive/%{sysd_commit}/opendaylight-systemd-%{sysd_commit}.tar.gz
 Buildroot:  /tmp
 # Required for ODL at run time
 Requires:   java %{java_version}
@@ -56,23 +32,23 @@ getent passwd odl > /dev/null || useradd odl -M -d $RPM_BUILD_ROOT/opt/%name
 getent group odl > /dev/null || groupadd odl
 
 %description
-OpenDaylight %{odl_codename}
+OpenDaylight %{codename}
 
 %prep
 # Extract Source0 (ODL archive)
-%autosetup -n distribution-karaf-%{odl_version}-%{odl_codename}
+%autosetup -n distribution-karaf-%{odl_version}-%{codename}
 # Extract Source1 (systemd config)
-%autosetup -T -D -b 1 -n opendaylight-systemd-%{commit}
+%autosetup -T -D -b 1 -n opendaylight-systemd-%{sysd_commit}
 
 %install
 # Create directory in build root for ODL
 mkdir -p $RPM_BUILD_ROOT/opt/%name
 # Copy ODL from archive to its dir in build root
-cp -r ../distribution-karaf-%{odl_version}-%{odl_codename}/* $RPM_BUILD_ROOT/opt/%name
+cp -r ../distribution-karaf-%{odl_version}-%{codename}/* $RPM_BUILD_ROOT/opt/%name
 # Create directory in build root for systemd .service file
 mkdir -p $RPM_BUILD_ROOT/%{_unitdir}
 # Copy ODL's systemd .service file to correct dir in build root
-cp ../../BUILD/opendaylight-systemd-%{commit}/opendaylight.service $RPM_BUILD_ROOT/%{_unitdir}
+cp ../../BUILD/opendaylight-systemd-%{sysd_commit}/opendaylight.service $RPM_BUILD_ROOT/%{_unitdir}
 
 %postun
 # When the RPM is removed, the subdirs containing new files wouldn't normally
