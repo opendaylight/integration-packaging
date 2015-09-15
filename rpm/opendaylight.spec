@@ -64,6 +64,8 @@ rm -rf $RPM_BUILD_ROOT/opt/%name
 
 
 %changelog
+* Tue Sep 15 2015 Daniel Farrell <dfarrell@redhat.com> - 2.4.0-1
+- Create Helium SR4 RPM
 * Fri Jul 17 2015 Daniel Farrell <dfarrell@redhat.com> - 3.0.0-2
 - Include required disttag in RPM release version
 * Tue Jul 14 2015 Daniel Farrell <dfarrell@redhat.com> - 3.0.0-1
