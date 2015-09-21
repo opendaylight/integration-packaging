@@ -7,4 +7,23 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # RPM build environment is CentOS 7
   config.vm.box = "boxcutter/centos71"
+
+  # Add EPEL for access to fedora-packager and maybe others
+  config.vm.provision "shell", inline: "yum install -y epel-release"
+
+  # Install required software
+  # fedora-packager: Basic RPM packaging software
+  config.vm.provision "shell", inline: "yum install -y fedora-packager \
+                                                       python-pip"
+
+  # Use the distribution's version of pip to upgrade to the latest pip
+  config.vm.provision "shell", inline: "pip install --upgrade pip"
+
+  # Install Python dependences system-wide via pip
+  # NB: Could use a venv here, but since we're already in a Vagrant box and
+  # don't need any isolation it seem worth the extra complexity.
+  config.vm.provision "shell", inline: "pip install -r /vagrant/requirements.txt"
+
+  # Add vagrant user to mock group for rpmbuild
+  config.vm.provision "shell", inline: "sudo usermod -a -G mock vagrant"
 end
