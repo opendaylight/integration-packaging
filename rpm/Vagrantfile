@@ -7,4 +7,10 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # RPM build environment is CentOS 7
   config.vm.box = "boxcutter/centos71"
+
+  # Install basic RPM packaging software
+  config.vm.provision "shell", inline: "yum install -y epel-release fedora-packager"
+
+  # Add vagrant user to mock group for rpmbuild
+  sudo usermod -a -G mock vagrant
 end
