@@ -3,6 +3,9 @@
 # `build.sh` reads these and passes them to opendaylight.spec
 # To define a new ODL RPM build, copy one of these and adjust as-needed
 
+# Echo commands as they are run
+set -x
+
 # Version fields for the ODL release
 version_patch=0
 

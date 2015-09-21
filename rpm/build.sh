@@ -102,17 +102,17 @@ build()
 
 # Accept path to build vars file as a param, build all if absent
 if [[ $# -eq 0 ]]; then
-  # If no build vars file passed, do all builds described in build_vars dir
-  for vars_file in /vagrant/build_vars/vars_*; do
+    # If no build vars file passed, do all builds described in build_vars dir
+    for vars_file in /vagrant/build_vars/vars_*; do
+        source $vars_file
+        build
+    done
+elif [[ $# -eq 1 ]]; then
+    # If build vars file passed, only do that build
+    vars_file=$1
     source $vars_file
     build
-  done
-elif [[ $# -eq 1 ]]; then
-  # If build vars file passed, only do that build
-  vars_file=$1
-  source $vars_file
-  build
 else
-  echo "Usage: $0 [vars_file]" >&2
-  exit 1
+    echo "Usage: $0 [vars_file]" >&2
+    exit 1
 fi
