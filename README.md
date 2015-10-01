@@ -37,7 +37,7 @@ cd ~/git/integration-packaging/packer/
 packer build -var-file=packer_vars.json centos.json
 ```
 
-The details of what is happening in the Packer build are explained [here](packer/README.md)
+The details of what is happening in the Packer build are explained [here.](packer/README.md)
 
 Note that these instructions *may* be workable on Windows also, but that has not been tested yet.
 
