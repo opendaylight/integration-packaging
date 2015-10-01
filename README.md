@@ -2,7 +2,7 @@ Welcome to the OpenDaylight Integration Packaging project.
 
 This project uses a combination of [Packer](https://www.packer.io), [Vagrant](https://www.vagrantup.com), [Docker](https://www.docker.com) and [Ansible](http://www.ansible.com) to create VMs that can be used for testing, developing, learning and teaching on the [OpenDaylight platform](https://www.opendaylight.org).
 
-#Required Tools to Install
+#About the Tools Being Used
 
 Before you can use this project to build a VM, you need to install the tools listed below, and, ideally, you should have at least a *passing* knowledge of what they are for. See the "Details" section below for some guidance on what these tools are doing for you, and how.
 
@@ -18,16 +18,16 @@ Note, on Mac OSX you need to use the "Docker Quickstart Terminal window" to run 
 
 ##Vagrant
 
-
+##Virtual Box
 
 #How to Use
 
 Read all the way through this section before attempting any commands.
 
-Clone this project locally, on either a Linux or Mac OS X platform, then:
+Clone this project locally, on either a Linux or Mac OS X platform, then (assuming your git directory is in your home directory):
 
 ```bash
-cd integration-packaging/packer/
+cd ~/git/integration-packaging/packer/
 packer build -var-file=packer_vars.json centos.json
 ```
 
