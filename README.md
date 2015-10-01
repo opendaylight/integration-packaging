@@ -41,7 +41,7 @@ The details of what is happening in the Packer build are explained [here][packer
 
 Note that these instructions *may* be workable on Windows also, but that has not been tested yet.
 
-On Mac OSX, if you want to build the Docker image, you will need to use the "Docker Quickstart Terminal window" as explained in these [Doscker on OSX instructions](http://docs.docker.com/mac/step_one/). If you try to run the `packer` command above in a "normal" terminal shell, the Docker part of the build will fail. At the time of writing, on Mac OSX though, the build running in the Docker terminal fails to terminate, whereas a build run in a "normal" OSX terminal does build the Vagrant box.
+On Mac OSX, if you want to build the Docker image, you will need to use the "Docker Quickstart Terminal window" as explained in these [Docker on OSX instructions](http://docs.docker.com/mac/step_one/). If you try to run the `packer` command above in a "normal" terminal shell, the Docker part of the build will fail. At the time of writing, on Mac OSX though, the build running in the Docker terminal fails to terminate, whereas a build run in a "normal" OSX terminal does build the Vagrant box.
 
 [1]: https://www.packer.io
 [2]: https://www.vagrantup.com
