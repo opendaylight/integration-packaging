@@ -4,11 +4,21 @@ This project uses a combination of [Packer](https://www.packer.io), [Vagrant](ht
 
 #Required Tools to Install
 
-Install packer – 
+Before you can use this project to build a VM, you need to install the tools listed below, and, ideally, you should have at least a *passing* knowledge of what they are for. See the "Details" section below for some guidance on what these tools are doing for you, and how.
 
-Install Docker – 
+##Packer
 
-Vagrant
+Packer is used to drive the overall VM build process. The Packer installation instructions here [here](https://www.packer.io/intro/getting-started/setup.html).
+
+##Docker
+
+Docker is invoked by Packer to create a Docker image. The Docker installation instructions are [here](https://docs.docker.com/installation/).
+
+Note, on Mac OSX you need to use the "Docker Quickstart Terminal window" to run the build.
+
+##Vagrant
+
+
 
 #How to Use
 
