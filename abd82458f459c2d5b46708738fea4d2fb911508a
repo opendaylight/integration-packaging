@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_2912cbb1",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2015-10-05T16:06:58Z",
+      "side": 1,
+      "message": "Please text wrap at around 79 characters if possible. It makes it easier to review on long paragraphs.",
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_c926b716",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2015-10-05T16:06:58Z",
+      "side": 1,
+      "message": "Typo: GitHub",
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_e9237303",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2015-10-05T16:06:58Z",
+      "side": 1,
+      "message": "Typo: consulted",
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_8920bff8",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2015-10-05T16:06:58Z",
+      "side": 1,
+      "message": "I don\u0027t mind either way but want to make sure I\u0027m clear on this.\n\nWe accept GitHub? Should we be encouraging users to come to Gerrit? As far as I\u0027m aware the github mirror is a one-way replication so I think merging a github patch may mess this up but I\u0027m not 100% on this one.",
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
