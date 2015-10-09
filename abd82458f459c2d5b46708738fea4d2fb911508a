@@ -19,6 +19,29 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_7eeb85b0",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-09T07:34:46Z",
+      "side": 1,
+      "message": "We\u0027ve been writing it `Integration/Packaging`",
+      "range": {
+        "startLine": 1,
+        "startChar": 35,
+        "endLine": 1,
+        "endChar": 56
+      },
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_c926b716",
         "filename": "CONTRIBUTING.md",
         "patchSetId": 1
@@ -64,6 +87,190 @@
       "writtenOn": "2015-10-05T16:06:58Z",
       "side": 1,
       "message": "I don\u0027t mind either way but want to make sure I\u0027m clear on this.\n\nWe accept GitHub? Should we be encouraging users to come to Gerrit? As far as I\u0027m aware the github mirror is a one-way replication so I think merging a github patch may mess this up but I\u0027m not 100% on this one.",
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_1ed29100",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-09T07:34:46Z",
+      "side": 1,
+      "message": "Yeah, Thanh\u0027s right, GitHub\u0027s just a nice web UI for viewing code.\n\n@Thanh - Not sure if it was obvious to you, but this is copied from my standard CONTRIBUTING docs (various repos, examples below), which is why it\u0027s GitHub-focused.\n\nhttps://github.com/dfarrell07/puppet-opendaylight/blob/master/CONTRIBUTING.markdown\nhttps://github.com/dfarrell07/ansible-opendaylight/blob/master/CONTRIBUTING.md",
+      "parentUuid": "1a76adc5_8920bff8",
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_dedbb919",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-09T07:34:46Z",
+      "side": 1,
+      "message": "There are communication docs here: https://wiki.opendaylight.org/view/CrossProject:Integration_Group:Packaging:Communication",
+      "range": {
+        "startLine": 27,
+        "startChar": 10,
+        "endLine": 27,
+        "endChar": 21
+      },
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_fed6b5f0",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-09T07:34:46Z",
+      "side": 1,
+      "message": "This whole section should likely just be removed for now. We currently use Trello as an issue tracker, we\u0027re going to move to JIRA as soon as we can.",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 248
+      },
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_be083d92",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-09T07:34:46Z",
+      "side": 1,
+      "message": "Should use Gerrit",
+      "range": {
+        "startLine": 45,
+        "startChar": 1,
+        "endLine": 55,
+        "endChar": 34
+      },
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_5effa967",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-09T07:34:46Z",
+      "side": 1,
+      "message": "This sounds a little aggressive ;)",
+      "range": {
+        "startLine": 3,
+        "startChar": 43,
+        "endLine": 3,
+        "endChar": 59
+      },
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_1ef93180",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-09T07:34:46Z",
+      "side": 1,
+      "message": "The README looks like it\u0027s really about `integration/packaging/packer`, not the full `integration/packaging` project. For example, none of this is true for the RPM-building logic in `integration/packaging/rpm`. We could merge this with `packaging/README`?",
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_3ef42d86",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-09T07:34:46Z",
+      "side": 1,
+      "message": "This might be helpful https://github.com/IEEERobotics/bot/blob/master/README.md#user-content-dependencies-vagrant",
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_def2d999",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-09T07:34:46Z",
+      "side": 1,
+      "message": "https://github.com/IEEERobotics/bot/blob/master/README.md#dependencies-docker",
+      "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_be2fddf5",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-09T07:34:46Z",
+      "side": 1,
+      "message": "Again, slightly aggressive sounding ;)",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 69
+      },
       "revId": "abd82458f459c2d5b46708738fea4d2fb911508a",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
