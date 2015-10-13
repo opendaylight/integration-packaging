@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_9d169e54",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-13T18:22:59Z",
+      "side": 1,
+      "message": "Yeah, we\u0027ll want to add a new build def here for SR2 once we have this refactoring merged. The changelog message is treated like build-specific data, provided once here by a human and then automatically consumed as appropriate in the templates.",
+      "parentUuid": "1a76adc5_673d35bb",
+      "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_074c816f",
         "filename": "rpm/connect.sh",
         "patchSetId": 11
@@ -30,6 +48,30 @@
       "writtenOn": "2015-10-12T23:13:13Z",
       "side": 1,
       "message": "I know this is old code, but now that I\u0027m looking is this loop infinite?  probably should give up after 10-20 seconds from my experience.",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 4
+      },
+      "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_3d0d0a3f",
+        "filename": "rpm/connect.sh",
+        "patchSetId": 11
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-13T18:22:59Z",
+      "side": 1,
+      "message": "The thought is that users will just ctrl+c out if it keeps looping forever, but yeah, it will loop for inf if it doesn\u0027t connect. imho that\u0027s the right design, but no strong opinion.",
+      "parentUuid": "1a76adc5_074c816f",
       "range": {
         "startLine": 26,
         "startChar": 0,
