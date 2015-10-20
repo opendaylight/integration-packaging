@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "fad0f9df_204be82c",
+        "filename": "rpm/Vagrantfile",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2015-10-20T18:13:20Z",
+      "side": 1,
+      "message": "Would it be better to turn these and below into a single bootstrap.sh script like we do with the infra Vagrantfiles?\n\nThat way the Vagrantfile will stay pretty clean and adding to the script is more simple in that people can just edit the bootstrap script.",
+      "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad0f9df_40486c2d",
+        "filename": "rpm/build.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2015-10-20T18:13:20Z",
+      "side": 1,
+      "message": "Please run flake8 against this and fix the flake8 issues.",
+      "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_673d35bb",
         "filename": "rpm/build_vars.yaml",
         "patchSetId": 11
@@ -31,6 +65,23 @@
       "side": 1,
       "message": "Yeah, we\u0027ll want to add a new build def here for SR2 once we have this refactoring merged. The changelog message is treated like build-specific data, provided once here by a human and then automatically consumed as appropriate in the templates.",
       "parentUuid": "1a76adc5_673d35bb",
+      "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad0f9df_005264dd",
+        "filename": "rpm/cache/cache.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2015-10-20T18:13:20Z",
+      "side": 1,
+      "message": "Please run flake8 against this and fix issues.",
       "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
@@ -78,6 +129,23 @@
         "endLine": 29,
         "endChar": 4
       },
+      "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad0f9df_a05ef8e7",
+        "filename": "rpm/specs/build_specs.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2015-10-20T18:13:20Z",
+      "side": 1,
+      "message": "Please run flake8 against this file and fix Python issues.",
       "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
