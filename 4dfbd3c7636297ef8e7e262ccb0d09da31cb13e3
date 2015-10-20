@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "fad0f9df_002ca4aa",
+        "filename": "rpm/build.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-20T21:42:06Z",
+      "side": 1,
+      "message": "We need to make a decision about indenting 2 or 4 spaces. I love being Pythonic, but I also kinda love 2 space indent. Do you have an opinion, Thanh (or anyone else)?",
+      "parentUuid": "fad0f9df_c0bf7ccf",
+      "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_673d35bb",
         "filename": "rpm/build_vars.yaml",
         "patchSetId": 11
