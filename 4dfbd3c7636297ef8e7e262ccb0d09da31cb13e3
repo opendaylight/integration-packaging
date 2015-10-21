@@ -108,6 +108,24 @@
     },
     {
       "key": {
+        "uuid": "fad0f9df_54826e01",
+        "filename": "rpm/build.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-21T22:10:11Z",
+      "side": 1,
+      "message": "Yeah, that\u0027s the main argument for 4 I\u0027m aware of too. Would we also want to closely follow PEP8\u0027s \"Limit all lines to a maximum of 79 characters.\"? Doing 4 space and that really makes for some ugly code imho, very cramped. We didn\u0027t do this in Integration (pre-split), we had a tox rule change to set the max to 120.\n\nIf we\u0027re going to ignore that class of warnings, ignoring E111 (2 vs 4 spaces) isn\u0027t much of a stretch.\n\nI\u0027m partly playing the Devil\u0027s Advocate above, to make sure we\u0027ve thought about those things. I\u0027m not totally sure how I feel about the line length question, but I\u0027m down with strictly following PEP8 for 2 vs 4 spaces.\n\nhttps://www.python.org/dev/peps/pep-0008/#maximum-line-length\nhttps://github.com/opendaylight/integration/blob/master/test/tox.ini#L12",
+      "parentUuid": "fad0f9df_940536c4",
+      "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_673d35bb",
         "filename": "rpm/build_vars.yaml",
         "patchSetId": 11
