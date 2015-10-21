@@ -126,6 +126,24 @@
     },
     {
       "key": {
+        "uuid": "fad0f9df_d4c3be36",
+        "filename": "rpm/build.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2015-10-21T22:47:17Z",
+      "side": 1,
+      "message": "I agree regarding line length. In today\u0027s age 79 characters is kind of small and usually set 120 max line.\n\nAnother thing to keep in mind though is the line length is just a guideline and shouldn\u0027t be followed blind. For example there are sometimes perfectly valid reasons for a line going longer than the max line. In these cases pep8 allows you to add a trailing comment \" # noqa\" which will say for that one line, ignore pep8 rules.\n\nIn general though pep8 is good to follow as it\u0027s the standard set by the Python community and via \" # noqa\" allows us to ignore pep8 when it makes sense to do so.\n\nAs for 2 vs 4 spaces. I\u0027d personally prefer to stick with 4 spaces because that\u0027s the standard most python projects follow and as someone who jumps between projects it\u0027s easier for my head to dive into code if things generally look similar when I expect them to.",
+      "parentUuid": "fad0f9df_54826e01",
+      "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_673d35bb",
         "filename": "rpm/build_vars.yaml",
         "patchSetId": 11
