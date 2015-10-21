@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "fad0f9df_940536c4",
+        "filename": "rpm/build.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2015-10-21T21:11:03Z",
+      "side": 1,
+      "message": "Personally I prefer to follow guidelines available by the language if possible. If not pick a reasonably large project in that language\u0027s community and follow their standard. For Python it\u0027s generally agreed that pep8 is the way to go so I think we should go with 4 spaces as that is what\u0027s recommended by the Python community. It just makes looking at other project code easier when we follow the same standards.",
+      "parentUuid": "fad0f9df_002ca4aa",
+      "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_673d35bb",
         "filename": "rpm/build_vars.yaml",
         "patchSetId": 11
