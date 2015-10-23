@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fad0f9df_7dd192cc",
+        "filename": "rpm/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2015-10-23T23:02:01Z",
+      "side": 1,
+      "message": "SR2 was released, should it be added too the list too?",
+      "revId": "8390f37686595e2673d8061b950cdd6995d956a0",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
