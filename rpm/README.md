@@ -1,81 +1,180 @@
-Everything required for building OpenDaylight's RPMs.
+Logic for building OpenDaylight's upstream Source RPMs.
 
-The latest RPM versions are Lithium SR1 and Helium SR4.
+SRPM/RPM builds are supported for the following OpenDaylight versions:
+
+* Helium SR4
+* Lithium
+* Lithium SR1
 
 ## Overview
 
-The `opendaylight.spec` RPM spec file contains logic for packaging ODL's
-tarball release artifact and a systemd service file into RPMs. The `build.sh`
-helper script, when run in the simple Vagrant environment described by our
-`Vagrantfile`, standardizes the build process. Additional helper scripts
-are included for installing the noarch RPM, connecting to the ODL Karaf
-shell and uninstalling ODL.
+OpenDaylight's Source RPMs (SRPMs) are built using the logic provided here.
 
-## Vagrant build environment
+When new builds are defined, the new SRPMs are uploaded to the CentOS
+Community Build System's Koji-based RPM build system. From there they are
+built into ready-to-install noarch RPMs and hosted for consumption.
 
-The included `Vagrantfile` provides a simple, but tested and known-working,
-build environment. We recommend using it when building ODL's RPMs.
+Data that differs per-build is is defined in the `build_vars.yaml" YAML
+configuration file. The build logic consumes that dynamic data, uses
+JinJa2 templates to generate RPM spec files and builds the RPMs/SRPMs they
+define.
+
+See the TODO section for details about why we use this design.
+
+## Vagrant Build Environment
+
+All SRPM builds are done in the included Vagrantfile. It provides a
+consistent known-working and easily shared environment.
 
 ```
-[~/integration/packaging/rpm]$ vagrant status
+[~/packaging/rpm]$ vagrant status
 Current machine states:
 
 default                   not created (virtualbox)
-[~/integration/packaging/rpm]$ vagrant up
-[~/integration/packaging/rpm]$ vagrant ssh
+[~/packaging/rpm]$ vagrant up
+[~/packaging/rpm]$ vagrant ssh
 [vagrant@localhost vagrant]$ ls /vagrant/
-build.sh  connect.sh  install.sh  opendaylight.spec  <snip>
+build.py  build_vars.yaml  cache  connect.sh  Vagrantfile <snip>
 ```
 
-## Building RPMs
+## Defining New RPMs
 
-RPM builds have been standardized to the point that all that's required
-to define an RPM is a simple `build_vars/vars_*` variable file.
+The dynamic aspects of a build, such as ODL and RPM version info, have all
+been extracted to a single YAML configuration file. For most RPM updates,
+only that configuration file should need to be updated by humans.
 
-You don't need to execute them like this, but doing so shows what they define.
+The variables available for configuration are documented below. A build
+definition should define all supported variables.
+
+### RPM Build Variables
+
+#### `version_major`
+
+The OpenDaylight major (element) version number of the release to build.
+
+For example, Hydrogen is 1.x.x, Helium is 2.x.x, Lithium is 3.x.x and
+so on down the periodic table.
+
+#### `version_minor`
+
+The OpenDaylight minor (SR) version number of the release to build.
+
+OpenDaylight proves periodic Service Releases (SRs) for each currently
+supported Major release. See the [Hydrogen][12], [Lithium][13] or
+[Beryllium][13] release plan schedules for more information.
+
+#### `version_patch`
+
+The OpenDaylight patch version of the release to build (unused pending CR).
+
+This version number isn't currently used by OpenDaylight, as there aren't
+releases more frequent than Service Releases. However, the upstream
+OpenDaylight community is working towards supporting a Continuous Release (CR)
+model. Once that exists, this patch version will denote CR-level releases.
+
+#### `rpm_release`
+
+RPM version for the given ODL major.minor.patch version.
+
+In addition to OpenDaylight's version, RPMs themselves have versions. These
+are called "release versions". For a given OpenDaylight major.minor.patch
+version, there will be one or more major.minor.patch-rpm_release RPMs.
+
+#### `rpm_disttag`
+
+Override build VM's disttag from `.el7.centos` to `.el7` per [expected norms][11].
+
+By default, the disttag RPM macro is determined at RPM build time by the
+rpmbuild tool. For our CentOS 7 Vagrantfile, this results in a disttag of
+`.el7.centos`. However, especially since we generate noarch RPMs, there's no
+technical reason to use `.el7.centos` instead of the more common `.el7` disttag.
+Per [recommendations from upstream CentOS packagers][11], seemingly mostly to
+avoid confusion, we're overriding the default `.el7.centos` to `.el7` for all
+current builds.
+
+#### `java_version`
+
+Java versions supported by this ODL release.
+
+Versions are specified as a range, in the format required by RPM spec files.
+
+For example: `>= 1:1.7.0`
+
+#### `sysd_commit`
+
+Version of ODL systemd unitfile to download and package in ODL RPM.
+
+The version of OpenDaylight's systemd unitfile in the `packaging/rpm/unitfiles`
+directory specified by this git commit hash is downloaded from the Int/Pack
+repo and consumed by OpenDaylight's RPM builds as an RPM spec file Source.
+
+#### `codename`
+
+Elemental codename for the ODL release, including SR if applicable.
+
+Examples include "Helium-SR4", "Lithium" and "Lithium-SR1".
+
+#### `changelog`
+
+Entry in the RPM .spec file's changelog for this RPM.
+
+When the RPM spec file template is specialized into per-build static RPM spec
+files, a changelog is generated using these entries.
+
+The changelog entry must follow a specific format. It's best to follow the
+examples provided by existing build definitions closely. The `rpmbuild` tool
+will fail and complain fairly clearly if the format isn't correct.
+
+## Building SRPMs/RPMs
+
+The `build.py` helper script is used for building OpenDaylight SRPMs/RPMs.
+
+All SRPM builds are done in the included Vagrant environment. SRPMs are then
+uploaded to the CentOS Community Build System, built into noarch RPMs there
+and hosted for distribution.
+
+The `build.py` helper script builds noarch RPMs in addition to the (actually
+used) SRPMs. The noarch RPMs are meant for quickly sanity checking that a
+build worked as expected. They can be installed in the Vagrant build box or
+another sandbox, then inspected.
+
+The `build.py` helper script can build a set of SRPMs/RPMs based on provided
+version arguments or all defined builds.
 
 ```
-[vagrant@localhost ~]$ /vagrant/build_vars/vars_3.1.0-1.sh
-+ /vagrant/build_vars/vars_3.1.0-1.sh
-+ cache_dir=/vagrant
-+ version_major=3
-+ version_minor=1
-+ source /vagrant/build_vars/default_vars.sh
-++ set -x
-++ version_patch=0
-++ rpm_disttag=el7
-++ java_version='>= 1:1.7.0'
-++ sysd_commit=4a872270893f0daeebcbbcc0ff0014978e3c5f68
-++ cache_dir=/vagrant
-++ odl_version=0.3.1
-++ rpm_version=3.1.0
-+ codename=Lithium-SR1
-+ rpm_release=1
+[vagrant@localhost ~]$ /vagrant/build.py -h
+usage: build.py [-h] [-v [major minor patch rpm [major minor patch rpm ...]]]
+                [-a]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v [major minor patch rpm [major minor patch rpm ...]], --version [major minor patch rpm [major minor patch rpm ...]]
+                        RPM version(s) to build
+  -a, --all             Build all RPMs
 ```
 
+The `-v`/`--version` flag accepts a version number. Any build that matches
+the portions provided will be build. If more than one build matches the
+portions provided, all matching builds will be executed.
 
-The `build.sh` script is a helper for building RPMs.
+For example, `build.py -v 3` would execute the builds that match the regex
+`3.*.*-*`. OpenDaylight 3.0.0-1 and 3.1.0-1, for example.
 
-Passing no arguments builds every RPM defined by the `build_vars/vars_*` files.
+To only build a single RPM definition, provide enough version info to make
+the match unique. For example, `build.py -v 2 4 0 1` could only match one
+definition (Helium SR4, 2.4.0-1).
 
-```
-[~/integration/packaging/rpm]$ vagrant ssh
-[vagrant@localhost ~]$ /vagrant/build.sh
-# All RPMs defined in build_vars/ are built
-[vagrant@localhost ~]$ ls -rc /vagrant/*src.rpm
-/vagrant/opendaylight-2.4.0-1.el7.src.rpm
-/vagrant/opendaylight-3.0.0-2.el7.src.rpm
-/vagrant/opendaylight-3.1.0-1.el7.src.rpm
-<snip>
-```
+To build all RPMs defined in `build_vars.yaml`, use `build.py -a`.
 
-Passing the path to a build vars file as an argument will build the RPMs
-it defines.
+The `build.py` script uses the `cache/cache.py` script to handled downloading
+and caching the artifacts required for the requested builds. Artifacts are
+cached in the `packaging/rpm/cache/` directory.
 
-```
-[vagrant@localhost ~]$ /vagrant/build.sh /vagrant/build_vars/vars_3.1.0-1.sh
-# opendaylight-3.1.0-1.el7.[src,noarch].rpm are built
-```
+The `build.py` script also uses the `specs/build_specs.py` script to generate
+static RPM spec files from the `packaging/rpm/specs/opendaylight.spec` JinJa2
+templates and the dynamic build data provided in `build_vars.yaml`. The
+resulting RPM spec files are passed to `rpmbuild` by `build.py` to build
+specific ODL SRPMs/RPMs.
 
 ## Working with the ODL RPM
 
@@ -83,35 +182,18 @@ The familiar RPM-related commands apply to the OpenDaylight RPM.
 
 ### Installing OpenDaylight via a local RPM
 
-The `install.sh` script is a helper for installing OpenDaylight from a
-local RPM. It's intended for quick sanity checks after a `build.sh` run.
+To install a local OpenDaylight's RPM, perhaps as a sanity check after a
+build, use `sudo yum install -y <path to ODL RPM>`.
 
-With no arguments, it tries to install the latest RPM you've built.
-
-```
-# Typically after you've built the RPM via build.sh
-[vagrant@localhost vagrant]$ /vagrant/install.sh
-```
-
-The `install.sh` script also optointally accepts a `vars_*` file to describe
-which RPM to build.
-
-```
-# Tyipically after you've built the RPM via build.sh
-[vagrant@localhost ~]$ /vagrant/install.sh /vagrant/build_vars/vars_3.1.0-1.sh
-```
-
-To install an RPM by its path, just use `sudo rpm -i <path>`.
-
-Here's a manual walk-through of an install and the resulting system changes.
+Here's a walk-through of an install and the resulting system changes.
 
 ```
 # Note that there's nothing in /opt before the install
 [vagrant@localhost ~]$ ls /opt/
 # Note that there are no ODL systemd files before the install
 [vagrant@localhost ~]$ ls /usr/lib/systemd/system | grep -i opendaylight
-# Install an ODL RPM
-[vagrant@localhost ~]$ sudo rpm -i /vagrant/opendaylight-3.1.0-1.noarch.rpm
+# Install an ODL RPM. Yum will handle installing ODL's Java dependency.
+[vagrant@localhost ~]$ sudo yum install -y /vagrant/cache/<RPM filename>
 # Note that ODL is now installed in /opt
 [vagrant@localhost ~]$ ls /opt/
 opendaylight
@@ -120,15 +202,11 @@ opendaylight
 opendaylight.service
 ```
 
-### Uninstalling OpenDaylight via the RPM
+### Uninstalling OpenDaylight's RPM
 
-The `uninstall.sh` script is a helper for uninstalling ODL.
+To uninstall OpenDaylight's RPM, use `sudo yum remove -y opendaylight`.
 
-```
-[vagrant@localhost vagrant]$ ./uninstall.sh
-```
-
-Here's a manual walk-through of the uninstall and the resulting system changes.
+Here's a walk-through of the uninstall and the resulting system changes.
 
 ```
 # Note that ODL is installed in /opt/
@@ -138,7 +216,7 @@ opendaylight
 [vagrant@localhost vagrant]$ ls /usr/lib/systemd/system | grep -i opendaylight
 opendaylight.service
 # Uninstall the ODL RPM
-[vagrant@localhost vagrant]$ sudo rpm -e opendaylight-3.1.0
+[vagrant@localhost vagrant]$ sudo  yum remove -y opendaylight
 # Note that ODL has been removed from /opt/
 [vagrant@localhost vagrant]$ ls /opt/
 # Note that the ODL systemd .service file has been removed
@@ -328,3 +406,7 @@ $ sudo yum install -y opendaylight
 [8]: https://bugs.centos.org/view.php?id=9472
 [9]: http://cbs.centos.org/repos/
 [10]: https://github.com/opendaylight/integration-packaging/tree/master/rpm/example_repo_configs
+[11]: https://bugs.centos.org/view.php?id=9098#c23768
+[12]: https://wiki.opendaylight.org/view/Simultaneous_Release:Helium_Release_Plan#Schedule
+[13]: https://wiki.opendaylight.org/view/Simultaneous_Release:Lithium_Release_Plan#Schedule
+[14]: https://wiki.opendaylight.org/view/Simultaneous_Release:Beryllium_Release_Plan#Schedule
