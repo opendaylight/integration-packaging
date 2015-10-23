@@ -1,31 +1,129 @@
-Everything required for building OpenDaylight's RPMs.
+Logic for building OpenDaylight's upstream Source RPMs.
 
-The latest RPM versions are Lithium SR1 and Helium SR4.
+SRPM/RPM builds are supported for the following OpenDaylight versions:
+
+* Helium SR4
+* Lithium
+* Lithium SR1
 
 ## Overview
 
-The `opendaylight.spec` RPM spec file contains logic for packaging ODL's
-tarball release artifact and a systemd service file into RPMs. The `build.sh`
-helper script, when run in the simple Vagrant environment described by our
-`Vagrantfile`, standardizes the build process. Additional helper scripts
-are included for installing the noarch RPM, connecting to the ODL Karaf
-shell and uninstalling ODL.
+OpenDaylight's Source RPMs (SRPMs) are built using the logic provided here.
 
-## Vagrant build environment
+When new builds are defined, the new SRPMs are uploaded to the CentOS
+Community Build System's Koji-based RPM build system. From there they are
+built into ready-to-install noarch RPMs and hosted for consumption.
 
-The included `Vagrantfile` provides a simple, but tested and known-working,
-build environment. We recommend using it when building ODL's RPMs.
+Data that differs per-build is is defined in the `build_vars.yaml" YAML
+configuration file. The build logic consumes that dynamic data, uses
+JinJa2 templates to generate RPM spec files and builds the RPMs/SRPMs they
+define.
+
+See the TODO section for details about why we use this design.
+
+## Vagrant Build Environment
+
+All SRPM builds are done in the included Vagrantfile. It provides a
+consistent known-working and eaisly shared enviroment.
 
 ```
-[~/integration/packaging/rpm]$ vagrant status
+[~/packaging/rpm]$ vagrant status
 Current machine states:
 
 default                   not created (virtualbox)
-[~/integration/packaging/rpm]$ vagrant up
-[~/integration/packaging/rpm]$ vagrant ssh
+[~/packaging/rpm]$ vagrant up
+[~/packaging/rpm]$ vagrant ssh
 [vagrant@localhost vagrant]$ ls /vagrant/
-build.sh  connect.sh  install.sh  opendaylight.spec  <snip>
+build.py  build_vars.yaml  cache  connect.sh  Vagrantfile <snip>
 ```
+
+## Defining New RPMs
+
+The dynamic aspects of a build, such as ODL and RPM version info, have all
+been extracted to a single YAML configruation file. For most RPM updates,
+only that configuration file should need to be updated by humans.
+
+The variables aviable for configuration are documented below. A build
+definition should define all supported variables.
+
+### RPM Build Variables
+
+#### `version_major`
+
+The OpenDaylight major (element) version number of the release to build.
+
+For example, Hydrogen is 1.x.x, Helium is 2.x.x, Lithium is 3.x.x and
+so on down the periodic table.
+
+#### `version_minor`
+
+The OpenDaylight minor (SR) version number of the release to build.
+
+OpenDaylight proves periodic Service Releases (SRs) for each currently
+supported Major release. See the [Hydrogen][12], [Lithium][13] or
+[Beryllium][13] release plan schedules for more information.
+
+#### `version_patch`
+
+The OpenDaylight patch version of the release to build (unused pending CR).
+
+This version number isn't currently used by OpenDaylight, as there aren't
+releases more frequent than Service Releases. However, the upstream
+OpenDaylight community is working towards supporting a Continuous Release (CR)
+model. Once that exists, this patch version will denote CR-level releases.
+
+#### `rpm_release`
+
+RPM version for the given ODL major.minor.patch version.
+
+In addition to OpenDaylight's version, RPMs themselves have versions. These
+are called "release versions". For a given OpenDaylight major.minor.patch
+version, there will be one or more major.minor.patch-rpm_release RPMs.
+
+#### `rpm_disttag`
+
+Override build VM's disttag from `.el7.centos` to `.el7` per [expected norms][11].
+
+By default, the disttag RPM macro is determined at RPM build time by the
+rpmbuild tool. For our CentOS 7 Vagrantfile, this results in a disttago of
+`.el7.centos`. However, especially since we generate noarch RPMs, there's no
+technical reason to use `.el7.centos` instead of the more common `.el7` distag.
+Per [recommendations from upstream CentOS packagers][11], seemingly mostly to
+avoid confusion, we're overriding the default `.el7.centos` to `.el7` for all
+current builds.
+
+#### `java_version`
+
+Java versions supported by this ODL release.
+
+Versions are specified as a range, in the format required by RPM spec files.
+
+For example: `>= 1:1.7.0`
+
+#### `sysd_commit`
+
+Version of ODL systemd unitfile to download and package in ODL RPM.
+
+The version of OpenDaylight's systemd unitfile in the `packaging/rpm/unitfiles`
+directory specified by this git commit hash is downloaded from the Int/Pack
+repo and consumed by OpenDaylight's RPM builds as an RPM spec file Source.
+
+#### `codename`
+
+Elemental codename for the ODL release, including SR if applicable.
+
+Examples include "Helium-SR4", "Lithium" and "Lithium-SR1".
+
+#### `changelog`
+
+Entry in the RPM .spec file's changelog for this RPM.
+
+When the RPM spec file template is specialized into per-build static RPM spec
+files, a changelog is generated using these entries.
+
+The changelog entry must follow a specific format. It's best to follow the
+examples provided by existing build definitions closely. The rpmbuild tool
+will fail and complain fairly clearly if the format isn't correct.
 
 ## Building RPMs
 
@@ -328,3 +426,7 @@ $ sudo yum install -y opendaylight
 [8]: https://bugs.centos.org/view.php?id=9472
 [9]: http://cbs.centos.org/repos/
 [10]: https://github.com/opendaylight/integration-packaging/tree/master/rpm/example_repo_configs
+[11]: https://bugs.centos.org/view.php?id=9098#c23768
+[12]: https://wiki.opendaylight.org/view/Simultaneous_Release:Helium_Release_Plan#Schedule
+[13]: https://wiki.opendaylight.org/view/Simultaneous_Release:Lithium_Release_Plan#Schedule
+[14]: https://wiki.opendaylight.org/view/Simultaneous_Release:Beryllium_Release_Plan#Schedule
