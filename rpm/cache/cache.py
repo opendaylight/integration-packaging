@@ -72,6 +72,7 @@ def cache_build(build):
         # TODO: Is there a good way to do this without changing directories?
         cwd = os.getcwd()
         os.chdir(cache_dir)
+        # Create a .tar.gz archive containing ODL's systemd unitfile
         with tarfile.open(unitfile_tarball, "w:gz") as tb:
             tb.add(unitfile)
         os.chdir(cwd)
