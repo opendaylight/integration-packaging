@@ -5,6 +5,7 @@ SRPM/RPM builds are supported for the following OpenDaylight versions:
 * Helium SR4
 * Lithium
 * Lithium SR1
+* Lithium SR2
 
 ## Overview
 
