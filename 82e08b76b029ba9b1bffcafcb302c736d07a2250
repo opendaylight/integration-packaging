@@ -22,6 +22,30 @@
       "revId": "82e08b76b029ba9b1bffcafcb302c736d07a2250",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dad5f5cf_714f9893",
+        "filename": "rpm/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-27T13:39:26Z",
+      "side": 1,
+      "message": "Good catch, thanks :)",
+      "parentUuid": "fad0f9df_ce46bf23",
+      "range": {
+        "startLine": 62,
+        "startChar": 13,
+        "endLine": 62,
+        "endChar": 19
+      },
+      "revId": "82e08b76b029ba9b1bffcafcb302c736d07a2250",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
