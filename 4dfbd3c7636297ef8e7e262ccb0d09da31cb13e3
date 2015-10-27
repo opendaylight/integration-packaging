@@ -144,6 +144,24 @@
     },
     {
       "key": {
+        "uuid": "dad5f5cf_f41cd615",
+        "filename": "rpm/build.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-10-27T14:53:11Z",
+      "side": 1,
+      "message": "Just rediscovered this line of PEP8:\n\n\u003e \"Some teams strongly prefer a longer line length. For code maintained exclusively or primarily by a team that can reach agreement on this issue, it is okay to increase the nominal line length from 80 to 100 characters (effectively increasing the maximum length to 99 characters), provided that comments and docstrings are still wrapped at 72 characters.\"\n\n\nhttps://www.python.org/dev/peps/pep-0008/#maximum-line-length\n\nMaybe we should use a 100 char flake8 exception. Still be consistent with PEP8, but get some length relief.",
+      "parentUuid": "fad0f9df_d4c3be36",
+      "revId": "4dfbd3c7636297ef8e7e262ccb0d09da31cb13e3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_673d35bb",
         "filename": "rpm/build_vars.yaml",
         "patchSetId": 11
