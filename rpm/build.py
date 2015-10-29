@@ -44,7 +44,7 @@ srpm_template = Template("opendaylight-$version_major.$version_minor."
 def build_rpm(build):
     """Build the RPMs described by the given build description.
 
-    :param build: Description of an RPM build, typically from rpm_vars.yaml
+    :param build: Description of an RPM build, typically from build_vars.yaml
     :type build: dict
 
     """

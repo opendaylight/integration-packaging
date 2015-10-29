@@ -15,7 +15,7 @@ When new builds are defined, the new SRPMs are uploaded to the CentOS
 Community Build System's Koji-based RPM build system. From there they are
 built into ready-to-install noarch RPMs and hosted for consumption.
 
-Data that differs per-build is is defined in the `build_vars.yaml" YAML
+Data that differs per-build is is defined in the `build_vars.yaml` YAML
 configuration file. The build logic consumes that dynamic data, uses
 JinJa2 templates to generate RPM spec files and builds the RPMs/SRPMs they
 define.
@@ -86,7 +86,7 @@ version, there will be one or more major.minor.patch-rpm_release RPMs.
 Override build VM's disttag from `.el7.centos` to `.el7` per [expected norms][11].
 
 By default, the disttag RPM macro is determined at RPM build time by the
-rpmbuild tool. For our CentOS 7 Vagrantfile, this results in a disttag of
+`rpmbuild` tool. For our CentOS 7 Vagrantfile, this results in a disttag of
 `.el7.centos`. However, especially since we generate noarch RPMs, there's no
 technical reason to use `.el7.centos` instead of the more common `.el7` disttag.
 Per [recommendations from upstream CentOS packagers][11], seemingly mostly to
@@ -106,8 +106,8 @@ For example: `>= 1:1.7.0`
 Version of ODL systemd unitfile to download and package in ODL RPM.
 
 The version of OpenDaylight's systemd unitfile in the `packaging/rpm/unitfiles`
-directory specified by this git commit hash is downloaded from the Int/Pack
-repo and consumed by OpenDaylight's RPM builds as an RPM spec file Source.
+directory specified by this git commit hash is downloaded from the [Int/Pack
+repo][16] and consumed by OpenDaylight's RPM builds as an RPM spec file Source.
 
 #### `codename`
 
@@ -155,7 +155,7 @@ optional arguments:
 ```
 
 The `-v`/`--version` flag accepts a version number. Any build that matches
-the portions provided will be build. If more than one build matches the
+the portions provided will be built. If more than one build matches the
 portions provided, all matching builds will be executed.
 
 For example, `build.py -v 3` would execute the builds that match the regex
@@ -183,7 +183,7 @@ The familiar RPM-related commands apply to the OpenDaylight RPM.
 
 ### Installing OpenDaylight via a local RPM
 
-To install a local OpenDaylight's RPM, perhaps as a sanity check after a
+To install a local OpenDaylight RPM, perhaps as a sanity check after a
 build, use `sudo yum install -y <path to ODL RPM>`.
 
 Here's a walk-through of an install and the resulting system changes.
@@ -320,7 +320,7 @@ the [Quickstart section of the CBS docs][5].
 
 As noted in those docs, you'll need to get the SIG chair to leave a note
 on your bug to verify that you should have access. Dave Neary is the
-current NFV SIG chair. The Int/Pack PTL (currently [Daniel Farrell][6])
+current NFV SIG chair. The [Int/Pack][15] PTL (currently [Daniel Farrell][6])
 can help you get his cooperation.
 
 ### Using the CBS
@@ -404,7 +404,7 @@ the sections above document _how_.
 Typically, RPM builds use the macro mechanism provided by RPM spec files
 and the `rpmbuild` tool to customize specs for specific builds. This works
 well for default macros that are gathered from the system automatically, like
-disttag and unitdir.
+`disttag` and `unitdir`.
 
 However, once we needed to support multiple RPM builds at the same time, we
 needed to either accept a large amount of logic duplication or use custom
@@ -420,10 +420,12 @@ second RPM is an unacceptable increase in complexity, and it's unclear if
 Koji handles macro RPMs correctly anyway (potentially buggy, at least very
 infrequently used).
 
-Given the inability to define handle dynamic, custom macros in Koji-based
-builds, but the need to use custom macros to avoid an exceptional amount of
-duplicated logic, the macro substitution into of dynamic per-build data +
-templates into static (or at least no-custom-macros) RPM spec files emerged.
+Given this inability to define dynamic, custom macros in Koji-based builds,
+but the need to extract variables to avoid manual duplication of a large
+amount of spec file logic, a design that uses dynamic per-build data +
+templates to build simi-static (only default macros) RPM spec files emerged.
+The specifics (YAML, Python, JinJa2) were chosen because of their use in
+other tools used by [Int/Pack][15], like Packer, Ansible and Puppet.
 
 
 [1]: http://cbs.centos.org/koji/
@@ -440,3 +442,5 @@ templates into static (or at least no-custom-macros) RPM spec files emerged.
 [12]: https://wiki.opendaylight.org/view/Simultaneous_Release:Helium_Release_Plan#Schedule
 [13]: https://wiki.opendaylight.org/view/Simultaneous_Release:Lithium_Release_Plan#Schedule
 [14]: https://wiki.opendaylight.org/view/Simultaneous_Release:Beryllium_Release_Plan#Schedule
+[15]: https://wiki.opendaylight.org/view/Integration/Packaging
+[16]: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=tree;h=refs/heads/master;hb=refs/heads/master

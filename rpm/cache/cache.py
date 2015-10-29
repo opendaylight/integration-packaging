@@ -36,7 +36,7 @@ unitfile_tb_template = Template("opendaylight-$sysd_commit.service.tar.gz")
 def cache_build(build):
     """Cache the artifacts required for the given RPM build.
 
-    :param build: Description of an RPM build, typically from rpm_vars.yaml
+    :param build: Description of an RPM build, typically from build_vars.yaml
     :type build: dict
 
     """

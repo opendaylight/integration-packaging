@@ -30,7 +30,7 @@ specfile_template = Template("opendaylight-$version_major.$version_minor."
 def build_spec(build):
     """Build the RPM .spec file from a template for the given build description.
 
-    :param build: Description of an RPM build, typically from rpm_vars.yaml
+    :param build: Description of an RPM build, typically from build_vars.yaml
     :type build: dict
 
     """
@@ -44,7 +44,7 @@ def build_spec(build):
 if __name__ == "__main__":
     # Load RPM build variables from a YAML config file
     with open(os.path.join(spec_dir, os.pardir, "build_vars.yaml")) as var_fd:
-        rpm_vars = yaml.load(var_fd)
+        build_vars = yaml.load(var_fd)
 
-    for build in rpm_vars["builds"]:
+    for build in build_vars["builds"]:
         build_spec(build)
