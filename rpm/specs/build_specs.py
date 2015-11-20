@@ -9,7 +9,7 @@ try:
     import yaml
     from jinja2 import Environment, FileSystemLoader
 except ImportError:
-    sys.stderr.write("We recommned using our included Vagrant env.\n")
+    sys.stderr.write("We recommend using our included Vagrant env.\n")
     sys.stderr.write("Else, do `pip install -r requirements.txt` in a venv.\n")
     raise
 
