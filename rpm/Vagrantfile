@@ -6,7 +6,17 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # RPM build environment is CentOS 7
-  config.vm.box = "boxcutter/centos71"
+  config.vm.box = "centos/7"
+
+  # We run out of RAM once ODL starts with default 500MB
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.memory = 2048
+    libvirt.cpus = 1
+  end
+
+  # NFS is fragile, use rsync
+  config.vm.synced_folder ".", "/vagrant", type: "rsync"
+  config.vm.synced_folder ".", "/home/vagrant/sync", disabled: true
 
   # Add EPEL for access to fedora-packager and maybe others
   config.vm.provision "shell", inline: "yum install -y epel-release"
@@ -21,7 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Install Python dependences system-wide via pip
   # NB: Could use a venv here, but since we're already in a Vagrant box and
-  # don't need any isolation it seem worth the extra complexity.
+  # don't need any isolation more, it doesn't seem worth the extra complexity.
   config.vm.provision "shell", inline: "pip install -r /vagrant/requirements.txt"
 
   # Add vagrant user to mock group for rpmbuild
