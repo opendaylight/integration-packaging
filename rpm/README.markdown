@@ -6,6 +6,7 @@ SRPM/RPM builds are supported for the following OpenDaylight versions:
 * Lithium
 * Lithium SR1
 * Lithium SR2
+* Lithium SR3
 
 ## Overview
 
@@ -326,7 +327,7 @@ can help you get his cooperation.
 ### Using the CBS
 
 The CentOS CBS is Koji-based, so the main way to interface with it via the
-Koji CLI client. There's also a [Koji web UI][7].
+Koji CLI client. There's also a [Koji web UI][1].
 
 Other than the [main CBS wiki][7] and Koji's help output, there aren't
 substantial Koji docs. These docs strive to cover everything that's
@@ -374,13 +375,13 @@ When submitting a build, it's typically a good idea to verify that everything
 is in working order using the `--scratch` option.
 
 ```
-$ koji build --scratch nfv7-opendaylight-3-el7 opendaylight-2.4.0-1.el7.src.rpm
+$ koji build --scratch nfv7-opendaylight-3-el7 opendaylight-3.0.0-1.el7.src.rpm
 ```
 
 If everything works, submit the actual build.
 
 ```
-$ koji build nfv7-opendaylight-3-el7 opendaylight-2.4.0-1.el7.src.rpm
+$ koji build nfv7-opendaylight-3-el7 opendaylight-3.0.0-1.el7.src.rpm
 ```
 
 You can monitor the build using the Koji CLI `watch-logs` and `watch-task`
