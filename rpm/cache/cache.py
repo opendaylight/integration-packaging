@@ -42,7 +42,6 @@ def cache_build(build):
     """
     # Specialize a series of name/URL templates for the given build
     odl_tarball = odl_template.substitute(build)
-    odl_tarball_url = odl_url_template.substitute(build)
     unitfile = unitfile_template.substitute(build)
     unitfile_url = unitfile_url_template.substitute(build)
     unitfile_tarball = unitfile_tb_template.substitute(build)
@@ -54,8 +53,8 @@ def cache_build(build):
 
     # Cache appropriate version of OpenDaylight's release tarball
     if not os.path.isfile(odl_tarball_path):
-        print("Downloading: {}".format(odl_tarball_url))
-        urllib.urlretrieve(odl_tarball_url, odl_tarball_path)
+        print("Downloading: {}".format(build["download_url"]))
+        urllib.urlretrieve(build["download_url"], odl_tarball_path)
         print("Cached: {}".format(odl_tarball))
     else:
         print("Already cached: {}".format(odl_tarball))
