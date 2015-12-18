@@ -22,6 +22,30 @@
       "revId": "00c9408b6e0982117dbbd4bcbe89d7780443cbc6",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_9931ddee",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2015-12-18T16:15:40Z",
+      "side": 1,
+      "message": "It would complicate all the logic that consumes these vars. As they are, cache.py, opendaylight.spec, etc can consume `codename` and `download_url` the same way for ERP RPMs (like this) and the other RPMs above. If all RPM codenames can\u0027t be treated the same way, there\u0027d have to be conditional logic that recognizes ERP RPMs vs others, and imho that\u0027s not worth it.",
+      "parentUuid": "1aa4ed85_df82da51",
+      "range": {
+        "startLine": 93,
+        "startChar": 30,
+        "endLine": 93,
+        "endChar": 42
+      },
+      "revId": "00c9408b6e0982117dbbd4bcbe89d7780443cbc6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
