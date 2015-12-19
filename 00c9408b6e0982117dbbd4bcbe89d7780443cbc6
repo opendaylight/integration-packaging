@@ -46,6 +46,30 @@
       "revId": "00c9408b6e0982117dbbd4bcbe89d7780443cbc6",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_7cc88f74",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2015-12-19T00:27:17Z",
+      "side": 1,
+      "message": "ack",
+      "parentUuid": "1aa4ed85_9931ddee",
+      "range": {
+        "startLine": 93,
+        "startChar": 30,
+        "endLine": 93,
+        "endChar": 42
+      },
+      "revId": "00c9408b6e0982117dbbd4bcbe89d7780443cbc6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
