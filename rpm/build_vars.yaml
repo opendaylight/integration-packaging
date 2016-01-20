@@ -23,10 +23,10 @@
 
 ---
 builds:
-  - version_major: 2
-    version_minor: 4
-    version_patch: 0
-    rpm_release: 1
+  - version_major: "2"
+    version_minor: "4"
+    version_patch: "0"
+    rpm_release: "1"
     rpm_disttag: el7
     java_version: "= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
@@ -35,10 +35,10 @@ builds:
     changelog: |
       * Tue Sep 15 2015 Daniel Farrell <dfarrell@redhat.com> - 2.4.0-1
       - Create Helium SR4 RPM
-  - version_major: 3
-    version_minor: 0
-    version_patch: 0
-    rpm_release: 2
+  - version_major: "3"
+    version_minor: "0"
+    version_patch: "0"
+    rpm_release: "2"
     rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
@@ -47,10 +47,10 @@ builds:
     changelog: |
       * Fri Jul 17 2015 Daniel Farrell <dfarrell@redhat.com> - 3.0.0-2
       - Include required disttag in RPM release version
-  - version_major: 3
-    version_minor: 1
-    version_patch: 0
-    rpm_release: 1
+  - version_major: "3"
+    version_minor: "1"
+    version_patch: "0"
+    rpm_release: "1"
     rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
@@ -59,10 +59,10 @@ builds:
     changelog: |
       * Tue Sep 15 2015 Daniel Farrell <dfarrell@redhat.com> - 3.1.0-1
       - Create Lithium SR1 RPM
-  - version_major: 3
-    version_minor: 2
-    version_patch: 0
-    rpm_release: 1
+  - version_major: "3"
+    version_minor: "2"
+    version_patch: "0"
+    rpm_release: "1"
     rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
@@ -71,10 +71,10 @@ builds:
     changelog: |
       * Mon Oct 26 2015 Daniel Farrell <dfarrell@redhat.com> - 3.2.0-1
       - Create Lithium SR2 RPM
-  - version_major: 3
-    version_minor: 3
-    version_patch: 0
-    rpm_release: 1
+  - version_major: "3"
+    version_minor: "3"
+    version_patch: "0"
+    rpm_release: "1"
     rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
@@ -83,10 +83,10 @@ builds:
     changelog: |
       * Fri Dec 11 2015 Daniel Farrell <dfarrell@redhat.com> - 3.3.0-1
       - Create Lithium SR3 RPM
-  - version_major: 4
-    version_minor: 0
-    version_patch: 0
-    rpm_release: 1.201512150335
+  - version_major: "4"
+    version_minor: "0"
+    version_patch: "0"
+    rpm_release: "1.201512150335"
     rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed

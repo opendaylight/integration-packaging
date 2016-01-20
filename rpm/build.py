@@ -100,7 +100,7 @@ if __name__ == "__main__":
     # TODO: More docs on ArgParser and argument
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", "--version", action="append",
-                        metavar="major minor patch rpm", nargs="*", type=int,
+                        metavar="major minor patch rpm", nargs="*",
                         help="RPM version(s) to build")
     parser.add_argument("-a", "--all", action="store_true",
                         help="Build all RPMs")
