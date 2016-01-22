@@ -8,7 +8,7 @@ Version:    4.0.0
 #   unnecessary and unused in our case, but both the docs and the pros (apevec)
 #   agree that we should include it.
 # See: https://fedoraproject.org/wiki/Packaging:DistTag
-Release:    1.201601200134.el7
+Release:    2.201601200134.el7
 BuildArch:  noarch
 Summary:    OpenDaylight SDN Controller
 Group:      Applications/Communications
@@ -54,7 +54,9 @@ cp ../../BUILD/%name-c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed.service/%name-c6d7
 # When the RPM is removed, the subdirs containing new files wouldn't normally
 #   be deleted. Manually clean them up.
 #   Warning: This does assume there's no data there that should be preserved
-rm -rf $RPM_BUILD_ROOT/opt/%name
+if [ $1 -eq 0 ]; then
+    rm -rf $RPM_BUILD_ROOT/opt/%name
+fi
 
 %files
 # ODL will run as odl:odl, set as user:group for ODL dir, don't override mode
@@ -64,5 +66,5 @@ rm -rf $RPM_BUILD_ROOT/opt/%name
 
 
 %changelog
-* Wed Jan 20 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1.201601200134
-- Create latest Beryllium Experimental Release Preview RPM
+* Wed Jan 22 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-2.201601200134
+- Make RPM upgrade properly

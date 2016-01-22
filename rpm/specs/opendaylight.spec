@@ -54,7 +54,9 @@ cp ../../BUILD/%name-{{ sysd_commit }}.service/%name-{{ sysd_commit }}.service $
 # When the RPM is removed, the subdirs containing new files wouldn't normally
 #   be deleted. Manually clean them up.
 #   Warning: This does assume there's no data there that should be preserved
-rm -rf $RPM_BUILD_ROOT/opt/%name
+if [ $1 -eq 0 ]; then
+    rm -rf $RPM_BUILD_ROOT/opt/%name
+fi
 
 %files
 # ODL will run as odl:odl, set as user:group for ODL dir, don't override mode
