@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a3d3df0_fa130d5a",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-01-28T00:08:53Z",
+      "side": 1,
+      "message": "only based on your gerrit comment about one RPM version for each RPM, I am guessing you mean the major version here of 2 vs 1 in line 101 above.\n\nif so, doesn\u0027t that mean line 89 should be v1, line 101 is v2 and this line here is v3?",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 113,
+        "endChar": 33
+      },
+      "revId": "7cfb5febaafe985af3b02562f258611fef41230e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
