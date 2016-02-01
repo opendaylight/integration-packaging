@@ -22,6 +22,30 @@
       "revId": "7cfb5febaafe985af3b02562f258611fef41230e",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a3d3df0_8f64384a",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-02-01T17:55:58Z",
+      "side": 1,
+      "message": "This is the relevant section of the Fedora Packaging Guidelines\n\nhttps://fedoraproject.org/wiki/Packaging:NamingGuidelines#Pre-Release_packages\n\nBasically, for pre-release packages, we overload what\u0027s normally used as an RPM version with the RC/similar version. So `\u003crpm_version\u003e.\u003cpre-release version\u003e`. The Gerrit comment was (poorly) saying that for each ODL version (major, minor, patch, RC) we only want one RPM version (2, 1) because once that ODL version\u0027s .spec file is updated we don\u0027t want to maintain the old .spec.\n\nAs I read your comment again, also not sure if you noticed that the date-style version is different on line 89 and 101.",
+      "parentUuid": "9a3d3df0_fa130d5a",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 113,
+        "endChar": 33
+      },
+      "revId": "7cfb5febaafe985af3b02562f258611fef41230e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
