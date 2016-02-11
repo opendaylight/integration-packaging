@@ -143,3 +143,15 @@ builds:
     changelog: |
       * Wed Jan 22 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1.rc2
       - Create Beryllium RC2 RPM
+  - version_major: "4"
+    version_minor: "0"
+    version_patch: "0"
+    rpm_release: "1.rc2.1"
+    rpm_disttag: el7
+    java_version: ">= 1:1.7.0"
+    sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
+    codename: RC2.1
+    download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-RC2.1/distribution-karaf-0.4.0-RC2.1.tar.gz"
+    changelog: |
+      * Wed Feb 9 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1.rc2.1
+      - Create Beryllium RC2.1 RPM
