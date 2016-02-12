@@ -1,0 +1,8 @@
+Code-Review+2: Thanh Ha <thanh.ha@linuxfoundation.org>
+Verified+1: Daniel Farrell <dfarrell@redhat.com>
+Code-Review+1: Daniel Farrell <dfarrell@redhat.com>
+Submitted-by: Daniel Farrell <dfarrell@redhat.com>
+Submitted-at: Fri, 12 Feb 2016 18:57:16 +0000
+Reviewed-on: https://git.opendaylight.org/gerrit/34572
+Project: integration/packaging
+Branch: refs/heads/master
