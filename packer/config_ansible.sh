@@ -10,8 +10,9 @@ set -x
 sudo yum install -y epel-release
 
 # Install Ansible, required for Packer's ansible-local provisioner
+# Recent versions of Ansible require ansible-playbook
 # Git is required by the ansible-galaxy tool when installing roles
-sudo yum install -y ansible git
+sudo yum install -y ansible ansible-playbook git
 
 # Install the latest release of ODL's Ansible role from Ansible Galaxy
 # The `ansible-galaxy` tool was installed by Ansible's RPM

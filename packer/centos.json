@@ -6,6 +6,28 @@
   },
   "builders": [
     {
+      "type": "qemu",
+      "iso_urls":
+        [
+          "http://mirrors.rit.edu/centos/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso",
+          "http://mirrors.usc.edu/pub/linux/distributions/centos/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso",
+          "http://centos.eecs.wsu.edu/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso",
+          "http://mirror.lug.udel.edu/pub/centos/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso",
+          "http://mirror.cc.columbia.edu/pub/linux/centos/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso"
+        ],
+      "iso_checksum": "f90e4d28fa377669b2db16cbcb451fcb9a89d2460e3645993e30e137ac37d284",
+      "iso_checksum_type": "sha256",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_wait_timeout": "20m",
+      "shutdown_command": "sudo shutdown -P now",
+      "http_directory": ".",
+      "boot_command":
+        [
+        "<tab>text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos_kickstart.cfg<enter>"
+        ]
+    },
+    {
       "type": "virtualbox-iso",
       "guest_os_type": "RedHat_64",
       "iso_urls":
@@ -54,6 +76,18 @@
       "type": "shell",
       "scripts":
         [
+          "config_vagrant.sh",
+          "config_ansible.sh"
+        ],
+      "only":
+        [
+          "qemu"
+        ]
+    },
+    {
+      "type": "shell",
+      "scripts":
+        [
           "config_virtualbox.sh",
           "config_vagrant.sh",
           "config_ansible.sh"
@@ -84,7 +118,13 @@
     {
       "type": "vagrant",
       "compression_level": "9",
-      "output": "opendaylight-{{ user `box_version` }}-centos-1503.box",
+      "output": "opendaylight-{{ user `box_version` }}-centos-7.2.1511-libvirt.box",
+      "only": ["qemu"]
+    },
+    {
+      "type": "vagrant",
+      "compression_level": "9",
+      "output": "opendaylight-{{ user `box_version` }}-centos-1503-virtualbox.box",
       "only": ["virtualbox-iso"]
     },
     {
