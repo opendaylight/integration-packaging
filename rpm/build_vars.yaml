@@ -227,3 +227,15 @@ builds:
     changelog: |
       * Fri Mar 11 2016 Daniel Farrell <dfarrell@redhat.com> - 3.4.0-1
       - Create Lithium SR4 RPM
+  - version_major: "4"
+    version_minor: "1"
+    version_patch: "0"
+    rpm_release: "1"
+    rpm_disttag: el7
+    java_version: ">= 1:1.7.0"
+    sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
+    codename: Beryllium-SR1
+    download_url: "https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.4.1-Beryllium-SR1/distribution-karaf-0.4.1-Beryllium-SR1.tar.gz"
+    changelog: |
+      * Wed Mar 23 2016 Daniel Farrell <dfarrell@redhat.com> - 4.1.0-1
+      - Create Beryllium SR1 RPM

@@ -9,6 +9,7 @@ SRPM/RPM builds are supported for the following OpenDaylight major releases, as 
 * Lithium SR3
 * Lithium SR4
 * Beryllium
+* Beryllium SR1
 
 ## Overview
 
