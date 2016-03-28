@@ -1,0 +1,46 @@
+{
+  "variables": {
+    "odl_version": null,
+    "centos_version": null,
+    "iso_urls": null,
+    "iso_checksum": null
+  },
+  "builders": [
+    {
+      "type": "qemu",
+      "iso_urls": "{{ user `iso_urls` }}",
+      "iso_checksum": "{{ user `iso_checksum` }}",
+      "iso_checksum_type": "sha256",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_wait_timeout": "20m",
+      "shutdown_command": "sudo shutdown -P now",
+      "http_directory": ".",
+      "boot_command":
+        [
+        "<tab>text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/provision/centos_kickstart.cfg<enter>"
+        ]
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "scripts":
+        [
+          "provision/config_vagrant.sh",
+          "provision/config_ansible.sh"
+        ]
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "provision/install_odl.yml"
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "compression_level": "9",
+      "output": "opendaylight-{{ user `odl_version` }}-centos-{{ user `centos_version` }}-libvirt.box"
+    }
+  ]
+}
