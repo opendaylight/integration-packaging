@@ -1,0 +1,68 @@
+{
+  "variables": {
+    "odl_version": null,
+    "centos_version": null,
+    "docker_repo": null,
+    "rpm_repo_file": null,
+    "rpm_repo_url": null
+  },
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "guest_os_type": "RedHat_64",
+      "iso_urls": "{{ user `iso_urls` }}",
+      "iso_checksum": "{{ user `iso_checksum` }}",
+      "iso_checksum_type": "sha256",
+      "headless": "false",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_wait_timeout": "20m",
+      "shutdown_command": "sudo shutdown -P now",
+      "http_directory": ".",
+      "boot_command": [
+        "<tab>text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/provision/centos_kickstart.cfg<enter>"
+      ],
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{ .Name }}",
+          "--memory",
+          "1024"
+        ],
+        [
+          "modifyvm",
+          "{{ .Name }}",
+          "--cpus",
+          "2"
+        ]
+      ]
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "scripts":
+        [
+          "provision/config_virtualbox.sh",
+          "provision/config_vagrant.sh",
+          "provision/config_ansible.sh"
+        ]
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "provision/install_odl.yml",
+      "extra_arguments": [
+        "--extra-vars",
+        "\"rpm_repo_file={{ user `rpm_repo_file` }}",
+        "rpm_repo_url={{ user `rpm_repo_url` }}\""
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "compression_level": "9",
+      "output": "opendaylight-{{ user `odl_version` }}-centos-{{ user `centos_version` }}-virtualbox.box"
+    }
+  ]
+}
