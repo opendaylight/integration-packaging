@@ -1,0 +1,44 @@
+{
+  "variables": {
+    "odl_version": null,
+    "centos_version": null,
+    "docker_repo": null,
+    "rpm_repo_file": null,
+    "rpm_repo_url": null
+  },
+  "builders": [
+    {
+      "type": "docker",
+      "image": "centos:{{ user `centos_version` }}",
+      "pull": false,
+      "commit": true
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "scripts":
+        [
+          "provision/config_docker.sh",
+          "provision/config_ansible.sh"
+        ]
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "provision/install_odl.yml",
+      "extra_arguments": [
+        "--extra-vars",
+        "\"rpm_repo_file={{ user `rpm_repo_file` }}",
+        "rpm_repo_url={{ user `rpm_repo_url` }}\""
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "docker-tag",
+      "repository": "{{ user `docker_repo` }}",
+      "tag": "{{ user `odl_version` }}",
+      "force": true,
+    }
+  ]
+}
