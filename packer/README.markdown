@@ -5,95 +5,203 @@ configuring them and post-processing them into standard output formats.
 
 We currently build OpenDaylight's Vagrant base box and Docker image via Packer.
 
-## Building an ODL Vagrant Base Box
+## Building
 
 You'll need to [install Packer][2], of course.
 
-You can now build our ODL Vagrant base box with:
+OpenDaylight's Packer configuration is divided into build-specific variables,
+output-specific templates and a set of shared provisioning scripts. To do a
+specific build, combine the template for the desired output artifact type with
+a variable file. For example, to build a LibVirt-based Vagrant base box with
+ODL Beryllium and CentOS 7.2.1511:
 
 ```
-[~/integration/packaging/packer]$ packer build -var-file=packer_vars.json centos.json
+packer build -var-file=vars/opendaylight-4.0.0-centos-7.2.1511.json templates/libvirt.json
 ```
 
-This will:
-
-* Download and verify a fresh CentOS 1503 Minimal ISO.
-* Use a Kickstart template to automate a minimal install against
-  a VirtualBox host.
-* Run a post-install shell provisioner to do VirtualBox, Vagrant
-  and Ansible-specific config.
-* Install OpenDaylight using its [Ansible role][4].
-* Export, compress and package the VM as a Vagrant base box.
+To build the same box with VirtualBox as the virtualization provider:
 
 ```
-<snip>
-Build 'virtualbox-iso' finished.
-
-==> Builds finished. The artifacts of successful builds are:
---> virtualbox-iso: 'virtualbox' provider box: opendaylight-2.3.0-centos-1503.box
-[~/integration/packaging/packer]$ ls -lh opendaylight-2.3.0-centos-1503.box
--rw-rw-r--. 1 daniel daniel 1.1G Jun  9 01:13 opendaylight-2.3.0-centos-1503.box
+packer build -var-file=vars/opendaylight-4.0.0-centos-7.2.1511.json templates/virtualbox.json
 ```
 
-Import the local box into Vagrant with:
+To build a Beryllium SR1 Docker container:
 
 ```
-[~/integration/packaging/packer]$ vagrant box add --name "opendaylight" opendaylight-2.3.0-centos-1503.box --force
-==> box: Adding box 'opendaylight' (v0) for provider:
-    box: Downloading: file:///home/daniel/integration/packaging/packer/opendaylight-2.3.0-centos-1503.box
-==> box: Successfully added box 'opendaylight' (v0) for 'virtualbox'!
+packer build -var-file=vars/opendaylight-4.1.0-centos-7.2.1511.json templates/docker.json
 ```
 
-To connect to your new box, you'll need a trivial Vagrantfile:
+Note that LibVirt, VirtualBox and Docker will need to work on your local system
+to run Packer builds that use them. You may need to disable LibVirt/VBox when
+enabling the other.
+
+From a high level, the builds:
+
+* Download and verify the CentOS ISO specified in the variables file.
+* Boot the ISO and do low-level configuration via a Kickstart template.
+* Run a set of shell scripts, listed in the template's shell provisioner
+  section, to do any configuration required by the builder (VBox, Docker),
+  other provisioners (Ansible) or post-processors (Vagrant, Docker).
+* Install and configure the version of OpenDaylight specified in the variables
+  file using the [ansible-opendaylight role][3].
+* Export, compress and package the VM as a Vagrant base box or Docker image.
+
+## Running
+
+This section documents how to run OpenDaylight's Vagrant base boxes and Docker
+images.
+
+### Pre-Built
+
+This section documents how to run OpenDaylight Vagrant base boxes and Docker
+images. That have been built by the Integration/Packaging project and pushed
+to hosting services for easy consumption.
+
+#### Vagrant Base Boxes
+
+OpenDaylight uses the official Atlas Vagrant base box hosting service.
+
+The [opendaylight/odl][4] repository contains built versions of every box
+defined here.
+
+To use the latest version, simply specify `opendaylight/odl` as the base
+box in your Vagrantfile.
 
 ```
-[~/integration/packaging/packer]$ vagrant init -m opendaylight
-A `Vagrantfile` has been placed in this directory.<snip>
-[~/integration/packaging/packer]$ cat Vagrantfile
+$ vagrant init -m opendaylight/odl
+$ cat Vagrantfile
 Vagrant.configure(2) do |config|
-  config.vm.box = "opendaylight"
+  config.vm.box = "opendaylight/odl"
 end
-[~/integration/packaging/packer]$ vagrant ssh
-<snip>
+```
+
+Boot the box (will download from Atlas if not cached locally) and connect:
+
+```
+$ vagrant up
+$ vagrant ssh
 ```
 
 OpenDaylight will already be installed and running:
 
 ```
-[vagrant@localhost ~]$ sudo systemctl is-active opendaylight
+$ sudo systemctl is-active opendaylight
 active
 ```
 
-## Pre-Built ODL Base Box
-
-While we'd eventually like to provide more official places to host ODL's
-base boxes, all of this is new and under active development. For now,
-you can consume the product of this Packer build configuration via
-Atlas (previously called be VagrantCloud), the de facto box hosting
-service at the moment. It's at [dfarrell07/opendaylight][5] for now, but
-of course we'd like to transfer it to an official OpenDaylight account
-eventually (a Help Desk ticket has been submitted).
+To connect to the Karaf shell:
 
 ```
-[~/sandbox]$ vagrant init -m dfarrell07/opendaylight
-[~/sandbox]$ cat Vagrantfile
+$ ssh -p 8101 karaf@localhost
+# password: karaf
+```
+
+To use a version other than latest, specify it in your Vagrantfile.
+
+```
 Vagrant.configure(2) do |config|
-  config.vm.box = "dfarrell07/opendaylight"
+  config.vm.box = "opendaylight/odl"
+  config.vm.box_version = "= 3.4.0"
 end
-[~/sandbox]$ vagrant up
-# Downloads box from Atlas
-# Boots box
-[~/sandbox]$ vagrant ssh
-[vagrant@localhost ~]$ sudo systemctl is-active opendaylight
-active
-[vagrant@localhost ~]$ /opt/opendaylight/bin/client
+```
+
+#### Docker Images
+
+OpenDaylight's [official DockerHub account][7] is very out-of-date. The
+Integration/Packaging project will eventually take control and update it,
+but for now pre-built Docker images can be pulled from [dfarrell07/odl][5],
+which is the account of the [Int/Pack PTL][6].
+
+Download an image and start a container with ODL running:
+
+```
+$ docker run -ti dfarrell07/odl /opt/opendaylight/bin/karaf
+```
+
+### Locally Built
+
+This section documents how to run locally-built OpenDaylight Vagrant base boxes
+and Docker images. Users not interested in building their own artifacts should
+see the Pre-Built section above.
+
+#### Vagrant Base Boxes
+
+The `vagrant` post-processor outputs built .box files into the current
+working directory.
+
+```
 <snip>
-opendaylight-user@root>
+Build 'qemu' finished.
+
+==> Builds finished. The artifacts of successful builds are:
+--> qemu: 'qemu' provider box: opendaylight-4.1.0-centos-7.2.1511-libvirt.box
+$ ls -rc | tail -n 1
+opendaylight-4.1.0-centos-7.2.1511-libvirt.box
+```
+
+Import the local box into Vagrant with:
+
+```
+$ vagrant box add --name "odl" opendaylight-4.1.0-centos-1511.box --force
+==> box: Adding box 'odl' (v0) for provider:
+    box: Downloading: file:///home/daniel/packaging/packer/opendaylight-4.1.0-centos-1511.box
+==> box: Successfully added box 'odl' (v0) for 'virtualbox'!
+```
+
+To connect to your new box, you'll need a trivial Vagrantfile:
+
+```
+$ vagrant init -m odl
+$ cat Vagrantfile
+Vagrant.configure(2) do |config|
+  config.vm.box = "odl"
+end
+```
+
+Boot the box and connect:
+
+```
+$ vagrant up
+$ vagrant ssh
+```
+
+OpenDaylight will already be installed and running:
+
+```
+$ sudo systemctl is-active opendaylight
+active
+```
+
+To connect to the Karaf shell:
+
+```
+$ ssh -p 8101 karaf@localhost
+# password: karaf
+```
+
+#### Docker Images
+
+The `docker-tag` post-processor imports the built Docker image into your local
+image repository.
+
+```
+$ docker images
+REPOSITORY          TAG         IMAGE ID        CREATED         SIZE
+opendaylight/odl    4.1.0       8c9e8c24081e    2 days ago      1.408 GB
+```
+
+Use `docker run` to start a container. Point it at the Karaf executable
+to run OpenDaylight as the container's process.
+
+```
+$ docker run -ti opendaylight/odl:4.1.0 /opt/opendaylight/bin/karaf
 ```
 
 
 [1]: https://www.packer.io/
 [2]: https://www.packer.io/intro/getting-started/setup.html
-[3]: https://trello.com/c/OoS1aKaN/150-packaging-create-odl-vagrant-base-box
-[4]: https://github.com/dfarrell07/ansible-opendaylight
-[5]: https://atlas.hashicorp.com/dfarrell07/boxes/opendaylight
+[3]: https://github.com/dfarrell07/ansible-opendaylight
+[4]: https://atlas.hashicorp.com/opendaylight/boxes/odl
+[5]: https://hub.docker.com/r/dfarrell07/odl/tags/
+[6]: https://wiki.opendaylight.org/view/User:Dfarrell07
+[7]: https://hub.docker.com/r/opendaylight/
