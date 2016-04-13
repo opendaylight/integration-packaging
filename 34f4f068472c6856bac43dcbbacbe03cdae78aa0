@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a494da4_274915d1",
+        "filename": "packer/README.markdown",
+        "patchSetId": 2
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-04-13T00:34:08Z",
+      "side": 1,
+      "message": "typo: specific",
+      "revId": "34f4f068472c6856bac43dcbbacbe03cdae78aa0",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
