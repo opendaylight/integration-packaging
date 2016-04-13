@@ -3,7 +3,7 @@
 [Packer][1] is a tool for automatically creating VM and container images,
 configuring them and post-processing them into standard output formats.
 
-We currently build OpenDaylight's Vagrant base box and Docker image via Packer.
+We build OpenDaylight's Vagrant base boxes and Docker images via Packer.
 
 ## Building
 
@@ -107,15 +107,18 @@ end
 
 #### Docker Images
 
-OpenDaylight's [official DockerHub account][7] is very out-of-date. The
-Integration/Packaging project will eventually take control and update it,
-but for now pre-built Docker images can be pulled from [dfarrell07/odl][5],
-which is the account of the [Int/Pack PTL][6].
+Up-to-date Docker images can be pulled from [OpenDaylight's DockerHub][5].
 
-Download an image and start a container with ODL running:
+Download the latest image and start a container with ODL running:
 
 ```
-$ docker run -ti dfarrell07/odl /opt/opendaylight/bin/karaf
+$ docker run -ti opendaylight/odl /opt/opendaylight/bin/karaf
+```
+
+To run a specific version, include a tag:
+
+```
+$ docker run -ti opendaylight/odl:4.1.0 /opt/opendaylight/bin/karaf
 ```
 
 ### Locally Built
@@ -202,6 +205,4 @@ $ docker run -ti opendaylight/odl:4.1.0 /opt/opendaylight/bin/karaf
 [2]: https://www.packer.io/intro/getting-started/setup.html
 [3]: https://github.com/dfarrell07/ansible-opendaylight
 [4]: https://atlas.hashicorp.com/opendaylight/boxes/odl
-[5]: https://hub.docker.com/r/dfarrell07/odl/tags/
-[6]: https://wiki.opendaylight.org/view/User:Dfarrell07
-[7]: https://hub.docker.com/r/opendaylight/
+[5]: https://hub.docker.com/r/opendaylight/
