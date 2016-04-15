@@ -251,3 +251,15 @@ builds:
     changelog: |
       * Thu Apr 07 2016 Daniel Farrell <dfarrell@redhat.com> - 4.2.0-1.20160407.144137180
       - Create Beryllium distribution build 4.2.0-1.20160407.144137180 RPM
+  - version_major: "4"
+    version_minor: "2"
+    version_patch: "0"
+    rpm_release: "1.20160414.221815224"
+    rpm_disttag: el7
+    java_version: ">= 1:1.7.0"
+    sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
+    codename: 20160414.221815-224
+    download_url: "https://nexus.opendaylight.org/service/local/repositories/opendaylight.snapshot/content/org/opendaylight/integration/distribution-karaf/0.4.2-SNAPSHOT/distribution-karaf-0.4.2-20160414.221815-224.tar.gz"
+    changelog: |
+      * Thu Apr 14 2016 Daniel Farrell <dfarrell@redhat.com> - 4.2.0-1.20160414.221815224
+      - Create Beryllium distribution build 4.2.0-1.20160414.221815224 RPM
