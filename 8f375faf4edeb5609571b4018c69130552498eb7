@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa57193c_c4cdbf5f",
+        "filename": "rpm/specs/opendaylight-4.2.0-1.201604190031.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 3675
+      },
+      "writtenOn": "2016-04-19T21:23:35Z",
+      "side": 1,
+      "message": "Hey, is there a place where you define the version scheme you\u0027re using here?\nI understand it but just wanted to know if this was formalized in some place?",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 17
+      },
+      "revId": "8f375faf4edeb5609571b4018c69130552498eb7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
