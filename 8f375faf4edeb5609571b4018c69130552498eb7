@@ -22,6 +22,30 @@
       "revId": "8f375faf4edeb5609571b4018c69130552498eb7",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa57193c_04efb7b1",
+        "filename": "rpm/specs/opendaylight-4.2.0-1.201604190031.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-04-19T21:41:06Z",
+      "side": 1,
+      "message": "Very good question. The full RPM version is complex, was a pain in the ass for me to figure out by scrounging docs. RPMs use `\u003cmajor\u003e.\u003cminor\u003e.\u003cpatch\u003e-\u003crpm_version\u003e.\u003cpre-release version\u003e.\u003cdist\u003e`. ODL autorelease versions dictate the major and minor versions (shifted). We\u0027re not currently using the patch version. RPM versions get bumped when things like the spec file change, not the software packaged. See: https://fedoraproject.org/wiki/Packaging:NamingGuidelines#Package_Versioning https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/",
+      "parentUuid": "fa57193c_c4cdbf5f",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 17
+      },
+      "revId": "8f375faf4edeb5609571b4018c69130552498eb7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
