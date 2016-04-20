@@ -287,3 +287,15 @@ builds:
     changelog: |
       * Tue Apr 19 2016 Daniel Farrell <dfarrell@redhat.com> - 4.2.0-1.201604190031
       - Create Beryllium autorelease build 4.2.0-1.201604190031 RPM
+  - version_major: "4"
+    version_minor: "2"
+    version_patch: "0"
+    rpm_release: "1.201604200031"
+    rpm_disttag: el7
+    java_version: ">= 1:1.7.0"
+    sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
+    codename: beryllium-daily-v201604200031
+    download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.2-beryllium-daily-v201604200031/distribution-karaf-0.4.2-beryllium-daily-v201604200031.tar.gz"
+    changelog: |
+      * Wed Apr 20 2016 Daniel Farrell <dfarrell@redhat.com> - 4.2.0-1.201604200031
+      - Create Beryllium autorelease build 4.2.0-1.201604200031 RPM
