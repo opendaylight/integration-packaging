@@ -16,19 +16,19 @@ a variable file. For example, to build a LibVirt-based Vagrant base box with
 ODL Beryllium and CentOS 7.2.1511:
 
 ```
-packer build -var-file=vars/opendaylight-4.0.0-centos-7.2.1511.json templates/libvirt.json
+packer build -var-file=vars/opendaylight-4.0.0.json -var-file=vars/centos-7.2.1511.json templates/libvirt.json
 ```
 
 To build the same box with VirtualBox as the virtualization provider:
 
 ```
-packer build -var-file=vars/opendaylight-4.0.0-centos-7.2.1511.json templates/virtualbox.json
+packer build -var-file=vars/opendaylight-4.0.0.json -var-file=vars/centos-7.2.1511.json templates/virtualbox.json
 ```
 
 To build a Beryllium SR1 Docker container:
 
 ```
-packer build -var-file=vars/opendaylight-4.1.0-centos-7.2.1511.json templates/docker.json
+packer build -var-file=vars/opendaylight-4.1.0.json -var-file=vars/centos-7.2.1511.json templates/docker.json
 ```
 
 Note that LibVirt, VirtualBox and Docker will need to work on your local system
