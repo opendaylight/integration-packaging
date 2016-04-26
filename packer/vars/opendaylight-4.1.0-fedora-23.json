@@ -1,0 +1,11 @@
+{
+  "odl_version": "4.1.0",
+  "os_name": "fedora",
+  "os_version": "23",
+  "guest_os_type": "Fedora_64",
+  "iso_urls": "http://mirrors.rit.edu/fedora/fedora/linux/releases/23/Server/x86_64/iso/Fedora-Server-DVD-x86_64-23.iso",
+  "iso_checksum": "30758dc821d1530de427c9e35212bd79b058bd4282e64b7b34ae1a40c87c05ae",
+  "docker_repo": "opendaylight/odl",
+  "rpm_repo_file": "opendaylight-41-release.repo",
+  "rpm_repo_url": "'https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=rpm/example_repo_configs/opendaylight-41-release.repo'"
+}
