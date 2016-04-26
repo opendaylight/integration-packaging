@@ -1,7 +1,8 @@
 {
   "variables": {
     "odl_version": null,
-    "centos_version": null,
+    "os_name": null,
+    "os_version": null,
     "docker_repo": null,
     "rpm_repo_file": null,
     "rpm_repo_url": null
@@ -9,7 +10,7 @@
   "builders": [
     {
       "type": "docker",
-      "image": "centos:{{ user `centos_version` }}",
+      "image": "{{ user `os_name` }}:{{ user `os_version` }}",
       "pull": false,
       "commit": true
     }
@@ -19,8 +20,8 @@
       "type": "shell",
       "scripts":
         [
-          "provision/config_docker.sh",
-          "provision/config_ansible.sh"
+          "provision/config_docker_{{ user `os_name`}}.sh",
+          "provision/config_ansible_{{ user `os_name`}}.sh"
         ]
     },
     {
