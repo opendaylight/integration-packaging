@@ -1,0 +1,7 @@
+
+To run the installed karaf container, use:
+
+	$ sudo karaf
+		or
+	$ sudo /opt/opendaylight/bin/karaf
+
