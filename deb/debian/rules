@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+DISTRIBUTION = $(shell lsb_release -sr)
+VERSION_MAJOR = 4
+VERSION_MINOR = 2
+CODENAME = "Beryllium-SR2"
+VERSION = 0.$(VERSION_MAJOR).$(VERSION_MINOR)-$(CODENAME)
+PACKAGEVERSION = $(VERSION)-0~$(DISTRIBUTION)0
+TARBALL = distribution-karaf-$(VERSION).tar.gz
+URL = "https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/$(VERSION)/$(TARBALL)"
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+override_dh_auto_test:
+override_dh_auto_build:
+override_dh_auto_install:
+	wget -N --progress=dot:mega $(URL)
+	tar --strip-components=1 -xf $(TARBALL)
+	./configure --prefix=/usr
+	make
+	make install DESTDIR=debian/distribution-karaf
+
+override_dh_gencontrol:
+	dh_gencontrol -- -v$(PACKAGEVERSION)
