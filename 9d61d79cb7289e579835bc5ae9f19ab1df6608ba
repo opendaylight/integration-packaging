@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba51214e_5e46a524",
+        "filename": "deb/debian/control",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-13T09:22:00Z",
+      "side": 1,
+      "message": "Following the RPM packaging, this should be opendaylight.",
+      "revId": "9d61d79cb7289e579835bc5ae9f19ab1df6608ba",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba51214e_be4a6125",
+        "filename": "deb/debian/control",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-13T09:22:00Z",
+      "side": 1,
+      "message": "Same here, this should be opendaylight.",
+      "revId": "9d61d79cb7289e579835bc5ae9f19ab1df6608ba",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba51214e_9e479d1d",
+        "filename": "deb/debian/control",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-13T09:22:00Z",
+      "side": 1,
+      "message": "The description is supposed to describe the package, not the packaging — copying from the RPM again, \"OpenDaylight SDN Controller\" would do nicely here. Ideally there should be a longer package description but that can wait!",
+      "revId": "9d61d79cb7289e579835bc5ae9f19ab1df6608ba",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba51214e_fe54d9cb",
+        "filename": "deb/debian/rules",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-13T09:22:00Z",
+      "side": 1,
+      "message": "The point of this packaging technique is to wrap the usual \"./configure \u0026\u0026 make \u0026\u0026 make install\" installation. For ODL there is no configuration script or Makefile, the distribution tarball is ready to install. So to get this working you need to replace the three lines starting here with the appropriate instructions to install the distribution in the appropriate place (debian/opendaylight if you rename the package to opendaylight).\n\nYou might find it useful to drop the \"--strip-components\" parameter from the tar line above...",
+      "revId": "9d61d79cb7289e579835bc5ae9f19ab1df6608ba",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
