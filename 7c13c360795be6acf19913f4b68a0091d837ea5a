@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba51214e_8cd137d0",
+        "filename": "deb/debian/rules",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-13T15:15:25Z",
+      "side": 1,
+      "message": "Why are you running Karaf here?\n\nThe intent of the override_dh_auto_install target is to place all the files that need to be packaged in debian/opendaylight, with the appropriate target folder structure. For example, if you wanted some file to end up installed (after installation of the package) in /etc/opendaylight/config.cfg, you\u0027d create it as debian/opendaylight/etc/opendaylight/config.cfg (don\u0027t do this, it\u0027s just an example). You need to take the contents of the ODL tarball and place them appropriately so they end up packaged.",
+      "revId": "7c13c360795be6acf19913f4b68a0091d837ea5a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
