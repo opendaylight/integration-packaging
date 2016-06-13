@@ -2,6 +2,46 @@
   "comments": [
     {
       "key": {
+        "uuid": "ba51214e_27876463",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-13T16:49:11Z",
+      "side": 1,
+      "message": "This was the commit message for your first commit, to add an empty deb stub dir. You\u0027ll want to update it for this different commit, of course. Here are some good docs on commit messages: http://chris.beams.io/posts/git-commit/",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 29
+      },
+      "revId": "9d61d79cb7289e579835bc5ae9f19ab1df6608ba",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba51214e_47825853",
+        "filename": "deb/debian/changelog",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-13T16:49:11Z",
+      "side": 1,
+      "message": "May want to clean this up a bit. Maybe mention the ODL version packaged, and remove the \"Closes\" part.",
+      "revId": "9d61d79cb7289e579835bc5ae9f19ab1df6608ba",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba51214e_5e46a524",
         "filename": "deb/debian/control",
         "patchSetId": 1
@@ -47,6 +87,29 @@
       "writtenOn": "2016-06-13T09:22:00Z",
       "side": 1,
       "message": "The description is supposed to describe the package, not the packaging — copying from the RPM again, \"OpenDaylight SDN Controller\" would do nicely here. Ideally there should be a longer package description but that can wait!",
+      "revId": "9d61d79cb7289e579835bc5ae9f19ab1df6608ba",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba51214e_e7b56c32",
+        "filename": "deb/debian/rules",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-13T16:49:11Z",
+      "side": 1,
+      "message": "Is it possible to use spaces over tabs? Int/Pack doesn\u0027t currently have any tabs in the repo. For constancy, I\u0027d prefer to continue using spaces. Your editor should have a way to auto-replace tabs with 2 or 4 spaces.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 1
+      },
       "revId": "9d61d79cb7289e579835bc5ae9f19ab1df6608ba",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
