@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "ba51214e_1f76e43e",
+        "filename": "deb/debian/changelog",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-14T07:47:03Z",
+      "side": 1,
+      "message": "+1, in Debian or Ubuntu the \"Closes\" part would refer to the ITP (\"intent to package\") bug, which we don\u0027t have here. (Well, perhaps we do, but not in anything that would process this changelog.)",
+      "parentUuid": "ba51214e_47825853",
+      "revId": "9d61d79cb7289e579835bc5ae9f19ab1df6608ba",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba51214e_5e46a524",
         "filename": "deb/debian/control",
         "patchSetId": 1
@@ -104,6 +122,30 @@
       "writtenOn": "2016-06-13T16:49:11Z",
       "side": 1,
       "message": "Is it possible to use spaces over tabs? Int/Pack doesn\u0027t currently have any tabs in the repo. For constancy, I\u0027d prefer to continue using spaces. Your editor should have a way to auto-replace tabs with 2 or 4 spaces.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 1
+      },
+      "revId": "9d61d79cb7289e579835bc5ae9f19ab1df6608ba",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba51214e_5f8fbc23",
+        "filename": "deb/debian/rules",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-14T07:47:03Z",
+      "side": 1,
+      "message": "This is a Makefile, so tabs are significant...",
+      "parentUuid": "ba51214e_e7b56c32",
       "range": {
         "startLine": 13,
         "startChar": 0,
