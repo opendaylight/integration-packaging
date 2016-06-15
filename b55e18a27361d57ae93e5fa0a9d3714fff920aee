@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba51214e_6d8db331",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-15T09:28:39Z",
+      "side": 1,
+      "message": "The commit message is supposed to describe the whole patch-set, not just the latest change in the patch set.\n\nI would suggest something like\n\n    Add .deb package for OpenDaylight\n\n    This is a basic, non-policy-compliant package installing OpenDaylight in /opt/opendaylight, following the technique described in https://vincent.bernat.im/en/blog/2016-pragmatic-debian-packaging.html",
+      "revId": "b55e18a27361d57ae93e5fa0a9d3714fff920aee",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba51214e_ad87cb0e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-15T09:28:39Z",
+      "side": 1,
+      "message": "This should go in a README file (add a file called README.Debian in the debian directory). You don\u0027t actually need to alter the PATH to run the installed Karaf container, this works fine:\n\n    sudo /opt/opendaylight/bin/karaf",
+      "revId": "b55e18a27361d57ae93e5fa0a9d3714fff920aee",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
