@@ -1,0 +1,11 @@
+description "opendaylight daemon"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+respawn
+respawn limit 5 60
+expect daemon
+
+script
+  exec /opt/opendaylight/bin/karaf
+end script
