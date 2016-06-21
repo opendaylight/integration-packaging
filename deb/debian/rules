@@ -9,7 +9,7 @@ TARBALL = distribution-karaf-$(VERSION).tar.gz
 URL = "https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/$(VERSION)/$(TARBALL)"
 
 %:
-	dh $@
+	dh $@ --with systemd
 
 override_dh_auto_clean:
 override_dh_auto_test:
@@ -19,6 +19,7 @@ override_dh_auto_install:
 	wget -N --progress=dot:mega $(URL)
 	tar -xf $(TARBALL)
 	mkdir -p ./debian/opendaylight/opt/opendaylight/
+	mkdir -p ./debian/opendaylight/opt/opendaylight/data/log
 	cp -r ./distribution-karaf-$(VERSION)/* ./debian/opendaylight/opt/opendaylight/
 
 override_dh_gencontrol:
