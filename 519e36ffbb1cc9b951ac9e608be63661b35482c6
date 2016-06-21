@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba51214e_31e77b14",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-21T12:40:27Z",
+      "side": 1,
+      "message": "You should also mention that you\u0027ve added some build-dependencies ;-).",
+      "revId": "519e36ffbb1cc9b951ac9e608be63661b35482c6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba51214e_51178fed",
+        "filename": "deb/debian/opendaylight.upstart",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-21T12:40:27Z",
+      "side": 1,
+      "message": "I don\u0027t think this is correct, since karaf doesn\u0027t daemonize itself. See http://upstart.ubuntu.com/cookbook/#expect for details. It might be necessary to use some of the parameters to the karaf script instead of the default (which starts a console).",
+      "revId": "519e36ffbb1cc9b951ac9e608be63661b35482c6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba51214e_f1dd0344",
+        "filename": "deb/debian/opendaylight.upstart",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-21T12:40:27Z",
+      "side": 1,
+      "message": "A single exec statement should be sufficient, without the script stanza (see http://upstart.ubuntu.com/cookbook/#exec for details).",
+      "revId": "519e36ffbb1cc9b951ac9e608be63661b35482c6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
