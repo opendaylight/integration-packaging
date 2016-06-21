@@ -1,5 +1,5 @@
 Source: opendaylight
-Build-Depends: debhelper (>= 9),
+Build-Depends: debhelper (>= 9), wget, ca-certificates
 Maintainer: Akshita Jha <zenith158@gmail.com>
 
 Package: opendaylight
