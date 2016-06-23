@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba51214e_bac51b5d",
+        "filename": "deb/debian/opendaylight.service",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-23T09:52:37Z",
+      "side": 1,
+      "message": "This is rather strange... I would expect the systemd unit to be identical to the one used in the RPM (rpm/unitfiles/opendaylight.service), and that doesn\u0027t do anything special with the exit status. 143 corresponds to SIGTERM which should happen when starting Karaf properly.\n\nI\u0027ve checked this on my Debian 9 system and it works fine without the SuccessExitStatus line; systemctl status shows\n\n    ? opendaylight.service - OpenDaylight SDN Controller\n       Loaded: loaded (/lib/systemd/system/opendaylight.service; enabled; vendor preset: enabled)\n       Active: active (running) since Thu 2016-06-23 11:48:16 CEST; 36s ago\n         Docs: https://wiki.opendaylight.org/view/Main_Page\n               http://www.opendaylight.org/\n      Process: 13311 ExecStart\u003d/opt/opendaylight/bin/start (code\u003dexited, status\u003d0/SUCCESS)\n     Main PID: 13317 (java)\n       CGroup: /system.slice/opendaylight.service\n               ??13317 /usr/bin/java -Djava.security.properties\u003d/opt/opendaylight/etc/odl.java.security -server -Xms128M\n\n    Jun 23 11:48:16 heffalump.sk2.org systemd[1]: Starting OpenDaylight SDN Controller...\n    Jun 23 11:48:16 heffalump.sk2.org systemd[1]: Started OpenDaylight SDN Controller.\n\nThe launch script exited correctly with status 0 and left behind the daemonized Karaf (pid 13317).",
+      "revId": "8903a3c2c8d794d03a7d95dd4b2c4a6d8b032d30",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba51214e_fa8dd332",
+        "filename": "deb/debian/rules",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-23T09:52:37Z",
+      "side": 1,
+      "message": "This is probably no longer necessary, now that the postinst chown\u0027s /opt/opendaylight.",
+      "revId": "8903a3c2c8d794d03a7d95dd4b2c4a6d8b032d30",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
