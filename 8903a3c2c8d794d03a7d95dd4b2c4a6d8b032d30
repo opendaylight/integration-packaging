@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ba51214e_1a908742",
+        "filename": "deb/debian/opendaylight.service",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-06-23T11:25:04Z",
+      "side": 1,
+      "message": "Yes. $sudo systemctl start opendaylight and then $sudo systemctl status opendaylight works fine without SuccessExitStatus.\n\nBut on executing $sudo systemctl stop opendaylight and $sudo systemctl status opendaylight, I get the following on Ubuntu 16.04:\n\n? opendaylight.service - OpenDaylight SDN Controller\n   Loaded: loaded (/lib/systemd/system/opendaylight.service; enabled; vendor preset: enabled)\n   Active: failed (Result: exit-code) since Thu 2016-06-23 15:31:20 IST; 1s ago\n     Docs: https://wiki.opendaylight.org/view/Main_Page\n           http://www.opendaylight.org/\n  Process: 15659 ExecStart\u003d/opt/opendaylight/bin/start (code\u003dexited, status\u003d0/SUCCESS)\n Main PID: 15667 (code\u003dexited, status\u003d143)\n\nJun 23 15:29:45 ubuntu1604 systemd[1]: Starting OpenDaylight SDN Controller...\nJun 23 15:29:45 ubuntu1604 systemd[1]: Started OpenDaylight SDN Controller.\nJun 23 15:30:18 ubuntu1604 systemd[1]: Started OpenDaylight SDN Controller.\nJun 23 15:31:20 ubuntu1604 systemd[1]: Stopping OpenDaylight SDN Controller...\nJun 23 15:31:20 ubuntu1604 systemd[1]: opendaylight.service: Main process exited, code\u003dexited, status\u003d143/n/a\nJun 23 15:31:20 ubuntu1604 systemd[1]: Stopped OpenDaylight SDN Controller.\n\n\nJun 23 15:31:20 ubuntu1604 systemd[1]: opendaylight.service: Unit entered failed state.\nJun 23 15:31:20 ubuntu1604 systemd[1]: opendaylight.service: Failed with result \u0027exit-code\u0027.\n\nI added the SuccessExitStatus line for a clean stop. After adding this, it shows  :\n\n.....\nActive: inactive (dead)\n     Docs: https://wiki.opendaylight.org/view/Main_Page\n           http://www.opendaylight.org/\n......\n\n\nIs this not needed ?",
+      "parentUuid": "ba51214e_bac51b5d",
+      "revId": "8903a3c2c8d794d03a7d95dd4b2c4a6d8b032d30",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba51214e_fa8dd332",
         "filename": "deb/debian/rules",
         "patchSetId": 4
