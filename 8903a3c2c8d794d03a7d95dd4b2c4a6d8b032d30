@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ba51214e_b5008cab",
+        "filename": "deb/debian/opendaylight.service",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-06-23T12:03:44Z",
+      "side": 1,
+      "message": "You\u0027re right, it is better with the 143 handling; I hadn\u0027t checked the behaviour when stopping!",
+      "parentUuid": "ba51214e_1a908742",
+      "revId": "8903a3c2c8d794d03a7d95dd4b2c4a6d8b032d30",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba51214e_fa8dd332",
         "filename": "deb/debian/rules",
         "patchSetId": 4
