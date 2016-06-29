@@ -15,8 +15,12 @@
 #   Elemental codename for the ODL release, including SR if applicable
 # download_url:
 #   URL to ODL tarball artifact to repackage into RPM
-# changelog:
-#   Entry in the RPM .spec file's changelog for this RPM
+# changelog_date:
+#   Date this RPM was defined
+# changelog_name:
+#   Name of person who defined RPM
+# changelog_email:
+#   Email of person who defined RPM
 
 ---
 builds:
@@ -27,9 +31,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Lithium-SR3
     download_url: "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/0.3.3-Lithium-SR3/distribution-karaf-0.3.3-Lithium-SR3.tar.gz"
-    changelog: |
-      * Mon Jan 25 2016 Daniel Farrell <dfarrell@redhat.com> - 3.3.0-2
-      - Make Lithium SR3 RPM upgrade properly
+    changelog_date: "Mon Jan 25 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "0"
     version_patch: "0"
@@ -37,9 +41,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201601200134
     download_url: "https://nexus.opendaylight.org/content/repositories/autorelease-1025/org/opendaylight/integration/distribution-karaf/0.4.0-beryllium-daily-v201601200134/distribution-karaf-0.4.0-beryllium-daily-v201601200134.tar.gz"
-    changelog: |
-      * Wed Jan 22 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-2.201601200134
-      - Make RPM upgrade properly
+    changelog_date: "Wed Jan 22 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "0"
     version_patch: "0"
@@ -47,9 +51,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-RC1
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium-RC1/distribution-karaf-0.4.0-Beryllium-RC1.tar.gz"
-    changelog: |
-      * Wed Jan 22 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1.rc1
-      - Create Beryllium RC1 RPM
+    changelog_date: "Wed Jan 22 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "0"
     version_patch: "0"
@@ -57,9 +61,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201602020032
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-beryllium-daily-v201602020032/distribution-karaf-0.4.0-beryllium-daily-v201602020032.tar.gz"
-    changelog: |
-      * Wed Jan 22 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1.201602020032
-      - Create Beryllium Experimental Release Preview 201602020032 RPM
+    changelog_date: "Wed Jan 22 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "0"
     version_patch: "0"
@@ -67,9 +71,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-RC2
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium-RC2/distribution-karaf-0.4.0-Beryllium-RC2.tar.gz"
-    changelog: |
-      * Wed Jan 22 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1.rc2
-      - Create Beryllium RC2 RPM
+    changelog_date: "Wed Jan 22 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "0"
     version_patch: "0"
@@ -77,9 +81,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: RC2.1
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-RC2.1/distribution-karaf-0.4.0-RC2.1.tar.gz"
-    changelog: |
-      * Wed Feb 9 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1.rc2.1
-      - Create Beryllium RC2.1 RPM
+    changelog_date: "Wed Feb 9 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "0"
     version_patch: "0"
@@ -87,9 +91,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-RC2.2
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium-RC2.2/distribution-karaf-0.4.0-Beryllium-RC2.2.tar.gz"
-    changelog: |
-      * Wed Feb 11 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1.rc2.2
-      - Create Beryllium RC2.2 RPM
+    changelog_date: "Wed Feb 11 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "0"
     version_patch: "0"
@@ -97,9 +101,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-RC2.3
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium-RC2.3/distribution-karaf-0.4.0-Beryllium-RC2.3.tar.gz"
-    changelog: |
-      * Fri Feb 12 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1.rc2.3
-      - Create Beryllium RC2.3 RPM
+    changelog_date: "Fri Feb 12 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "0"
     version_patch: "0"
@@ -107,9 +111,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium
     download_url: "https://nexus.opendaylight.org/content/repositories/autorelease-1075/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium/distribution-karaf-0.4.0-Beryllium.tar.gz"
-    changelog: |
-      * Mon Feb 15 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1.rc3
-      - Create Beryllium RC3 RPM
+    changelog_date: "Mon Feb 15 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "0"
     version_patch: "0"
@@ -117,9 +121,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium
     download_url: "https://nexus.opendaylight.org/content/repositories/autorelease-1079/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium/distribution-karaf-0.4.0-Beryllium.tar.gz"
-    changelog: |
-      * Tue Feb 16 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1.rc3.1
-      - Create Beryllium RC3.1 RPM
+    changelog_date: "Tue Feb 16 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "0"
     version_patch: "0"
@@ -127,9 +131,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium
     download_url: "https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium/distribution-karaf-0.4.0-Beryllium.tar.gz"
-    changelog: |
-      * Fri Feb 19 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1
-      - Create Beryllium RPM
+    changelog_date: "Fri Feb 19 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "3"
     version_minor: "4"
     version_patch: "0"
@@ -137,9 +141,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Lithium-SR4
     download_url: "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/0.3.4-Lithium-SR4/distribution-karaf-0.3.4-Lithium-SR4.tar.gz"
-    changelog: |
-      * Fri Mar 11 2016 Daniel Farrell <dfarrell@redhat.com> - 3.4.0-1
-      - Create Lithium SR4 RPM
+    changelog_date: "Fri Mar 11 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "1"
     version_patch: "0"
@@ -147,9 +151,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-SR1
     download_url: "https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.4.1-Beryllium-SR1/distribution-karaf-0.4.1-Beryllium-SR1.tar.gz"
-    changelog: |
-      * Wed Mar 23 2016 Daniel Farrell <dfarrell@redhat.com> - 4.1.0-1
-      - Create Beryllium SR1 RPM
+    changelog_date: "Wed Mar 23 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "2"
     version_patch: "0"
@@ -157,9 +161,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: 20160407.144137-180
     download_url: "https://nexus.opendaylight.org/service/local/repositories/opendaylight.snapshot/content/org/opendaylight/integration/distribution-karaf/0.4.2-SNAPSHOT/distribution-karaf-0.4.2-20160407.144137-180.tar.gz"
-    changelog: |
-      * Thu Apr 07 2016 Daniel Farrell <dfarrell@redhat.com> - 4.2.0-1.20160407.144137180
-      - Create Beryllium distribution build 4.2.0-1.20160407.144137180 RPM
+    changelog_date: "Thu Apr 07 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "2"
     version_patch: "0"
@@ -167,9 +171,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: 20160414.221815-224
     download_url: "https://nexus.opendaylight.org/service/local/repositories/opendaylight.snapshot/content/org/opendaylight/integration/distribution-karaf/0.4.2-SNAPSHOT/distribution-karaf-0.4.2-20160414.221815-224.tar.gz"
-    changelog: |
-      * Thu Apr 14 2016 Daniel Farrell <dfarrell@redhat.com> - 4.2.0-1.20160414.221815224
-      - Create Beryllium distribution build 4.2.0-1.20160414.221815224 RPM
+    changelog_date: "Thu Apr 14 2016 "
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "2"
     version_patch: "0"
@@ -177,9 +181,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: 20160415.165450-231
     download_url: "https://nexus.opendaylight.org/service/local/repositories/opendaylight.snapshot/content/org/opendaylight/integration/distribution-karaf/0.4.2-SNAPSHOT/distribution-karaf-0.4.2-20160415.165450-231.tar.gz"
-    changelog: |
-      * Fri Apr 15 2016 Daniel Farrell <dfarrell@redhat.com> - 4.2.0-1.20160415.165450231
-      - Create Beryllium distribution build 4.2.0-1.20160415.165450231 RPM
+    changelog_date: "Fri Apr 15 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "2"
     version_patch: "0"
@@ -187,9 +191,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201604190031
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.2-beryllium-daily-v201604190031/distribution-karaf-0.4.2-beryllium-daily-v201604190031.tar.gz"
-    changelog: |
-      * Tue Apr 19 2016 Daniel Farrell <dfarrell@redhat.com> - 4.2.0-1.201604190031
-      - Create Beryllium autorelease build 4.2.0-1.201604190031 RPM
+    changelog_date: "Tue Apr 19 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "2"
     version_patch: "0"
@@ -197,9 +201,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201604200031
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.2-beryllium-daily-v201604200031/distribution-karaf-0.4.2-beryllium-daily-v201604200031.tar.gz"
-    changelog: |
-      * Wed Apr 20 2016 Daniel Farrell <dfarrell@redhat.com> - 4.2.0-1.201604200031
-      - Create Beryllium autorelease build 4.2.0-1.201604200031 RPM
+    changelog_date: "Wed Apr 20 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "2"
     version_patch: "0"
@@ -207,9 +211,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: 20160420.023809-294
     download_url: "https://nexus.opendaylight.org/service/local/repositories/opendaylight.snapshot/content/org/opendaylight/integration/distribution-karaf/0.4.2-SNAPSHOT/distribution-karaf-0.4.2-20160420.023809-294.tar.gz"
-    changelog: |
-      * Wed Apr 20 2016 Daniel Farrell <dfarrell@redhat.com> - 4.2.0-1.20160420.023809294
-      - Create Beryllium distribution build 4.2.0-1.20160420.023809294 RPM
+    changelog_date: "Wed Apr 20 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "2"
     version_patch: "0"
@@ -217,9 +221,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-SR2
     download_url: "https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.4.2-Beryllium-SR2/distribution-karaf-0.4.2-Beryllium-SR2.tar.gz"
-    changelog: |
-      * Wed May 11 2016 Daniel Farrell <dfarrell@redhat.com> - 4.2.0-1
-      - Create Beryllium SR2 RPM
+    changelog_date: "Wed May 11 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "3"
     version_patch: "0"
@@ -227,9 +231,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201605200033
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.3-beryllium-daily-v201605200033/distribution-karaf-0.4.3-beryllium-daily-v201605200033.tar.gz"
-    changelog: |
-      * Sat May 21 2016 Daniel Farrell <dfarrell@redhat.com> - 4.3.0-1.201605200033
-      - Create Beryllium autorelease build 4.3.0-1.201605200033 RPM
+    changelog_date: "Sat May 21 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "3"
     version_patch: "0"
@@ -237,9 +241,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201605250031
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.3-beryllium-daily-v201605250031/distribution-karaf-0.4.3-beryllium-daily-v201605250031.tar.gz"
-    changelog: |
-      * Thu May 26 2016 Daniel Farrell <dfarrell@redhat.com> - 4.3.0-1.201605250031
-      - Create Beryllium autorelease build 4.3.0-1.201605250031 RPM
+    changelog_date: "Thu May 26 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "5"
     version_minor: "0"
     version_patch: "0"
@@ -247,9 +251,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: boron-daily-v201604260021
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.5.0-boron-daily-v201604260021/distribution-karaf-0.5.0-boron-daily-v201604260021.tar.gz"
-    changelog: |
-      * Tue May 31 2016 Daniel Farrell <dfarrell@redhat.com> - 5.0.0-1.201604260021
-      - Create Boron autorelease build 5.0.0-1.201604260021 RPM
+    changelog_date: "Tue May 31 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "5"
     version_minor: "0"
     version_patch: "0"
@@ -257,9 +261,9 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: boron-daily-v201606060053
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.5.0-boron-daily-v201606060053/distribution-karaf-0.5.0-boron-daily-v201606060053.tar.gz"
-    changelog: |
-      * Mon Jun 06 2016 Daniel Farrell <dfarrell@redhat.com> - 5.0.0-1.201606060053
-      - Create Boron autorelease build 5.0.0-1.201606060053 RPM
+    changelog_date: "Mon Jun 06 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
   - version_major: "4"
     version_minor: "3"
     version_patch: "0"
@@ -267,6 +271,6 @@ builds:
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201606060052
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.3-beryllium-daily-v201606060052/distribution-karaf-0.4.3-beryllium-daily-v201606060052.tar.gz"
-    changelog: |
-      * Mon Jun 06 2016 Daniel Farrell <dfarrell@redhat.com> - 4.3.0-1.201606060052
-      - Create Beryllium autorelease build 4.3.0-1.201606060052 RPM
+    changelog_date: "Mon Jun 06 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
