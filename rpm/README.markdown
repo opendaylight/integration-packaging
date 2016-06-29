@@ -107,6 +107,13 @@ Elemental codename for the ODL release, including SR if applicable.
 
 Examples include "Helium-SR4", "Lithium" and "Lithium-SR1".
 
+#### `download_url`
+
+The ODL RPM repackages the tarball build artifact produced by ODL's
+autorelease build, because building Java projects from source directly
+to RPMs is very difficult with current tooling. This is the URL to the
+tarball ODL build to repackage into an RPM.
+
 #### `changelog`
 
 Entry in the RPM .spec file's changelog for this RPM.

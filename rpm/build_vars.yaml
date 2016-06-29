@@ -15,6 +15,8 @@
 #   Version of ODL systemd unitfile to download and package in ODL RPM
 # codename:
 #   Elemental codename for the ODL release, including SR if applicable
+# download_url:
+#   URL to ODL tarball artifact to repackage into RPM
 # changelog:
 #   Entry in the RPM .spec file's changelog for this RPM
 
