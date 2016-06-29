@@ -99,9 +99,19 @@ if __name__ == "__main__":
     # Accept the version(s) of the build(s) to perform as args
     # TODO: More docs on ArgParser and argument
     parser = argparse.ArgumentParser()
-    parser.add_argument("-v", "--version", action="append",
+    existing_build_group = parser.add_argument_group("Existing builds")
+    existing_build_group.add_argument("-v", "--version", action="append",
                         metavar="major minor patch rpm", nargs="*",
                         help="RPM version(s) to build")
+    new_build_group = parser.add_argument_group("New build")
+    new_build_group.add_argument("-M", "--major",
+                        help="Major (element) version to build")
+    new_build_group.add_argument("-m", "--minor",
+                        help="Minor (SR) version to build")
+    new_build_group.add_argument("-p", "--patch",
+                        help="Patch version to build")
+    new_build_group.add_argument("-r", "--rpm",
+                        help="RPM version to build")
 
     # Print help if no arguments are given
     if len(sys.argv) == 1:
