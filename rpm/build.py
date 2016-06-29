@@ -36,9 +36,9 @@ specfile_template = Template("opendaylight-$version_major.$version_minor."
                              "$version_patch-$rpm_release.spec")
 unitfile_tb_template = Template("opendaylight-$sysd_commit.service.tar.gz")
 rpm_template = Template("opendaylight-$version_major.$version_minor."
-                        "$version_patch-$rpm_release.$rpm_disttag.noarch.rpm")
+                        "$version_patch-$rpm_release.el7.noarch.rpm")
 srpm_template = Template("opendaylight-$version_major.$version_minor."
-                         "$version_patch-$rpm_release.$rpm_disttag.src.rpm")
+                         "$version_patch-$rpm_release.el7.src.rpm")
 
 
 def build_rpm(build):

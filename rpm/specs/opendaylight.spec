@@ -8,7 +8,7 @@ Version:    {{ version_major }}.{{ version_minor }}.{{ version_patch }}
 #   unnecessary and unused in our case, but both the docs and the pros (apevec)
 #   agree that we should include it.
 # See: https://fedoraproject.org/wiki/Packaging:DistTag
-Release:    {{ rpm_release }}.{{ rpm_disttag }}
+Release:    {{ rpm_release }}.el7
 BuildArch:  noarch
 Summary:    OpenDaylight SDN Controller
 Group:      Applications/Communications

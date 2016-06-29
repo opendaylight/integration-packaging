@@ -9,9 +9,6 @@
 #   The OpenDaylight patch version of the release to build (unused pending CR)
 # rpm_release:
 #   RPM version for the given ODL major.minor.patch
-# rpm_disttag:
-#   Override build VM's disttag from .el7.centos to .el7 per expected norms
-#   See: https://bugs.centos.org/view.php?id=9098
 # java_version:
 #   Java versions supported by this ODL release
 # sysd_commit:
@@ -27,7 +24,6 @@ builds:
     version_minor: "4"
     version_patch: "0"
     rpm_release: "1"
-    rpm_disttag: el7
     java_version: "= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Helium-SR4
@@ -39,7 +35,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "2"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Lithium
@@ -51,7 +46,6 @@ builds:
     version_minor: "1"
     version_patch: "0"
     rpm_release: "1"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Lithium-SR1
@@ -63,7 +57,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Lithium-SR2
@@ -75,7 +68,6 @@ builds:
     version_minor: "3"
     version_patch: "0"
     rpm_release: "2"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Lithium-SR3
@@ -87,7 +79,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.201512150335"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Test-beryllium-v201512150335
@@ -99,7 +90,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "2.201601200134"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201601200134
@@ -111,7 +101,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc1"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-RC1
@@ -123,7 +112,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.201602020032"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201602020032
@@ -135,7 +123,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc2"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-RC2
@@ -147,7 +134,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc2.1"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: RC2.1
@@ -159,7 +145,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc2.2"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-RC2.2
@@ -171,7 +156,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc2.3"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-RC2.3
@@ -183,7 +167,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc3"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium
@@ -195,7 +178,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc3.1"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium
@@ -207,7 +189,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium
@@ -219,7 +200,6 @@ builds:
     version_minor: "4"
     version_patch: "0"
     rpm_release: "1"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Lithium-SR4
@@ -231,7 +211,6 @@ builds:
     version_minor: "1"
     version_patch: "0"
     rpm_release: "1"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-SR1
@@ -243,7 +222,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1.20160407.144137180"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: 20160407.144137-180
@@ -255,7 +233,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1.20160414.221815224"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: 20160414.221815-224
@@ -267,7 +244,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1.20160415.165450231"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: 20160415.165450-231
@@ -279,7 +255,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1.201604190031"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201604190031
@@ -291,7 +266,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1.201604200031"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201604200031
@@ -303,7 +277,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1.20160420.023809294"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: 20160420.023809-294
@@ -315,7 +288,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-SR2
@@ -327,7 +299,6 @@ builds:
     version_minor: "3"
     version_patch: "0"
     rpm_release: "1.201605200033"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201605200033
@@ -339,7 +310,6 @@ builds:
     version_minor: "3"
     version_patch: "0"
     rpm_release: "1.201605250031"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201605250031
@@ -351,7 +321,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.201604260021"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: boron-daily-v201604260021
@@ -363,7 +332,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.201606060053"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: boron-daily-v201606060053
@@ -375,7 +343,6 @@ builds:
     version_minor: "3"
     version_patch: "0"
     rpm_release: "1.201606060052"
-    rpm_disttag: el7
     java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201606060052

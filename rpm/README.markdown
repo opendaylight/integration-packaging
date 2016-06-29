@@ -85,18 +85,6 @@ In addition to OpenDaylight's version, RPMs themselves have versions. These
 are called "release versions". For a given OpenDaylight major.minor.patch
 version, there will be one or more major.minor.patch-rpm_release RPMs.
 
-#### `rpm_disttag`
-
-Override build VM's disttag from `.el7.centos` to `.el7` per [expected norms][11].
-
-By default, the disttag RPM macro is determined at RPM build time by the
-`rpmbuild` tool. For our CentOS 7 Vagrantfile, this results in a disttag of
-`.el7.centos`. However, especially since we generate noarch RPMs, there's no
-technical reason to use `.el7.centos` instead of the more common `.el7` disttag.
-Per [recommendations from upstream CentOS packagers][11], seemingly mostly to
-avoid confusion, we're overriding the default `.el7.centos` to `.el7` for all
-current builds.
-
 #### `java_version`
 
 Java versions supported by this ODL release.
