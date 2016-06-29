@@ -64,6 +64,6 @@ fi
 # Configure systemd unitfile user/group/mode
 %attr(0644,root,root) %{_unitdir}/%name.service
 
-
 %changelog
-{{ changelog }}
+* {{ changelog_date }} {{ changelog_name }} <{{ changelog_email }}> - {{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ rpm_release }}
+- Create {{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ rpm_release }} RPM
