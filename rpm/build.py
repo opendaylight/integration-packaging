@@ -102,8 +102,6 @@ if __name__ == "__main__":
     parser.add_argument("-v", "--version", action="append",
                         metavar="major minor patch rpm", nargs="*",
                         help="RPM version(s) to build")
-    parser.add_argument("-a", "--all", action="store_true",
-                        help="Build all RPMs")
 
     # Print help if no arguments are given
     if len(sys.argv) == 1:
@@ -115,9 +113,7 @@ if __name__ == "__main__":
 
     # Build list of RPM builds to perform
     builds = []
-    if args.all:
-        builds = build_vars["builds"]
-    else:
+    if args.version:
         # Build a list of requested versions as dicts of version components
         versions = []
         version_keys = ["version_major", "version_minor", "version_patch",

@@ -139,18 +139,16 @@ build worked as expected. They can be installed in the Vagrant build box or
 another sandbox, then inspected.
 
 The `build.py` helper script can build a set of SRPMs/RPMs based on provided
-version arguments or all defined builds.
+version arguments.
 
 ```
 [vagrant@localhost ~]$ /vagrant/build.py -h
 usage: build.py [-h] [-v [major minor patch rpm [major minor patch rpm ...]]]
-                [-a]
 
 optional arguments:
   -h, --help            show this help message and exit
   -v [major minor patch rpm [major minor patch rpm ...]], --version [major minor patch rpm [major minor patch rpm ...]]
                         RPM version(s) to build
-  -a, --all             Build all RPMs
 ```
 
 The `-v`/`--version` flag accepts a version number. Any build that matches
@@ -163,8 +161,6 @@ For example, `build.py -v 3` would execute the builds that match the regex
 To only build a single RPM definition, provide enough version info to make
 the match unique. For example, `build.py -v 2 4 0 1` could only match one
 definition (Helium SR4, 2.4.0-1).
-
-To build all RPMs defined in `build_vars.yaml`, use `build.py -a`.
 
 The `build.py` script uses the `cache/cache.py` script to handled downloading
 and caching the artifacts required for the requested builds. Artifacts are
