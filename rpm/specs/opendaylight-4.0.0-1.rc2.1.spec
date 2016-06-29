@@ -64,7 +64,6 @@ fi
 # Configure systemd unitfile user/group/mode
 %attr(0644,root,root) %{_unitdir}/%name.service
 
-
 %changelog
 * Wed Feb 9 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-1.rc2.1
-- Create Beryllium RC2.1 RPM
+- Create 4.0.0-1.rc2.1 RPM

@@ -64,7 +64,6 @@ fi
 # Configure systemd unitfile user/group/mode
 %attr(0644,root,root) %{_unitdir}/%name.service
 
-
 %changelog
 * Fri Mar 11 2016 Daniel Farrell <dfarrell@redhat.com> - 3.4.0-1
-- Create Lithium SR4 RPM
+- Create 3.4.0-1 RPM

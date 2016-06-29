@@ -64,7 +64,6 @@ fi
 # Configure systemd unitfile user/group/mode
 %attr(0644,root,root) %{_unitdir}/%name.service
 
-
 %changelog
 * Tue May 31 2016 Daniel Farrell <dfarrell@redhat.com> - 5.0.0-1.201604260021
-- Create Boron autorelease build 5.0.0-1.201604260021 RPM
+- Create 5.0.0-1.201604260021 RPM

@@ -64,7 +64,6 @@ fi
 # Configure systemd unitfile user/group/mode
 %attr(0644,root,root) %{_unitdir}/%name.service
 
-
 %changelog
 * Wed Jan 22 2016 Daniel Farrell <dfarrell@redhat.com> - 4.0.0-2.201601200134
-- Make RPM upgrade properly
+- Create 4.0.0-2.201601200134 RPM

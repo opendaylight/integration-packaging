@@ -64,7 +64,6 @@ fi
 # Configure systemd unitfile user/group/mode
 %attr(0644,root,root) %{_unitdir}/%name.service
 
-
 %changelog
 * Thu May 26 2016 Daniel Farrell <dfarrell@redhat.com> - 4.3.0-1.201605250031
-- Create Beryllium autorelease build 4.3.0-1.201605250031 RPM
+- Create 4.3.0-1.201605250031 RPM

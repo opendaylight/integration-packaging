@@ -64,7 +64,6 @@ fi
 # Configure systemd unitfile user/group/mode
 %attr(0644,root,root) %{_unitdir}/%name.service
 
-
 %changelog
 * Mon Jan 25 2016 Daniel Farrell <dfarrell@redhat.com> - 3.3.0-2
-- Make Lithium SR3 RPM upgrade properly
+- Create 3.3.0-2 RPM
