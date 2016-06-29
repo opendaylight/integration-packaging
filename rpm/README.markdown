@@ -97,14 +97,6 @@ Per [recommendations from upstream CentOS packagers][11], seemingly mostly to
 avoid confusion, we're overriding the default `.el7.centos` to `.el7` for all
 current builds.
 
-#### `java_version`
-
-Java versions supported by this ODL release.
-
-Versions are specified as a range, in the format required by RPM spec files.
-
-For example: `>= 1:1.7.0`
-
 #### `sysd_commit`
 
 Version of ODL systemd unitfile to download and package in ODL RPM.
