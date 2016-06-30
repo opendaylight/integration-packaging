@@ -1,0 +1,71 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version.
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  # Configure VM RAM and CPU. Change this to meet your needs.
+  config.vm.provider :virtualbox do |virtualbox|
+    virtualbox.memory = 4096
+    virtualbox.cpus = 1
+  end
+
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.memory = 4096
+    libvirt.cpus = 1
+  end
+
+  # NFS is fragile, disable it and use rsync
+  config.nfs.functional = false
+
+  # Box that installs the L2switch Tutorial
+  config.vm.define "l2switch" do |l2switch|
+    # Build Vagrant box based on Fedora 23
+    l2switch.vm.box = "fedora/23-cloud-base"
+
+    # Forward ODL's web GUI (DLUX) port so it's accessible on the host machine
+    l2switch.vm.network "forwarded_port", guest: 8181, host: 8181
+
+    # Add ODL RPM repo config to correct location in box filesystem
+    # Repo configs are provided by upstream OpenDaylight Integration/Packaging
+    l2switch.vm.provision "shell", inline: "curl --silent -o /etc/yum.repos.d/opendaylight-42-release.repo \"https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=rpm/example_repo_configs/opendaylight-42-release.repo;hb=refs/heads/master\""
+
+    # Install ODL using the RPM repo config added above
+    l2switch.vm.provision "shell", inline: "dnf install -y opendaylight"
+
+    # Start ODL's service via systemd
+    l2switch.vm.provision "shell", inline: "systemctl start opendaylight"
+
+    # Modify bashrc to set JAVA path
+    l2switch.vm.provision "shell", inline: "echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> /etc/bashrc"
+
+    # Install git and sshpass
+    l2switch.vm.provision "shell", inline: "dnf install -y git sshpass"
+
+    # NB: Recent versions of OpenSSH, shipped with Fedora, don't support ssh-dss
+    # as an auth protocol. ODL seems offers ssh-dss by default. To SSH to the
+    # Karaf shell, tell SSH to accept ssh-dss or set this default.
+    #    ssh -p 8101 -oHostKeyAlgorithms=+ssh-dss karaf@localhost
+    l2switch.vm.provision "shell", inline: "echo 'HostKeyAlgorithms=+ssh-dss' >> /etc/ssh/ssh_config"
+
+    # Install ODL Karaf features required for DLUX and L2Switch
+    l2switch.vm.provision "shell", inline: "sshpass -p karaf ssh -tt -p 8101 -o StrictHostKeyChecking=no karaf@localhost feature:install odl-l2switch-switch-ui"
+
+    # Install Open vSwitch
+    l2switch.vm.provision "shell", inline: "dnf install -y openvswitch"
+
+    # Start Open vSwitch
+    l2switch.vm.provision "shell", inline: "sudo /usr/share/openvswitch/scripts/ovs-ctl restart"
+
+    # Install Mininet
+    l2switch.vm.provision "shell", inline: "git clone git://github.com/mininet/mininet"
+    l2switch.vm.provision "shell", inline: "mininet/util/install.sh -nf"
+
+    # TODO: To via inline shell provisioner, or use a path https://www.vagrantup.com/docs/provisioning/shell.html#path
+    l2switch.vm.provision "shell", inline: "sudo touch /home/vagrant/mininet.sh"
+    l2switch.vm.provision "shell", inline: " sudo echo -e '#!/bin/bash\nsudo mn --mac --topo=single,3 --controller=remote,ip=127.0.0.1 --switch=ovsk' >> /home/vagrant/mininet.sh && chmod u+x mininet.sh"
+    l2switch.vm.provision "shell", inline: "sudo ./mininet.sh"
+  end
+end
