@@ -1,0 +1,147 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_2802803e",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-30T17:05:07Z",
+      "side": 1,
+      "message": "Vagrant has a convention with regard to the names of Vagrantfiles, for the tooling to work. Vagrant doesn\u0027t recognize this as a Vagrantfile, so all Vagrant commands ignore it. It needs to be called \"Vagrantfile\". To have both Ubuntu and Fedora boxes, use a multi-machine Vagrnatfile (the vagrant-opendaylight example you\u0027ve been following is an example).\n\nAlso, please make the path lower case, to follow convention in Int/Pack.",
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_48f9b44c",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-30T17:05:07Z",
+      "side": 1,
+      "message": "Please fix all these trailing spaces, extra newlines and broken indentation.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 1
+      },
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_e8e8887e",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-30T17:05:07Z",
+      "side": 1,
+      "message": "This is the begining of a code block, the things inside this need to be indented another level (level\u003d2 spaces in Vagrantfiles)",
+      "range": {
+        "startLine": 27,
+        "startChar": 35,
+        "endLine": 27,
+        "endChar": 37
+      },
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_2889e0ca",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-30T17:05:07Z",
+      "side": 1,
+      "message": "See Fedora/Ansible install comment below, better to let this be handled by a package or config mgmt tool",
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_c8a4a459",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-30T17:05:07Z",
+      "side": 1,
+      "message": "ODL complains about this, but I don\u0027t think it actually causes problems to not have it. To simplify the view to the user, may want to remove, but not a big deal imho.",
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_e89fe801",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-30T17:05:07Z",
+      "side": 1,
+      "message": "Not a big fan of you all having to do this logic here. There are other aspects of the install you\u0027re missing, like file permissions, users, systemd to manage ODL service, etc. Maybe best to focus on Fedora initially, so you can use the RPM? Or for Ubuntu, if you want to keep it, maybe use the Ansible role to install ODL. Again, very clear examples in vagrant-opendaylight.",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 103
+      },
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_889aac12",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-30T17:05:07Z",
+      "side": 1,
+      "message": "Why are you doing this?",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 109
+      },
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
