@@ -85,14 +85,6 @@ In addition to OpenDaylight's version, RPMs themselves have versions. These
 are called "release versions". For a given OpenDaylight major.minor.patch
 version, there will be one or more major.minor.patch-rpm_release RPMs.
 
-#### `java_version`
-
-Java versions supported by this ODL release.
-
-Versions are specified as a range, in the format required by RPM spec files.
-
-For example: `>= 1:1.7.0`
-
 #### `sysd_commit`
 
 Version of ODL systemd unitfile to download and package in ODL RPM.

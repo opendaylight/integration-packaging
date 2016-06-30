@@ -18,7 +18,7 @@ Source0:    https://nexus.opendaylight.org/content/groups/public/org/opendayligh
 Source1:    %name-{{ sysd_commit }}.service.tar.gz
 Buildroot:  /tmp
 # Required for ODL at run time
-Requires:   java {{ java_version }}
+Requires:   java >= 1:1.7.0
 # Required for creating odl group
 Requires(pre): shadow-utils
 # Required for configuring systemd

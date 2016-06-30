@@ -9,8 +9,6 @@
 #   The OpenDaylight patch version of the release to build (unused pending CR)
 # rpm_release:
 #   RPM version for the given ODL major.minor.patch
-# java_version:
-#   Java versions supported by this ODL release
 # sysd_commit:
 #   Version of ODL systemd unitfile to download and package in ODL RPM
 # codename:
@@ -26,7 +24,6 @@ builds:
     version_minor: "3"
     version_patch: "0"
     rpm_release: "2"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Lithium-SR3
     download_url: "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/0.3.3-Lithium-SR3/distribution-karaf-0.3.3-Lithium-SR3.tar.gz"
@@ -37,7 +34,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "2.201601200134"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201601200134
     download_url: "https://nexus.opendaylight.org/content/repositories/autorelease-1025/org/opendaylight/integration/distribution-karaf/0.4.0-beryllium-daily-v201601200134/distribution-karaf-0.4.0-beryllium-daily-v201601200134.tar.gz"
@@ -48,7 +44,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc1"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-RC1
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium-RC1/distribution-karaf-0.4.0-Beryllium-RC1.tar.gz"
@@ -59,7 +54,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.201602020032"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201602020032
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-beryllium-daily-v201602020032/distribution-karaf-0.4.0-beryllium-daily-v201602020032.tar.gz"
@@ -70,7 +64,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc2"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-RC2
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium-RC2/distribution-karaf-0.4.0-Beryllium-RC2.tar.gz"
@@ -81,7 +74,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc2.1"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: RC2.1
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-RC2.1/distribution-karaf-0.4.0-RC2.1.tar.gz"
@@ -92,7 +84,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc2.2"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-RC2.2
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium-RC2.2/distribution-karaf-0.4.0-Beryllium-RC2.2.tar.gz"
@@ -103,7 +94,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc2.3"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-RC2.3
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium-RC2.3/distribution-karaf-0.4.0-Beryllium-RC2.3.tar.gz"
@@ -114,7 +104,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc3"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium
     download_url: "https://nexus.opendaylight.org/content/repositories/autorelease-1075/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium/distribution-karaf-0.4.0-Beryllium.tar.gz"
@@ -125,7 +114,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.rc3.1"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium
     download_url: "https://nexus.opendaylight.org/content/repositories/autorelease-1079/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium/distribution-karaf-0.4.0-Beryllium.tar.gz"
@@ -136,7 +124,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium
     download_url: "https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/0.4.0-Beryllium/distribution-karaf-0.4.0-Beryllium.tar.gz"
@@ -147,7 +134,6 @@ builds:
     version_minor: "4"
     version_patch: "0"
     rpm_release: "1"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Lithium-SR4
     download_url: "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/0.3.4-Lithium-SR4/distribution-karaf-0.3.4-Lithium-SR4.tar.gz"
@@ -158,7 +144,6 @@ builds:
     version_minor: "1"
     version_patch: "0"
     rpm_release: "1"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-SR1
     download_url: "https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.4.1-Beryllium-SR1/distribution-karaf-0.4.1-Beryllium-SR1.tar.gz"
@@ -169,7 +154,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1.20160407.144137180"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: 20160407.144137-180
     download_url: "https://nexus.opendaylight.org/service/local/repositories/opendaylight.snapshot/content/org/opendaylight/integration/distribution-karaf/0.4.2-SNAPSHOT/distribution-karaf-0.4.2-20160407.144137-180.tar.gz"
@@ -180,7 +164,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1.20160414.221815224"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: 20160414.221815-224
     download_url: "https://nexus.opendaylight.org/service/local/repositories/opendaylight.snapshot/content/org/opendaylight/integration/distribution-karaf/0.4.2-SNAPSHOT/distribution-karaf-0.4.2-20160414.221815-224.tar.gz"
@@ -191,7 +174,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1.20160415.165450231"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: 20160415.165450-231
     download_url: "https://nexus.opendaylight.org/service/local/repositories/opendaylight.snapshot/content/org/opendaylight/integration/distribution-karaf/0.4.2-SNAPSHOT/distribution-karaf-0.4.2-20160415.165450-231.tar.gz"
@@ -202,7 +184,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1.201604190031"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201604190031
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.2-beryllium-daily-v201604190031/distribution-karaf-0.4.2-beryllium-daily-v201604190031.tar.gz"
@@ -213,7 +194,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1.201604200031"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201604200031
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.2-beryllium-daily-v201604200031/distribution-karaf-0.4.2-beryllium-daily-v201604200031.tar.gz"
@@ -224,7 +204,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1.20160420.023809294"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: 20160420.023809-294
     download_url: "https://nexus.opendaylight.org/service/local/repositories/opendaylight.snapshot/content/org/opendaylight/integration/distribution-karaf/0.4.2-SNAPSHOT/distribution-karaf-0.4.2-20160420.023809-294.tar.gz"
@@ -235,7 +214,6 @@ builds:
     version_minor: "2"
     version_patch: "0"
     rpm_release: "1"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: Beryllium-SR2
     download_url: "https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.4.2-Beryllium-SR2/distribution-karaf-0.4.2-Beryllium-SR2.tar.gz"
@@ -246,7 +224,6 @@ builds:
     version_minor: "3"
     version_patch: "0"
     rpm_release: "1.201605200033"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201605200033
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.3-beryllium-daily-v201605200033/distribution-karaf-0.4.3-beryllium-daily-v201605200033.tar.gz"
@@ -257,7 +234,6 @@ builds:
     version_minor: "3"
     version_patch: "0"
     rpm_release: "1.201605250031"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201605250031
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.3-beryllium-daily-v201605250031/distribution-karaf-0.4.3-beryllium-daily-v201605250031.tar.gz"
@@ -268,7 +244,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.201604260021"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: boron-daily-v201604260021
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.5.0-boron-daily-v201604260021/distribution-karaf-0.5.0-boron-daily-v201604260021.tar.gz"
@@ -279,7 +254,6 @@ builds:
     version_minor: "0"
     version_patch: "0"
     rpm_release: "1.201606060053"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: boron-daily-v201606060053
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.5.0-boron-daily-v201606060053/distribution-karaf-0.5.0-boron-daily-v201606060053.tar.gz"
@@ -290,7 +264,6 @@ builds:
     version_minor: "3"
     version_patch: "0"
     rpm_release: "1.201606060052"
-    java_version: ">= 1:1.7.0"
     sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
     codename: beryllium-daily-v201606060052
     download_url: "https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.3-beryllium-daily-v201606060052/distribution-karaf-0.4.3-beryllium-daily-v201606060052.tar.gz"
