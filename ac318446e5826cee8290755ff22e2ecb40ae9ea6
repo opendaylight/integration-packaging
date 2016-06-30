@@ -206,6 +206,54 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_41a7cf4f",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-06-30T23:48:41Z",
+      "side": 1,
+      "message": "I have sent the Fedora Vagrantfile. I am working on the multi-machine Vagrantfile. Its working fine using wget for Ubuntu. I am trying to make it work using Ansible role.",
+      "parentUuid": "9a561d44_ab2cca4b",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 103
+      },
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_412cefab",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-06-30T23:48:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_01e4b70b",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 103
+      },
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_889aac12",
         "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
         "patchSetId": 1
