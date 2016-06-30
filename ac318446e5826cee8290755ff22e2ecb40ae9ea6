@@ -99,6 +99,24 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_4bc52e5a",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-06-30T20:49:57Z",
+      "side": 1,
+      "message": "./bin/karaf is not able to function on my system if the export is not implemented. I need to ssh into karaf as an alternative. Should I go ahead and remove this completely?",
+      "parentUuid": "9a561d44_c8a4a459",
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_e89fe801",
         "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
         "patchSetId": 1
@@ -122,6 +140,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_ab2cca4b",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-06-30T20:49:57Z",
+      "side": 1,
+      "message": "This makes sense. I will build a Fedora RPM box initially. If you want I can create a multi-machine Vagrantfile.",
+      "parentUuid": "9a561d44_e89fe801",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 103
+      },
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_889aac12",
         "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
         "patchSetId": 1
@@ -133,6 +175,30 @@
       "writtenOn": "2016-06-30T17:05:07Z",
       "side": 1,
       "message": "Why are you doing this?",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 109
+      },
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_8bbf46d0",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-06-30T20:49:57Z",
+      "side": 1,
+      "message": "Don\u0027t we need to install the ODL l2switch?",
+      "parentUuid": "9a561d44_889aac12",
       "range": {
         "startLine": 49,
         "startChar": 0,
