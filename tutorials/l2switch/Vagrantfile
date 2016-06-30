@@ -1,0 +1,63 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version.
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  # Configure VM RAM and CPU. Change this to meet your needs.
+  config.vm.provider :virtualbox do |virtualbox|
+    virtualbox.memory = 4096
+    virtualbox.cpus = 1
+  end
+
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.memory = 4096
+    libvirt.cpus = 1
+  end
+
+  # NFS is fragile, disable it and use rsync
+  config.nfs.functional = false
+  # config.synced_folder.functional = false
+  config.vm.synced_folder "./rsync", "/vagrant", type: "rsync", rsync__exclude: ".git/"
+
+  # Box that installs ODL directly from an RPM on Fedora 23
+  config.vm.define "f23_rpm_be_sr2" do |f23_rpm_be_sr2|
+    # Build Vagrant box based on Fedora 23
+    f23_rpm_be_sr2.vm.box = "fedora/23-cloud-base"
+
+    # Defining a forwarded port
+    f23_rpm_be_sr2.vm.network "forwarded_port", guest: 8181, host: 8181
+
+    # Add ODL RPM repo config to correct location in box filesystem
+    # Repo configs are provided by upstream OpenDaylight Integration/Packaging
+    f23_rpm_be_sr2.vm.provision "shell", inline: "curl --silent -o /etc/yum.repos.d/opendaylight-42-release.repo \"https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=rpm/example_repo_configs/opendaylight-42-release.repo;hb=refs/heads/master\""
+
+    # Install ODL using the RPM repo config added above
+    f23_rpm_be_sr2.vm.provision "shell", inline: "dnf install -y opendaylight"
+
+    # Start ODL's service via systemd
+    f23_rpm_be_sr2.vm.provision "shell", inline: "systemctl start opendaylight"
+
+    # Modifying bashrc
+    f23_rpm_be_sr2.vm.provision "shell", inline: "echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> /etc/bashrc"
+
+    # Enable SSH to log into karaf
+    f23_rpm_be_sr2.vm.provision "shell", inline: "echo 'HostKeyAlgorithms=+ssh-dss' >> /etc/ssh/ssh_config"
+
+    # Install L2Switch
+    f23_rpm_be_sr2.vm.provision "shell", inline: "dnf install -y git"
+
+    # Install Open vSwitch
+    f23_rpm_be_sr2.vm.provision "shell", inline:  "dnf install -q -y openvswitch"
+
+    # Start Open vSwitch
+    f23_rpm_be_sr2.vm.provision "shell", inline: "sudo /usr/share/openvswitch/scripts/ovs-ctl start"
+
+    # Install mininet
+    f23_rpm_be_sr2.vm.provision "shell", inline: "sudo git clone git://github.com/mininet/mininet"
+    f23_rpm_be_sr2.vm.provision "shell", inline: "mininet/util/install.sh -nf"
+  end
+
+end
