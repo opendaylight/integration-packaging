@@ -117,6 +117,24 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_c1e2bf02",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-30T23:05:05Z",
+      "side": 1,
+      "message": "Ah, I guess that\u0027s why I don\u0027t need/use it, I always ssh in. ODL will be running as a service in the box already, so people should not use /bin/karaf (they should ssh in). But maybe it\u0027s better to leave it, if people are playing around they may run into this.",
+      "parentUuid": "9a561d44_4bc52e5a",
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_e89fe801",
         "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
         "patchSetId": 1
@@ -164,6 +182,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_01e4b70b",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-30T23:05:05Z",
+      "side": 1,
+      "message": "Yes, +1 to multi-machine",
+      "parentUuid": "9a561d44_ab2cca4b",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 103
+      },
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_889aac12",
         "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
         "patchSetId": 1
@@ -199,6 +241,30 @@
       "side": 1,
       "message": "Don\u0027t we need to install the ODL l2switch?",
       "parentUuid": "9a561d44_889aac12",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 109
+      },
+      "revId": "ac318446e5826cee8290755ff22e2ecb40ae9ea6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_41eeafed",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-06-30T23:05:05Z",
+      "side": 1,
+      "message": "You need to load the L2Switch Karaf feature, but you don\u0027t need the codebase. The codebase was used when building the ODL distro you\u0027re installing, you\u0027re loading the compiled version of it with feature:install",
+      "parentUuid": "9a561d44_8bbf46d0",
       "range": {
         "startLine": 49,
         "startChar": 0,
