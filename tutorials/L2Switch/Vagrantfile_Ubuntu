@@ -1,0 +1,65 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version.
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  # Configure VM RAM and CPU. Change this to meet your needs.
+  config.vm.provider :virtualbox do |virtualbox|
+    virtualbox.memory = 4096
+    virtualbox.cpus = 1
+  end
+
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.memory = 4096
+    libvirt.cpus = 1
+  end
+
+  # NFS is fragile, disable it and use rsync
+  config.nfs.functional = false
+  config.vm.synced_folder "./rsync", "/vagrant", type: "rsync",
+  rsync__exclude: ".git/"
+ 
+
+  #Box that installs Ubuntu
+  config.vm.define "ubuntu_be_sr2" do |ubuntu_be_sr2|
+
+  # Build Vagrant box based on Ubuntu
+  ubuntu_be_sr2.vm.box = "ubuntu/trusty64"
+  
+  # Defining a forwarded port
+  ubuntu_be_sr2.vm.network "forwarded_port", guest: 8181, host: 8181
+
+  # Installing JRE
+  ubuntu_be_sr2.vm.provision "shell", inline: "apt-get install -y default-jre-headless"
+
+   # Modifying bashrc
+   ubuntu_be_sr2.vm.provision "shell", inline: "echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> ~/.bashrc"
+   
+   # Installing ODL through the pre-built tar file
+   ubuntu_be_sr2.vm.provision "shell", inline: "apt-get -y install wget"
+
+   ubuntu_be_sr2.vm.provision "shell", inline: "wget https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/0.4.2-Beryllium-SR2/distribution-karaf-0.4.2-Beryllium-SR2.tar.gz" 
+
+   ubuntu_be_sr2.vm.provision "shell", inline: "tar -xvf distribution-karaf-0.4.2-Beryllium-SR2.tar.gz"
+
+ 
+  # Install L2Switch
+  ubuntu_be_sr2.vm.provision "shell", inline: "apt-get install -y git" 
+  ubuntu_be_sr2.vm.provision "shell", inline:  "git clone https://git.opendaylight.org/gerrit/p/l2switch.git"
+
+   
+  # Install Open vSwitch
+  ubuntu_be_sr2.vm.provision "shell", inline:  "apt-get install -y openvswitch-switch"
+    
+  # Start Open vSwitch  via systemd
+  ubuntu_be_sr2.vm.provision "shell", inline: "sudo /usr/share/openvswitch/scripts/ovs-ctl start"
+    
+  # Install mininet
+  ubuntu_be_sr2.vm.provision "shell", inline: "sudo git clone git://github.com/mininet/mininet"
+    ubuntu_be_sr2.vm.provision "shell", inline: "mininet/util/install.sh -nf"
+    end
+
+end
