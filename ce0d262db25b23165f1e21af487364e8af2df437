@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_07b682d9",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-01T22:33:02Z",
+      "side": 1,
+      "message": "You\u0027re curling down 40-release repo but calling it 42-release, which is causing you to install Beryllium 4.0.0 instead of Beryllium SR2 4.2.0 as you claim.",
+      "range": {
+        "startLine": 35,
+        "startChar": 240,
+        "endLine": 35,
+        "endChar": 241
+      },
+      "revId": "ce0d262db25b23165f1e21af487364e8af2df437",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_67cade50",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-01T22:33:02Z",
+      "side": 1,
+      "message": "Do you need this?",
+      "revId": "ce0d262db25b23165f1e21af487364e8af2df437",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
