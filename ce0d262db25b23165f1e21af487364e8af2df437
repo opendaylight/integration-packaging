@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_e7bc2e6f",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-02T00:25:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_07b682d9",
+      "range": {
+        "startLine": 35,
+        "startChar": 240,
+        "endLine": 35,
+        "endChar": 241
+      },
+      "revId": "ce0d262db25b23165f1e21af487364e8af2df437",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_67cade50",
         "filename": "tutorials/l2switch/Vagrantfile",
         "patchSetId": 2
@@ -36,6 +60,24 @@
       "writtenOn": "2016-07-01T22:33:02Z",
       "side": 1,
       "message": "Do you need this?",
+      "revId": "ce0d262db25b23165f1e21af487364e8af2df437",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_c7c12ae6",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-02T00:25:57Z",
+      "side": 1,
+      "message": "This is needed for installing Mininet later. \nI missed the comment for extra spaces and submitted a patch with all other fixes. I will upload a new patch set with no extra spaces.",
+      "parentUuid": "9a561d44_67cade50",
       "revId": "ce0d262db25b23165f1e21af487364e8af2df437",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
