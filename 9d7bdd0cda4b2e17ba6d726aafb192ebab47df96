@@ -1,0 +1,210 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_22739816",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T01:44:13Z",
+      "side": 1,
+      "message": "Follow these docs for commit messages please http://chris.beams.io/posts/git-commit/",
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_62647049",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T01:44:13Z",
+      "side": 1,
+      "message": "and Ubuntu",
+      "range": {
+        "startLine": 7,
+        "startChar": 36,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_8261c43b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T01:44:13Z",
+      "side": 1,
+      "message": "The commit message should be about the change as a hole, people looking at the log don\u0027t care about the feedback on the Gerrit, and if they do they can look here. Also, git thinks this is all one line, need a blank line, see docs above",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 42
+      },
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_c25bbc85",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T01:44:13Z",
+      "side": 1,
+      "message": "This still needs to be combined into a single multi-machine Vagrantfile (or removed if you just want to stick with Fedora as commit message currently indicates). Also, you\u0027re creating two different dirs, `l2switch` and `L2Switch`. Use all lower case one only",
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_a287a8d6",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T01:44:13Z",
+      "side": 1,
+      "message": "Need a space",
+      "range": {
+        "startLine": 26,
+        "startChar": 3,
+        "endLine": 26,
+        "endChar": 4
+      },
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_627d90e7",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T01:44:13Z",
+      "side": 1,
+      "message": "This is all indented an extra space",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 103
+      },
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_026e542f",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 5
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T01:44:13Z",
+      "side": 1,
+      "message": "Still lots of trailing spaces, no red marks in the Gerrit diff please",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 1
+      },
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_e2688023",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T01:44:13Z",
+      "side": 1,
+      "message": "You don\u0027t need this, as I said on the other Vagrantfile",
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_42784cf2",
+        "filename": "tutorials/L2Switch/Vagrantfile_Ubuntu",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T01:44:13Z",
+      "side": 1,
+      "message": "More broken indentation, audit and fix everywhere yourself please",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 63,
+        "endChar": 7
+      },
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_a25e8874",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T01:44:13Z",
+      "side": 1,
+      "message": "I\u0027d remove this newline",
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
