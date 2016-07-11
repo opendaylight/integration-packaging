@@ -1,0 +1,471 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_a2ba086c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Follow these docs for commit messages please http://chris.beams.io/posts/git-commit/\n\nAnd remove all the extra/repeated stuff, of course",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_82c8a423",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "I\u0027ve never heard this. Is it really common? Since you\u0027re not using \"VDE\" frequently, I\u0027d maybe drop if for elegance/simplicity",
+      "range": {
+        "startLine": 4,
+        "startChar": 126,
+        "endLine": 4,
+        "endChar": 134
+      },
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_224a78ac",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Please wrap lines. I suggest \u003c80 chars or \u003c100 chars.",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_c2d29cd1",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Need to think about the balance between being explicit/complete and being overly verbose/confusing/wasteful of time.",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_62cbd01e",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "This will not work unless you have the rpmfusion-free repo enabled. Across the board, make sure the docs work for people with new/unknown envs. I typically install VBox directly from the RPMs they provide, but maybe the one packaged for Fedora is okay (it\u0027s a few patch versions behind at the moment). You\u0027ll also, at least, need to start VBox\u0027s systemd service. Also, please format this (and other commands) as code.",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_a2d5e8ba",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "idk if this works, but I suspect you at least need to start its service",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_02dc94e3",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Does this work? I typically install vagrant manually from the RPMs they provide. I don\u0027t think it\u0027s in a repo?",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_e2d6c0c2",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Again, think about balance of verbose. Is this really helpful or extra/confusing info?",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_42e68cb5",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "There could still be tons of broken things",
+      "range": {
+        "startLine": 31,
+        "startChar": 117,
+        "endLine": 31,
+        "endChar": 174
+      },
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_62f2b070",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "This entire section is totally wrong, they need to use the Vagrantfiles you all created, not a new one",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_c2e9fc81",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "You should do this for them in the Vagrantfile, they should be able to clone your tut, cd to the right dir, `vagrant up` and connect to GUI",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_a2ecc890",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Remove all trailing spaces",
+      "range": {
+        "startLine": 76,
+        "startChar": 15,
+        "endLine": 76,
+        "endChar": 17
+      },
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_e2fd203d",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Maybe give an estimate?",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_028ad4be",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "I like the `#`, `##`, ... way of doing H1, H2, ... but up to you I guess",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_42fdec39",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Extra",
+      "range": {
+        "startLine": 84,
+        "startChar": 208,
+        "endLine": 84,
+        "endChar": 209
+      },
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_22f8b848",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Is this a section? If so, markdown it as one",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_e28400b3",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "More extra spaces, audit elsewhere yourself please",
+      "range": {
+        "startLine": 88,
+        "startChar": 71,
+        "endLine": 88,
+        "endChar": 72
+      },
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_4294cce1",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Not sure this is needed in a fresh env, again, make things as easy for user as possible",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_8296e4ee",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Same as l86 feedback",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_6299101f",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Maybe it\u0027d be better to go ahead and create the topo in the Vagrantfile? Again, want as little done by user as possible, just want them to get hands-on work with working demo ASAP",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_82bd446b",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Good to explain these, but maybe they could be formatted a bit better",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_228f18ce",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "?",
+      "range": {
+        "startLine": 101,
+        "startChar": 20,
+        "endLine": 101,
+        "endChar": 41
+      },
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_a2a3284e",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Not sure what this adds",
+      "range": {
+        "startLine": 110,
+        "startChar": 167,
+        "endLine": 110,
+        "endChar": 290
+      },
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_62c0f0e0",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "Yeah, I\u0027d do this for the user in the Vagrantfile. You can doc what it does here",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_c2b73c85",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-11T02:13:47Z",
+      "side": 1,
+      "message": "This doesn\u0027t look like a valid command",
+      "revId": "003f1d43e91a8e28cee6a6631428dbddbb8bc8c1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
