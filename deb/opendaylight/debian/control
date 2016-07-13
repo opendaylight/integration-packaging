@@ -3,7 +3,7 @@ Build-Depends: debhelper (>= 9), wget, ca-certificates, dh-systemd
 Maintainer: Akshita Jha <zenith158@gmail.com>
 
 Package: opendaylight
-Depends: ${misc:Depends}, adduser
+Depends: ${misc:Depends}, adduser, default-jre-headless | java7-runtime-headless, java7-runtime-headless
 Architecture: any
 Description: OpenDaylight SDN controller
 
