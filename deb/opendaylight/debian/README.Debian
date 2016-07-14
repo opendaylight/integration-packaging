@@ -1,7 +1,9 @@
 
-To run the installed karaf container, use:
+To start OpenDaylight via systemd, use:
+  $sudo systemctl start opendaylight
 
-	$ sudo karaf
-		or
-	$ sudo /opt/opendaylight/bin/karaf
+To uninstall OpenDaylight, use:
+  $sudo apt-get remove opendaylight
 
+To uninstall OpenDaylight, while deleting user data and configuration, use:
+  $sudo apt-get purge opendaylight
