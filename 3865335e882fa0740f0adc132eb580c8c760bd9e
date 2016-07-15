@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_70137fb8",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:43:07Z",
+      "side": 1,
+      "message": "Do you need root?",
+      "range": {
+        "startLine": 53,
+        "startChar": 50,
+        "endLine": 53,
+        "endChar": 54
+      },
+      "revId": "3865335e882fa0740f0adc132eb580c8c760bd9e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_50163ba8",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:43:07Z",
+      "side": 1,
+      "message": "I\u0027d maybe let the output happen, to let users see anything that goes wrong more easily, but nbd",
+      "range": {
+        "startLine": 56,
+        "startChar": 63,
+        "endLine": 56,
+        "endChar": 65
+      },
+      "revId": "3865335e882fa0740f0adc132eb580c8c760bd9e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_b00d1793",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:43:07Z",
+      "side": 1,
+      "message": "root?",
+      "range": {
+        "startLine": 62,
+        "startChar": 50,
+        "endLine": 62,
+        "endChar": 54
+      },
+      "revId": "3865335e882fa0740f0adc132eb580c8c760bd9e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
