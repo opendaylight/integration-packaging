@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_b0107702",
+        "filename": "rpm/specs/opendaylight-4.3.0-1.1345.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-07-15T00:19:25Z",
+      "side": 1,
+      "message": "this is the line where I didn\u0027t see autorelease so made the initial comment.  should this also have the autorel URL?",
+      "range": {
+        "startLine": 17,
+        "startChar": 1,
+        "endLine": 17,
+        "endChar": 178
+      },
+      "revId": "2fb357c843c467cd7be5b12345a3568c9d28f77f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
