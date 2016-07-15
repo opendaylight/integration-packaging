@@ -14,7 +14,7 @@ Summary:    OpenDaylight SDN Controller
 Group:      Applications/Communications
 License:    EPL-1.0
 URL:        http://www.opendaylight.org
-Source0:    https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/0.4.2-beryllium-daily-v201604200031/distribution-karaf-0.4.2-beryllium-daily-v201604200031.tar.gz
+Source0:    https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/0.4.2-beryllium-daily-v201604200031/distribution-karaf-0.4.2-beryllium-daily-v201604200031.tar.gz
 Source1:    %name-c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed.service.tar.gz
 Buildroot:  /tmp
 # Required for ODL at run time

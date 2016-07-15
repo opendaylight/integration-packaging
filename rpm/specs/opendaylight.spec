@@ -14,7 +14,7 @@ Summary:    OpenDaylight SDN Controller
 Group:      Applications/Communications
 License:    EPL-1.0
 URL:        http://www.opendaylight.org
-Source0:    https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/0.{{ version_major }}.{{ version_minor }}-{{ codename }}/distribution-karaf-0.{{ version_major }}.{{ version_minor }}-{{ codename }}.tar.gz
+Source0:    {{ download_url }}
 Source1:    %name-{{ sysd_commit }}.service.tar.gz
 Buildroot:  /tmp
 # Required for ODL at run time
