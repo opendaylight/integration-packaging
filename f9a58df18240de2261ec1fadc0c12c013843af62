@@ -1,0 +1,164 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_f0a30f9c",
+        "filename": "deb/opendaylight/debian/README.Debian",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:10:45Z",
+      "side": 1,
+      "message": "Likely should not be indented (I guess we should have caught this before, sorry)",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 4
+      },
+      "revId": "f9a58df18240de2261ec1fadc0c12c013843af62",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_b09a3761",
+        "filename": "deb/opendaylight/debian/README.Debian",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:10:45Z",
+      "side": 1,
+      "message": "When possible, please prefer spaces over hard tabs",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 1
+      },
+      "revId": "f9a58df18240de2261ec1fadc0c12c013843af62",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_909d735c",
+        "filename": "deb/opendaylight/debian/README.Debian",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:10:45Z",
+      "side": 1,
+      "message": "Trailing tab, please remove",
+      "range": {
+        "startLine": 10,
+        "startChar": 75,
+        "endLine": 10,
+        "endChar": 76
+      },
+      "revId": "f9a58df18240de2261ec1fadc0c12c013843af62",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_5093db4e",
+        "filename": "deb/opendaylight/debian/opendaylight.postrm",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:10:45Z",
+      "side": 1,
+      "message": "I typically recommend `#!/usr/bin/env sh`, but nbd",
+      "revId": "f9a58df18240de2261ec1fadc0c12c013843af62",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_70909f43",
+        "filename": "deb/opendaylight/debian/opendaylight.postrm",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:10:45Z",
+      "side": 1,
+      "message": "We don\u0027t need to take any action, rm anything?",
+      "revId": "f9a58df18240de2261ec1fadc0c12c013843af62",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_10720349",
+        "filename": "deb/opendaylight/debian/opendaylight.postrm",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:10:45Z",
+      "side": 1,
+      "message": "Would this cause `apt-get upgrade` to rm ODL?",
+      "range": {
+        "startLine": 9,
+        "startChar": 8,
+        "endLine": 9,
+        "endChar": 15
+      },
+      "revId": "f9a58df18240de2261ec1fadc0c12c013843af62",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_3077473c",
+        "filename": "deb/opendaylight/debian/opendaylight.postrm",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:10:45Z",
+      "side": 1,
+      "message": "Do we need to remove systemd unitfile as well?",
+      "revId": "f9a58df18240de2261ec1fadc0c12c013843af62",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_d077eb39",
+        "filename": "deb/opendaylight/debian/opendaylight.postrm",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:10:45Z",
+      "side": 1,
+      "message": "Does exit 0 (success) make sense for this error-like condition? Piping to stderr and exiting success smells wrong, but I\u0027m not an expert in conventions for these.",
+      "revId": "f9a58df18240de2261ec1fadc0c12c013843af62",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
