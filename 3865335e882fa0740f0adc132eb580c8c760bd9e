@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_50f2bb6f",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-15T03:09:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_70137fb8",
+      "range": {
+        "startLine": 53,
+        "startChar": 50,
+        "endLine": 53,
+        "endChar": 54
+      },
+      "revId": "3865335e882fa0740f0adc132eb580c8c760bd9e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_50163ba8",
         "filename": "tutorials/l2switch/Vagrantfile",
         "patchSetId": 7
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_b0e99782",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-15T03:09:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_50163ba8",
+      "range": {
+        "startLine": 56,
+        "startChar": 63,
+        "endLine": 56,
+        "endChar": 65
+      },
+      "revId": "3865335e882fa0740f0adc132eb580c8c760bd9e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_b00d1793",
         "filename": "tutorials/l2switch/Vagrantfile",
         "patchSetId": 7
@@ -59,6 +107,30 @@
       "writtenOn": "2016-07-15T02:43:07Z",
       "side": 1,
       "message": "root?",
+      "range": {
+        "startLine": 62,
+        "startChar": 50,
+        "endLine": 62,
+        "endChar": 54
+      },
+      "revId": "3865335e882fa0740f0adc132eb580c8c760bd9e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_90ec5391",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-15T03:09:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_b00d1793",
       "range": {
         "startLine": 62,
         "startChar": 50,
