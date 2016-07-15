@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_d9b1ebe2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-15T03:09:38Z",
+      "side": 1,
+      "message": "Did not include Ubuntu in the commit message becsuse I have not created a multi-machine Vagrantfile yet. Will include the same if multi-machine file gets finalized.",
+      "parentUuid": "9a561d44_22739816",
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_8261c43b",
         "filename": "/COMMIT_MSG",
         "patchSetId": 5
@@ -53,6 +71,30 @@
       "writtenOn": "2016-07-11T01:44:13Z",
       "side": 1,
       "message": "The commit message should be about the change as a hole, people looking at the log don\u0027t care about the feedback on the Gerrit, and if they do they can look here. Also, git thinks this is all one line, need a blank line, see docs above",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 42
+      },
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_79089f91",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-15T03:09:38Z",
+      "side": 1,
+      "message": "Did not include the additional explanatory lines in the new patch set. After reading the document that you sent, did not find these lines necessary for this set as I am only editing the commit message.",
+      "parentUuid": "9a561d44_8261c43b",
       "range": {
         "startLine": 8,
         "startChar": 0,
@@ -220,6 +262,24 @@
       "writtenOn": "2016-07-11T01:44:13Z",
       "side": 1,
       "message": "I\u0027d remove this newline",
+      "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_99901345",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-15T03:09:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a561d44_a25e8874",
       "revId": "9d7bdd0cda4b2e17ba6d726aafb192ebab47df96",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
