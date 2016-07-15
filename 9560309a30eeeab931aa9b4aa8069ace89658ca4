@@ -1,0 +1,228 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_b0ffd766",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "HTML? Please follow https://guides.github.com/features/mastering-markdown/ or https://daringfireball.net/projects/markdown/syntax markdown syntax",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 12
+      },
+      "revId": "9560309a30eeeab931aa9b4aa8069ace89658ca4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_70053f79",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "They could use (and many perfer) LibVirt",
+      "range": {
+        "startLine": 6,
+        "startChar": 41,
+        "endLine": 6,
+        "endChar": 51
+      },
+      "revId": "9560309a30eeeab931aa9b4aa8069ace89658ca4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_f0f82f7e",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "Extracting links to the bottom makes reading the docs in a vim-like editor easier, and allows you to do alt-text https://git.opendaylight.org/gerrit/gitweb?p\u003dintegration/packaging.git;a\u003dblob;f\u003drpm/README.markdown;h\u003de0b6a1eb7884e322c005d992465b48312d8a5f43;hb\u003drefs/heads/master#l418",
+      "range": {
+        "startLine": 6,
+        "startChar": 52,
+        "endLine": 6,
+        "endChar": 80
+      },
+      "revId": "9560309a30eeeab931aa9b4aa8069ace89658ca4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_d0f36b9d",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "Not a proper noun",
+      "range": {
+        "startLine": 9,
+        "startChar": 65,
+        "endLine": 9,
+        "endChar": 66
+      },
+      "revId": "9560309a30eeeab931aa9b4aa8069ace89658ca4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_30f3c79f",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "This will break/hang in the tutorial, since ODL is already running",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 36
+      },
+      "revId": "9560309a30eeeab931aa9b4aa8069ace89658ca4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_10ee83b4",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "Don\u0027t need root",
+      "range": {
+        "startLine": 28,
+        "startChar": 1,
+        "endLine": 28,
+        "endChar": 5
+      },
+      "revId": "9560309a30eeeab931aa9b4aa8069ace89658ca4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_702c1f03",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "Backticks",
+      "range": {
+        "startLine": 33,
+        "startChar": 11,
+        "endLine": 33,
+        "endChar": 45
+      },
+      "revId": "9560309a30eeeab931aa9b4aa8069ace89658ca4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_502f5bf6",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "May be worth clarifying that this is the time it takes for the Karaf features to load, not for the GUI to load. Once Karaf features are loaded GUI should be very responsive",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 8
+      },
+      "revId": "9560309a30eeeab931aa9b4aa8069ace89658ca4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_f03f8f23",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "I guess you\u0027re working towards this, but need docs from perspective of someone looking at DLUX",
+      "revId": "9560309a30eeeab931aa9b4aa8069ace89658ca4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_b036b750",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "But they don\u0027t need to do this, right? Maybe better to include later as a \"after playing with the default topo, doing most of the tutorial, here\u0027s some advanced stuff you can do, including creating different topos\"",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 89
+      },
+      "revId": "9560309a30eeeab931aa9b4aa8069ace89658ca4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
