@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_b0b197e3",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "What is all this stuff? HTML? Please follow https://guides.github.com/features/mastering-markdown/ or https://daringfireball.net/projects/markdown/syntax",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 25
+      },
+      "revId": "d89a3bad8bfb564619260f288e0a45bb9af0f90f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_70b7ffd8",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "Why are you escaping everything? Definitely not necessary, and I doubt it will work.",
+      "range": {
+        "startLine": 5,
+        "startChar": 8,
+        "endLine": 5,
+        "endChar": 10
+      },
+      "revId": "d89a3bad8bfb564619260f288e0a45bb9af0f90f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_f0caef4d",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-15T02:38:53Z",
+      "side": 1,
+      "message": "Since ODL will already be running, this will do nothing/break. Bug",
+      "revId": "d89a3bad8bfb564619260f288e0a45bb9af0f90f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
