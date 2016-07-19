@@ -221,6 +221,24 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_13c95b26",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-19T15:19:19Z",
+      "side": 1,
+      "message": "We expect the user to clone the code, `vagrant up`, access the DLUX GUI and see networks. We currently don\u0027t include anything about the GUI.",
+      "parentUuid": "9a561d44_b0451772",
+      "revId": "9560309a30eeeab931aa9b4aa8069ace89658ca4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_b036b750",
         "filename": "tutorials/l2switch/README.md",
         "patchSetId": 7
