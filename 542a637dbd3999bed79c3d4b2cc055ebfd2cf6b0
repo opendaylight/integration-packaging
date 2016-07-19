@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_d3aec384",
+        "filename": "deb/opendaylight/debian/opendaylight.upstart",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-19T15:03:18Z",
+      "side": 0,
+      "message": "bin/start calls bin/karaf server (see the last line of the run fn). Also, seems like we should do the same thing in upstart and systemd unitfiles.",
+      "range": {
+        "startLine": 9,
+        "startChar": 27,
+        "endLine": 9,
+        "endChar": 32
+      },
+      "revId": "542a637dbd3999bed79c3d4b2cc055ebfd2cf6b0",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
