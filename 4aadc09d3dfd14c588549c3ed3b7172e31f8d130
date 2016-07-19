@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_b31cefc2",
+        "filename": "deb/opendaylight/debian/README.Debian",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-19T15:17:09Z",
+      "side": 1,
+      "message": "Can\u0027t/shouldn\u0027t we do something like `sudo systemctl start opendaylight`, since we have systemd unitfile to manage ODL\u0027s service?",
+      "range": {
+        "startLine": 3,
+        "startChar": 6,
+        "endLine": 3,
+        "endChar": 16
+      },
+      "revId": "4aadc09d3dfd14c588549c3ed3b7172e31f8d130",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_d37883f4",
+        "filename": "deb/opendaylight/debian/opendaylight.postrm",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-19T15:17:09Z",
+      "side": 1,
+      "message": "So something\u0027s handling removing the unitfiles? I just need to run this and see what it does I guess, see Vagrantfile request",
+      "revId": "4aadc09d3dfd14c588549c3ed3b7172e31f8d130",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
