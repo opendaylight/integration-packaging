@@ -69,6 +69,24 @@
       "revId": "2243a06d2f622410639f5caa8d42c154b1db7638",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_07b910e9",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-20T15:23:24Z",
+      "side": 1,
+      "message": "I replied\n\n\"Not sure, can\u0027t tell from that log. As always, pushing code to show would help.\n\nYou can do things like `sleep 5 \u0026` (just using sleep as an example) to run\nprocesses in the background, but I\u0027m not sure that\u0027s you\u0027re problem. It shouldn\u0027t\nbe too different, shell provisioning vs manually. Keep digging.\"\n\ntl;dr - push the failing code, keep trying, it shouldn\u0027t be too complex/unusual.\n\nLater feedback: You could also do this with Python https://github.com/mininet/mininet/wiki/Introduction-to-Mininet",
+      "parentUuid": "9a561d44_674c4c43",
+      "revId": "2243a06d2f622410639f5caa8d42c154b1db7638",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
