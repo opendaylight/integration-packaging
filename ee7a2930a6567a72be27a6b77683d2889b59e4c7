@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_d0cb541c",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 10
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-20T14:55:58Z",
+      "side": 1,
+      "message": "Crating a Mininet topology remotely still giving issues. I have emailed about it.",
+      "range": {
+        "startLine": 71,
+        "startChar": 4,
+        "endLine": 71,
+        "endChar": 103
+      },
+      "revId": "ee7a2930a6567a72be27a6b77683d2889b59e4c7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
