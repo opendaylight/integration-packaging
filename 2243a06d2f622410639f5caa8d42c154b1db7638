@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_c730b8a0",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-20T15:16:06Z",
+      "side": 1,
+      "message": "Does this mean that I remove Rsync completely? Or should I be creating a folder first through the Vagrantfile to avoid this message?",
+      "parentUuid": "9a561d44_5cd2bb00",
+      "revId": "2243a06d2f622410639f5caa8d42c154b1db7638",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_9cfd733d",
         "filename": "tutorials/l2switch/Vagrantfile",
         "patchSetId": 12
@@ -30,6 +48,24 @@
       "writtenOn": "2016-07-20T14:24:33Z",
       "side": 1,
       "message": "Note this, blocking for merge imho",
+      "revId": "2243a06d2f622410639f5caa8d42c154b1db7638",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_674c4c43",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-20T15:16:06Z",
+      "side": 1,
+      "message": "I tried using path, still giving the same issue. I have sent you an email regarding this change. Kindly have a look at it.",
+      "parentUuid": "9a561d44_9cfd733d",
       "revId": "2243a06d2f622410639f5caa8d42c154b1db7638",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
