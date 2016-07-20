@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_67960c4e",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-20T15:24:49Z",
+      "side": 1,
+      "message": "Just don\u0027t change the sync folder, take the defaults",
+      "parentUuid": "9a561d44_c730b8a0",
+      "revId": "2243a06d2f622410639f5caa8d42c154b1db7638",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_9cfd733d",
         "filename": "tutorials/l2switch/Vagrantfile",
         "patchSetId": 12
