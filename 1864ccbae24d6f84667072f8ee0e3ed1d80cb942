@@ -1,0 +1,141 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_7b04dcbf",
+        "filename": "tutorials/l2switch/mininet.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-21T21:24:54Z",
+      "side": 1,
+      "message": "I think `/usr/bin/env python` is more portable, not a huge deal. More importantly, write a module-level docstring documenting that this based on exaples from Mininet docs https://github.com/mininet/mininet/wiki/Introduction-to-Mininet",
+      "revId": "1864ccbae24d6f84667072f8ee0e3ed1d80cb942",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_1bf5e0ca",
+        "filename": "tutorials/l2switch/mininet.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-21T21:24:54Z",
+      "side": 1,
+      "message": "Use triple quotes for docstrings https://www.python.org/dev/peps/pep-0257/#one-line-docstrings, applies everywhere",
+      "revId": "1864ccbae24d6f84667072f8ee0e3ed1d80cb942",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_5bff58aa",
+        "filename": "tutorials/l2switch/mininet.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-21T21:24:54Z",
+      "side": 1,
+      "message": "Convention in Int/* is to use double quotes for strings, not a huge deal, applies everywhere",
+      "range": {
+        "startLine": 13,
+        "startChar": 32,
+        "endLine": 13,
+        "endChar": 33
+      },
+      "revId": "1864ccbae24d6f84667072f8ee0e3ed1d80cb942",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_fb274c62",
+        "filename": "tutorials/l2switch/mininet.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-21T21:24:54Z",
+      "side": 1,
+      "message": "snake_case for fn names https://www.python.org/dev/peps/pep-0008/#function-names",
+      "range": {
+        "startLine": 20,
+        "startChar": 4,
+        "endLine": 20,
+        "endChar": 14
+      },
+      "revId": "1864ccbae24d6f84667072f8ee0e3ed1d80cb942",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_dbb408d3",
+        "filename": "tutorials/l2switch/mininet.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-21T21:24:54Z",
+      "side": 1,
+      "message": "rm",
+      "range": {
+        "startLine": 22,
+        "startChar": 8,
+        "endLine": 22,
+        "endChar": 9
+      },
+      "revId": "1864ccbae24d6f84667072f8ee0e3ed1d80cb942",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_9b1610a6",
+        "filename": "tutorials/l2switch/mininet.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-21T21:24:54Z",
+      "side": 1,
+      "message": "Wondering if we should add a small sleep here, to give things a few seconds to get up and stable",
+      "revId": "1864ccbae24d6f84667072f8ee0e3ed1d80cb942",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_5b4598b1",
+        "filename": "tutorials/l2switch/mininet.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-21T21:24:54Z",
+      "side": 1,
+      "message": "Why do you want to start the CLI?",
+      "revId": "1864ccbae24d6f84667072f8ee0e3ed1d80cb942",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
