@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_c03899a2",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 15
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-21T16:37:34Z",
+      "side": 1,
+      "message": "Causing `vagrant up` to fail with \"`path` for shell provisioner does not exist on the host system: /src/mininet.py\", just don\u0027t include abs path, use rel path in same dir as Vagrantfile",
+      "range": {
+        "startLine": 67,
+        "startChar": 43,
+        "endLine": 67,
+        "endChar": 47
+      },
+      "revId": "cf6f3d6c79d316ca7d9703592623b185fc6e68fb",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
