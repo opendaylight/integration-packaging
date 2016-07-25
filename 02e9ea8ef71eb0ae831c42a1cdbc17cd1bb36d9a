@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_b5daf349",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T23:23:46Z",
+      "side": 1,
+      "message": "Same codeblocks vs inline code feedback",
+      "revId": "02e9ea8ef71eb0ae831c42a1cdbc17cd1bb36d9a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_15b3df0a",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T23:23:46Z",
+      "side": 1,
+      "message": "I\u0027d call it a network visualizer. Not strictly related to OF.",
+      "range": {
+        "startLine": 94,
+        "startChar": 43,
+        "endLine": 94,
+        "endChar": 76
+      },
+      "revId": "02e9ea8ef71eb0ae831c42a1cdbc17cd1bb36d9a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
