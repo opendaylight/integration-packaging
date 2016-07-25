@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_35f7038d",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 17
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T23:23:46Z",
+      "side": 1,
+      "message": "I\u0027d like to see this topos section flushed out with more examples and a more walk-through, tutorial feel",
+      "revId": "def3c1bee204aca69986bc319b48e737dff40f2e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_b50b138d",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 17
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T23:23:46Z",
+      "side": 1,
+      "message": "I\u0027m not sure this section is really providing value. I\u0027d prefer to remove it, or work it into more of an exercise for the user doing the tutorial. Think tutorial activity over docs.",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 32
+      },
+      "revId": "def3c1bee204aca69986bc319b48e737dff40f2e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_55fa7775",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 17
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T23:23:46Z",
+      "side": 1,
+      "message": "Seems like this should be in topos section",
+      "range": {
+        "startLine": 107,
+        "startChar": 0,
+        "endLine": 110,
+        "endChar": 21
+      },
+      "revId": "def3c1bee204aca69986bc319b48e737dff40f2e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_f5010b6b",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 17
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T23:23:46Z",
+      "side": 1,
+      "message": "Actually use alt text",
+      "range": {
+        "startLine": 112,
+        "startChar": 2,
+        "endLine": 112,
+        "endChar": 10
+      },
+      "revId": "def3c1bee204aca69986bc319b48e737dff40f2e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
