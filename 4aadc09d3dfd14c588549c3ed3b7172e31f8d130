@@ -25,6 +25,81 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_c68a671a",
+        "filename": "deb/opendaylight/debian/README.Debian",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-07-25T08:05:52Z",
+      "side": 1,
+      "message": "+1, in fact this shouldn\u0027t be necessary since the systemd unit is enabled (so the service should be started automatically).",
+      "parentUuid": "9a561d44_b31cefc2",
+      "range": {
+        "startLine": 3,
+        "startChar": 6,
+        "endLine": 3,
+        "endChar": 16
+      },
+      "revId": "4aadc09d3dfd14c588549c3ed3b7172e31f8d130",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_e685eb07",
+        "filename": "deb/opendaylight/debian/karaf",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-07-25T08:05:52Z",
+      "side": 1,
+      "message": "I know this is inconsistent with the RPM, but in Debian we use /bin/sh (which is guaranteed to exist).",
+      "revId": "4aadc09d3dfd14c588549c3ed3b7172e31f8d130",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_6671db43",
+        "filename": "deb/opendaylight/debian/opendaylight.postinst",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-07-25T08:05:52Z",
+      "side": 1,
+      "message": "Here too\n\n    #!/bin/sh\n\nwould be more idiomatic, especially since (in extreme cases) package scripts may be run without /usr.",
+      "revId": "4aadc09d3dfd14c588549c3ed3b7172e31f8d130",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_66a8bb77",
+        "filename": "deb/opendaylight/debian/opendaylight.postrm",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-07-25T08:05:52Z",
+      "side": 1,
+      "message": "Presumably this is helpful when debugging, but the maintainer scripts should be silent when everything goes well.",
+      "revId": "4aadc09d3dfd14c588549c3ed3b7172e31f8d130",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_d37883f4",
         "filename": "deb/opendaylight/debian/opendaylight.postrm",
         "patchSetId": 4
@@ -36,6 +111,24 @@
       "writtenOn": "2016-07-19T15:17:09Z",
       "side": 1,
       "message": "So something\u0027s handling removing the unitfiles? I just need to run this and see what it does I guess, see Vagrantfile request",
+      "revId": "4aadc09d3dfd14c588549c3ed3b7172e31f8d130",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_06af3f7e",
+        "filename": "deb/opendaylight/debian/opendaylight.postrm",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-07-25T08:05:52Z",
+      "side": 1,
+      "message": "Yes, the unit files are handled by code which is added to the maintainer scripts by debhelper (#DEBHELPER# below) or by dpkg triggers.",
+      "parentUuid": "9a561d44_d37883f4",
       "revId": "4aadc09d3dfd14c588549c3ed3b7172e31f8d130",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
