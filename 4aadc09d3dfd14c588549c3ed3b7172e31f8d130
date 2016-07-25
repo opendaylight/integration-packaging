@@ -66,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_1f3adee6",
+        "filename": "deb/opendaylight/debian/karaf",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T15:35:32Z",
+      "side": 1,
+      "message": "Ah, okay, sorry for the bad feedback Akshita. Thanks for the correction, Stephen. :)",
+      "parentUuid": "9a561d44_e685eb07",
+      "revId": "4aadc09d3dfd14c588549c3ed3b7172e31f8d130",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_6671db43",
         "filename": "deb/opendaylight/debian/opendaylight.postinst",
         "patchSetId": 4
@@ -146,6 +164,24 @@
       "side": 1,
       "message": "Yes, the unit files are handled by code which is added to the maintainer scripts by debhelper (#DEBHELPER# below) or by dpkg triggers.",
       "parentUuid": "9a561d44_d37883f4",
+      "revId": "4aadc09d3dfd14c588549c3ed3b7172e31f8d130",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_9f2d4eab",
+        "filename": "deb/opendaylight/debian/opendaylight.postrm",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T15:35:32Z",
+      "side": 1,
+      "message": "Cool, understood. Thanks for the outstanding review here and elsewhere Stephen.",
+      "parentUuid": "9a561d44_06af3f7e",
       "revId": "4aadc09d3dfd14c588549c3ed3b7172e31f8d130",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
