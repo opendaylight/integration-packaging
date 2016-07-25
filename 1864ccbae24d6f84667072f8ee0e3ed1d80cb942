@@ -158,6 +158,24 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_faea98aa",
+        "filename": "tutorials/l2switch/mininet.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-25T18:43:34Z",
+      "side": 1,
+      "message": "Strangely, I too have been facing the same issue since today morning. It seemed to work fine and displayed the entire topology the other day. I tried to increase sleep timer, but even that does not seem to fix it.",
+      "parentUuid": "9a561d44_9ac27c32",
+      "revId": "1864ccbae24d6f84667072f8ee0e3ed1d80cb942",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_5b4598b1",
         "filename": "tutorials/l2switch/mininet.py",
         "patchSetId": 16
