@@ -176,6 +176,24 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_9ad9dc24",
+        "filename": "tutorials/l2switch/mininet.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-25T18:46:08Z",
+      "side": 1,
+      "message": "Due to some odd reason, it does not seem to be stable. It displays the topology correctly certain times and messes it up at other times.",
+      "parentUuid": "9a561d44_faea98aa",
+      "revId": "1864ccbae24d6f84667072f8ee0e3ed1d80cb942",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_5b4598b1",
         "filename": "tutorials/l2switch/mininet.py",
         "patchSetId": 16
