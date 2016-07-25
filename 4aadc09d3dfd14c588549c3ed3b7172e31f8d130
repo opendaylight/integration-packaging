@@ -100,6 +100,23 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_26d083f5",
+        "filename": "deb/opendaylight/debian/opendaylight.postrm",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-07-25T08:18:20Z",
+      "side": 1,
+      "message": "I\u0027m pretty sure this should just be\n\n    purge)\n\nwith a separate, do nothing\n\n    remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)\n\nto avoid failing from the last clause.\n\nHaving \"upgrade\" in there is going to cause problems when we do a real upgrade (not reinstalling the same .deb); see https://wiki.debian.org/MaintainerScripts for the detailed sequence diagrams — postrm upgrade is called during a normal upgrade, so this will blow away any user configuration.\n\nSo all in all,\n\n    #!/bin/sh\n    set -e\n\n    case \"$1\" in\n      purge)\n        rm -rf /opt/opendaylight/\n      ;;\n      remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)\n      ;;\n\n      *)\n        echo \"postrm called with unknown argument \\`$1\u0027\" \u003e\u00262\n        exit 1\n      ;;\n    esac\n\n    #DEBHELPER#\n\n    exit 0",
+      "revId": "4aadc09d3dfd14c588549c3ed3b7172e31f8d130",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_d37883f4",
         "filename": "deb/opendaylight/debian/opendaylight.postrm",
         "patchSetId": 4
