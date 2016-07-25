@@ -1,0 +1,159 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_da4fd469",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T17:00:24Z",
+      "side": 1,
+      "message": "The indentation as I had it produces codeblock formatting https://daringfireball.net/projects/markdown/syntax#precode\n\nBackticks can be used for inline code https://daringfireball.net/projects/markdown/syntax#code\n\nYou should never use both.",
+      "range": {
+        "startLine": 16,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 5
+      },
+      "revId": "1626d514aa100af7482553c13218af26b903a067",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_7ae20830",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T17:00:24Z",
+      "side": 1,
+      "message": "Wouldn\u0027t this make more sense in the topos section?",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 11
+      },
+      "revId": "1626d514aa100af7482553c13218af26b903a067",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_9ae55c3a",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T17:00:24Z",
+      "side": 1,
+      "message": "Are you going to go into these examples in detail? If not, no need to mention them I think.",
+      "range": {
+        "startLine": 86,
+        "startChar": 12,
+        "endLine": 87,
+        "endChar": 29
+      },
+      "revId": "1626d514aa100af7482553c13218af26b903a067",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_1af2ec05",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T17:00:24Z",
+      "side": 1,
+      "message": "Can it? What does this mean?",
+      "range": {
+        "startLine": 93,
+        "startChar": 67,
+        "endLine": 93,
+        "endChar": 85
+      },
+      "revId": "1626d514aa100af7482553c13218af26b903a067",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_faf618f8",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T17:00:24Z",
+      "side": 1,
+      "message": "If you don\u0027t separate paragraphs by blank lines, Markdown makes them one",
+      "revId": "1626d514aa100af7482553c13218af26b903a067",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_5adf4469",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T17:00:24Z",
+      "side": 1,
+      "message": "It seems like you have two ideas here - intro to DLUX and info about how DLUX is installed/loaded via Karaf. I think you should do that more explicitly, vs mixing and matching in these paragraphs.",
+      "range": {
+        "startLine": 97,
+        "startChar": 30,
+        "endLine": 98,
+        "endChar": 78
+      },
+      "revId": "1626d514aa100af7482553c13218af26b903a067",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_3adc1073",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 12
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-25T17:00:24Z",
+      "side": 1,
+      "message": "May be better to say that it\u0027s collected by ODL\u0027s southbound plugins, stored in the MD-SAL and provided for access to northbound applications like DLUX",
+      "range": {
+        "startLine": 100,
+        "startChar": 80,
+        "endLine": 101,
+        "endChar": 8
+      },
+      "revId": "1626d514aa100af7482553c13218af26b903a067",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
