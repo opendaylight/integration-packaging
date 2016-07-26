@@ -124,3 +124,13 @@ builds:
     changelog_date: "Wed Jul 13 2016"
     changelog_name: "Daniel Farrell"
     changelog_email: "dfarrell@redhat.com"
+  - version_major: "4"
+    version_minor: "3"
+    version_patch: "0"
+    rpm_release: "1.1367"
+    sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
+    codename: Beryllium-SR3
+    download_url: "https://nexus.opendaylight.org/content/repositories/autorelease-1367/org/opendaylight/integration/distribution-karaf/0.4.3-Beryllium-SR3/distribution-karaf-0.4.3-Beryllium-SR3.tar.gz"
+    changelog_date: "Tue Jul 26 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
