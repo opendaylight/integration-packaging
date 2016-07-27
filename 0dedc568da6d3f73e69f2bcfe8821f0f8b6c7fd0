@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_18d30a61",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-07-27T11:28:51Z",
+      "side": 1,
+      "message": "The patch as-is doesn\u0027t change the shebang back, it\u0027s just the last version of it — the commit message describes the changes in the patch, not the history of the patch.\n\nTo make things even better, I\u0027d start with the end-user behavioural change being implemented (in the summary):\n\n    Delete /opt/opendaylight on package purge\n\n    This patch adds a postrm script which deletes /opt/opendaylight on purge. This deletes user data and configuration.\n\n    Also correct README.Debian, using the systemd unit to start OpenDaylight.",
+      "revId": "0dedc568da6d3f73e69f2bcfe8821f0f8b6c7fd0",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
