@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_2c9df059",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 18
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-27T21:47:29Z",
+      "side": 1,
+      "message": "Please document how the user gets this mininet shell",
+      "range": {
+        "startLine": 109,
+        "startChar": 4,
+        "endLine": 109,
+        "endChar": 11
+      },
+      "revId": "70d02a6281e1fc7a560a1e6084dcda5fabaa5218",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
