@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_ccf0b493",
+        "filename": "tutorials/l2switch/mininet.py",
+        "patchSetId": 18
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-27T22:06:32Z",
+      "side": 1,
+      "message": "This is being discussed on-list https://lists.opendaylight.org/pipermail/integration-dev/2016-July/007634.html",
+      "revId": "8f7c35397b53f9394ee23a6412fb8e688c51ed6e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
