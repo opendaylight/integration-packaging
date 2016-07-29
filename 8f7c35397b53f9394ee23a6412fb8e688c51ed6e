@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_a07a9721",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-29T21:53:36Z",
+      "side": 1,
+      "message": "There\u0027s a 2.3.0d1? Latest release I see is 2.2.1, with a devel/2.2.2 branch presumably under development.",
+      "parentUuid": "9a561d44_00c6e367",
+      "revId": "8f7c35397b53f9394ee23a6412fb8e688c51ed6e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_ccf0b493",
         "filename": "tutorials/l2switch/mininet.py",
         "patchSetId": 18
