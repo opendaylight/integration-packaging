@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_a0a1f795",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-07-29T22:00:20Z",
+      "side": 1,
+      "message": "Their website recommended to download it in this manner:\n\ngit clone git://github.com/mininet/mininet\n\n   Note that the above git command will check out the latest and greatest\nMininet (which we recommend!)\n\nIf you want to run the last tagged/released\n   version of Mininet, you can look at the release tags using\n\n        cd mininet\n        git tag\n\n    and then\n\ngit checkout \u003crelease tag\u003e",
+      "parentUuid": "9a561d44_00c6e367",
+      "revId": "8f7c35397b53f9394ee23a6412fb8e688c51ed6e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_ccf0b493",
         "filename": "tutorials/l2switch/mininet.py",
         "patchSetId": 18
