@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "9a561d44_409d7bbb",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-07-29T20:14:09Z",
+      "side": 1,
+      "message": "Maybe it would help stability if we used a specific tag/release, vs HEAD of master",
+      "revId": "8f7c35397b53f9394ee23a6412fb8e688c51ed6e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_ccf0b493",
         "filename": "tutorials/l2switch/mininet.py",
         "patchSetId": 18
