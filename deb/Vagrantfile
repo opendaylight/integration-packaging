@@ -1,0 +1,24 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "ubuntu/xenial64"
+
+  # Install Debian package development tools
+  config.vm.provision "shell", inline: "apt-get install -y dpkg-dev"
+
+  # Install helper programs for debian/rules
+  config.vm.provision "shell", inline: "apt-get install -y debhelper"
+
+  # Install systemd unit files
+  config.vm.provision "shell", inline: "apt-get install -y dh-systemd"
+
+  # Install Java 7 for Beryllium
+  config.vm.provision "shell", inline: <<-SHELL
+    add-apt-repository -y ppa:openjdk-r/ppa
+    apt-get -y update
+    apt-get install -y openjdk-7-jre-headless --allow-unauthenticated
+  SHELL
+
+end
