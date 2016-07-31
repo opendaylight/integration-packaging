@@ -1,0 +1,24 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  # Start from Debian VM so resulting pkgs will build on all Deb derivatives
+  config.vm.box = "debian/jessie64"
+
+  # NFS is fragile, disable it and use rsync
+  config.nfs.functional = false
+
+  # Install Debian package development tools
+  config.vm.provision "shell", inline: "apt-get install -y dpkg-dev --force-yes"
+
+  # Install helper programs for debian/rules
+  config.vm.provision "shell", inline: "apt-get install -y debhelper --force-yes"
+
+  # Install systemd unit files
+  config.vm.provision "shell", inline: "apt-get install -y dh-systemd --force-yes"
+
+  # Install Java 7 for Beryllium
+  config.vm.provision "shell", inline: "apt-get install -y default-jdk --force-yes"
+
+end
