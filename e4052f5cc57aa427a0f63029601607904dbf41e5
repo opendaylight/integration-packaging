@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_993b3f38",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-08-01T09:36:30Z",
+      "side": 1,
+      "message": "Please use \"debian/jessie64\" instead; in this way we can be sure that the resulting Debian packages will build on all Debian derivatives.",
+      "revId": "e4052f5cc57aa427a0f63029601607904dbf41e5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_b9255b0c",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-08-01T09:36:30Z",
+      "side": 1,
+      "message": "With \"debian/jessie64\" this can be simplified to\n\n    config.vm.provision \"shell\", inline: \"apt-get install -y default-jdk\"",
+      "revId": "e4052f5cc57aa427a0f63029601607904dbf41e5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
