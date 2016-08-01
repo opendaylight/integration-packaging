@@ -91,6 +91,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_6a5c7f26",
+        "filename": "tutorials/l2switch/Vagrantfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-01T14:44:27Z",
+      "side": 1,
+      "message": "It\u0027s interesting that they recommend pulling from master. For stability/reproducibility/consistency, pulling from a tagged release is typically better. I don\u0027t care very much, just an option.",
+      "parentUuid": "9a561d44_a0a1f795",
+      "revId": "8f7c35397b53f9394ee23a6412fb8e688c51ed6e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_ccf0b493",
         "filename": "tutorials/l2switch/mininet.py",
         "patchSetId": 18
