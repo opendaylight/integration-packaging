@@ -31,11 +31,14 @@ consistent, known-working and easily shared environment.
     default                   not created (libvirt)
     [~/packaging/deb]$ vagrant up
     [~/packaging/deb]$ vagrant ssh
-    [vagrant@localhost vagrant]$ # Do .deb build
+    [vagrant@localhost ~]$ ls /vagrant/
+    opendaylight  README.markdown  Vagrantfile
 
 ## Building Debs
 
-TODO: Docs about how to build .debs in the Vagrant env
+To build .deb in the Vagrant env, use Debian packaging tools
+
+    [vagrant@localhost vagrant/opendaylight]$ dpkg-buildpackage -us -uc -b
 
 ## Defining New Debs
 
@@ -57,11 +60,46 @@ The familiar Deb-related commands apply to OpenDaylight's Debs.
 
 ### Installing
 
-TODO: Docs about how to install .deb once it's built locally
+To install a local OpenDaylight .deb package, use sudo dpkg -i <path to ODL .deb>
+
+Here's a walk-through of an install and the resulting system changes.
+
+    # Note that there's nothing in /opt before the install
+    [vagrant@localhost vagrant]$ ls /opt/
+    # Note that there are no ODL systemd files before the install
+    [vagrant@localhost vagrant]$ ls /lib/systemd/system | grep -i opendaylight
+    # Install an ODL .deb package
+    [vagrant@localhost vagrant]$ sudo dpkg -i opendaylight_0.4.2-Beryllium-SR2-0_amd64.deb
+    # Note that ODL is now installed in /opt
+    [vagrant@localhost vagrant]$ ls /opt/
+    opendaylight
+    # Note that there's now a systemd .service file for ODL
+    [vagrant@localhost vagrant]$ ls /lib/systemd/system | grep -i opendaylight
+    opendaylight.service
 
 ### Uninstalling
 
-TODO: Docs about how to uninstall .deb
+To uninstall a local OpenDaylight .deb package, use sudo apt-get remove opendaylight
+
+Here's a walk-through of the uninstall and the resulting system changes.
+
+    # Note that ODL is installed in /opt/
+    [vagrant@localhost vagrant]$ ls /opt/
+    opendaylight
+    # Note that there's a systemd .service file for ODL
+    [vagrant@localhost vagrant]$ ls /lib/systemd/system | grep -i opendaylight
+    opendaylight.service
+    # Uninstall the ODL .deb package
+    [vagrant@localhost vagrant]$ sudo apt-get remove opendaylight
+    # Note that ODL user data has not been removed from /opt/
+    [vagrant@localhost vagrant]$ ls /opt/opendaylight/
+    data  instances
+    # Uninstall the ODL .deb package and delete user data and configuration
+    [vagrant@localhost vagrant]$ sudo apt-get purge opendaylight
+    # Note that ODL has been completely removed from /opt/
+    [vagrant@localhost vagrant]$ ls /opt/
+    # Note that the ODL systemd .service file has been removed
+    [vagrant@localhost vagrant]$ ls /lib/systemd/system | grep -i opendaylight
 
 ## Using systemd
 
@@ -69,11 +107,29 @@ OpenDaylight's debs ship with systemd support.
 
 ### Starting
 
-TODO: Docs about starting ODL's systemd service, that it's enabled
+    [vagrant@localhost ~]$ sudo systemctl start opendaylight
+    [vagrant@localhost ~]$ sudo systemctl status opendaylight
+    ● opendaylight.service - OpenDaylight SDN Controller
+       Loaded: loaded (/lib/systemd/system/opendaylight.service; enabled)
+       Active: active (running) since Tue 2016-08-02 17:33:29 GMT; 2min 7s ago
+         Docs: https://wiki.opendaylight.org/view/Main_Page
+               http://www.opendaylight.org/
+      Process: 1181 ExecStart=/opt/opendaylight/bin/start (code=exited, status=0/SUCCESS)
+     Main PID: 1188 (java)
+       CGroup: /system.slice/opendaylight.service
+               └─1188 /usr/bin/java -Djava.security.properties=/opt/opendaylight/etc/odl.java.security -server -Xms128M -Xmx2048m -XX:+UnlockDiagnosticVMOptions -XX:+Unsy...
 
 ### Stopping
 
-TODO: Docs about stopping ODL's systemd service
+    [vagrant@localhost ~]$ sudo systemctl stop opendaylight
+    [vagrant@localhost ~]$ sudo systemctl status OpenDaylight
+    ● opendaylight.service - OpenDaylight SDN Controller
+       Loaded: loaded (/lib/systemd/system/opendaylight.service; enabled)
+       Active: inactive (dead) since Tue 2016-08-02 17:39:02 GMT; 10s ago
+         Docs: https://wiki.opendaylight.org/view/Main_Page
+               http://www.opendaylight.org/
+      Process: 1181 ExecStart=/opt/opendaylight/bin/start (code=exited, status=0/SUCCESS)
+     Main PID: 1188 (code=exited, status=143)
 
 ## Karaf shell
 
@@ -81,7 +137,7 @@ A few seconds after OpenDaylight is started, its Karaf shell will be accessible.
 
 You can connect by SSHing into ODL's karaf port and logging in (karaf/karaf).
 
-    [vagrant@localhost vagrant]$ ssh -p 8101 karaf@localhost
+    [vagrant@localhost ~]$ ssh -p 8101 karaf@localhost
     Password authentication
     Password:
 
@@ -98,3 +154,4 @@ You can connect by SSHing into ODL's karaf port and logging in (karaf/karaf).
     Hit '<ctrl-d>' or type 'system:shutdown' or 'logout' to shutdown OpenDaylight.
 
     opendaylight-user@root>
+
