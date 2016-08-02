@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_36630db3",
+        "filename": "deb/README.markdown",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-02T19:57:00Z",
+      "side": 1,
+      "message": "It looks like /opt was removed during apt-get purge as I walked through this: http://pastebin.com/rvePYrw7\n\nI haven\u0027t tried to recreate, but possible bug FYI. Unrelated to this patch",
+      "range": {
+        "startLine": 100,
+        "startChar": 33,
+        "endLine": 100,
+        "endChar": 41
+      },
+      "revId": "44299ff68809be7c3ae99a6988ee4bf9a26f9cea",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
