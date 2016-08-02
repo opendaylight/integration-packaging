@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_20a8478c",
+        "filename": "packer/templates/libvirt.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-02T15:12:06Z",
+      "side": 1,
+      "message": "I think we don\u0027t want to run the VBox shell provisioner script for LibVirt builds. In the current LibVirt build, we don\u0027t need to run any virt-provider-specific script.",
+      "revId": "d6ab1296246d78d19579de705e4a0844ac125b04",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
