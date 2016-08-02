@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_d6957989",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-02T19:20:00Z",
+      "side": 1,
+      "message": "I think this is the default, right? May still be good to add it explicitly, to make editing it to `config.vm.synced_folder \".\", \"/vagrant\", disabled: true` easier. Or to exclude some file regexs, like *.deb, from rsyncing to the guest at `vagrant up`.\n\nhttps://www.vagrantup.com/docs/synced-folders/rsync.html#rsync_exclude\nhttps://www.vagrantup.com/docs/synced-folders/basic_usage.html#disabling",
+      "revId": "dc622a1485185d7c14b1f69038a1e3bbf13b6bd0",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
