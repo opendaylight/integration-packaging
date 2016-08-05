@@ -2,9 +2,19 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
+  # Configure VM RAM and CPU for VirtualBox
+  config.vm.provider :virtualbox do |virtualbox|
+    virtualbox.memory = 1024
+    # Two cores over default one for faster builds
+    virtualbox.cpus = 2
+  end
 
-  # Start from Debian VM so resulting pkgs will build on all Deb derivatives
-  config.vm.box = "debian/jessie64"
+  # Configure VM RAM and CPU for LibVirt
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.memory = 1024
+    # Two cores over default one for faster builds
+    libvirt.cpus = 2
+  end
 
   # NFS is fragile, disable it and use rsync
   config.nfs.functional = false
@@ -12,12 +22,31 @@ Vagrant.configure("2") do |config|
   # Sync folders /packaging/deb/ and /vagrant
   config.vm.synced_folder ".", "/vagrant"
 
+  # Start from Debian VM so resulting pkgs will build on all Deb derivatives
+  config.vm.box = "debian/jessie64"
+
   # Install Debian package dev tools, helper programs for debian/rules,
   # systemd unit files, Java 7 for ODL Beryllium
   config.vm.provision "shell", inline: "apt-get install -y --force-yes \
-                                            dpkg-dev \
-                                            debhelper \
+                                            build-essential \
+                                            devscripts \
+                                            equivs \
                                             dh-systemd \
-                                            default-jdk \
+                                            python-pip \
                                             "
+
+  # Use the distribution's version of pip to upgrade to the latest pip
+  config.vm.provision "shell", inline: "pip install --upgrade pip"
+
+  # Install Python dependences system-wide via pip
+  # NB: Could use a venv here, but since we're already in a Vagrant box and
+  # don't need any isolation more, it doesn't seem worth the extra complexity.
+  config.vm.provision "shell", inline: "pip install -r /vagrant/requirements.txt"
+
+  # Add jessie-backports
+  config.vm.provision "shell", inline: <<-SHELL
+    echo "deb http://httpredir.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list
+    apt-get update
+  SHELL
+
 end
