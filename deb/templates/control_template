@@ -1,0 +1,8 @@
+Source: opendaylight
+Build-Depends: debhelper (>= 9), wget, ca-certificates, dh-systemd
+Maintainer: {{ changelog_name }} <{{ changelog_email }}>
+
+Package: opendaylight
+Depends: ${misc:Depends}, adduser, openjdk-{{ java_version }}-jre-headless
+Architecture: all
+Description: OpenDaylight SDN controller

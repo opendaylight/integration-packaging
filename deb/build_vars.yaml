@@ -1,0 +1,66 @@
+# Variables that define OpenDaylight's .deb builds
+# Consumed by Python logic to render Jinja2 templates into debian files
+# Each build should define:
+# version_major:
+#   The OpenDaylight major (element) version number of the release to build
+# version_minor:
+#   The OpenDaylight minor (SR) version number of the release to build
+# version_patch:
+#   The OpenDaylight patch version of the release to build (unused pending CR)
+# pkg_version:
+#   Deb version for the given ODL major.minor.patch
+# sysd_commit:
+#   Version of ODL systemd unitfile to download and package in ODL .deb
+# codename:
+#   Elemental codename for the ODL release, including SR if applicable
+# download_url:
+#   URL to ODL tarball artifact to repackage into .deb
+# java_version:
+#   Java dependency for the ODL release
+# changelog_date:
+#   Date this .deb was defined
+# changelog_time:
+#   Time this .deb was defined
+# changelog_name:
+#   Name of person who defined .deb
+# changelog_email:
+#   Email of person who defined .deb
+
+---
+builds:
+  - version_major: "4"
+    version_minor: "2"
+    version_patch: "0"
+    pkg_version: "1"
+    sysd_commit: 07f7c83b0ef46ad3809e5be03e09a77fe554eeae
+    codename: Beryllium-SR2
+    download_url: "https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.4.2-Beryllium-SR2/distribution-karaf-0.4.2-Beryllium-SR2.tar.gz"
+    changelog_date: "Wed, 11 May 2016"
+    java_version: "7"
+    changelog_time: "17:48:42 +0530"
+    changelog_name: "Akshita Jha"
+    changelog_email: "zenith158@gmail.com"
+  - version_major: "4"
+    version_minor: "3"
+    version_patch: "0"
+    pkg_version: "1"
+    sysd_commit: 07f7c83b0ef46ad3809e5be03e09a77fe554eeae
+    codename: Beryllium-SR3
+    download_url: "https://nexus.opendaylight.org/content/repositories/autorelease-1367/org/opendaylight/integration/distribution-karaf/0.4.3-Beryllium-SR3/distribution-karaf-0.4.3-Beryllium-SR3.tar.gz"
+    java_version: "7"
+    changelog_date: "Tue, 26 Jul 2016"
+    changelog_time: "17:48:42 +0530"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
+  - version_major: "5"
+    version_minor: "0"
+    version_patch: "0"
+    pkg_version: "1"
+    codename: SNAPSHOT
+    download_url: "https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.5.0-SNAPSHOT/distribution-karaf-0.5.0-20160809.145534-4240.tar.gz"
+    sysd_commit: 07f7c83b0ef46ad3809e5be03e09a77fe554eeae
+    java_version: "8"
+    changelog_date: "Tue, 09 Aug 2016"
+    changelog_time: "17:48:42 +0530"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
