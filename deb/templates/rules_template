@@ -1,12 +1,12 @@
 #!/usr/bin/make -f
 
-VERSION_MAJOR = 4
-VERSION_MINOR = 2
-CODENAME = "Beryllium-SR2"
+VERSION_MAJOR = {{ version_major }}
+VERSION_MINOR = {{ version_minor }}
+CODENAME = "{{ codename }}"
 VERSION = 0.$(VERSION_MAJOR).$(VERSION_MINOR)-$(CODENAME)
 PACKAGEVERSION = $(VERSION)-$(DISTRIBUTION)0
-TARBALL = distribution-karaf-$(VERSION).tar.gz
-URL = "https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/$(VERSION)/$(TARBALL)"
+TARBALL = $(notdir {{ download_url }})
+URL = "{{ download_url }}"
 
 %:
 	dh $@ --with systemd
