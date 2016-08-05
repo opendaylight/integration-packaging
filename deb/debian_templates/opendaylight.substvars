@@ -1,0 +1,2 @@
+misc:Depends=init-system-helpers (>= 1.18~), lsb-base (>= 4.1+Debian11ubuntu7)
+misc:Pre-Depends=
