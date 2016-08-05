@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_6002c23f",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-05T18:07:28Z",
+      "side": 1,
+      "message": "These lines have been changed compared to https://github.com/opendaylight/integration-packaging/blob/master/rpm/build_vars.yaml#L67-L76. `debian/changelog` requires dates in a particular format.\n\nProbably `rpm_release` should also be changed to something like `debian_release`?",
+      "range": {
+        "startLine": 34,
+        "startChar": 4,
+        "endLine": 37,
+        "endChar": 42
+      },
+      "revId": "467cf5928e7dcfc58dc3b7e502da97f50ded385f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
