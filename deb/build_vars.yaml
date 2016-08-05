@@ -1,0 +1,38 @@
+# Variables that define OpenDaylight's RPM builds
+# Consumed by Python logic to render Jinja2 templates into RPM .spec files
+# Each build should define:
+# version_major:
+#   The OpenDaylight major (element) version number of the release to build
+# version_minor:
+#   The OpenDaylight minor (SR) version number of the release to build
+# version_patch:
+#   The OpenDaylight patch version of the release to build (unused pending CR)
+# rpm_release:
+#   RPM version for the given ODL major.minor.patch
+# sysd_commit:
+#   Version of ODL systemd unitfile to download and package in ODL RPM
+# codename:
+#   Elemental codename for the ODL release, including SR if applicable
+# download_url:
+#   URL to ODL tarball artifact to repackage into RPM
+# changelog_date:
+#   Date this RPM was defined
+# changelog_name:
+#   Name of person who defined RPM
+# changelog_email:
+#   Email of person who defined RPM
+
+---
+builds:
+  - version_major: "4"
+    version_minor: "2"
+    version_patch: "0"
+    rpm_release: "1"
+    sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
+    codename: Beryllium-SR2
+    download_url: "https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.4.2-Beryllium-SR2/distribution-karaf-0.4.2-Beryllium-SR2.tar.gz"
+    changelog_date: "Wed, 11 May 2016"
+    changelog_time: "17:48:42 +0530"
+    changelog_name: "Akshita Jha"
+    changelog_email: "zenith158@gmail.com"
+
