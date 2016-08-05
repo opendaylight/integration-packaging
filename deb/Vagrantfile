@@ -2,9 +2,19 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
+  # Configure VM RAM and CPU for VirtualBox
+  config.vm.provider :virtualbox do |virtualbox|
+    virtualbox.memory = 1024
+    # Two cores over default one for faster builds
+    virtualbox.cpus = 2
+  end
 
-  # Start from Debian VM so resulting pkgs will build on all Deb derivatives
-  config.vm.box = "debian/jessie64"
+  # Configure VM RAM and CPU for LibVirt
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.memory = 1024
+    # Two cores over default one for faster builds
+    libvirt.cpus = 2
+  end
 
   # NFS is fragile, disable it and use rsync
   config.nfs.functional = false
@@ -12,12 +22,23 @@ Vagrant.configure("2") do |config|
   # Sync folders /packaging/deb/ and /vagrant
   config.vm.synced_folder ".", "/vagrant"
 
-  # Install Debian package dev tools, helper programs for debian/rules,
-  # systemd unit files, Java 7 for ODL Beryllium
+  # Start from Debian VM so resulting pkgs will build on all Deb derivatives
+  config.vm.box = "debian/jessie64"
+
+  # Install pkg dev tools, Python libs for build scripts, gdebi to test install
   config.vm.provision "shell", inline: "apt-get install -y --force-yes \
-                                            dpkg-dev \
-                                            debhelper \
+                                            build-essential \
+                                            devscripts \
+                                            equivs \
                                             dh-systemd \
-                                            default-jdk \
+                                            python-yaml \
+                                            python-jinja2 \
+                                            gdebi
                                             "
+
+  # Add jessie-backports
+  config.vm.provision "shell", inline: <<-SHELL
+    echo "deb http://httpredir.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list
+    apt-get update
+  SHELL
 end
