@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+VERSION_MAJOR = {{ version_major }}
+VERSION_MINOR = {{ version_minor }}
+CODENAME = "{{ codename }}"
+VERSION = 0.$(VERSION_MAJOR).$(VERSION_MINOR)-$(CODENAME)
+PACKAGEVERSION = $(VERSION)-$(DISTRIBUTION)0
+TARBALL = distribution-karaf-$(VERSION).tar.gz
+URL = "https://nexus.opendaylight.org/content/groups/public/org/opendaylight/integration/distribution-karaf/$(VERSION)/$(TARBALL)"
+
+%:
+	dh $@ --with systemd
+
+override_dh_auto_clean:
+override_dh_auto_test:
+override_dh_auto_build:
+override_dh_usrlocal:
+override_dh_auto_install:
+	wget -N --progress=dot:mega $(URL)
+	tar -xf $(TARBALL)
+	mkdir -p ./debian/opendaylight/opt/opendaylight/
+	cp -r ./distribution-karaf-$(VERSION)/* ./debian/opendaylight/opt/opendaylight/
+
+override_dh_gencontrol:
+	dh_gencontrol -- -v$(PACKAGEVERSION)
+
