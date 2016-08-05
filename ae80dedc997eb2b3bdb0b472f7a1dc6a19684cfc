@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_c3d5a044",
+        "filename": "deb/debian_templates/control_template",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-05T20:06:58Z",
+      "side": 1,
+      "message": "This might also change with each build. Not sure how to capture this, though.",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 7
+      },
+      "revId": "ae80dedc997eb2b3bdb0b472f7a1dc6a19684cfc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
