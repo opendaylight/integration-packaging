@@ -144,3 +144,13 @@ builds:
     changelog_date: "Tue Aug 09 2016"
     changelog_name: "Daniel Farrell"
     changelog_email: "dfarrell@redhat.com"
+  - version_major: "5"
+    version_minor: "0"
+    version_patch: "0"
+    rpm_release: "0.1.20160809snap4240"
+    codename: SNAPSHOT
+    download_url: "https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.5.0-SNAPSHOT/distribution-karaf-0.5.0-20160809.145534-4240.tar.gz"
+    sysd_commit: c6d7ee1f21d62ff8ffb741c7a12c3d8d3aa3d6ed
+    changelog_date: "Tue Aug 09 2016"
+    changelog_name: "Daniel Farrell"
+    changelog_email: "dfarrell@redhat.com"
