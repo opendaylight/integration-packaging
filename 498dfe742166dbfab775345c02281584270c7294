@@ -1,0 +1,8 @@
+Code-Review+1: Daniel Farrell <dfarrell@redhat.com>
+Verified+1: jenkins-releng <jenkins-releng@opendaylight.org>
+Code-Review+2: Jamo Luhrsen <jluhrsen@redhat.com>
+Submitted-by: Jamo Luhrsen <jluhrsen@redhat.com>
+Submitted-at: Tue, 09 Aug 2016 23:36:22 +0000
+Reviewed-on: https://git.opendaylight.org/gerrit/43560
+Project: integration/packaging
+Branch: refs/heads/master
