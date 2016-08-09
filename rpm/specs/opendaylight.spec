@@ -14,7 +14,7 @@ Summary:    OpenDaylight SDN Controller
 Group:      Applications/Communications
 License:    EPL-1.0
 URL:        http://www.opendaylight.org
-Source0:    {{ download_url }}
+Source0:    %name-{{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ rpm_release }}.tar.gz
 Source1:    %name-{{ sysd_commit }}.service.tar.gz
 Buildroot:  /tmp
 # Required for ODL at run time

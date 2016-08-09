@@ -30,8 +30,8 @@ srpm_out_dir = os.path.join(rpmbuild_dir, "SRPMS")
 rpm_out_dir = os.path.join(rpmbuild_dir, "RPMS", "noarch")
 
 # Templates that can be specialized into common artifact names per-build
-odl_template = Template("distribution-karaf-0.$version_major."
-                        "$version_minor-$codename.tar.gz")
+odl_template = Template("opendaylight-$version_major.$version_minor."
+                        "$version_patch-$rpm_release.tar.gz")
 specfile_template = Template("opendaylight-$version_major.$version_minor."
                              "$version_patch-$rpm_release.spec")
 unitfile_tb_template = Template("opendaylight-$sysd_commit.service.tar.gz")
