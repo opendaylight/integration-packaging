@@ -19,12 +19,7 @@ cache_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Templates that can be specialized into artifact names/paths per-build
 odl_template = Template("distribution-karaf-0.$version_major."
-                        "$version_minor-$codename.tar.gz")
-odl_url_template = Template("https://nexus.opendaylight.org/content/"
-                            "groups/public/org/opendaylight/integration/"
-                            "distribution-karaf/0.$version_major."
-                            "$version_minor-$codename/distribution-karaf-0."
-                            "$version_major.$version_minor-$codename.tar.gz")
+                        "$version_minor-$rpm_release.tar.gz")
 unitfile_template = Template("opendaylight-$sysd_commit.service")
 unitfile_url_template = Template("https://git.opendaylight.org/gerrit/"
                                  "gitweb?p=integration/packaging.git;a="
