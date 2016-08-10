@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_e276c43d",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-10T02:43:11Z",
+      "side": 1,
+      "message": "Once you cut the vars back to just the set you need for .debs, you\u0027ll want to update these docs",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 35
+      },
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_4204d87a",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-10T02:43:11Z",
+      "side": 1,
+      "message": "You may want to do your dev work with various types of builds as test cases. You have a good \"release\" build below. Should also be able to build, with only new YAML build config, snapshots and autorelease builds. Things like the version format of the tarball and the extracted dir, as well as the URL, will be different. Here\u0027s an example of a snapshot build: https://github.com/opendaylight/integration-packaging/blob/master/rpm/build_vars.yaml#L87-L96 Here\u0027s an example of an autorelease build: https://github.com/opendaylight/integration-packaging/blob/0da99fca4e02d3fa43d41a46d12014c79d57d84d/rpm/build_vars.yaml#L127-L136",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_82f55085",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-10T02:43:11Z",
+      "side": 1,
+      "message": "I imagine there\u0027s a different name for this in deb-world. I guess \"pkg_version\" would be generic for debs/RPMs.",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_429fb852",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-10T02:43:11Z",
+      "side": 1,
+      "message": "This is meant to enable using a past version of a systemd unitfile for some builds. You\u0027re currently using the latest version for all builds, so you\u0027re not using it.",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_a2d16cfd",
+        "filename": "deb/debian_templates/rules_template",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-10T02:43:11Z",
+      "side": 1,
+      "message": "I think you should use {{ download_url }} for this, vs always pulling from the release Nexus repo. We\u0027ll definitely want to support building from other ODL builds, like snapshots https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.5.0-SNAPSHOT/",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
