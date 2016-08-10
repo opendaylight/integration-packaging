@@ -2,6 +2,115 @@
   "comments": [
     {
       "key": {
+        "uuid": "7a6b29fe_62275465",
+        "filename": "deb/debian_templates/build_debianfiles.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-10T02:19:51Z",
+      "side": 1,
+      "message": "There should be a blank line between the summary line and additional lines https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings",
+      "revId": "ae80dedc997eb2b3bdb0b472f7a1dc6a19684cfc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_0232e0a6",
+        "filename": "deb/debian_templates/build_debianfiles.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-10T02:19:51Z",
+      "side": 1,
+      "message": "Please remove all trailing whitespace",
+      "range": {
+        "startLine": 43,
+        "startChar": 51,
+        "endLine": 43,
+        "endChar": 52
+      },
+      "revId": "ae80dedc997eb2b3bdb0b472f7a1dc6a19684cfc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_222d5c47",
+        "filename": "deb/debian_templates/build_debianfiles.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-10T02:19:51Z",
+      "side": 1,
+      "message": "Please convert all hard tabs to spaces. It\u0027s a syntax error, not style error, to mix tabs/spaces in Python.",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 1
+      },
+      "revId": "ae80dedc997eb2b3bdb0b472f7a1dc6a19684cfc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_e21a4416",
+        "filename": "deb/debian_templates/build_debianfiles.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-10T02:19:51Z",
+      "side": 1,
+      "message": "Good, but there should be a parallel comment for the next loop I guess",
+      "range": {
+        "startLine": 63,
+        "startChar": 1,
+        "endLine": 63,
+        "endChar": 60
+      },
+      "revId": "ae80dedc997eb2b3bdb0b472f7a1dc6a19684cfc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_a2204c4a",
+        "filename": "deb/debian_templates/build_debianfiles.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-10T02:19:51Z",
+      "side": 1,
+      "message": "Space between args (a, b)",
+      "range": {
+        "startLine": 65,
+        "startChar": 41,
+        "endLine": 65,
+        "endChar": 42
+      },
+      "revId": "ae80dedc997eb2b3bdb0b472f7a1dc6a19684cfc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_c3d5a044",
         "filename": "deb/debian_templates/control_template",
         "patchSetId": 4
@@ -13,6 +122,30 @@
       "writtenOn": "2016-08-05T20:06:58Z",
       "side": 1,
       "message": "This might also change with each build. Not sure how to capture this, though.",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 7
+      },
+      "revId": "ae80dedc997eb2b3bdb0b472f7a1dc6a19684cfc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_c200e8ac",
+        "filename": "deb/debian_templates/control_template",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-10T02:19:51Z",
+      "side": 1,
+      "message": "This shouldn\u0027t change frequently, not frequently enough to warrant templating I think",
+      "parentUuid": "7a6b29fe_c3d5a044",
       "range": {
         "startLine": 6,
         "startChar": 0,
