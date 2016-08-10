@@ -186,6 +186,24 @@
       "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_dea0c0f6",
+        "filename": "deb/debian_templates/rules_template",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-10T23:05:23Z",
+      "side": 1,
+      "message": "Changed it to {{ download_url }}",
+      "parentUuid": "7a6b29fe_a2d16cfd",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
