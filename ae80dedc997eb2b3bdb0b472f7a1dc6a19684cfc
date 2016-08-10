@@ -155,6 +155,30 @@
       "revId": "ae80dedc997eb2b3bdb0b472f7a1dc6a19684cfc",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_dd9f2d5e",
+        "filename": "deb/debian_templates/control_template",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-08-10T08:19:24Z",
+      "side": 1,
+      "message": "It will change for Boron, since we\u0027ve switched to Java 8 — perhaps a variable for that would be useful.\n\n    Depends: ${misc:Depends}, adduser, default-jre-headless | java{{ java_version }}-runtime-headless, java{{ java_version }}-runtime-headless\n\nReading that again makes me wonder about the whole Java dependency, I\u0027ll need to check that (the Boolean operators just boil down to `java7-runtime-headless`).",
+      "parentUuid": "7a6b29fe_c200e8ac",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 7
+      },
+      "revId": "ae80dedc997eb2b3bdb0b472f7a1dc6a19684cfc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
