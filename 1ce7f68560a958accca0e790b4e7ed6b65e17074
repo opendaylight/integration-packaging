@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_7e3a4cce",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-10T23:01:33Z",
+      "side": 1,
+      "message": "Yes. I\u0027ll do that. \nI was thinking that it will be easier to maintain if we use the same YAML file for building both the RPMS and the .debs. The only concern is that .deb requires changelog_time and changelog_date in a specific format (eg: Tue, 26 Jul 2016) else dpkg-buildpackage throws error.",
+      "parentUuid": "7a6b29fe_e276c43d",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 35
+      },
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_4204d87a",
         "filename": "deb/build_vars.yaml",
         "patchSetId": 3
@@ -36,6 +60,24 @@
       "writtenOn": "2016-08-10T02:43:11Z",
       "side": 1,
       "message": "You may want to do your dev work with various types of builds as test cases. You have a good \"release\" build below. Should also be able to build, with only new YAML build config, snapshots and autorelease builds. Things like the version format of the tarball and the extracted dir, as well as the URL, will be different. Here\u0027s an example of a snapshot build: https://github.com/opendaylight/integration-packaging/blob/master/rpm/build_vars.yaml#L87-L96 Here\u0027s an example of an autorelease build: https://github.com/opendaylight/integration-packaging/blob/0da99fca4e02d3fa43d41a46d12014c79d57d84d/rpm/build_vars.yaml#L127-L136",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_5e3e70b9",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-10T23:01:33Z",
+      "side": 1,
+      "message": "I have modified build_vars.yaml to include the above builds. It should work correctly.",
+      "parentUuid": "7a6b29fe_4204d87a",
       "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
@@ -77,6 +119,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_be4b4458",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-10T23:01:33Z",
+      "side": 1,
+      "message": "Changed rpm_release to pkg_version.",
+      "parentUuid": "7a6b29fe_bd9cf16a",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_429fb852",
         "filename": "deb/build_vars.yaml",
         "patchSetId": 3
@@ -88,6 +148,24 @@
       "writtenOn": "2016-08-10T02:43:11Z",
       "side": 1,
       "message": "This is meant to enable using a past version of a systemd unitfile for some builds. You\u0027re currently using the latest version for all builds, so you\u0027re not using it.",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_be6224d6",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-10T23:01:33Z",
+      "side": 1,
+      "message": "I have modified templates/debian_buildfiles.py to download and use specific systemd unitfile for each build.",
+      "parentUuid": "7a6b29fe_429fb852",
       "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
