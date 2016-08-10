@@ -179,6 +179,30 @@
       "revId": "ae80dedc997eb2b3bdb0b472f7a1dc6a19684cfc",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_beb98430",
+        "filename": "deb/debian_templates/control_template",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-10T23:05:23Z",
+      "side": 1,
+      "message": "So, should I leave \u0027depends\u0027 as it is? We can change it later if needed, right?",
+      "parentUuid": "7a6b29fe_dd9f2d5e",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 7
+      },
+      "revId": "ae80dedc997eb2b3bdb0b472f7a1dc6a19684cfc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
