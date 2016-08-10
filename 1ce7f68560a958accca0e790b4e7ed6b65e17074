@@ -59,6 +59,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_bd9cf16a",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-08-10T08:19:24Z",
+      "side": 1,
+      "message": "In the Debian world it\u0027s known as debian_revision. pkg_version would work generically!",
+      "parentUuid": "7a6b29fe_82f55085",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_429fb852",
         "filename": "deb/build_vars.yaml",
         "patchSetId": 3
