@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_fe05bcc2",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-11T00:26:25Z",
+      "side": 1,
+      "message": "Ah, okay, good idea. Similar to the deb, the RPM build logic requires exactly this formatting. Options that come to mind include giving different date info for each (changelog_date_{rpm,deb}) or passing the info in a machine-friendly format and having the package build logic convert it into the per-package formats and use those in the templates.",
+      "parentUuid": "7a6b29fe_7e3a4cce",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 35
+      },
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_4204d87a",
         "filename": "deb/build_vars.yaml",
         "patchSetId": 3
@@ -78,6 +102,24 @@
       "side": 1,
       "message": "I have modified build_vars.yaml to include the above builds. It should work correctly.",
       "parentUuid": "7a6b29fe_4204d87a",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_1e1518f1",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-11T00:26:25Z",
+      "side": 1,
+      "message": "Nice, will test ASAP",
+      "parentUuid": "7a6b29fe_5e3e70b9",
       "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
@@ -137,6 +179,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_3e10d400",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-11T00:26:25Z",
+      "side": 1,
+      "message": "Cool, thanks",
+      "parentUuid": "7a6b29fe_be4b4458",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_429fb852",
         "filename": "deb/build_vars.yaml",
         "patchSetId": 3
@@ -172,6 +232,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_de0a80d1",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-11T00:26:25Z",
+      "side": 1,
+      "message": "Awesome, thanks:)",
+      "parentUuid": "7a6b29fe_be6224d6",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_a2d16cfd",
         "filename": "deb/debian_templates/rules_template",
         "patchSetId": 3
@@ -201,6 +279,24 @@
       "side": 1,
       "message": "Changed it to {{ download_url }}",
       "parentUuid": "7a6b29fe_a2d16cfd",
+      "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_7ef9acc7",
+        "filename": "deb/debian_templates/rules_template",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-11T00:26:25Z",
+      "side": 1,
+      "message": "Cool, thanks",
+      "parentUuid": "7a6b29fe_dea0c0f6",
       "revId": "1ce7f68560a958accca0e790b4e7ed6b65e17074",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
