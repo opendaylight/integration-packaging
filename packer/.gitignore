@@ -5,7 +5,6 @@
 output-virtualbox-iso/
 packer_cache/
 *.box
-Vagrantfile
 build.hwm
 build.pwd
 build.pwi
