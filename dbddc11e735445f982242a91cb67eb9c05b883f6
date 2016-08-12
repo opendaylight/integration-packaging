@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_f8e2e9ff",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-12T09:20:39Z",
+      "side": 1,
+      "message": "Ok. I thought build_vars.yaml will be same for both RPMs and .debs. I have corrected this.",
+      "parentUuid": "7a6b29fe_8d645523",
+      "revId": "dbddc11e735445f982242a91cb67eb9c05b883f6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_6d673926",
         "filename": "deb/build_vars.yaml",
         "patchSetId": 12
@@ -30,6 +48,24 @@
       "writtenOn": "2016-08-12T08:25:29Z",
       "side": 1,
       "message": "As above.",
+      "revId": "dbddc11e735445f982242a91cb67eb9c05b883f6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_58f2fdd2",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-12T09:20:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a6b29fe_6d673926",
       "revId": "dbddc11e735445f982242a91cb67eb9c05b883f6",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_38ed81f0",
+        "filename": "deb/templates/build_debianfiles.py",
+        "patchSetId": 12
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-12T09:20:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a6b29fe_ad7151e2",
+      "revId": "dbddc11e735445f982242a91cb67eb9c05b883f6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_0d7845c3",
         "filename": "deb/templates/changelog_template",
         "patchSetId": 12
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_98bbf5e4",
+        "filename": "deb/templates/changelog_template",
+        "patchSetId": 12
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-12T09:20:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a6b29fe_0d7845c3",
+      "revId": "dbddc11e735445f982242a91cb67eb9c05b883f6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_cd6e4d01",
         "filename": "deb/templates/control_template",
         "patchSetId": 12
@@ -81,6 +153,24 @@
       "writtenOn": "2016-08-12T08:25:29Z",
       "side": 1,
       "message": "This should be \"Architecture: all\" currently.",
+      "revId": "dbddc11e735445f982242a91cb67eb9c05b883f6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_78bed9d5",
+        "filename": "deb/templates/control_template",
+        "patchSetId": 12
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-12T09:20:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a6b29fe_cd6e4d01",
       "revId": "dbddc11e735445f982242a91cb67eb9c05b883f6",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
