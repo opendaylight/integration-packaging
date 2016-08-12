@@ -91,6 +91,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_4854e820",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-12T18:39:28Z",
+      "side": 1,
+      "message": "Wow, outstanding answer Stephen, thanks. :)",
+      "parentUuid": "7a6b29fe_68c9e477",
+      "revId": "dbddc11e735445f982242a91cb67eb9c05b883f6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_6d673926",
         "filename": "deb/build_vars.yaml",
         "patchSetId": 12
