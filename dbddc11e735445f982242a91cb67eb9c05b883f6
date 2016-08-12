@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_68e8c410",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-12T15:04:37Z",
+      "side": 1,
+      "message": "http://fedoraproject.org/wiki/Packaging:Naming#Release_Tag",
+      "parentUuid": "7a6b29fe_28decc6d",
+      "revId": "dbddc11e735445f982242a91cb67eb9c05b883f6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_6d673926",
         "filename": "deb/build_vars.yaml",
         "patchSetId": 12
