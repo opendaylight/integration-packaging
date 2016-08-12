@@ -36,23 +36,103 @@ consistent, known-working and easily shared environment.
 
 ## Building Debs
 
-To build .deb in the Vagrant env, use Debian packaging tools
+The `build.py` helper script is used for building OpenDaylight .debs.
 
-    [vagrant@localhost vagrant/opendaylight]$ dpkg-buildpackage -us -uc -b
+The `build.py` helper script can build a set of .debs based on provided
+version arguments.
+
+    [vagrant@localhost ~]$ /vagrant/build.py -h
+    usage: build.py [-h] [-v [major minor patch deb [major minor patch deb ...]]]
+    ....
+
+    optional arguments:
+      -h, --help            show this help message and exit
+
+    Existing build:
+      -v [major minor patch deb [major minor patch deb ...]], --version [major minor patch deb [major minor patch deb ...]]
+                        Deb version(s) to build
+    ....
+
+The `-v`/`--version` flag accepts a version number. Any build that matches
+the portions provided will be built. If more than one build matches the
+portions provided, all matching builds will be executed.
+
+For example, `build.py -v 3` would execute the builds that match the regex
+`3.*.*-*`. OpenDaylight 3.0.0-1 and 3.1.0-1, for example.
+
+To only build a single debian package, provide enough version info to make
+the match unique. For example, `build.py -v 2 4 0 1` could only match one
+definition (Helium SR4, 2.4.0-1).
+
+The `build.py` script uses `templates/build_debianfiles.py` to generate debian files for
+ODL .deb packages using JinJa2 templates and dynamic build data provided in `build_vars.yaml`.
 
 ## Defining New Debs
 
-NB: Functionality under construction
-TODO: Docs about how to define debs for new ODL versions
+The dynamic aspects of a build, such as ODL and Deb version info, have all
+been extracted to a single YAML configuration file. For most Deb updates,
+only that configuration file should need to be updated by humans.
+
+The variables available for configuration are documented below. A build
+definition should define all supported variables.
 
 ### Deb Build Variables
 
-NB: Functionality under construction
-TODO: More of these var defs as vars added
+#### `version_major`
 
-#### `TODO: Var name`
+The OpenDaylight major (element) version number of the release to build.
 
-TODO: Description
+For example, Hydrogen is 1.x.x, Helium is 2.x.x, Lithium is 3.x.x and
+so on down the periodic table.
+
+#### `version_minor`
+
+The OpenDaylight minor (SR) version number of the release to build.
+
+#### `version_patch`
+
+The OpenDaylight patch version of the release to build.
+
+#### `pkg_version`
+
+Debian revision for the given ODL major.minor.patch version.
+
+In addition to OpenDaylight's version, .debs themselves have versions. These
+are called "debian revisions". For a given OpenDaylight major.minor.patch
+version, there will be one or more major.minor.patch-pkg_version .debs.
+
+#### `sysd_commit`
+
+Version of ODL systemd unitfile to download and package in ODL .deb.
+
+The version of OpenDaylight's systemd unitfile, specified by the
+git commit hash, is downloaded from the [Int/Pack repo][16] and
+consumed by OpenDaylight's Deb builds.
+
+#### `codename`
+
+Elemental codename for the ODL release, including SR if applicable.
+
+Examples include "Helium-SR4", "Lithium" and "Lithium-SR1".
+
+#### `download_url`
+
+The ODL Deb repackages the tarball build artifact produced by ODL's
+autorelease build. This is the URL to the tarball ODL build to repackage
+into a Debian package.
+
+#### `java_version`
+
+Java dependency for specific ODL builds
+
+#### `changelog`
+
+Entry in the debian/changelog file for specific .deb.
+
+A debian/changelog file for specialized ODL builds is generated using these entries.
+
+The changelog entry must follow a specific format. It's best to follow the
+examples provided by existing build definitions closely.
 
 ## Using Debs
 
@@ -60,7 +140,7 @@ The familiar Deb-related commands apply to OpenDaylight's Debs.
 
 ### Installing
 
-To install a local OpenDaylight .deb package, use sudo dpkg -i <path to ODL .deb>
+To install a local OpenDaylight .deb package, use `sudo dpkg -i <path to ODL .deb>`
 
 Here's a walk-through of an install and the resulting system changes.
 
@@ -69,7 +149,7 @@ Here's a walk-through of an install and the resulting system changes.
     # Note that there are no ODL systemd files before the install
     [vagrant@localhost vagrant]$ ls /lib/systemd/system | grep -i opendaylight
     # Install an ODL .deb package
-    [vagrant@localhost vagrant]$ sudo dpkg -i opendaylight_0.4.2-Beryllium-SR2-0_amd64.deb
+    [vagrant@localhost vagrant]$ sudo dpkg -i opendaylight/opendaylight_0.4.2-Beryllium-SR2-0_amd64.deb
     # Note that ODL is now installed in /opt
     [vagrant@localhost vagrant]$ ls /opt/
     opendaylight
