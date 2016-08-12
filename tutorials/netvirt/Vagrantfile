@@ -1,0 +1,88 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version.
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  # Configure VM RAM and CPU for VirtualBox. Change this to meet your needs.
+  config.vm.provider :virtualbox do |virtualbox|
+    virtualbox.memory = 4096
+    virtualbox.cpus = 2
+  end
+
+  # Configure VM RAM and CPU for LibVirt. Change this to meet your needs.
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.memory = 4096
+    libvirt.cpus = 2
+  end
+
+  # NFS is fragile, disable it and use rsync
+  config.nfs.functional = false
+
+  # Work around bug in Vagrant 1.8.5 by using password over SSH auth
+  # https://github.com/mitchellh/vagrant/issues/7610
+  config.ssh.insert_key = false
+
+  # Box that installs the NetVirt Tutorial
+  config.vm.define "netvirt" do |netvirt|
+    # Build Vagrant box based on Fedora 24
+    netvirt.vm.box = "fedora/24-cloud-base"
+
+    # NB: Recent versions of OpenSSH, shipped with Fedora, don't support ssh-dss
+    # as an auth protocol. ODL seems offers ssh-dss by default. To SSH to the
+    # Karaf shell, tell SSH to accept ssh-dss or set this default.
+    #    ssh -p 8101 -oHostKeyAlgorithms=+ssh-dss karaf@localhost
+    netvirt.vm.provision "shell", inline: "echo 'HostKeyAlgorithms=+ssh-dss' >> /etc/ssh/ssh_config"
+
+    # ODL's APIs (REST and GUI) respond on both 8080 and 8181 by default
+    netvirt.vm.network "forwarded_port", guest: 8080, host: 8080
+    netvirt.vm.network "forwarded_port", guest: 8181, host: 8181
+
+    # Set Vagrant VMs IP to known value, used as ODL IP for OVS later
+    netvirt.vm.network "private_network", ip: "10.0.0.2"
+
+    # Install Docker for managing OVS containers
+    netvirt.vm.provision "shell", inline: "tee /etc/yum.repos.d/docker.repo <<-'EOF'
+[dockerrepo]
+name=Docker Repository
+baseurl=https://yum.dockerproject.org/repo/main/fedora/$releasever/
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
+EOF"
+    netvirt.vm.provision "shell", inline: "dnf install -y docker-engine"
+    netvirt.vm.provision "shell", inline: "usermod -a -G docker vagrant"
+    netvirt.vm.provision "shell", inline: "systemctl enable docker.service"
+    netvirt.vm.provision "shell", inline: "systemctl start docker"
+
+    # Need to reboot VM for Docker to work as non-root
+    # NB: Requires vagrant-reload plugin. Install on host with:
+    #   sudo vagrant plugin install vagrant-reload
+    config.vm.provision :reload
+
+    # Install and start OVS
+    netvirt.vm.provision "shell", inline: "dnf install -y openvswitch"
+    netvirt.vm.provision "shell", inline: "sudo /usr/share/openvswitch/scripts/ovs-ctl restart"
+
+    # Install Mininet
+    netvirt.vm.provision "shell", inline: "dnf install -y git"
+    netvirt.vm.provision "shell", inline: "git clone git://github.com/mininet/mininet"
+    netvirt.vm.provision "shell", inline: "cd mininet;git checkout -b 2.2.1 2.2.1;cd .."
+    netvirt.vm.provision "shell", inline: "mininet/util/install.sh -nf"
+
+    # Install Puppet
+    netvirt.vm.provision "shell", inline: "dnf install -y puppet"
+
+    # Install OpenDaylight using its Puppet module
+    netvirt.vm.provision "puppet" do |puppet|
+      puppet.module_path = ["modules"]
+      puppet.environment_path = "environments"
+      puppet.environment = "main"
+    end
+
+    # Start OVS contaier instance(s)
+    netvirt.vm.provision "shell", path: "docker_run_ovs.sh"
+  end
+end
