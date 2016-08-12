@@ -16,6 +16,24 @@
       "revId": "6f4f2e3a2dc4553b99c76520e1bd0d93093e0e45",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_b8eb51af",
+        "filename": "deb/templates/changelog_template",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-12T09:53:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a6b29fe_7893794f",
+      "revId": "6f4f2e3a2dc4553b99c76520e1bd0d93093e0e45",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
