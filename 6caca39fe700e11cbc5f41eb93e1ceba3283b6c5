@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_db9a8462",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 14
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-12T18:39:28Z",
+      "side": 1,
+      "message": "This causes problems for installing Boron, since it pulls Java 7 in this Vagrant env, but the Boron RPM now requests Java 8. I tried removing it and had trouble getting the .deb to resolve its dependencies and install the right version of Java. Using gdebi to manage the package and dep installs fails with `Dependency is not satisfiable: java8-runtime-headless`. Full docs here: http://pastebin.com/5yK0nBv8",
+      "range": {
+        "startLine": 34,
+        "startChar": 44,
+        "endLine": 34,
+        "endChar": 55
+      },
+      "revId": "6caca39fe700e11cbc5f41eb93e1ceba3283b6c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
