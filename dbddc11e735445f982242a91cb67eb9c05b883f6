@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_28decc6d",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-12T15:03:34Z",
+      "side": 1,
+      "message": "RPMs use this incrementally increasing pkg version concept and hack onto it info about pre-release builds, which is what was going on here. We need some way to distinguish this as a build based on autorelease build 1367, and the one below as based on snapshot build 4240 (vs having having the same version I\u0027d used for Be SR3 and B). How should we do that in Deb world?",
+      "parentUuid": "7a6b29fe_f8e2e9ff",
+      "revId": "dbddc11e735445f982242a91cb67eb9c05b883f6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_6d673926",
         "filename": "deb/build_vars.yaml",
         "patchSetId": 12
