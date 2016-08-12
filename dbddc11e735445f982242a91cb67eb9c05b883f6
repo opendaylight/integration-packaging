@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_68c9e477",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-08-12T15:40:28Z",
+      "side": 1,
+      "message": "Debian versioning considers the part to the left of the hyphen to be upstream, the part to the right to be Debian (downstream). Any time something upstream changes, the version number to the left *must* change. This is very important, because it determines the version of the orig tarball and that cannot ever change without changing its version number (and it only has the upstream part of the version). The Debian version tracks changes to the Debian packaging only; traditionally it starts from 1 every time an upstream version is bumped, then increments until the next upstream version bump.\n\nIn Debian, pre-releases etc. are dealt with using ~ and + suffixes. For example, a pre-release of upstream version 4.0 would be represented using an upstream version number starting with 4.0~ (e.g. 4.0~rc0, 4.0~alpha...); ~ sorts before anything else in version comparisons. A post-release snapshot of upstream version 4.0 (e.g. to fix bugs which are too critical to wait for the next upstream release) would be represented using 4.0+ (e.g. 4.0+git20160812).\n\nSo we probably need to split off snapshot information into another version number, and build the complete version number separately to conform to the RPM and DEB idiosyncracies...\n\nhttps://www.debian.org/doc/debian-policy/ch-controlfields.html#s-f-Version",
+      "parentUuid": "7a6b29fe_28decc6d",
+      "revId": "dbddc11e735445f982242a91cb67eb9c05b883f6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_6d673926",
         "filename": "deb/build_vars.yaml",
         "patchSetId": 12
