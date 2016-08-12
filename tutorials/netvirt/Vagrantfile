@@ -1,0 +1,51 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version.
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  # Configure VM RAM and CPU for VirtualBox. Change this to meet your needs.
+  config.vm.provider :virtualbox do |virtualbox|
+    virtualbox.memory = 4096
+    virtualbox.cpus = 2
+  end
+
+  # Configure VM RAM and CPU for LibVirt. Change this to meet your needs.
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.memory = 4096
+    libvirt.cpus = 2
+  end
+
+  # NFS is fragile, disable it and use rsync
+  config.nfs.functional = false
+
+  # Box that installs the NetVirt Tutorial
+  config.vm.define "netvirt" do |netvirt|
+    # Build Vagrant box based on Fedora 23
+    netvirt.vm.box = "fedora/23-cloud-base"
+
+    # NB: Recent versions of OpenSSH, shipped with Fedora, don't support ssh-dss
+    # as an auth protocol. ODL seems offers ssh-dss by default. To SSH to the
+    # Karaf shell, tell SSH to accept ssh-dss or set this default.
+    #    ssh -p 8101 -oHostKeyAlgorithms=+ssh-dss karaf@localhost
+    netvirt.vm.provision "shell", inline: "echo 'HostKeyAlgorithms=+ssh-dss' >> /etc/ssh/ssh_config"
+
+    # Forward ODL's web GUI (DLUX) port so it's accessible on the host machine
+    #netvirt.vm.network "forwarded_port", guest: 8181, host: 8181
+
+    # Install Puppet
+    netvirt.vm.provision "shell", inline: "dnf install -y puppet"
+
+    # Install OpenDaylight using its Puppet module
+    netvirt.vm.provision "puppet" do |puppet|
+      puppet.module_path = ["modules"]
+      puppet.environment_path = "environments"
+      puppet.environment = "main"
+    end
+
+    # Set JAVA_HOME in all shells that source bashrc
+    #netvirt.vm.provision "shell", inline: "echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> /etc/bashrc"
+  end
+end
