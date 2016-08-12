@@ -22,6 +22,30 @@
       "revId": "6caca39fe700e11cbc5f41eb93e1ceba3283b6c5",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_5e5662d3",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 14
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-12T22:10:25Z",
+      "side": 1,
+      "message": "To install OpenJDK 8, we can follow these steps: (http://bit.ly/2aPtzxK)\n\n1. Edit /etc/apt/sources.list and add these lines:\n   # Backport Testing on stable\n   # JDK 8\n   deb http://ftp.de.debian.org/debian jessie-backports main\n\n2. $ sudo apt-get update\n\n3. $ sudo apt-get install openjdk-8-jre\n\n4. Update Java alternative path:\n   $ sudo update-alternatives --config java\n   Select the JVM 8 path\n\nAfter this:\n  $ java -version\n  openjdk version \"1.8.0_102\"\n\nAlso, should we make changes in the Vagrantfile, so that it does not install a default-jdk? The user can install the package himself depending on the ODL release, although I don\u0027t think this is user-friendly. Any other way to solve this issue?",
+      "parentUuid": "7a6b29fe_db9a8462",
+      "range": {
+        "startLine": 34,
+        "startChar": 44,
+        "endLine": 34,
+        "endChar": 55
+      },
+      "revId": "6caca39fe700e11cbc5f41eb93e1ceba3283b6c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
