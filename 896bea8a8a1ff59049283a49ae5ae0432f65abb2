@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_922c7404",
+        "filename": "deb/templates/build_debianfiles.py",
+        "patchSetId": 10
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-12T01:10:48Z",
+      "side": 1,
+      "message": "This looks good, +1",
+      "revId": "896bea8a8a1ff59049283a49ae5ae0432f65abb2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
