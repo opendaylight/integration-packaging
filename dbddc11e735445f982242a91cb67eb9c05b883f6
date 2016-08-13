@@ -144,6 +144,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_39b0e042",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-13T20:28:51Z",
+      "side": 1,
+      "message": "Umm...so finally what is the pkg_version that we should use here?",
+      "parentUuid": "7a6b29fe_58f2fdd2",
+      "revId": "dbddc11e735445f982242a91cb67eb9c05b883f6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_ad7151e2",
         "filename": "deb/templates/build_debianfiles.py",
         "patchSetId": 12
