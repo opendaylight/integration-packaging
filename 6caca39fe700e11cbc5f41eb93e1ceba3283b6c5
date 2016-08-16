@@ -46,6 +46,30 @@
       "revId": "6caca39fe700e11cbc5f41eb93e1ceba3283b6c5",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_3bbd6d69",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 14
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-08-16T08:48:52Z",
+      "side": 1,
+      "message": "I\u0027m thinking that we should avoid tying the Vagrantfile to the specific requirements of each generated package. So it definitely makes sense to add jessie-backports via the Vagrantfile (but use http://httpredir.debian.org/debian instead of the German mirror, and instead of editing sources.list, add a jessie-backports.list file to /etc/apt/sources.list.d), but not so much to specify the build-dependencies here. Let me see what I can come up with...",
+      "parentUuid": "7a6b29fe_5e5662d3",
+      "range": {
+        "startLine": 34,
+        "startChar": 44,
+        "endLine": 34,
+        "endChar": 55
+      },
+      "revId": "6caca39fe700e11cbc5f41eb93e1ceba3283b6c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
