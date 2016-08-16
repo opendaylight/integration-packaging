@@ -70,6 +70,47 @@
       "revId": "6caca39fe700e11cbc5f41eb93e1ceba3283b6c5",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_fb2f759f",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 14
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-08-16T09:06:23Z",
+      "side": 1,
+      "message": "I haven\u0027t tried this out in detail, but here are some ideas to pull in the appropriate build-dependencies automatically...\n\n* Drop the packages which aren\u0027t necessary for setting the environment up from the apt-get line above (presumably, dpkg-dev, debhelper, dh-systemd and default-jdk).\n\n* Add three packages above: build-essential (which we\u0027re supposed to assume is present on Debian build systems), devscripts (which we\u0027ll use to install the build-dependencies) and equivs (which we need for mk-build-deps below).\n\n* Use mk-build-deps to install the build-dependencies; I don\u0027t know if this can be done from the Vagrantfile or if it has to be a step in the build (it needs access to the control file). \"mk-build-deps -i path/to/debian/control\" run as root should do the right thing.",
+      "parentUuid": "7a6b29fe_3bbd6d69",
+      "range": {
+        "startLine": 34,
+        "startChar": 44,
+        "endLine": 34,
+        "endChar": 55
+      },
+      "revId": "6caca39fe700e11cbc5f41eb93e1ceba3283b6c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_1b1cf176",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 14
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-08-16T09:06:23Z",
+      "side": 1,
+      "message": "The Debian way of doing this is to install python-jinja2 instead of python-pip ;-).",
+      "revId": "6caca39fe700e11cbc5f41eb93e1ceba3283b6c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
