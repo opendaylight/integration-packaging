@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_a08f5629",
+        "filename": "deb/build.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-26T19:46:27Z",
+      "side": 1,
+      "message": "When `apt-get -f install` is run before trying to install \"opendaylight_5.0.0-1_all.deb\", the output is as follows:\n\n$ sudo apt-get -f install \nReading package lists... Done\nBuilding dependency tree       \nReading state information... Done\n0 upgraded, 0 newly installed, 0 to remove and 16 not upgraded\n\nTrying to install opendaylight .deb package, gives the following error:\n\n$ sudo dpkg -i opendaylight_5.0.0-1_all.deb \nSelecting previously unselected package opendaylight.\n(Reading database ... 40276 files and directories currently installed.)\nPreparing to unpack opendaylight_5.0.0-1_all.deb ...\nUnpacking opendaylight (5.0.0-1) ...\ndpkg: dependency problems prevent configuration of opendaylight:\n opendaylight depends on java8-runtime-headless; however:\n  Package java8-runtime-headless is not installed.\n  Package openjdk-8-jre-headless:amd64 which provides java8-runtime-headless is not installed.\n\ndpkg: error processing package opendaylight (--install):\n dependency problems - leaving unconfigured\nErrors were encountered while processing:\n opendaylight\n\nThe above error occurs because openjdk-8-jre-headless had unmet dependencies. Hence, java8 was not installed using `mk-build-deps`.\n\nHowever, after this `apt-get -f install` successfully installs openjdk8-jre-headless along with all its unmet dependencies:\n\n$ sudo apt-get -f install\nReading package lists... Done\nBuilding dependency tree       \nReading state information... Done\nCorrecting dependencies... Done\nThe following extra packages will be installed:\n  ca-certificates-java fontconfig-config fonts-dejavu-core java-common libavahi-client3 libavahi-common-data libavahi-common3 libcups2 libfontconfig1 libnspr4 libnss3\n  libxi6 libxrender1 libxtst6 openjdk-8-jre-headless x11-common.....\n....\n\nAm I missing something here? How can we make sure that all dependencies get installed in the system before installing opendaylight?",
+      "range": {
+        "startLine": 53,
+        "startChar": 22,
+        "endLine": 53,
+        "endChar": 45
+      },
+      "revId": "ae78e30fea5d5288f241025ca00c8dd6d2b46fd1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
