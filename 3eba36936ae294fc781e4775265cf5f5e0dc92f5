@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_43976948",
+        "filename": "deb/templates/README.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-29T15:51:28Z",
+      "side": 1,
+      "message": "The new build.py script is the recommended way to build debs, so I think we can remove these old docs. There\u0027s also much better docs at ../README.markdown",
+      "revId": "3eba36936ae294fc781e4775265cf5f5e0dc92f5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_63c38557",
+        "filename": "deb/templates/control_template",
+        "patchSetId": 17
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-29T15:51:28Z",
+      "side": 1,
+      "message": "I could build 4.3, but this was failing at gdebi install with \"Dependency is not satisfiable: java7-runtime-headless\": http://pastebin.com/RZjtLjTJ\n\nODL RelEng/Builder uses OpenJDK for all Jenkins instances, so simplified to just install OpenJDK JRE \u003cJava version\u003e. https://github.com/opendaylight/releng-builder/blob/master/packer/provision/baseline.sh#L122-L134\nhttps://github.com/opendaylight/releng-builder/blob/master/jjb/releng-defaults.yaml#L42\n\nSeems to build and install fine with the Depends line in patchset 18",
+      "revId": "3eba36936ae294fc781e4775265cf5f5e0dc92f5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_03aa9184",
+        "filename": "deb/templates/opendaylight.service",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-29T15:51:28Z",
+      "side": 1,
+      "message": "build_debfiles.build_debfiles downloads opendaylight.service into the debain build dir from rpm/unitfiles/ based on sysd_commit, this opendaylight.service wasn\u0027t being used",
+      "revId": "3eba36936ae294fc781e4775265cf5f5e0dc92f5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
