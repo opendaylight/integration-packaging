@@ -111,6 +111,24 @@
       "revId": "6caca39fe700e11cbc5f41eb93e1ceba3283b6c5",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_63a8a577",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 14
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-29T15:52:45Z",
+      "side": 1,
+      "message": "Done in patchset 18",
+      "parentUuid": "7a6b29fe_1b1cf176",
+      "revId": "6caca39fe700e11cbc5f41eb93e1ceba3283b6c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
