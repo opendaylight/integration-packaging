@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_a30bdd8c",
+        "filename": "deb/templates/control_template",
+        "patchSetId": 17
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-08-29T16:10:42Z",
+      "side": 1,
+      "message": "Basically package openjdk-{{java_version}}-jre-headless provides java{{java_version}}-runtime-headless. So, this should not be a problem.",
+      "parentUuid": "7a6b29fe_63c38557",
+      "revId": "3eba36936ae294fc781e4775265cf5f5e0dc92f5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_03aa9184",
         "filename": "deb/templates/opendaylight.service",
         "patchSetId": 17
