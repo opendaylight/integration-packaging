@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_e385d507",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-29T15:51:28Z",
+      "side": 1,
+      "message": "These changes from using pip and requirements.txt to installing via deb pkgs is based on skitt\u0027s feedback on a previous patchset",
+      "revId": "1ad22ed2eae2d1f1ebdf4d114f6f631330ce0a01",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_437e491a",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-29T15:51:28Z",
+      "side": 1,
+      "message": "Just installing this so we can test the install in the Vagrant env",
+      "range": {
+        "startLine": 36,
+        "startChar": 44,
+        "endLine": 36,
+        "endChar": 49
+      },
+      "revId": "1ad22ed2eae2d1f1ebdf4d114f6f631330ce0a01",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_0381f1fa",
+        "filename": "deb/build.py",
+        "patchSetId": 18
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-29T15:51:28Z",
+      "side": 1,
+      "message": "It seems like the names of the two Python functions were basically inverted. This one actually builds the deb, using a helper to build debfiles.",
+      "revId": "1ad22ed2eae2d1f1ebdf4d114f6f631330ce0a01",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_c38a591a",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 18
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-08-29T15:51:28Z",
+      "side": 1,
+      "message": "I copied your exit code 143 change in the RPM .service file in this commit, so this ends up pulling down the exact same opendaylight.service you had in templates/.",
+      "revId": "1ad22ed2eae2d1f1ebdf4d114f6f631330ce0a01",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
