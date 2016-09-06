@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_27017905",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-09-06T15:23:03Z",
+      "side": 1,
+      "message": "Please quote your variables:\n\n    if [ -f \"$TARBALL\" ];\n\n(and so on).",
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_470c753b",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-09-06T15:23:03Z",
+      "side": 1,
+      "message": "It would be nice to make it clear that it\u0027s either --dist or --file here (\"two arguments\" can be understood as \"--dist\" and \"--file\").",
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_87116d54",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-09-06T15:23:03Z",
+      "side": 1,
+      "message": "Watch out for trailing spaces, we don\u0027t like them in ODL ;-).",
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_e71ae16d",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-09-06T15:23:03Z",
+      "side": 1,
+      "message": "You can use basename to strip the extension (if it\u0027s constant).",
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_27285985",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-09-06T15:23:03Z",
+      "side": 1,
+      "message": "Please use heredocs to create these files... Or better yet, use the templates (or is there a reason you\u0027re not doing that?).",
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
