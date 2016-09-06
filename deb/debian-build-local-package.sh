@@ -38,14 +38,14 @@ if [ $# -ne 2 ]; then
 fi
 
 case "$1" in
-        --dist) 
+        --dist)
 		check_distribution $2
             ;;
         --file)
 		TARBALL=$2
-		check_tarball 
+		check_tarball
             ;;
-        *) 
+        *)
 		echo "Usage: --dist <distribution-karaf-directory>"
 		echo "       --dist /home/user/distribution"
 		echo "       --file <distribution-karaf-tarball>"
@@ -58,8 +58,8 @@ FILENAME=$(basename "$TARBALL")
 FILENAME="${FILENAME%.*}"
 FILENAME="${FILENAME%.*}"
 CODENAME="${FILENAME##*-}"
-VERSION="${FILENAME%-*}" 
-VERSION="${VERSION##*-}" 
+VERSION="${FILENAME%-*}"
+VERSION="${VERSION##*-}"
 VERSION_PATCH="${VERSION##*.}"
 VERSION_MINOR="${VERSION%.*}"
 VERSION_MINOR="${VERSION_MINOR##*.}"
@@ -67,30 +67,30 @@ VERSION_MAJOR="${VERSION%%.*}"
 
 mkdir debian
 
-echo '#!/usr/bin/make -f' > debian/rules 
-echo '' >> debian/rules 
-echo 'VERSION_MAJOR = '$VERSION_MAJOR >> debian/rules 
-echo 'VERSION_MINOR = '$VERSION_MINOR >> debian/rules 
-echo 'VERSION_PATCH = '$VERSION_PATCH >> debian/rules 
-echo 'CODENAME = '$CODENAME >> debian/rules 
-echo 'VERSION = $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)-$(CODENAME)' >> debian/rules 
-echo 'PACKAGEVERSION = $(VERSION)-$(DISTRIBUTION)0' >> debian/rules 
-echo 'TARBALL = distribution-karaf-$(VERSION).tar.gz' >> debian/rules 
-echo '' >> debian/rules 
-echo '%:' >> debian/rules 
-echo -e '\tdh $@ --with systemd' >> debian/rules 
-echo '' >> debian/rules 
-echo 'override_dh_auto_clean:' >> debian/rules 
-echo 'override_dh_auto_test:' >> debian/rules 
-echo 'override_dh_auto_build:' >> debian/rules 
-echo 'override_dh_usrlocal:' >> debian/rules 
-echo 'override_dh_auto_install:' >> debian/rules 
-echo -e '\ttar -xf $(TARBALL)' >> debian/rules 
-echo -e '\tmkdir -p ./debian/opendaylight/opt/opendaylight/' >> debian/rules 
-echo -e '\tcp -r ./distribution-karaf-$(VERSION)/* ./debian/opendaylight/opt/opendaylight/' >> debian/rules 
-echo '' >> debian/rules 
-echo 'override_dh_gencontrol:' >> debian/rules 
-echo -e '\tdh_gencontrol -- -v$(PACKAGEVERSION)' >> debian/rules 
+echo '#!/usr/bin/make -f' > debian/rules
+echo '' >> debian/rules
+echo 'VERSION_MAJOR = '$VERSION_MAJOR >> debian/rules
+echo 'VERSION_MINOR = '$VERSION_MINOR >> debian/rules
+echo 'VERSION_PATCH = '$VERSION_PATCH >> debian/rules
+echo 'CODENAME = '$CODENAME >> debian/rules
+echo 'VERSION = $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)-$(CODENAME)' >> debian/rules
+echo 'PACKAGEVERSION = $(VERSION)-$(DISTRIBUTION)0' >> debian/rules
+echo 'TARBALL = distribution-karaf-$(VERSION).tar.gz' >> debian/rules
+echo '' >> debian/rules
+echo '%:' >> debian/rules
+echo -e '\tdh $@ --with systemd' >> debian/rules
+echo '' >> debian/rules
+echo 'override_dh_auto_clean:' >> debian/rules
+echo 'override_dh_auto_test:' >> debian/rules
+echo 'override_dh_auto_build:' >> debian/rules
+echo 'override_dh_usrlocal:' >> debian/rules
+echo 'override_dh_auto_install:' >> debian/rules
+echo -e '\ttar -xf $(TARBALL)' >> debian/rules
+echo -e '\tmkdir -p ./debian/opendaylight/opt/opendaylight/' >> debian/rules
+echo -e '\tcp -r ./distribution-karaf-$(VERSION)/* ./debian/opendaylight/opt/opendaylight/' >> debian/rules
+echo '' >> debian/rules
+echo 'override_dh_gencontrol:' >> debian/rules
+echo -e '\tdh_gencontrol -- -v$(PACKAGEVERSION)' >> debian/rules
 
 
 echo 'opendaylight ('$VERSION_MAJOR'.'$VERSION_MINOR'.'$VERSION_PATCH'-1) UNRELEASED; urgency=medium' > debian/changelog
@@ -98,7 +98,7 @@ echo '' >> debian/changelog
 echo '  * Release: OpenDaylight '$VERSION_MAJOR'.'$VERSION_MINOR'.'$VERSION_PATCH'-'$CODENAME >> debian/changelog
 echo ' -- '$CHANGELOGNAME' <'$CHANGELOGEMAIL'>  '$(date +"%a, %d %b %Y %T %z") >> debian/changelog
 
-echo 'Source: opendaylight' > debian/control 
+echo 'Source: opendaylight' > debian/control
 echo 'Build-Depends: debhelper (>= 9), wget, ca-certificates, dh-systemd' >> debian/control
 echo 'Maintainer: '$CHANGELOGNAME' <'$CHANGELOGEMAIL'> ' >> debian/control
 echo '' >> debian/control
