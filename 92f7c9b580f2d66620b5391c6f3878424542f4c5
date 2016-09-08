@@ -37,6 +37,29 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_decfab27",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-09-08T06:38:27Z",
+      "side": 1,
+      "message": "Please prefer spaces over tabs where possible.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 1
+      },
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_470c753b",
         "filename": "deb/debian-build-local-package.sh",
         "patchSetId": 1
@@ -153,6 +176,52 @@
       "side": 1,
       "message": "I started this as a quick script two weeks ago, before the python template model was committed. it looked as a very quick way to create this 3 single files. I will spend some time tomorrow reviewing the python scripts in order to see how to take advantage of them to create the same files.",
       "parentUuid": "7a6b29fe_27285985",
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_3e8e9fd0",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-09-08T06:38:27Z",
+      "side": 1,
+      "message": "This may vary. It\u0027s Java 7 for Beryllium and Java 8 for Boron.",
+      "range": {
+        "startLine": 106,
+        "startChar": 41,
+        "endLine": 106,
+        "endChar": 63
+      },
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_5e91dbef",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2016-09-08T06:38:27Z",
+      "side": 1,
+      "message": "For now, the contents of the package don\u0027t vary based on architecture. So, this should simply be \"all\".",
+      "range": {
+        "startLine": 107,
+        "startChar": 20,
+        "endLine": 107,
+        "endChar": 23
+      },
       "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
