@@ -130,6 +130,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_327c0eb5",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-09-09T07:20:33Z",
+      "side": 1,
+      "message": "You can use \"commit --amend\" to re-do this commit; then \"git review\" will push it as a new patch-set on this review. https://wiki.opendaylight.org/view/Git-review_Workflow has the details...",
+      "parentUuid": "7a6b29fe_2506911d",
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_e71ae16d",
         "filename": "deb/debian-build-local-package.sh",
         "patchSetId": 1
