@@ -60,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_4e963e40",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-09-12T17:55:03Z",
+      "side": 1,
+      "message": "+1, this is a convention for Integration/Packaging (and Int/* I think)",
+      "parentUuid": "7a6b29fe_decfab27",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 1
+      },
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_470c753b",
         "filename": "deb/debian-build-local-package.sh",
         "patchSetId": 1
@@ -148,6 +172,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_6e917a46",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-09-12T17:55:03Z",
+      "side": 1,
+      "message": "There are some Int/Pack-specific Git/Gerrit docs here too, FYI: https://wiki.opendaylight.org/view/Integration/Packaging/Patches",
+      "parentUuid": "7a6b29fe_327c0eb5",
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_e71ae16d",
         "filename": "deb/debian-build-local-package.sh",
         "patchSetId": 1
@@ -200,6 +242,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_ae971239",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-09-12T17:55:03Z",
+      "side": 1,
+      "message": "+1 Patricio",
+      "parentUuid": "7a6b29fe_650c093c",
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_3e8e9fd0",
         "filename": "deb/debian-build-local-package.sh",
         "patchSetId": 1
@@ -234,6 +294,30 @@
       "writtenOn": "2016-09-08T06:38:27Z",
       "side": 1,
       "message": "For now, the contents of the package don\u0027t vary based on architecture. So, this should simply be \"all\".",
+      "range": {
+        "startLine": 107,
+        "startChar": 20,
+        "endLine": 107,
+        "endChar": 23
+      },
+      "revId": "92f7c9b580f2d66620b5391c6f3878424542f4c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_8e9cd65e",
+        "filename": "deb/debian-build-local-package.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-09-12T17:55:03Z",
+      "side": 1,
+      "message": "Good review feedback (and elsewhere), thanks :)",
+      "parentUuid": "7a6b29fe_5e91dbef",
       "range": {
         "startLine": 107,
         "startChar": 20,
