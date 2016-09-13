@@ -2,6 +2,7 @@
 """Build debian files from YAML debian config and Jinja2 debian templates."""
 
 import os
+import re
 import sys
 import shutil
 import urllib
@@ -31,8 +32,8 @@ odl_dir_template = Template("opendaylight/opendaylight-$version_major.$version_m
                             "$version_patch-$pkg_version/")
 odl_deb_template = Template("opendaylight/opendaylight_$version_major.$version_minor."
                             "$version_patch-${pkg_version}_all.deb")
-odl_changes_template = Template("opendaylight/opendaylight_$version_major.$version_minor."
-                                "$version_patch-${pkg_version}_all.changes")
+odl_files_template = Template("opendaylight_$version_major.$version_minor."
+                              "$version_patch-${pkg_version}*")
 
 
 def build_debfiles(build):
@@ -46,6 +47,7 @@ def build_debfiles(build):
     :type build: dict
 
     """
+    # Specialize a series of name templates for the given build
     odl_dir_name = odl_dir_template.substitute(build)
     odl_dir_path = os.path.join(templates_dir, os.pardir, odl_dir_name)
 
@@ -59,11 +61,13 @@ def build_debfiles(build):
     if os.path.isfile(odl_deb_path):
         os.remove(odl_deb_path)
 
-    # Delete old .changes file if it exists
-    odl_changes_name = odl_changes_template.substitute(build)
-    odl_changes_path = os.path.join(templates_dir, os.pardir, odl_changes_name)
-    if os.path.isfile(odl_changes_path):
-        os.remove(odl_changes_path)
+    # Delete old .changes, .dsc, .tar.gz files if they exist
+    odl_files_regex = odl_files_template.substitute(build)
+    odl_par_dir = os.path.join(templates_dir, os.pardir, "opendaylight")
+    if os.path.isdir(odl_par_dir):
+        for f in os.listdir(odl_par_dir):
+            if re.search(odl_files_regex, f):
+                os.remove(os.path.join(odl_par_dir, f))
 
     # Create debian directory
     debian_dir_path = os.path.join(odl_dir_path, "debian")
@@ -98,7 +102,7 @@ def build_debfiles(build):
         urllib.urlretrieve(unitfile_url, unitfile_path)
 
 
-# If run as a script, build .spec files for all builds
+# If run as a script, build debian files for all builds
 if __name__ == "__main__":
     # Load debian build variables from a YAML config file
     with open(os.path.join(templates_dir, os.pardir, "build_vars.yaml")) as var_fd:
