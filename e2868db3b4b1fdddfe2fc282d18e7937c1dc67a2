@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_a66b9d83",
+        "filename": "deb/README.markdown",
+        "patchSetId": 2
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-09-20T22:16:04Z",
+      "side": 1,
+      "message": "FYI, you can give HTML alt tag descriptions of links with:\n\n[#]: \u003cURL\u003e \"Description\"\n\nNot a blocker at all, just teaching. :)",
+      "revId": "e2868db3b4b1fdddfe2fc282d18e7937c1dc67a2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
