@@ -1,0 +1,148 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version.
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  # NFS is fragile, disable it and use rsync
+  config.nfs.functional = false
+
+  config.ssh.insert_key = false
+
+  # Box that installs the L2switch Tutorial
+  config.vm.define "controller" do |controller|
+
+    controller.vm.hostname = "controller"
+
+    # Configure 4G RAM for virtualbox or libvirt.
+    controller.vm.provider :virtualbox do |c|
+      c.memory = 4096
+    end
+    controller.vm.provider :libvirt do |c|
+      c.memory = 4096
+    end
+
+    # Build Vagrant box based on Centos 7
+    controller.vm.box = "centos/7"
+
+    # set prompt for vagrant user to match the default/expected prompt for upstream ODL CSIT
+    controller.vm.provision "shell", inline: "echo 'PS1=\"[\\u@\\h \\W]> \"' >> ~vagrant/.bashrc"
+
+    # Forward ODL's web GUI (DLUX) port so it's accessible on the host machine
+    controller.vm.network "forwarded_port", guest: 8181, host: 8181
+
+    controller.vm.network "private_network", ip: "10.10.81.21"
+    controller.vm.provision "shell",
+      inline: "curl -o ~vagrant/.ssh/id_rsa https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant"
+    controller.vm.provision "shell", inline: "chown vagrant:vagrant ~vagrant/.ssh/id_rsa"
+    controller.vm.provision "shell", inline: "chmod 0600 ~vagrant/.ssh/id_rsa"
+
+    # Add ODL RPM repo config to correct location in box filesystem
+    # Repo configs are provided by upstream OpenDaylight Integration/Packaging
+    controller.vm.provision "shell",
+      inline: "curl --silent -o /etc/yum.repos.d/opendaylight-42-release.repo \
+               \"https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=rpm/example_repo_configs/opendaylight-42-release.repo;hb=refs/heads/master\""
+
+    # Install ODL using the RPM repo config added above
+    controller.vm.provision "shell", inline: "yum install -y --nogpgcheck opendaylight"
+
+    # Start ODL's service via systemd
+    controller.vm.provision "shell", inline: "systemctl start opendaylight"
+
+    # Modify bashrc to set JAVA path
+    controller.vm.provision "shell", inline: "echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> /etc/bashrc"
+
+    # Install epel yum repo
+    controller.vm.provision "shell", inline: "yum install -y --nogpgcheck epel-release"
+
+    # Install git and sshpass
+    controller.vm.provision "shell", inline: "yum install -y --nogpgcheck git sshpass"
+
+    # Install ODL Karaf features required for DLUX and L2Switch
+    # Config management tools do this by adding features to featuresBoot in
+    # /opt/opendaylight/etc/org.apache.karaf.features.cfg
+    # A human user would typically SSH into ODL's Karaf shell, as we're demoing
+    controller.vm.provision "shell",
+      inline: "sshpass -p karaf ssh -tt -p 8101 -o StrictHostKeyChecking=no karaf@localhost feature:install odl-l2switch-switch-ui"
+
+  end
+
+  config.vm.define "tools" do |tools|
+
+    tools.vm.hostname = "tools"
+    tools.vm.network "private_network", ip: "10.10.81.31"
+    tools.vm.provision "shell",
+      inline: "curl -o ~vagrant/.ssh/id_rsa https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant"
+    tools.vm.provision "shell", inline: "chown vagrant:vagrant ~vagrant/.ssh/id_rsa"
+    tools.vm.provision "shell", inline: "chmod 0600 ~vagrant/.ssh/id_rsa"
+
+    # Configure 1G RAM for virtualbox or libvirt.
+    tools.vm.provider :virtualbox do |t|
+      t.memory = 1024
+    end
+    tools.vm.provider :libvirt do |t|
+      t.memory = 1024
+    end
+
+    # Build Vagrant box based on Fedora 24
+    tools.vm.box = "fedora/24-cloud-base"
+
+    # set prompt for vagrant user to match the default/expected prompt for upstream ODL CSIT
+    tools.vm.provision "shell", inline: "echo 'PS1=\"[\\u@\\h \\W]> \"' >> ~vagrant/.bashrc"
+
+    # Install git and openvswitch
+    tools.vm.provision "shell", inline: "dnf install -y --nogpgcheck git openvswitch"
+
+    # Start Open vSwitch
+    tools.vm.provision "shell", inline: "sudo /usr/share/openvswitch/scripts/ovs-ctl restart"
+
+    # Install Mininet
+    tools.vm.provision "shell", inline: "git clone git://github.com/mininet/mininet"
+    tools.vm.provision "shell", inline: "cd mininet;git checkout -b 2.2.1 2.2.1;cd .."
+    tools.vm.provision "shell", inline: "mininet/util/install.sh -nf"
+
+  end
+
+  config.vm.define "robot" do |robot|
+
+    robot.vm.hostname = "robot"
+    robot.vm.network "private_network", ip: "10.10.81.11"
+    robot.vm.provision "shell",
+      inline: "curl -o ~vagrant/.ssh/id_rsa https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant"
+    robot.vm.provision "shell", inline: "chown vagrant:vagrant ~vagrant/.ssh/id_rsa"
+    robot.vm.provision "shell", inline: "chmod 0600 ~vagrant/.ssh/id_rsa"
+
+    # Configure 1G RAM for virtualbox or libvirt.
+    robot.vm.provider :virtualbox do |r|
+      r.memory = 1024
+    end
+    robot.vm.provider :libvirt do |r|
+      r.memory = 1024
+    end
+
+    # Build Vagrant box based on Centos 7
+    robot.vm.box = "centos/7"
+
+    # set prompt for vagrant user to match the default/expected prompt for upstream ODL CSIT
+    robot.vm.provision "shell", inline: "echo 'PS1=\"[\\u@\\h \\W]> \"' >> ~vagrant/.bashrc"
+
+    # Install git, python-setuptools and epel repo
+    robot.vm.provision "shell",
+      inline: "yum install -y --nogpgcheck git gcc libffi-devel openssl-devel python-devel \
+        python-setuptools epel-release"
+
+    robot.vm.provision "shell", inline: "yum install -y --nogpgcheck python-pip"
+
+    robot.vm.provision "shell",
+      inline: "pip install --upgrade docker-py importlib requests scapy netifaces netaddr ipaddr \
+        jsonpath-rw robotframework{,-{httplibrary,requests,sshlibrary,selenium2library}}"
+
+    robot.vm.provision "shell",
+      inline: "git clone https://git.opendaylight.org/gerrit/p/integration/test.git"
+    robot.vm.provision "shell", inline: "chown -R vagrant:vagrant ~vagrant/test"
+
+  end
+
+end
