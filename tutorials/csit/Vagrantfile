@@ -1,0 +1,114 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version.
+VAGRANTFILE_API_VERSION = "2"
+
+# This is a single-vm vagrant file that will install the controller and all the tools needed to run
+# basic upstream CSIT
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  # NFS is fragile, disable it and use rsync
+  config.nfs.functional = false
+
+  # Explicitly using the "insecure" private key below, so don't need the insert_key
+  config.ssh.insert_key = false
+
+  # Set x11 forwarding so we can run GUIs on host from ssh sessions to guest
+  config.ssh.forward_x11 = true
+
+  # Box that installs the controller VM
+  config.vm.define "csit" do |csit|
+
+    csit.vm.hostname = "csit"
+
+    # Configure 4G RAM for virtualbox or libvirt.
+    csit.vm.provider :virtualbox do |c|
+      c.memory = 4096
+      c.cpus = 2
+      c.name = "CSIT"
+    end
+    csit.vm.provider :libvirt do |c|
+      c.memory = 4096
+      c.cpus = 2
+    end
+
+    # Build Vagrant box based on Fedora 24
+    csit.vm.box = "fedora/24-cloud-base"
+
+    # Set prompt for vagrant user to match the default/expected prompt for upstream ODL CSIT
+    csit.vm.provision "shell", inline: "echo 'PS1=\"[\\u@\\h \\W]> \"' >> ~vagrant/.bashrc"
+
+    # Forward ODL ports so they accessible on the host machine
+    # ODL's APIs (REST and GUI) respond on both 8080 and 8181 by default
+    csit.vm.network "forwarded_port", guest: 8080, host: 8080
+    csit.vm.network "forwarded_port", guest: 8181, host: 8181
+
+    # NB: Recent versions of OpenSSH, shipped with Fedora, don't support ssh-dss
+    # as an auth protocol. ODL seems offers ssh-dss by default. To SSH to the
+    # Karaf shell, tell SSH to accept ssh-dss or set this default.
+    csit.vm.provision "shell", inline: "echo 'HostKeyAlgorithms=+ssh-dss' >> /etc/ssh/ssh_config"
+
+    # Install dependencies
+    csit.vm.provision "shell",
+      inline: "dnf install -y --nogpgcheck git gcc libffi-devel openssl-devel \
+                                           python-devel redhat-rpm-config python-pip \
+                                           sshpass openvswitch python-dnf firefox xauth"
+
+    csit.vm.provision "shell",
+      inline: "pip install --upgrade docker-py importlib requests scapy netifaces netaddr ipaddr \
+        jsonpath-rw robotframework{,-{httplibrary,requests,sshlibrary,selenium2library}}"
+
+    # Install ODL using the Ansible provisioner
+    csit.vm.provision "ansible" do |ansible|
+      # Path to Ansible playbook that installs ODL using ODL's Ansible role
+      ansible.playbook = "provisioning/all_defaults_playbook.yml"
+    end
+
+    # Modify bashrc to set JAVA path
+    csit.vm.provision "shell", inline: "echo 'export JAVA_HOME=/etc/alternatives/jre_1.8.0' >> /etc/bashrc"
+
+    # Enable and Start Open vSwitch
+    csit.vm.provision "shell", inline: "sudo systemctl enable openvswitch; \
+                                        sudo systemctl start openvswitch"
+
+    # Install Mininet
+    csit.vm.provision "shell", inline: "git clone git://github.com/mininet/mininet"
+    csit.vm.provision "shell", inline: "cd mininet;git checkout -b 2.2.1 2.2.1;cd .."
+    csit.vm.provision "shell", inline: "mininet/util/install.sh -nf"
+
+    # Pull in Integration/Test and Releng/Builder repos
+    csit.vm.provision "shell",
+      inline: "git clone https://git.opendaylight.org/gerrit/p/integration/test.git"
+    csit.vm.provision "shell", inline: "chown -R vagrant:vagrant ~vagrant/test"
+
+    csit.vm.provision "shell",
+      inline: "git clone https://git.opendaylight.org/gerrit/p/releng/builder.git"
+    csit.vm.provision "shell", inline: "chown -R vagrant:vagrant ~vagrant/builder"
+
+
+    # pull private "insecure" vagrant key to match the default public key for key authentication for robot suites
+    csit.vm.provision "shell",
+      inline: "curl -o ~vagrant/.ssh/id_rsa https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant"
+    csit.vm.provision "shell", inline: "chown vagrant:vagrant ~vagrant/.ssh/id_rsa"
+    csit.vm.provision "shell", inline: "chmod 0600 ~vagrant/.ssh/id_rsa"
+
+
+    # Install Jenkins Job Builder (JJB)
+    csit.vm.provision "shell",
+      inline: "git clone https://git.openstack.org/openstack-infra/jenkins-job-builder"
+    csit.vm.provision "shell", inline: "chown -R vagrant:vagrant ~vagrant/jenkins-job-builder"
+    csit.vm.provision "shell", inline: "cd ~vagrant/jenkins-job-builder; \
+                                        pip install -r requirements.txt; \
+                                        pip install ."
+
+    # Disable selinux because once mininet is used for the first time, it is somehow
+    # blocking the vagrant ssh connections after that.  Also need to reboot for it to
+    # take effect.
+    csit.vm.provision "shell",
+          inline: "sed -i 's/SELINUX=\\(enforcing\\|permissive\\)/SELINUX=disabled/g' /etc/selinux/config"
+    csit.vm.provision "shell", inline: "reboot now"
+
+  end
+
+end
