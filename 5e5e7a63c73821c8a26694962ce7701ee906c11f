@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_467a8924",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-09-20T23:22:13Z",
+      "side": 1,
+      "message": "this is the private \"insecure\" key to go with the public key that gets installed.  is that what you meant?  I\u0027m doing this so there can be inter-vm ssh\u0027ing happening with keys.",
+      "parentUuid": "7a6b29fe_e6d63527",
+      "revId": "5e5e7a63c73821c8a26694962ce7701ee906c11f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_66ea25dc",
         "filename": "tutorials/csit/Vagrantfile",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_66cd0566",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-09-20T23:22:13Z",
+      "side": 1,
+      "message": "ok.  I think we might decide to not start or install opendaylight in this vagrant in the end.  the user can \ntake care of that.  not sure yet.",
+      "parentUuid": "7a6b29fe_66ea25dc",
+      "revId": "5e5e7a63c73821c8a26694962ce7701ee906c11f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_c6d97958",
         "filename": "tutorials/csit/Vagrantfile",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2016-09-20T22:51:46Z",
       "side": 1,
       "message": "This is because CSIT expects this prompt, right? Maybe good to doc",
+      "revId": "5e5e7a63c73821c8a26694962ce7701ee906c11f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_a6c39d36",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-09-20T23:22:13Z",
+      "side": 1,
+      "message": "yes.  will do.",
+      "parentUuid": "7a6b29fe_c6d97958",
       "revId": "5e5e7a63c73821c8a26694962ce7701ee906c11f",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
@@ -76,6 +130,30 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_c6e339d7",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-09-20T23:22:13Z",
+      "side": 1,
+      "message": "will fix.",
+      "parentUuid": "7a6b29fe_26ddcd42",
+      "range": {
+        "startLine": 121,
+        "startChar": 0,
+        "endLine": 122,
+        "endChar": 29
+      },
+      "revId": "5e5e7a63c73821c8a26694962ce7701ee906c11f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_06e091f8",
         "filename": "tutorials/csit/Vagrantfile",
         "patchSetId": 1
@@ -87,6 +165,30 @@
       "writtenOn": "2016-09-20T22:51:46Z",
       "side": 1,
       "message": "Does this land in /vagrant/test? I would have thought it\u0027d land in /home/vagrant/test unless you give a dir argument above",
+      "range": {
+        "startLine": 138,
+        "startChar": 66,
+        "endLine": 138,
+        "endChar": 79
+      },
+      "revId": "5e5e7a63c73821c8a26694962ce7701ee906c11f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_26e78de5",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-09-20T23:22:13Z",
+      "side": 1,
+      "message": "good catch.  will fix",
+      "parentUuid": "7a6b29fe_06e091f8",
       "range": {
         "startLine": 138,
         "startChar": 66,
