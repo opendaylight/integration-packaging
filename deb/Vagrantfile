@@ -25,6 +25,9 @@ Vagrant.configure("2") do |config|
   # Start from Debian VM so resulting pkgs will build on all Deb derivatives
   config.vm.box = "debian/jessie64"
 
+  # Update package info to prevent old info from causing 404s during install
+  config.vm.provision "shell", inline: "apt-get update"
+
   # Install pkg dev tools, Python libs for build scripts, gdebi to test install
   config.vm.provision "shell", inline: "apt-get install -y --force-yes \
                                             build-essential \
