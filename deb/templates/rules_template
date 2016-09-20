@@ -8,7 +8,6 @@ CODENAME = "{{ codename }}"
 VERSION = 0.$(VERSION_MAJOR).$(VERSION_MINOR)-$(CODENAME)
 PACKAGEVERSION = $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)-$(PKG_VERSION)
 TARBALL = $(notdir {{ download_url }})
-URL = "{{ download_url }}"
 
 %:
 	dh $@ --with systemd
@@ -18,7 +17,6 @@ override_dh_auto_test:
 override_dh_auto_build:
 override_dh_usrlocal:
 override_dh_auto_install:
-	wget -N --progress=dot:mega $(URL)
 	tar -xf $(TARBALL)
 	mkdir -p ./debian/opendaylight/opt/opendaylight/
 	cp -r ./distribution-karaf-$(VERSION)/* ./debian/opendaylight/opt/opendaylight/
