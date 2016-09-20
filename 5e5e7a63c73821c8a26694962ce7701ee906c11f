@@ -1,0 +1,101 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_e6d63527",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-09-20T22:51:46Z",
+      "side": 1,
+      "message": "This should get installed by Vagrant. There was a recent Vagrant bug where it had the wrong permissions, are you working around that?",
+      "revId": "5e5e7a63c73821c8a26694962ce7701ee906c11f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_66ea25dc",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-09-20T22:51:46Z",
+      "side": 1,
+      "message": "Installing this way is fine, but imho Puppet/Ansible is better https://git.opendaylight.org/gerrit/#/c/43880",
+      "revId": "5e5e7a63c73821c8a26694962ce7701ee906c11f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_c6d97958",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-09-20T22:51:46Z",
+      "side": 1,
+      "message": "This is because CSIT expects this prompt, right? Maybe good to doc",
+      "revId": "5e5e7a63c73821c8a26694962ce7701ee906c11f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_26ddcd42",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-09-20T22:51:46Z",
+      "side": 1,
+      "message": "You\u0027re saying Fedora and doing CentOS",
+      "range": {
+        "startLine": 121,
+        "startChar": 0,
+        "endLine": 122,
+        "endChar": 29
+      },
+      "revId": "5e5e7a63c73821c8a26694962ce7701ee906c11f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_06e091f8",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-09-20T22:51:46Z",
+      "side": 1,
+      "message": "Does this land in /vagrant/test? I would have thought it\u0027d land in /home/vagrant/test unless you give a dir argument above",
+      "range": {
+        "startLine": 138,
+        "startChar": 66,
+        "endLine": 138,
+        "endChar": 79
+      },
+      "revId": "5e5e7a63c73821c8a26694962ce7701ee906c11f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
