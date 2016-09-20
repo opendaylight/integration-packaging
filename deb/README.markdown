@@ -15,6 +15,7 @@ Logic for building OpenDaylight's upstream Debian packages.
   * [Starting](#starting)
   * [Stopping](#stopping)
 1. [Karaf shell](#karaf-)
+1. [Using OpenSUSE Build Service](#using-obs)
 
 ## Overview
 
@@ -235,3 +236,11 @@ You can connect by SSHing into ODL's karaf port and logging in (karaf/karaf).
 
     opendaylight-user@root>
 
+## Using OpenSUSE Build Service
+
+After building Debs as described above, we use the [OpenSUSE Build Service][1] to build and
+host Debs for consumption. The Boron .deb package for Debian/Ubuntu, can be installed by
+following the instructions given [here][2].
+
+[1]: https://build.opensuse.org/
+[2]: http://software.opensuse.org/download.html?project=home%3Aakshitajha&package=opendaylight
