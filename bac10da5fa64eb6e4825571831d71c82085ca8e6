@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_d211305e",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-09-21T21:10:24Z",
+      "side": 1,
+      "message": "\"they are\", my fault that was in my patchset",
+      "range": {
+        "startLine": 42,
+        "startChar": 27,
+        "endLine": 42,
+        "endChar": 32
+      },
+      "revId": "bac10da5fa64eb6e4825571831d71c82085ca8e6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
