@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_1941160b",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 797
+      },
+      "writtenOn": "2016-09-21T03:18:45Z",
+      "side": 1,
+      "message": "epel-release will not install",
+      "revId": "96f7b50b3e4a71442c7eaf63ae3be76ef79be4d7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_063ed1d9",
         "filename": "tutorials/csit/Vagrantfile",
         "patchSetId": 1
@@ -47,6 +64,41 @@
       "writtenOn": "2016-09-21T01:23:12Z",
       "side": 1,
       "message": "I get build ERROR installing the python stuff.",
+      "revId": "96f7b50b3e4a71442c7eaf63ae3be76ef79be4d7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_594eee3b",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 797
+      },
+      "writtenOn": "2016-09-21T03:18:45Z",
+      "side": 1,
+      "message": "It is mostly the robot SSH library that fails to compile: \u003d\u003d\u003e csit: Command \"/usr/bin/python -u -c \"import setuptools, tokenize;__file__\u003d\u0027/tmp/pip-build-_hJGU_/cryptography/setup.py\u0027;exec(compile(getattr(tokenize, \u0027open\u0027, open)(__file__).read().replace(\u0027\\r\\n\u0027, \u0027\\n\u0027), __file__, \u0027exec\u0027))\" install --record /tmp/pip-_NYQEb-record/install-record.txt --single-version-externally-managed --compile\" failed with error code 1 in /tmp/pip-build-_hJGU_/cryptography/",
+      "parentUuid": "7a6b29fe_063ed1d9",
+      "revId": "96f7b50b3e4a71442c7eaf63ae3be76ef79be4d7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_f9437a10",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 797
+      },
+      "writtenOn": "2016-09-21T03:18:45Z",
+      "side": 1,
+      "message": "This line is duplicated.",
       "revId": "96f7b50b3e4a71442c7eaf63ae3be76ef79be4d7",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
