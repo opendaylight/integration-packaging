@@ -22,6 +22,30 @@
       "revId": "50dd9b2f85fa8d678bf6bed90e271e9e49e9063e",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_a89b6616",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4540
+      },
+      "writtenOn": "2016-09-21T16:07:55Z",
+      "side": 1,
+      "message": "I don\u0027t think \"apt-get update\" ever asks any questions, it just updates the indices.",
+      "parentUuid": "7a6b29fe_a8cd2633",
+      "range": {
+        "startLine": 29,
+        "startChar": 40,
+        "endLine": 29,
+        "endChar": 54
+      },
+      "revId": "50dd9b2f85fa8d678bf6bed90e271e9e49e9063e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
