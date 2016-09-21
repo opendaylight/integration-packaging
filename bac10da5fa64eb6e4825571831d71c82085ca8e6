@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7a6b29fe_f510964f",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-09-21T21:19:13Z",
+      "side": 1,
+      "message": "i\u0027m sure I\u0027ll have another update soon, so I\u0027ll fix this then.",
+      "parentUuid": "7a6b29fe_d211305e",
+      "range": {
+        "startLine": 42,
+        "startChar": 27,
+        "endLine": 42,
+        "endChar": 32
+      },
+      "revId": "bac10da5fa64eb6e4825571831d71c82085ca8e6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a6b29fe_52052012",
         "filename": "tutorials/csit/provisioning/all_defaults_playbook.yml",
         "patchSetId": 7
@@ -36,6 +60,24 @@
       "writtenOn": "2016-09-21T21:12:27Z",
       "side": 1,
       "message": "If you want to install some features by default, we can do that here trivially https://github.com/dfarrell07/ansible-opendaylight/blob/master/README.markdown#example-playbook",
+      "revId": "bac10da5fa64eb6e4825571831d71c82085ca8e6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_1516f24b",
+        "filename": "tutorials/csit/provisioning/all_defaults_playbook.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-09-21T21:19:13Z",
+      "side": 1,
+      "message": "no, I think we like it blank slate...  and now I\u0027m singing Taylor Swift :)\n\nbut having is up and running is nice.",
+      "parentUuid": "7a6b29fe_52052012",
       "revId": "bac10da5fa64eb6e4825571831d71c82085ca8e6",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
