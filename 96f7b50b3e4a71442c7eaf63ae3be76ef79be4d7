@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6b29fe_263b0dec",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 797
+      },
+      "writtenOn": "2016-09-21T01:23:12Z",
+      "side": 1,
+      "message": "You have to use dnf install instead of yum install.",
+      "revId": "96f7b50b3e4a71442c7eaf63ae3be76ef79be4d7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_c637b9fd",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 797
+      },
+      "writtenOn": "2016-09-21T01:23:12Z",
+      "side": 1,
+      "message": "The path is not correct, I used /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.91-7.b14.fc24.x86_64/jre",
+      "revId": "96f7b50b3e4a71442c7eaf63ae3be76ef79be4d7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_063ed1d9",
+        "filename": "tutorials/csit/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 797
+      },
+      "writtenOn": "2016-09-21T01:23:12Z",
+      "side": 1,
+      "message": "I get build ERROR installing the python stuff.",
+      "revId": "96f7b50b3e4a71442c7eaf63ae3be76ef79be4d7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
