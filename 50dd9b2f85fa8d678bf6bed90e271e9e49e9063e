@@ -46,6 +46,30 @@
       "revId": "50dd9b2f85fa8d678bf6bed90e271e9e49e9063e",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a6b29fe_08b6da89",
+        "filename": "deb/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-09-21T16:09:56Z",
+      "side": 1,
+      "message": "+1, didn\u0027t need -y or similar when testing this or trying manually",
+      "parentUuid": "7a6b29fe_a89b6616",
+      "range": {
+        "startLine": 29,
+        "startChar": 40,
+        "endLine": 29,
+        "endChar": 54
+      },
+      "revId": "50dd9b2f85fa8d678bf6bed90e271e9e49e9063e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
