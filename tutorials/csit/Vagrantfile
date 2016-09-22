@@ -4,7 +4,7 @@
 # Vagrantfile API/syntax version.
 VAGRANTFILE_API_VERSION = "2"
 
-# This is a single-vm vagrant file that will install the controller and all the tools needed to run
+# This is a single-vm vagrant file that will install OpenDaylight and all the tools needed to run
 # basic upstream CSIT
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Set x11 forwarding so we can run GUIs on host from ssh sessions to guest
   config.ssh.forward_x11 = true
 
-  # Box that installs the controller VM
+  # Box setup (specs, tools, etc)
   config.vm.define "csit" do |csit|
 
     csit.vm.hostname = "csit"
@@ -28,15 +28,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       c.cpus = 2
       c.name = "CSIT"
     end
-    csit.vm.provider :libvirt do |c|
-      c.memory = 4096
-      c.cpus = 2
-    end
 
     # Build Vagrant box based on Fedora 24
     csit.vm.box = "fedora/24-cloud-base"
 
     # Set prompt for vagrant user to match the default/expected prompt for upstream ODL CSIT
+    # Note: upstream CSIT has the ability to modify expected prompts dynamically, but this
+    #       just makes it easier
     csit.vm.provision "shell", inline: "echo 'PS1=\"[\\u@\\h \\W]> \"' >> ~vagrant/.bashrc"
 
     # Forward ODL ports so they are accessible on the host machine
@@ -49,13 +47,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Karaf shell, tell SSH to accept ssh-dss or set this default.
     csit.vm.provision "shell", inline: "echo 'HostKeyAlgorithms=+ssh-dss' >> /etc/ssh/ssh_config"
 
-    # Install dependencies
+    # Install dependencies and tools from dnf
     csit.vm.provision "shell",
       inline: "dnf install -y --nogpgcheck git git-review gcc libffi-devel openssl-devel \
                                            python-devel redhat-rpm-config python-pip \
                                            sshpass openvswitch python-dnf firefox xauth \
                                            wireshark wireshark-gnome"
 
+    # Give vagrant user permission to sniff interfaces
+    csit.vm.provision "shell", inline: "usermod -a -G wireshark vagrant"
+    csit.vm.provision "shell", inline: "setcap cap_net_raw,cap_net_admin=eip /usr/sbin/dumpcap"
+
+    # Install dependencies and tools from pip
     csit.vm.provision "shell",
       inline: "pip install --upgrade docker-py importlib requests scapy netifaces netaddr ipaddr \
         jsonpath-rw robotframework{,-{httplibrary,requests,sshlibrary,selenium2library}}"
@@ -87,18 +90,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       inline: "git clone https://git.opendaylight.org/gerrit/p/releng/builder.git"
     csit.vm.provision "shell", inline: "chown -R vagrant:vagrant ~vagrant/builder"
 
-    # configure ssh to know which key file to use when talking with gerrit
-    # keypair needs to be created by user with proper name, location and permissions
+    # configure ssh to know which key file to use with gerrit
+    # the keypair needs to be created by user with proper name, location and permissions
     csit.vm.provision "shell",
       inline: "echo -e \"Host git.opendaylight.org\\n  IdentityFile /home/vagrant/.ssh/gerrit_rsa\" > /home/vagrant/.ssh/config"
-    csit.vm.provision "shell", inline: "chmod 0600 ~vagrant/.ssh/config"
+    csit.vm.provision "shell", inline: "chmod 0600 /home/vagrant/.ssh/config"
+    csit.vm.provision "shell", inline: "chown vagrant:vagrant /home/vagrant/.ssh/config"
 
     # pull private "insecure" vagrant key to match the default public key for key authentication for robot suites
     csit.vm.provision "shell",
       inline: "curl -o ~vagrant/.ssh/id_rsa https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant"
     csit.vm.provision "shell", inline: "chown vagrant:vagrant ~vagrant/.ssh/id_rsa"
     csit.vm.provision "shell", inline: "chmod 0600 ~vagrant/.ssh/id_rsa"
-
 
     # Install Jenkins Job Builder (JJB)
     csit.vm.provision "shell",
