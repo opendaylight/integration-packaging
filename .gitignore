@@ -16,3 +16,6 @@
 log.html
 output.xml
 report.html
+
+# Ansible
+*.retry
