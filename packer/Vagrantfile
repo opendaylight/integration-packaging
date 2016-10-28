@@ -31,11 +31,6 @@ Vagrant.configure(2) do |config|
   # VirtualBox and CentOS
   #
 
-  config.vm.define "cent_odl34_vb" do |cent_odl34_vb|
-    cent_odl34_vb.vm.box = "cent_odl34_vb"
-    cent_odl34_vb.vm.box_url = "file://opendaylight-3.4.0-centos-7.2.1511-virtualbox.box"
-  end
-
   config.vm.define "cent_odl40_vb" do |cent_odl40_vb|
     cent_odl40_vb.vm.box = "cent_odl40_vb"
     cent_odl40_vb.vm.box_url = "file://opendaylight-4.0.0-centos-7.2.1511-virtualbox.box"
@@ -51,28 +46,53 @@ Vagrant.configure(2) do |config|
     cent_odl42_vb.vm.box_url = "file://opendaylight-4.2.0-centos-7.2.1511-virtualbox.box"
   end
 
+  config.vm.define "cent_odl43_vb" do |cent_odl43_vb|
+    cent_odl43_vb.vm.box = "cent_odl43_vb"
+    cent_odl43_vb.vm.box_url = "file://opendaylight-4.3.0-centos-7.2.1511-virtualbox.box"
+  end
+
+  config.vm.define "cent_odl44_vb" do |cent_odl44_vb|
+    cent_odl44_vb.vm.box = "cent_odl44_vb"
+    cent_odl44_vb.vm.box_url = "file://opendaylight-4.4.0-centos-7.2.1511-virtualbox.box"
+  end
+
+  config.vm.define "cent_odl50_vb" do |cent_odl50_vb|
+    cent_odl50_vb.vm.box = "cent_odl50_vb"
+    cent_odl50_vb.vm.box_url = "file://opendaylight-5.0.0-centos-7.2.1511-virtualbox.box"
+  end
+
   #
-  # VirtualBox and Fedora 23
+  # VirtualBox and Fedora 24
   #
 
-  config.vm.define "f23_odl34_vb" do |f23_odl34_vb|
-    f23_odl34_vb.vm.box = "f23_odl34_vb"
-    f23_odl34_vb.vm.box_url = "file://opendaylight-3.4.0-fedora-23-virtualbox.box"
+  config.vm.define "f24_odl40_vb" do |f24_odl40_vb|
+    f24_odl40_vb.vm.box = "f24_odl40_vb"
+    f24_odl40_vb.vm.box_url = "file://opendaylight-4.0.0-fedora-24-virtualbox.box"
   end
 
-  config.vm.define "f23_odl40_vb" do |f23_odl40_vb|
-    f23_odl40_vb.vm.box = "f23_odl40_vb"
-    f23_odl40_vb.vm.box_url = "file://opendaylight-4.0.0-fedora-23-virtualbox.box"
+  config.vm.define "f24_odl41_vb" do |f24_odl41_vb|
+    f24_odl41_vb.vm.box = "f24_odl41_vb"
+    f24_odl41_vb.vm.box_url = "file://opendaylight-4.1.0-fedora-24-virtualbox.box"
   end
 
-  config.vm.define "f23_odl41_vb" do |f23_odl41_vb|
-    f23_odl41_vb.vm.box = "f23_odl41_vb"
-    f23_odl41_vb.vm.box_url = "file://opendaylight-4.1.0-fedora-23-virtualbox.box"
+  config.vm.define "f24_odl42_vb" do |f24_odl42_vb|
+    f24_odl42_vb.vm.box = "f24_odl42_vb"
+    f24_odl42_vb.vm.box_url = "file://opendaylight-4.2.0-fedora-24-virtualbox.box"
   end
 
-  config.vm.define "f23_odl42_vb" do |f23_odl42_vb|
-    f23_odl42_vb.vm.box = "f23_odl42_vb"
-    f23_odl42_vb.vm.box_url = "file://opendaylight-4.2.0-fedora-23-virtualbox.box"
+  config.vm.define "f24_odl43_vb" do |f24_odl43_vb|
+    f24_odl43_vb.vm.box = "f24_odl43_vb"
+    f24_odl43_vb.vm.box_url = "file://opendaylight-4.3.0-fedora-24-virtualbox.box"
+  end
+
+  config.vm.define "f24_odl44_vb" do |f24_odl44_vb|
+    f24_odl44_vb.vm.box = "f24_odl44_vb"
+    f24_odl44_vb.vm.box_url = "file://opendaylight-4.4.0-fedora-24-virtualbox.box"
+  end
+
+  config.vm.define "f24_odl50_vb" do |f24_odl50_vb|
+    f24_odl50_vb.vm.box = "f24_odl50_vb"
+    f24_odl50_vb.vm.box_url = "file://opendaylight-5.0.0-fedora-24-virtualbox.box"
   end
 
   #
@@ -82,11 +102,6 @@ Vagrant.configure(2) do |config|
   #
   # LibVirt and CentOS
   #
-
-  config.vm.define "cent_odl34_lv" do |cent_odl34_lv|
-    cent_odl34_lv.vm.box = "cent_odl34_lv"
-    cent_odl34_lv.vm.box_url = "file://opendaylight-3.4.0-centos-7.2.1511-libvirt.box"
-  end
 
   config.vm.define "cent_odl40_lv" do |cent_odl40_lv|
     cent_odl40_lv.vm.box = "cent_odl40_lv"
@@ -103,27 +118,52 @@ Vagrant.configure(2) do |config|
     cent_odl42_lv.vm.box_url = "file://opendaylight-4.2.0-centos-7.2.1511-libvirt.box"
   end
 
+  config.vm.define "cent_odl43_lv" do |cent_odl43_lv|
+    cent_odl43_lv.vm.box = "cent_odl43_lv"
+    cent_odl43_lv.vm.box_url = "file://opendaylight-4.3.0-centos-7.2.1511-libvirt.box"
+  end
+
+  config.vm.define "cent_odl44_lv" do |cent_odl44_lv|
+    cent_odl44_lv.vm.box = "cent_odl44_lv"
+    cent_odl44_lv.vm.box_url = "file://opendaylight-4.4.0-centos-7.2.1511-libvirt.box"
+  end
+
+  config.vm.define "cent_odl50_lv" do |cent_odl50_lv|
+    cent_odl50_lv.vm.box = "cent_odl50_lv"
+    cent_odl50_lv.vm.box_url = "file://opendaylight-5.0.0-centos-7.2.1511-libvirt.box"
+  end
+
   #
-  # LibVirt and Fedora 23
+  # LibVirt and Fedora 24
   #
 
-  config.vm.define "f23_odl34_lv" do |f23_odl34_lv|
-    f23_odl34_lv.vm.box = "f23_odl34_lv"
-    f23_odl34_lv.vm.box_url = "file://opendaylight-3.4.0-fedora-23-libvirt.box"
+  config.vm.define "f24_odl40_lv" do |f24_odl40_lv|
+    f24_odl40_lv.vm.box = "f24_odl40_lv"
+    f24_odl40_lv.vm.box_url = "file://opendaylight-4.0.0-fedora-24-libvirt.box"
   end
 
-  config.vm.define "f23_odl40_lv" do |f23_odl40_lv|
-    f23_odl40_lv.vm.box = "f23_odl40_lv"
-    f23_odl40_lv.vm.box_url = "file://opendaylight-4.0.0-fedora-23-libvirt.box"
+  config.vm.define "f24_odl41_lv" do |f24_odl41_lv|
+    f24_odl41_lv.vm.box = "f24_odl41_lv"
+    f24_odl41_lv.vm.box_url = "file://opendaylight-4.1.0-fedora-24-libvirt.box"
   end
 
-  config.vm.define "f23_odl41_lv" do |f23_odl41_lv|
-    f23_odl41_lv.vm.box = "f23_odl41_lv"
-    f23_odl41_lv.vm.box_url = "file://opendaylight-4.1.0-fedora-23-libvirt.box"
+  config.vm.define "f24_odl42_lv" do |f24_odl42_lv|
+    f24_odl42_lv.vm.box = "f24_odl42_lv"
+    f24_odl42_lv.vm.box_url = "file://opendaylight-4.2.0-fedora-24-libvirt.box"
   end
 
-  config.vm.define "f23_odl42_lv" do |f23_odl42_lv|
-    f23_odl42_lv.vm.box = "f23_odl42_lv"
-    f23_odl42_lv.vm.box_url = "file://opendaylight-4.2.0-fedora-23-libvirt.box"
+  config.vm.define "f24_odl43_lv" do |f24_odl43_lv|
+    f24_odl43_lv.vm.box = "f24_odl43_lv"
+    f24_odl43_lv.vm.box_url = "file://opendaylight-4.3.0-fedora-24-libvirt.box"
+  end
+
+  config.vm.define "f24_odl44_lv" do |f24_odl44_lv|
+    f24_odl44_lv.vm.box = "f24_odl44_lv"
+    f24_odl44_lv.vm.box_url = "file://opendaylight-4.4.0-fedora-24-libvirt.box"
+  end
+
+  config.vm.define "f24_odl50_lv" do |f24_odl50_lv|
+    f24_odl50_lv.vm.box = "f24_odl50_lv"
+    f24_odl50_lv.vm.box_url = "file://opendaylight-5.0.0-fedora-24-libvirt.box"
   end
 end
