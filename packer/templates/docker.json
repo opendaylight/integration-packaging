@@ -21,7 +21,8 @@
       "scripts":
         [
           "provision/config_docker_{{ user `os_name`}}.sh",
-          "provision/config_ansible_{{ user `os_name`}}.sh"
+          "provision/config_ansible_{{ user `os_name`}}.sh",
+          "provision/config_ssh.sh"
         ]
     },
     {
