@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a65312a_aa269066",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-10-28T17:35:00Z",
+      "side": 1,
+      "message": "I have no better ideas, but what happens on older versions of Fedora (or other OSes) that already have this in their ssh config?",
+      "revId": "2679e00d77380e5b97cc425aa2e2de68a146f5c8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
