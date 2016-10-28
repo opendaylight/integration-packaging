@@ -31,48 +31,38 @@ Vagrant.configure(2) do |config|
   # VirtualBox and CentOS
   #
 
-  config.vm.define "cent_odl34_vb" do |cent_odl34_vb|
-    cent_odl34_vb.vm.box = "cent_odl34_vb"
-    cent_odl34_vb.vm.box_url = "file://opendaylight-3.4.0-centos-7.2.1511-virtualbox.box"
+  # Beryllium Release through SR4
+  (0..4).each do |i|
+    config.vm.define "cent_odl4#{i}_vb" do |cent_odl_vb|
+      cent_odl_vb.vm.box = "cent_odl4#{i}_vb"
+      cent_odl_vb.vm.box_url = "file://opendaylight-4.#{i}.0-centos-7.2.1511-virtualbox.box"
+    end
   end
 
-  config.vm.define "cent_odl40_vb" do |cent_odl40_vb|
-    cent_odl40_vb.vm.box = "cent_odl40_vb"
-    cent_odl40_vb.vm.box_url = "file://opendaylight-4.0.0-centos-7.2.1511-virtualbox.box"
-  end
-
-  config.vm.define "cent_odl41_vb" do |cent_odl41_vb|
-    cent_odl41_vb.vm.box = "cent_odl41_vb"
-    cent_odl41_vb.vm.box_url = "file://opendaylight-4.1.0-centos-7.2.1511-virtualbox.box"
-  end
-
-  config.vm.define "cent_odl42_vb" do |cent_odl42_vb|
-    cent_odl42_vb.vm.box = "cent_odl42_vb"
-    cent_odl42_vb.vm.box_url = "file://opendaylight-4.2.0-centos-7.2.1511-virtualbox.box"
+  # Boron Release
+  (0..0).each do |i|
+    config.vm.define "cent_odl5#{i}_vb" do |cent_odl_vb|
+      cent_odl_vb.vm.box = "cent_odl5#{i}_vb"
+      cent_odl_vb.vm.box_url = "file://opendaylight-5.#{i}.0-centos-7.2.1511-virtualbox.box"
+    end
   end
 
   #
-  # VirtualBox and Fedora 23
+  # VirtualBox and Fedora 24
   #
 
-  config.vm.define "f23_odl34_vb" do |f23_odl34_vb|
-    f23_odl34_vb.vm.box = "f23_odl34_vb"
-    f23_odl34_vb.vm.box_url = "file://opendaylight-3.4.0-fedora-23-virtualbox.box"
+  (0..4).each do |i|
+    config.vm.define "f24_odl4#{i}_vb" do |f24_odl_vb|
+      f24_odl_vb.vm.box = "f24_odl4#{i}_vb"
+      f24_odl_vb.vm.box_url = "file://opendaylight-4.#{i}.0-fedora-24-virtualbox.box"
+    end
   end
 
-  config.vm.define "f23_odl40_vb" do |f23_odl40_vb|
-    f23_odl40_vb.vm.box = "f23_odl40_vb"
-    f23_odl40_vb.vm.box_url = "file://opendaylight-4.0.0-fedora-23-virtualbox.box"
-  end
-
-  config.vm.define "f23_odl41_vb" do |f23_odl41_vb|
-    f23_odl41_vb.vm.box = "f23_odl41_vb"
-    f23_odl41_vb.vm.box_url = "file://opendaylight-4.1.0-fedora-23-virtualbox.box"
-  end
-
-  config.vm.define "f23_odl42_vb" do |f23_odl42_vb|
-    f23_odl42_vb.vm.box = "f23_odl42_vb"
-    f23_odl42_vb.vm.box_url = "file://opendaylight-4.2.0-fedora-23-virtualbox.box"
+  (0..0).each do |i|
+    config.vm.define "f24_odl5#{i}_vb" do |f24_odl_vb|
+      f24_odl_vb.vm.box = "f24_odl5#{i}_vb"
+      f24_odl_vb.vm.box_url = "file://opendaylight-5.#{i}.0-fedora-24-virtualbox.box"
+    end
   end
 
   #
@@ -83,47 +73,38 @@ Vagrant.configure(2) do |config|
   # LibVirt and CentOS
   #
 
-  config.vm.define "cent_odl34_lv" do |cent_odl34_lv|
-    cent_odl34_lv.vm.box = "cent_odl34_lv"
-    cent_odl34_lv.vm.box_url = "file://opendaylight-3.4.0-centos-7.2.1511-libvirt.box"
+  # Beryllium Release through SR4
+  (0..4).each do |i|
+    config.vm.define "cent_odl4#{i}_lv" do |cent_odl_lv|
+      cent_odl_lv.vm.box = "cent_odl4#{i}_lv"
+      cent_odl_lv.vm.box_url = "file://opendaylight-4.#{i}.0-centos-7.2.1511-virtualbox.box"
+    end
   end
 
-  config.vm.define "cent_odl40_lv" do |cent_odl40_lv|
-    cent_odl40_lv.vm.box = "cent_odl40_lv"
-    cent_odl40_lv.vm.box_url = "file://opendaylight-4.0.0-centos-7.2.1511-libvirt.box"
-  end
-
-  config.vm.define "cent_odl41_lv" do |cent_odl41_lv|
-    cent_odl41_lv.vm.box = "cent_odl41_lv"
-    cent_odl41_lv.vm.box_url = "file://opendaylight-4.1.0-centos-7.2.1511-libvirt.box"
-  end
-
-  config.vm.define "cent_odl42_lv" do |cent_odl42_lv|
-    cent_odl42_lv.vm.box = "cent_odl42_lv"
-    cent_odl42_lv.vm.box_url = "file://opendaylight-4.2.0-centos-7.2.1511-libvirt.box"
+  # Boron Release
+  (0..0).each do |i|
+    config.vm.define "cent_odl5#{i}_lv" do |cent_odl_lv|
+      cent_odl_lv.vm.box = "cent_odl5#{i}_lv"
+      cent_odl_lv.vm.box_url = "file://opendaylight-5.#{i}.0-centos-7.2.1511-virtualbox.box"
+    end
   end
 
   #
-  # LibVirt and Fedora 23
+  # LibVirt and Fedora 24
   #
 
-  config.vm.define "f23_odl34_lv" do |f23_odl34_lv|
-    f23_odl34_lv.vm.box = "f23_odl34_lv"
-    f23_odl34_lv.vm.box_url = "file://opendaylight-3.4.0-fedora-23-libvirt.box"
+  (0..4).each do |i|
+    config.vm.define "f24_odl4#{i}_lv" do |f24_odl_lv|
+      f24_odl_lv.vm.box = "f24_odl4#{i}_lv"
+      f24_odl_lv.vm.box_url = "file://opendaylight-4.#{i}.0-fedora-24-virtualbox.box"
+    end
   end
 
-  config.vm.define "f23_odl40_lv" do |f23_odl40_lv|
-    f23_odl40_lv.vm.box = "f23_odl40_lv"
-    f23_odl40_lv.vm.box_url = "file://opendaylight-4.0.0-fedora-23-libvirt.box"
-  end
-
-  config.vm.define "f23_odl41_lv" do |f23_odl41_lv|
-    f23_odl41_lv.vm.box = "f23_odl41_lv"
-    f23_odl41_lv.vm.box_url = "file://opendaylight-4.1.0-fedora-23-libvirt.box"
-  end
-
-  config.vm.define "f23_odl42_lv" do |f23_odl42_lv|
-    f23_odl42_lv.vm.box = "f23_odl42_lv"
-    f23_odl42_lv.vm.box_url = "file://opendaylight-4.2.0-fedora-23-libvirt.box"
+  (0..0).each do |i|
+    config.vm.define "f24_odl5#{i}_lv" do |f24_odl_lv|
+      f24_odl_lv.vm.box = "f24_odl5#{i}_lv"
+      f24_odl_lv.vm.box_url = "file://opendaylight-5.#{i}.0-fedora-24-virtualbox.box"
+    end
   end
 end
+
