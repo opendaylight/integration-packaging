@@ -47,7 +47,8 @@
         [
           "provision/config_virtualbox_{{ user `os_name`}}.sh",
           "provision/config_vagrant.sh",
-          "provision/config_ansible_{{ user `os_name`}}.sh"
+          "provision/config_ansible_{{ user `os_name`}}.sh",
+          "provision/config_ssh.sh"
         ]
     },
     {
