@@ -16,6 +16,24 @@
       "revId": "2679e00d77380e5b97cc425aa2e2de68a146f5c8",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_d51c4416",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-11-02T00:23:32Z",
+      "side": 1,
+      "message": "I don\u0027t think it makes things start failing, but I haven\u0027t tried it in a while",
+      "parentUuid": "3a65312a_aa269066",
+      "revId": "2679e00d77380e5b97cc425aa2e2de68a146f5c8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
