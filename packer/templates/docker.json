@@ -40,7 +40,7 @@
       "type": "docker-tag",
       "repository": "{{ user `docker_repo` }}",
       "tag": "{{ user `odl_version` }}",
-      "force": true
+      "force": false
     }
   ]
 }
