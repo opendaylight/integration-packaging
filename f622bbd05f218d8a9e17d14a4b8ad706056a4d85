@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a65312a_9ee5c1aa",
+        "filename": "packer/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-11-04T15:15:50Z",
+      "side": 1,
+      "message": "cool!",
+      "range": {
+        "startLine": 61,
+        "startChar": 6,
+        "endLine": 61,
+        "endChar": 7
+      },
+      "revId": "f622bbd05f218d8a9e17d14a4b8ad706056a4d85",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_3ed8edee",
+        "filename": "packer/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-11-04T15:15:50Z",
+      "side": 1,
+      "message": "whoops.  this was my mistake I guess :(",
+      "range": {
+        "startLine": 80,
+        "startChar": 77,
+        "endLine": 80,
+        "endChar": 84
+      },
+      "revId": "f622bbd05f218d8a9e17d14a4b8ad706056a4d85",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
