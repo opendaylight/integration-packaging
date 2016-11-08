@@ -6,6 +6,7 @@ import sys
 import argparse
 import shutil
 import subprocess
+import re
 from string import Template
 
 try:
@@ -39,6 +40,19 @@ rpm_template = Template("opendaylight-$version_major.$version_minor."
                         "$version_patch-$rpm_release.el7.noarch.rpm")
 srpm_template = Template("opendaylight-$version_major.$version_minor."
                          "$version_patch-$rpm_release.el7.src.rpm")
+
+
+def odl_version(url):
+    """Determine the version information from the given URL."""
+
+    odl_version = re.search(r'\/(\d)\.(\d)\.(\d).(.*)\/', url)    # Search ODL version from URL
+    global version_major
+    version_major = odl_version.group(2)
+    global version_minor
+    version_minor = odl_version.group(3)
+    global codename
+    codename = odl_version.group(4)
+    return dict((i, eval(i)) for i in ('version_major', 'version_minor', 'codename'))
 
 
 def build_rpm(build):
@@ -95,6 +109,7 @@ if __name__ == "__main__":
     build_vars_path = os.path.join(project_root, "build_vars.yaml")
     with open(build_vars_path) as rpm_var_file:
         build_vars = yaml.load(rpm_var_file)
+
 
     # Accept the version(s) of the build(s) to perform as args
     # TODO: More docs on ArgParser and argument
