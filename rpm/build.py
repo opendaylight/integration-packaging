@@ -6,6 +6,7 @@ import sys
 import argparse
 import shutil
 import subprocess
+import re
 from string import Template
 
 try:
@@ -39,6 +40,17 @@ rpm_template = Template("opendaylight-$version_major.$version_minor."
                         "$version_patch-$rpm_release.el7.noarch.rpm")
 srpm_template = Template("opendaylight-$version_major.$version_minor."
                          "$version_patch-$rpm_release.el7.src.rpm")
+
+def version(url):
+    """Determine the version information from the given URL."""
+
+    odl_version = re.search(r'\/(\d)\.(\d)\.(\d).(.*)\/', url)    # Search ODL version information from URL 
+    global version_major
+    version_major = odl_version.group(2)
+    global version_minor
+    version_minor = odl_version.group(3)
+    codename = odl_version.group(4)
+    return dict(((k, eval(k)) for k in ('version_major', 'version_minor')))
 
 
 def build_rpm(build):
