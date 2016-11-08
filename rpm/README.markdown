@@ -128,6 +128,16 @@ The changelog entry must follow a specific format. It's best to follow the
 examples provided by existing build definitions closely. The `rpmbuild` tool
 will fail and complain fairly clearly if the format isn't correct.
 
+### Testing Build Logic
+
+Some `build.py` logic is covered by Python unit tests.
+
+To execute them:
+
+```
+$ python -m unittest test_rpm
+```
+
 ## Building SRPMs/RPMs
 
 The `build.py` helper script is used for building OpenDaylight SRPMs/RPMs.
