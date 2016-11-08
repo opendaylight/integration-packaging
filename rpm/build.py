@@ -6,6 +6,8 @@ import sys
 import argparse
 import shutil
 import subprocess
+import re
+import time
 from string import Template
 
 try:
@@ -39,6 +41,31 @@ rpm_template = Template("opendaylight-$version_major.$version_minor."
                         "$version_patch-$rpm_release.el7.noarch.rpm")
 srpm_template = Template("opendaylight-$version_major.$version_minor."
                          "$version_patch-$rpm_release.el7.src.rpm")
+
+
+def extract_version(url):
+    """Determine the version information from the given URL."""
+
+    version_keys = []
+    version = {}
+    date = time.strftime("%Y%m%d")
+    odl_version = re.search(r'\/(\d)\.(\d)\.(\d).(.*)\/', url)    # Search ODL version in URL
+    if "autorelease" in url:
+        build_id = re.search(r'\/([a-zA-Z]+)-([0-9]+)\/', url).group(2)    # Search Build ID in URL
+        rpm_release = "0.1." + date + "rel" + build_id
+    elif "snapshot" in url:
+        build_id = re.search(r'-([0-9]+)\.([0-9]+)-([0-9]+)', url).group(3) # Search Build ID in URL
+        rpm_release = "0.1." + date + "snap" + build_id
+    else:
+        rpm_release = 1
+    version_patch = 0
+    version_major = odl_version.group(2)
+    version_minor = odl_version.group(3)
+    codename = odl_version.group(4)
+    version_keys.extend(['rpm_release', 'version_patch', 'version_major', 'version_minor', 'codename'])
+    for i in version_keys:
+       version[i] = eval(i)
+    return version
 
 
 def build_rpm(build):
