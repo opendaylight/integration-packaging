@@ -29,17 +29,38 @@ spec_in_dir = os.path.join(rpmbuild_dir, "SPECS")
 srpm_out_dir = os.path.join(rpmbuild_dir, "SRPMS")
 rpm_out_dir = os.path.join(rpmbuild_dir, "RPMS", "noarch")
 
-# Templates that can be specialized into common artifact names per-build
-odl_template = Template("opendaylight-$version_major.$version_minor."
-                        "$version_patch-$rpm_release.tar.gz")
-specfile_template = Template("opendaylight-$version_major.$version_minor."
-                             "$version_patch-$rpm_release.spec")
-unitfile_tb_template = Template("opendaylight-$sysd_commit.service.tar.gz")
-rpm_template = Template("opendaylight-$version_major.$version_minor."
-                        "$version_patch-$rpm_release.el7.noarch.rpm")
-srpm_template = Template("opendaylight-$version_major.$version_minor."
-                         "$version_patch-$rpm_release.el7.src.rpm")
 
+def version(url):
+    """Determine the version information from the given URL."""
+
+    odl_version = url.split("/")[10]
+    version_major = odl_version.split(".")[1]
+    version_minor = odl_version.split("-")[0].split(".")[2]
+    version_patch = "0"
+    rpm_release = "1"
+    if "SNAPSHOT" in odl_version:
+        codename = "SNAPSHOT"
+    else:
+        try:
+            codename = odl_version.split("-")[1] + "-" + odl_version.split("-")[2]
+        except:
+            codename = odl_version.split("-")[1]
+    return (version_major, version_minor, version_patch, rpm_release, codename)
+version_major, version_minor, version_patch, rpm_release, codename = 
+version("https://nexus.opendaylight.org/content/repositories/public/
+org/opendaylight/integration/distribution-karaf/0.3.3-Lithium-SR3/
+distribution-karaf-0.3.3-Lithium-SR3.tar.gz")
+
+# Templates that can be specialized into common artifact names per-build
+odl_template = Template("opendaylight-" + version_major + "." + version_minor + "."
+                        + version_patch + "-" + rpm_release + ".tar.gz")
+specfile_template = Template("opendaylight-" + version_major + "." + version_minor + "."
+                             + version_patch + "-" + rpm_release + ".spec")
+unitfile_tb_template = Template("opendaylight-$sysd_commit.service.tar.gz")
+rpm_template = Template("opendaylight-" + version_major + "." + version_minor + "."
+                        + version_patch + "-" + rpm_release + ".el7.noarch.rpm")
+srpm_template = Template("opendaylight-" + version_major + "." + version_minor + "."
+                         + version_patch + "-" + rpm_release + ".el7.src.rpm")
 
 def build_rpm(build):
     """Build the RPMs described by the given build description.
@@ -49,10 +70,14 @@ def build_rpm(build):
 
     """
     # Specialize a series of name templates for the given build
-    odl_tarball = odl_template.substitute(build)
-    odl_rpm = rpm_template.substitute(build)
-    odl_srpm = srpm_template.substitute(build)
-    odl_specfile = specfile_template.substitute(build)
+    odl_tarball = ("opendaylight-" + version_major + "." + version_minor + "."
+                   + version_patch + "-" + rpm_release + ".tar.gz")
+    odl_rpm = ("opendaylight-" + version_major + "." + version_minor + "."
+               + version_patch + "-" + rpm_release + ".el7.noarch.rpm")
+    odl_srpm = ("opendaylight-" + version_major + "." + version_minor + "."
+                + version_patch + "-" + rpm_release + ".el7.src.rpm")
+    odl_specfile = ("opendaylight-" + version_major + "." + version_minor + "."
+                    + version_patch + "-" + rpm_release + ".spec")
     unitfile_tarball = unitfile_tb_template.substitute(build)
 
     # After building strings from the name templates, build their full path
