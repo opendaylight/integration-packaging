@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3a65312a_99a3099e",
+        "filename": "rpm/build.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-11-09T19:24:00Z",
+      "side": 1,
+      "message": "I tested different types of URL\u0027s before submitting the patch. I can include the same in the new patch if you do suggest the same.",
+      "parentUuid": "3a65312a_4ae35907",
+      "range": {
+        "startLine": 33,
+        "startChar": 4,
+        "endLine": 33,
+        "endChar": 11
+      },
+      "revId": "941f64bdeede752918dae5b760e08f8d78994748",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a65312a_eaf185ce",
         "filename": "rpm/build.py",
         "patchSetId": 5
@@ -36,6 +60,24 @@
       "writtenOn": "2016-11-08T15:28:57Z",
       "side": 1,
       "message": "I wonder if there are better ways to do this in Python? Regexes via the re module seem helpful.",
+      "revId": "941f64bdeede752918dae5b760e08f8d78994748",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_d9ad818a",
+        "filename": "rpm/build.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-11-09T19:24:00Z",
+      "side": 1,
+      "message": "Sure, I will do the same using Regexes in a new patch.",
+      "parentUuid": "3a65312a_eaf185ce",
       "revId": "941f64bdeede752918dae5b760e08f8d78994748",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
