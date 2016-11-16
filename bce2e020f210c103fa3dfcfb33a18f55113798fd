@@ -22,6 +22,30 @@
       "revId": "bce2e020f210c103fa3dfcfb33a18f55113798fd",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_0d3ddebb",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-11-16T16:56:03Z",
+      "side": 1,
+      "message": "\u003e but will fix in different commit\n\nah, nvm, was thinking (when looking at code on local system) this 5.1 def wasn\u0027t added in this change, but ic now that it is, so let\u0027s fix the bug here",
+      "parentUuid": "3a65312a_ed586234",
+      "range": {
+        "startLine": 110,
+        "startChar": 4,
+        "endLine": 110,
+        "endChar": 15
+      },
+      "revId": "bce2e020f210c103fa3dfcfb33a18f55113798fd",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
