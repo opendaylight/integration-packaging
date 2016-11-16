@@ -42,6 +42,22 @@ default                   not created (virtualbox)
 build.py  build_vars.yaml  cache  connect.sh  Vagrantfile <snip>
 ```
 
+### Docker provider
+
+To run `build.py` script in the context of docker container the below command
+can be used:
+
+```
+$ vagrant docker-run -- -v 5
+```
+
+Dockerfile can be also used directly to build container image:
+
+```
+$ docker build -t "odl_rpm" .
+$ docker run -v $(pwd):/build odl_rpm -v 5
+```
+
 ## Defining New RPMs
 
 The dynamic aspects of a build, such as ODL and RPM version info, have all
