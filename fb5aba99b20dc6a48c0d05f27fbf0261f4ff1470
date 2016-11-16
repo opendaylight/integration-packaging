@@ -22,6 +22,30 @@
       "revId": "fb5aba99b20dc6a48c0d05f27fbf0261f4ff1470",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_6dae1287",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 6829
+      },
+      "writtenOn": "2016-11-16T19:58:33Z",
+      "side": 1,
+      "message": "Sorry about that, should be ok now.",
+      "parentUuid": "3a65312a_6d6d7298",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 52,
+        "endChar": 18
+      },
+      "revId": "fb5aba99b20dc6a48c0d05f27fbf0261f4ff1470",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
