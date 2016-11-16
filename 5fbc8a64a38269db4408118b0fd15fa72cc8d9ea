@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a65312a_b24b6586",
+        "filename": "deb/README.markdown",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-11-16T16:30:45Z",
+      "side": 1,
+      "message": "\"the below\"  instead of \"bellow\"",
+      "range": {
+        "startLine": 41,
+        "startChar": 60,
+        "endLine": 41,
+        "endChar": 66
+      },
+      "revId": "5fbc8a64a38269db4408118b0fd15fa72cc8d9ea",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_f245dd70",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-11-16T16:30:45Z",
+      "side": 1,
+      "message": "we have Boron SR",
+      "revId": "5fbc8a64a38269db4408118b0fd15fa72cc8d9ea",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_d248a189",
+        "filename": "rpm/README.markdown",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-11-16T16:30:45Z",
+      "side": 1,
+      "message": "the below instead of bellow",
+      "range": {
+        "startLine": 47,
+        "startChar": 60,
+        "endLine": 47,
+        "endChar": 66
+      },
+      "revId": "5fbc8a64a38269db4408118b0fd15fa72cc8d9ea",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_325f5543",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2016-11-16T16:30:45Z",
+      "side": 1,
+      "message": "do we also want Boron 0.5.0 in this file?  it\u0027s there in the other build_vars.yaml",
+      "revId": "5fbc8a64a38269db4408118b0fd15fa72cc8d9ea",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
