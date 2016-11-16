@@ -1,16 +1,5 @@
 Logic for building OpenDaylight's upstream Source RPMs.
 
-SRPM/RPM builds are supported for the following OpenDaylight major releases, as well as various daily builds:
-
-* Helium SR4
-* Lithium
-* Lithium SR1
-* Lithium SR2
-* Lithium SR3
-* Lithium SR4
-* Beryllium
-* Beryllium SR1
-
 ## Overview
 
 OpenDaylight's Source RPMs (SRPMs) are built using the logic provided here.
