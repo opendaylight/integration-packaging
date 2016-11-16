@@ -5,6 +5,7 @@ Logic for building OpenDaylight's upstream Debian packages.
 #### Table of Contents
 1. [Overview](#overview)
 1. [Vagrant Build Environment](#vagrant-build-environment)
+  * [Docker provider](#docker-provider)
 1. [Building Debs](#building-debs)
 1. [Defining New Debs](#defining-new-debs)
   * [Deb Build Variables](#deb-build-variables)
@@ -23,8 +24,8 @@ TODO: Overview of Debian pkg builds, plans
 
 ## Vagrant Build Environment
 
-Deb builds can be done in the included Vagrantfile. It provides a
-consistent, known-working and easily shared environment.
+The included Vagrantfile defines a consistent, known-working and easily
+shared environment. It supports both VM and container-based providers.
 
     [~/packaging/deb]$ vagrant status
     Current machine states:
@@ -34,6 +35,28 @@ consistent, known-working and easily shared environment.
     [~/packaging/deb]$ vagrant ssh
     [vagrant@localhost ~]$ ls /vagrant/
     opendaylight  README.markdown  Vagrantfile
+
+### Docker provider
+
+The Vagrantfile defines a Docker provider, enabling easy access to build.py
+in a container. The general command format is:
+
+```
+$ vagrant docker-run -- <flags to build.py>
+```
+
+To pass 5.0 (Boron) as the version to build:
+
+```
+$ vagrant docker-run -- -v 5 0
+```
+
+Dockerfile can be also used directly to build container image:
+
+```
+$ docker build -t "odl_deb" .
+$ docker run -v $(pwd):/build odl_deb -v 5 0
+```
 
 ## Building Debs
 
