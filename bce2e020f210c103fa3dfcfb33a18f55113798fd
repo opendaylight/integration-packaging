@@ -2,6 +2,98 @@
   "comments": [
     {
       "key": {
+        "uuid": "3a65312a_ed6fc2c3",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-11-16T17:01:50Z",
+      "side": 1,
+      "message": "Do we need a changelog_time for new defs?",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 52,
+        "endChar": 18
+      },
+      "revId": "bce2e020f210c103fa3dfcfb33a18f55113798fd",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_0dab1ed7",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-11-16T17:01:50Z",
+      "side": 1,
+      "message": "should be pkg_version for deb",
+      "range": {
+        "startLine": 58,
+        "startChar": 4,
+        "endLine": 58,
+        "endChar": 15
+      },
+      "revId": "bce2e020f210c103fa3dfcfb33a18f55113798fd",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_4db51630",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-11-16T17:01:50Z",
+      "side": 1,
+      "message": "should be pkg_version for deb",
+      "range": {
+        "startLine": 68,
+        "startChar": 4,
+        "endLine": 68,
+        "endChar": 15
+      },
+      "revId": "bce2e020f210c103fa3dfcfb33a18f55113798fd",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_8d78ce90",
+        "filename": "rpm/Vagrantfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-11-16T17:01:50Z",
+      "side": 1,
+      "message": "What is o? Maybe a longer var name would be good here",
+      "range": {
+        "startLine": 10,
+        "startChar": 49,
+        "endLine": 10,
+        "endChar": 50
+      },
+      "revId": "bce2e020f210c103fa3dfcfb33a18f55113798fd",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a65312a_ed586234",
         "filename": "rpm/build_vars.yaml",
         "patchSetId": 5
