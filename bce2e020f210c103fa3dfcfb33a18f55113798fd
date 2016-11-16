@@ -46,6 +46,30 @@
       "revId": "bce2e020f210c103fa3dfcfb33a18f55113798fd",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_eda6a20f",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 6829
+      },
+      "writtenOn": "2016-11-16T17:00:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a65312a_0d3ddebb",
+      "range": {
+        "startLine": 110,
+        "startChar": 4,
+        "endLine": 110,
+        "endChar": 15
+      },
+      "revId": "bce2e020f210c103fa3dfcfb33a18f55113798fd",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
