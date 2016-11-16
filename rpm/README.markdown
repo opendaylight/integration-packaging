@@ -28,18 +28,40 @@ See the Templates vs Macros section for details about why we use this design.
 
 ## Vagrant Build Environment
 
-All SRPM builds are done in the included Vagrantfile. It provides a
-consistent, known-working and easily shared environment.
+The included Vagrantfile defines a consistent, known-working and easily
+shared environment. It supports both VM and container-based providers.
 
 ```
-[~/packaging/rpm]$ vagrant status
+$ vagrant status
 Current machine states:
 
 default                   not created (virtualbox)
-[~/packaging/rpm]$ vagrant up
-[~/packaging/rpm]$ vagrant ssh
+$ vagrant up
+$ vagrant ssh
 [vagrant@localhost vagrant]$ ls /vagrant/
 build.py  build_vars.yaml  cache  connect.sh  Vagrantfile <snip>
+```
+
+### Docker provider
+
+The Vagrantfile defines a Docker provider, enabling easy access to build.py
+in a container. The general command format is:
+
+```
+$ vagrant docker-run -- <flags to build.py>
+```
+
+To pass 5.0 (Boron) as the version to build:
+
+```
+$ vagrant docker-run -- -v 5 0
+```
+
+Dockerfile can be also used directly to build container image:
+
+```
+$ docker build -t "odl_rpm" .
+$ docker run -v $(pwd):/build odl_rpm -v 5 0
 ```
 
 ## Defining New RPMs
