@@ -5,6 +5,7 @@ Logic for building OpenDaylight's upstream Debian packages.
 #### Table of Contents
 1. [Overview](#overview)
 1. [Vagrant Build Environment](#vagrant-build-environment)
+  * [Docker provider](#docker-provider)
 1. [Building Debs](#building-debs)
 1. [Defining New Debs](#defining-new-debs)
   * [Deb Build Variables](#deb-build-variables)
@@ -34,6 +35,22 @@ consistent, known-working and easily shared environment.
     [~/packaging/deb]$ vagrant ssh
     [vagrant@localhost ~]$ ls /vagrant/
     opendaylight  README.markdown  Vagrantfile
+
+### Docker provider
+
+To run `build.py` script in the context of docker container bellow command
+can be used:
+
+```
+$ vagrant docker-run -- -v 5
+```
+
+Dockerfile can be also used directly to build container image:
+
+```
+$ docker build -t "odl_deb" .
+$ docker run -v $(pwd):/build odl_deb -v 5
+```
 
 ## Building Debs
 

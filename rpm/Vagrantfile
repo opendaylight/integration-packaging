@@ -3,21 +3,27 @@
 
 # Vagrantfile API/syntax version.
 VAGRANTFILE_API_VERSION = "2"
+BOX = "centos/7"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  # RPM build environment is CentOS 7
-  config.vm.box = "centos/7"
-
   # Configure VM RAM and CPU for VirtualBox. Change this to meet your needs.
-  config.vm.provider :virtualbox do |virtualbox|
+  config.vm.provider :virtualbox do |virtualbox, o|
     virtualbox.memory = 2048
     virtualbox.cpus = 2
+    o.vm.box = BOX
   end
 
   # Configure VM RAM and CPU for LibVirt. Change this to meet your needs.
-  config.vm.provider :libvirt do |libvirt|
+  config.vm.provider :libvirt do |libvirt, o|
     libvirt.memory = 2048
     libvirt.cpus = 2
+    o.vm.box = BOX
+  end
+
+  config.vm.provider "docker" do |docker, o|
+    docker.build_dir = "."
+    docker.remains_running = false
+    o.vm.synced_folder ".", "/build"
   end
 
   # NFS is fragile, use rsync

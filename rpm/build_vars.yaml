@@ -104,3 +104,13 @@ builds:
     changelog_date: "Thu Oct 27 2016"
     changelog_name: "Daniel Farrell"
     changelog_email: "dfarrell@redhat.com"
+  - version_major: "5"
+    version_minor: "1"
+    version_patch: "0"
+    pkg_version: "1"
+    codename: Boron-SR1
+    download_url: "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/0.5.1-Boron-SR1/distribution-karaf-0.5.1-Boron-SR1.tar.gz"
+    sysd_commit: 07f7c83b0ef46ad3809e5be03e09a77fe554eeae
+    changelog_date: "Nov 16 2016"
+    changelog_name: "Michal Skalski"
+    changelog_email: "mskalski@mirantis.com"
