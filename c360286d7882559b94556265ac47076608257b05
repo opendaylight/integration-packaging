@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a65312a_ed42220f",
+        "filename": "rpm/build.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-11-16T17:30:43Z",
+      "side": 1,
+      "message": "Always suggest inline docs for regexes, both to quickly understand it and so you know what the person meant for it to do (incase it does something different ;)\n\nAlso, can\u0027t you use re.group to get all the parts of the version without this splitting/indexing stuff?",
+      "revId": "c360286d7882559b94556265ac47076608257b05",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_cd45a618",
+        "filename": "rpm/build.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-11-16T17:30:43Z",
+      "side": 1,
+      "message": "odl_version vs version - is this needed? mixing indexing into both is complex to read, should be a cleaner way",
+      "revId": "c360286d7882559b94556265ac47076608257b05",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_0d479e1e",
+        "filename": "rpm/build.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-11-16T17:30:43Z",
+      "side": 1,
+      "message": "I think this fn should just return the version info, maybe as a dict",
+      "range": {
+        "startLine": 47,
+        "startChar": 4,
+        "endLine": 47,
+        "endChar": 10
+      },
+      "revId": "c360286d7882559b94556265ac47076608257b05",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_2d4c1a42",
+        "filename": "rpm/build.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-11-16T17:30:43Z",
+      "side": 1,
+      "message": "???",
+      "range": {
+        "startLine": 48,
+        "startChar": 58,
+        "endLine": 50,
+        "endChar": 67
+      },
+      "revId": "c360286d7882559b94556265ac47076608257b05",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
