@@ -46,21 +46,40 @@ builds:
     pkg_version: "1"
     sysd_commit: 07f7c83b0ef46ad3809e5be03e09a77fe554eeae
     codename: Beryllium-SR3
-    download_url: "https://nexus.opendaylight.org/content/repositories/autorelease-1367/org/opendaylight/integration/distribution-karaf/0.4.3-Beryllium-SR3/distribution-karaf-0.4.3-Beryllium-SR3.tar.gz"
+    download_url: "https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.4.3-Beryllium-SR3/distribution-karaf-0.4.3-Beryllium-SR3.tar.gz"
     java_version: "7"
     changelog_date: "Tue, 26 Jul 2016"
     changelog_time: "17:48:42 +0530"
     changelog_name: "Daniel Farrell"
     changelog_email: "dfarrell@redhat.com"
+  - version_major: "4"
+    version_minor: "4"
+    version_patch: "0"
+    rpm_release: "1"
+    sysd_commit: 07f7c83b0ef46ad3809e5be03e09a77fe554eeae
+    codename: Beryllium-SR4
+    download_url: "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/0.4.4-Beryllium-SR4/distribution-karaf-0.4.4-Beryllium-SR4.tar.gz"
+    changelog_date: "Nov 16 2016"
+    changelog_name: "Michal Skalski"
+    changelog_email: "mskalski@mirantis.com"
   - version_major: "5"
     version_minor: "0"
     version_patch: "0"
+    rpm_release: "1"
+    codename: Boron
+    download_url: "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/0.5.0-Boron/distribution-karaf-0.5.0-Boron.tar.gz"
+    sysd_commit: 07f7c83b0ef46ad3809e5be03e09a77fe554eeae
+    changelog_date: "Nov 16 2016"
+    changelog_name: "Michal Skalski"
+    changelog_email: "mskalski@mirantis.com"
+  - version_major: "5"
+    version_minor: "1"
+    version_patch: "0"
     pkg_version: "1"
-    codename: SNAPSHOT
-    download_url: "https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.5.0-SNAPSHOT/distribution-karaf-0.5.0-20160809.145534-4240.tar.gz"
+    codename: Boron-SR1
+    download_url: "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/0.5.1-Boron-SR1/distribution-karaf-0.5.1-Boron-SR1.tar.gz"
     sysd_commit: 07f7c83b0ef46ad3809e5be03e09a77fe554eeae
     java_version: "8"
-    changelog_date: "Tue, 09 Aug 2016"
-    changelog_time: "17:48:42 +0530"
-    changelog_name: "Daniel Farrell"
-    changelog_email: "dfarrell@redhat.com"
+    changelog_date: "Nov 16 2016"
+    changelog_name: "Michal Skalski"
+    changelog_email: "mskalski@mirantis.com"
