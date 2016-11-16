@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3a65312a_7230ad01",
+        "filename": "deb/README.markdown",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 6829
+      },
+      "writtenOn": "2016-11-16T16:42:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a65312a_b24b6586",
+      "range": {
+        "startLine": 41,
+        "startChar": 60,
+        "endLine": 41,
+        "endChar": 66
+      },
+      "revId": "5fbc8a64a38269db4408118b0fd15fa72cc8d9ea",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a65312a_f245dd70",
         "filename": "deb/build_vars.yaml",
         "patchSetId": 2
@@ -36,6 +60,24 @@
       "writtenOn": "2016-11-16T16:30:45Z",
       "side": 1,
       "message": "we have Boron SR",
+      "revId": "5fbc8a64a38269db4408118b0fd15fa72cc8d9ea",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_72070d1d",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6829
+      },
+      "writtenOn": "2016-11-16T16:42:37Z",
+      "side": 1,
+      "message": "not sure what you mean? This file pointed to some snapshost of ODL Boron, here I\u0027m pointing to official Boron SR0 and SR1.",
+      "parentUuid": "3a65312a_f245dd70",
       "revId": "5fbc8a64a38269db4408118b0fd15fa72cc8d9ea",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "3a65312a_5202d10b",
+        "filename": "rpm/README.markdown",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 6829
+      },
+      "writtenOn": "2016-11-16T16:42:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a65312a_d248a189",
+      "range": {
+        "startLine": 47,
+        "startChar": 60,
+        "endLine": 47,
+        "endChar": 66
+      },
+      "revId": "5fbc8a64a38269db4408118b0fd15fa72cc8d9ea",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a65312a_325f5543",
         "filename": "rpm/build_vars.yaml",
         "patchSetId": 2
@@ -76,6 +142,24 @@
       "writtenOn": "2016-11-16T16:30:45Z",
       "side": 1,
       "message": "do we also want Boron 0.5.0 in this file?  it\u0027s there in the other build_vars.yaml",
+      "revId": "5fbc8a64a38269db4408118b0fd15fa72cc8d9ea",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_ad002a02",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 6829
+      },
+      "writtenOn": "2016-11-16T16:42:37Z",
+      "side": 1,
+      "message": "it is already defined above",
+      "parentUuid": "3a65312a_325f5543",
       "revId": "5fbc8a64a38269db4408118b0fd15fa72cc8d9ea",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
