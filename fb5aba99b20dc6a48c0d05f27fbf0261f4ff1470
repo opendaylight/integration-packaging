@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a65312a_6d6d7298",
+        "filename": "deb/build_vars.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-11-16T17:37:46Z",
+      "side": 1,
+      "message": "No, I\u0027m saying that we need this field for all versions. It needs to be added to the new defs, not removed from old ones. The builds without it fail with:\n\nStderr: parsechangelog/debian: warning:     debian/changelog(l5): badly formatted trailer line\nLINE:  -- Michal Skalski \u003cmskalski@mirantis.com\u003e  Nov 16 2016 \nparsechangelog/debian: warning:     debian/changelog(l5): found eof where expected more change data or trailer",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 52,
+        "endChar": 18
+      },
+      "revId": "fb5aba99b20dc6a48c0d05f27fbf0261f4ff1470",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
