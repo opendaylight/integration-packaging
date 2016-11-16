@@ -29,6 +29,7 @@ def simple_test():
     print "Testing network connectivity"
     net.pingAll()
 
+
 if __name__ == "__main__":
     # Tell mininet to print useful information
     setLogLevel("info")
