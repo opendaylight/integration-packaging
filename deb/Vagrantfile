@@ -1,19 +1,32 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+BOX = "debian/jessie64"
+BOX_VERSION = "= 8.5.2"
+
 Vagrant.configure("2") do |config|
   # Configure VM RAM and CPU for VirtualBox
-  config.vm.provider :virtualbox do |virtualbox|
+  config.vm.provider :virtualbox do |virtualbox, override|
     virtualbox.memory = 1024
     # Two cores over default one for faster builds
     virtualbox.cpus = 2
+    override.vm.box = BOX
+    override.vm.box_version = BOX_VERSION
   end
 
   # Configure VM RAM and CPU for LibVirt
-  config.vm.provider :libvirt do |libvirt|
+  config.vm.provider :libvirt do |libvirt, override|
     libvirt.memory = 1024
     # Two cores over default one for faster builds
     libvirt.cpus = 2
+    override.vm.box = BOX
+    override.vm.box_version = BOX_VERSION
+  end
+
+  config.vm.provider "docker" do |docker, override|
+    docker.build_dir = "."
+    docker.remains_running = false
+    override.vm.synced_folder ".", "/build"
   end
 
   # NFS is fragile, disable it and use rsync
@@ -21,10 +34,6 @@ Vagrant.configure("2") do |config|
 
   # Sync folders /packaging/deb/ and /vagrant
   config.vm.synced_folder ".", "/vagrant"
-
-  # Start from Debian VM so resulting pkgs will build on all Deb derivatives
-  config.vm.box = "debian/jessie64"
-  config.vm.box_version = "= 8.5.2"
 
   # Update package info to prevent old info from causing 404s during install
   config.vm.provision "shell", inline: "apt-get update"
