@@ -9,6 +9,7 @@ ExecStart=/opt/opendaylight/bin/start
 User=odl
 Group=odl
 SuccessExitStatus=143
+LimitNOFILE=102400
 
 [Install]
 WantedBy=multi-user.target
