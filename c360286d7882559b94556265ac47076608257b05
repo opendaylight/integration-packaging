@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3a65312a_3f354ef7",
+        "filename": "rpm/build.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-11-23T06:46:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a65312a_ed42220f",
+      "revId": "c360286d7882559b94556265ac47076608257b05",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a65312a_cd45a618",
         "filename": "rpm/build.py",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2016-11-16T17:30:43Z",
       "side": 1,
       "message": "odl_version vs version - is this needed? mixing indexing into both is complex to read, should be a cleaner way",
+      "revId": "c360286d7882559b94556265ac47076608257b05",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_9f3c62e4",
+        "filename": "rpm/build.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-11-23T06:46:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a65312a_cd45a618",
       "revId": "c360286d7882559b94556265ac47076608257b05",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
@@ -59,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "3a65312a_df253ac3",
+        "filename": "rpm/build.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-11-23T06:46:05Z",
+      "side": 1,
+      "message": "Will codename not be needed?",
+      "parentUuid": "3a65312a_0d479e1e",
+      "range": {
+        "startLine": 47,
+        "startChar": 4,
+        "endLine": 47,
+        "endChar": 10
+      },
+      "revId": "c360286d7882559b94556265ac47076608257b05",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a65312a_2d4c1a42",
         "filename": "rpm/build.py",
         "patchSetId": 7
@@ -70,6 +130,30 @@
       "writtenOn": "2016-11-16T17:30:43Z",
       "side": 1,
       "message": "???",
+      "range": {
+        "startLine": 48,
+        "startChar": 58,
+        "endLine": 50,
+        "endChar": 67
+      },
+      "revId": "c360286d7882559b94556265ac47076608257b05",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a65312a_7f3fc6d6",
+        "filename": "rpm/build.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-11-23T06:46:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a65312a_2d4c1a42",
       "range": {
         "startLine": 48,
         "startChar": 58,
