@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a622d24_2b454d70",
+        "filename": "rpm/build.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-07T21:01:12Z",
+      "side": 1,
+      "message": "Maybe \"extract_version\"?",
+      "range": {
+        "startLine": 45,
+        "startChar": 4,
+        "endLine": 45,
+        "endChar": 15
+      },
+      "revId": "bd99c6af07309dacafce26d2a06b813298f173af",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_6bb0e58b",
         "filename": "rpm/build.py",
         "patchSetId": 13
