@@ -1,0 +1,40 @@
+[Default]
+ignore = .tox/**, .gitignore, .gitreview, .gitmodules
+use_spaces = True
+
+[DOCS]
+bears = SpaceConsistencyBear, LineLengthBear
+files = ./**/*.rst
+default_actions = SpaceConsistencyBear: ApplyPatchAction
+
+[markdown]
+bears = MarkdownBear
+files = ./**/*.markdown, ./**/*.md
+default_actions = MarkdownBear: ApplyPatchAction
+
+[dockerfile]
+bears = DockerfileLintBear
+files = ./**/Dockerfile
+
+[json]
+bears = JSONFormatBear
+files = ./**/*.json
+default_actions = JSONFormatBear: ApplyPatchAction
+
+[shellcheck]
+bears = ShellCheckBear
+files = ./**/*.sh
+
+[python]
+bears = PyUnusedCodeBear
+files = ./**/*.py
+default_actions = PyUnusedCodeBear: ApplyPatchAction
+
+[autopep8]
+bears = PEP8Bear
+files = ./**/*.py
+default_actions = PEP8Bear: ApplyPatchAction
+
+[yaml]
+bears = YAMLLintBear
+files = ./**/*yaml, ./**/*.yml
