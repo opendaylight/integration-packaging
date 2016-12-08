@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_f14d0474",
+        "filename": "rpm/build.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-08T02:33:11Z",
+      "side": 1,
+      "message": "Also need to handle rpm_release",
+      "parentUuid": "1a622d24_2b454d70",
+      "range": {
+        "startLine": 45,
+        "startChar": 4,
+        "endLine": 45,
+        "endChar": 15
+      },
+      "revId": "bd99c6af07309dacafce26d2a06b813298f173af",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_6bb0e58b",
         "filename": "rpm/build.py",
         "patchSetId": 13
