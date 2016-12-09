@@ -1,0 +1,112 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_055b1588",
+        "filename": "rpm/build.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-09T18:23:16Z",
+      "side": 1,
+      "message": "Docstring should include docs about the return val, in this case the version dict and its components.",
+      "revId": "740a5493a81b369dfde3cafe11fd1ce3edcfcf1f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_05367552",
+        "filename": "rpm/build.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-09T18:23:16Z",
+      "side": 1,
+      "message": "The date is supposed to be the date the ODL build was done, not the RPM build. Other than that, the main problem with this method is that builds aren\u0027t reproducible. You can\u0027t build an RPM with the same name from the same ODL artifact on two different days. We can get the ODL artifact\u0027s date with something like\n\n    curl -s https://nexus.opendaylight.org/content/repositories/autorelease-1533/org/opendaylight/integration/distribution-karaf/0.4.4-Beryllium-SR4/ | grep \"tar.gz\\\"\" -A1 | tail -n 1",
+      "revId": "740a5493a81b369dfde3cafe11fd1ce3edcfcf1f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_253c512f",
+        "filename": "rpm/build.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-09T18:23:16Z",
+      "side": 1,
+      "message": "This is pretty obvious given the var name old_version and input url. It would be more helpful to doc what the regex matches, maybe with examples. Applies to all.",
+      "range": {
+        "startLine": 52,
+        "startChar": 65,
+        "endLine": 52,
+        "endChar": 93
+      },
+      "revId": "740a5493a81b369dfde3cafe11fd1ce3edcfcf1f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_e511b9ad",
+        "filename": "rpm/build.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-09T18:23:16Z",
+      "side": 1,
+      "message": "Maybe better to explicitly check the third case as well, searching for something unique to release-build URLs. The else fall-through can be an error about an unrecognized URL.",
+      "revId": "740a5493a81b369dfde3cafe11fd1ce3edcfcf1f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_2523b106",
+        "filename": "rpm/build.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-09T18:23:16Z",
+      "side": 1,
+      "message": "Maybe more readable to do the odl_version regex closer to where it\u0027s used, down here.",
+      "revId": "740a5493a81b369dfde3cafe11fd1ce3edcfcf1f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_85772502",
+        "filename": "rpm/build.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-09T18:23:16Z",
+      "side": 1,
+      "message": "I think it would be more readable just to build the dict as you find the version components.\n\n    version \u003d {}\n    version[\"version_minor\" ] \u003d odl_version.group(3)\n    # applies to others",
+      "revId": "740a5493a81b369dfde3cafe11fd1ce3edcfcf1f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
