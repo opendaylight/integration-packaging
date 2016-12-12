@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_9e5e4b44",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T18:58:59Z",
+      "side": 1,
+      "message": "I think you\u0027re not using this",
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
