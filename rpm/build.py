@@ -6,14 +6,23 @@ import sys
 import argparse
 import shutil
 import subprocess
+import datetime
+import re
+
 from string import Template
+from urllib2 import urlopen
+import requests
+from requests.exceptions import HTTPError
+
 
 try:
     import yaml
+    from bs4 import BeautifulSoup
 except ImportError:
     sys.stderr.write("We recommend using our included Vagrant env.\n")
     sys.stderr.write("Else, do `pip install -r requirements.txt` in a venv.\n")
     raise
+
 
 import cache.cache as cache
 import specs.build_specs as build_specs
@@ -89,6 +98,84 @@ def build_rpm(build):
     shutil.copy(srpm_out_path, cache_dir)
 
 
+def build_snapshot_rpm(build):
+    """Build latest snapshot RPMs fetching information from URL.
+
+    :param build: Description of an RPM build, from parent_dir URL
+    :type build: dict
+
+    """
+    parent_dir = 'https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/'
+
+    # If the minor verison is given, get the sub-directory directly
+    # else, find the latest sub-directory
+    sub_dir = ''
+    snapshot_dir = ''
+    if build['version_minor']:
+        sub_dir = '0.' + build['version_major'] + '.' + build['version_minor'] + '-SNAPSHOT/'
+        snapshot_dir = parent_dir + sub_dir
+    else:
+        subdir_url = urlopen(parent_dir)
+        content = subdir_url.read().decode('utf-8')
+        all_dirs = BeautifulSoup(content, 'html.parser')
+
+        # Loops through all the sub-directories present and stores the
+        # latest sub directory.
+        for tag in all_dirs.find_all('a', href=True):
+            # Checks if the sub-directory name is of the form
+            # '0.<major_version>.<minor_version>-SNAPSHOT'.
+            dir = re.search(r'\/(\d)\.(\d)\.(\d).(.*)\/', tag['href'])
+            # If the major version matches the argument provided
+            # store the minor version, else ignore.
+            if dir:
+                if dir.group(2) == build['version_major']:
+                    snapshot_dir = tag['href']
+                    build['version_minor'] = dir.group(3)
+
+    try:
+        req = requests.get(snapshot_dir)
+        req.raise_for_status()
+    except HTTPError:
+        print "Could not find the snapshot directory"
+    else:
+        urlpath = urlopen(snapshot_dir)
+        content = urlpath.read().decode('utf-8')
+        html_content = BeautifulSoup(content, 'html.parser')
+
+        snapshot_url = ''
+        # Loops thorugh all the files present in `snapshot_dir`
+        # and stores the url of latest tarball.
+        for tag in html_content.find_all('a', href=True):
+            if tag['href'].endswith('tar.gz'):
+                snapshot_url = tag['href']
+
+        # Get download_url
+        build['download_url'] = snapshot_url
+
+        # Get changelog_date from the snapshot URL
+        # eg: 'distribution-karaf-0.5.2-20161202.230609-363.tar.gz'
+        # '\d{8}' searches for the date in the url
+        extract_date = re.search(r'\d{8}', snapshot_url)
+        extract_date = extract_date.group(0)
+        year = int(extract_date[:4])
+        month = int(extract_date[4:6])
+        date = int(extract_date[6:])
+
+        # %a: Abbreviated weekday name
+        # %b: Abbreviated month name
+        # %d: Zero padded decimal number
+        # %Y: Year
+        # `changelog_date` is in the format: 'Sat Dec 10 2016'
+        # Docs: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
+        build['changelog_date'] = datetime.date(year, month, date).strftime("%a %b %d %Y")
+
+        # Assign codename
+        build['codename'] = "SNAPSHOT"
+        urlpath.close()
+
+        build_rpm(build)
+
+
 # When run as a script, accept a set of builds and execute them
 if __name__ == "__main__":
     # Load RPM build variables from a YAML config file
@@ -98,7 +185,7 @@ if __name__ == "__main__":
 
     # Accept the version(s) of the build(s) to perform as args
     # TODO: More docs on ArgParser and argument
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(conflict_handler='resolve')
     existing_build_group = parser.add_argument_group("Existing build")
     existing_build_group.add_argument(
         "-v", "--version", action="append", metavar="major minor patch rpm",
@@ -115,6 +202,19 @@ if __name__ == "__main__":
     new_build_group.add_argument("--changelog_date", help="Date this RPM was defined")
     new_build_group.add_argument("--changelog_name", help="Name of person who defined RPM")
     new_build_group.add_argument("--changelog_email", help="Email of person who defined RPM")
+
+    # Arguments needed to build RPM from latest snapshot given a stable major branch
+    latest_snap_group = parser.add_argument_group("Latest snapshot build")
+    latest_snap_group.add_argument("--build-latest-snap", action='store_true',
+        help="Build RPM from the latest snpashot")
+    latest_snap_group.add_argument("--major", required='true', help="Stable branch from which to build the snapshot")
+    latest_snap_group.add_argument("--minor", help="Minor version of the stable branch to build the snapshot")
+    latest_snap_group.add_argument("--patch", help="Patch version to build")
+    latest_snap_group.add_argument("--rpm",   help="RPM version to build")
+    latest_snap_group.add_argument("--sysd_commit", help="Version of ODL unitfile to package")
+    latest_snap_group.add_argument("--codename", help="Codename for ODL snapshot")
+    latest_snap_group.add_argument("--changelog_name", help="Name of person who defined RPM")
+    latest_snap_group.add_argument("--changelog_email", help="Email of person who defined RPM")
 
     # Print help if no arguments are given
     if len(sys.argv) == 1:
@@ -159,5 +259,10 @@ if __name__ == "__main__":
                        "changelog_name": args.changelog_name,
                        "changelog_email": args.changelog_email})
 
+    # If the flag `--build-latest-snap` is true, extract information from the snapshot URL,
+    # else directly build the RPM
     for build in builds:
-        build_rpm(build)
+        if args.build_latest_snap:
+            build_snapshot_rpm(build)
+        else:
+            build_rpm(build)
