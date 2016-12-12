@@ -210,6 +210,23 @@
       "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_32412b5b",
+        "filename": "rpm/requirements.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T23:16:00Z",
+      "side": 1,
+      "message": "While you\u0027re editing this to install requests, maybe remove these extra newlines",
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
