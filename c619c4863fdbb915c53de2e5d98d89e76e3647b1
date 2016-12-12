@@ -1,0 +1,198 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_3273ebea",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T23:13:17Z",
+      "side": 1,
+      "message": "I think you\u0027re not using this",
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_b2a7fb4e",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T23:13:17Z",
+      "side": 1,
+      "message": "Interesting lib, seems helpful. Didn\u0027t know about it, thanks :)",
+      "range": {
+        "startLine": 20,
+        "startChar": 20,
+        "endLine": 20,
+        "endChar": 33
+      },
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_925e3f44",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T23:13:17Z",
+      "side": 1,
+      "message": "Thanks for the docs",
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_124b4f88",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T23:13:17Z",
+      "side": 1,
+      "message": "Nice logic",
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_72ad6331",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T23:13:17Z",
+      "side": 1,
+      "message": "Not sure this helps, an empty string or None will fail eventually. nbd",
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_32bc8b69",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T23:13:17Z",
+      "side": 1,
+      "message": "I guess it\u0027s storing the latest one because the files are sorted early-\u003elate? Makes sense, but maybe good to clarify that assumption in the inline docs. (/me notices also applies above)",
+      "range": {
+        "startLine": 147,
+        "startChar": 32,
+        "endLine": 147,
+        "endChar": 38
+      },
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_d281d790",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T23:13:17Z",
+      "side": 1,
+      "message": "Very good",
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_324acb80",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T23:13:17Z",
+      "side": 1,
+      "message": "The changelog date should technically be the date the RPM was defined, not the snapshot artifact built, but it\u0027s pretty trivial imho, this is fine",
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_725ba354",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T23:13:17Z",
+      "side": 1,
+      "message": "Had to look this up, but to the other reviewers, it\u0027s about allowing arguments to be defined more than once in different groups with different help messages",
+      "range": {
+        "startLine": 188,
+        "startChar": 55,
+        "endLine": 188,
+        "endChar": 62
+      },
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_526e6702",
+        "filename": "rpm/requirements.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T23:13:17Z",
+      "side": 1,
+      "message": "If this isn\u0027t available by default, may cause build-rpm jobs to start failing in Jenkins. Testing it by passing REFSPEC to point at this unmerge patch",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 3
+      },
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
