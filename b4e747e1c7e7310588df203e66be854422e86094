@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a622d24_fe365f02",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T19:06:28Z",
+      "side": 1,
+      "message": "Will also not be needed",
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_9e5e4b44",
         "filename": "rpm/build.py",
         "patchSetId": 17
@@ -13,6 +30,132 @@
       "writtenOn": "2016-12-12T18:58:59Z",
       "side": 1,
       "message": "I think you\u0027re not using this",
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_5e3cb3e2",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T19:06:28Z",
+      "side": 1,
+      "message": "Why not just search for \"autorelease-\"?",
+      "range": {
+        "startLine": 71,
+        "startChar": 33,
+        "endLine": 71,
+        "endChar": 44
+      },
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_1e323b10",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T19:06:28Z",
+      "side": 1,
+      "message": "TODO?",
+      "range": {
+        "startLine": 74,
+        "startChar": 79,
+        "endLine": 74,
+        "endChar": 88
+      },
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_9e25abc4",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T19:06:28Z",
+      "side": 1,
+      "message": "I would probably search for \u003cbuild_id\u003e.tar.gz, but I guess this works",
+      "range": {
+        "startLine": 79,
+        "startChar": 32,
+        "endLine": 79,
+        "endChar": 59
+      },
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_7e224fba",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T19:06:28Z",
+      "side": 1,
+      "message": "This doesn\u0027t work, see unittests",
+      "range": {
+        "startLine": 81,
+        "startChar": 10,
+        "endLine": 81,
+        "endChar": 16
+      },
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_be2ce7ac",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T19:06:28Z",
+      "side": 1,
+      "message": "For readability, maybe order major, minor, patch, rpm_version",
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_de2f23a0",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-12T19:06:28Z",
+      "side": 1,
+      "message": "Just set above, vs using this intermediate var",
       "revId": "b4e747e1c7e7310588df203e66be854422e86094",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
