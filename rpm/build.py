@@ -105,16 +105,22 @@ if __name__ == "__main__":
         nargs="*", help="RPM version(s) to build"
     )
     new_build_group = parser.add_argument_group("New build")
-    new_build_group.add_argument("--major", help="Major (element) version to build")
+    new_build_group.add_argument(
+        "--major", help="Major (element) version to build")
     new_build_group.add_argument("--minor", help="Minor (SR) version to build")
     new_build_group.add_argument("--patch", help="Patch version to build")
     new_build_group.add_argument("--rpm",   help="RPM version to build")
-    new_build_group.add_argument("--sysd_commit", help="Version of ODL unitfile to package")
+    new_build_group.add_argument(
+        "--sysd_commit", help="Version of ODL unitfile to package")
     new_build_group.add_argument("--codename", help="Codename for ODL version")
-    new_build_group.add_argument("--download_url", help="Tarball to repackage into RPM")
-    new_build_group.add_argument("--changelog_date", help="Date this RPM was defined")
-    new_build_group.add_argument("--changelog_name", help="Name of person who defined RPM")
-    new_build_group.add_argument("--changelog_email", help="Email of person who defined RPM")
+    new_build_group.add_argument(
+        "--download_url", help="Tarball to repackage into RPM")
+    new_build_group.add_argument(
+        "--changelog_date", help="Date this RPM was defined")
+    new_build_group.add_argument(
+        "--changelog_name", help="Name of person who defined RPM")
+    new_build_group.add_argument(
+        "--changelog_email", help="Email of person who defined RPM")
 
     # Print help if no arguments are given
     if len(sys.argv) == 1:
