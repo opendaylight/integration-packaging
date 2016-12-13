@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_0bef9a88",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2016-12-13T13:57:24Z",
+      "side": 1,
+      "message": "Its being used to get the changelog_date, line no:171 of this patch.",
+      "parentUuid": "1a622d24_3273ebea",
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_f2369302",
         "filename": "rpm/build.py",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_4be9927f",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2016-12-13T13:57:24Z",
+      "side": 1,
+      "message": "I agree.",
+      "parentUuid": "1a622d24_f2369302",
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_b2a7fb4e",
         "filename": "rpm/build.py",
         "patchSetId": 1
@@ -47,6 +83,30 @@
       "writtenOn": "2016-12-12T23:13:17Z",
       "side": 1,
       "message": "Interesting lib, seems helpful. Didn\u0027t know about it, thanks :)",
+      "range": {
+        "startLine": 20,
+        "startChar": 20,
+        "endLine": 20,
+        "endChar": 33
+      },
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_8b028a3c",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2016-12-13T13:57:24Z",
+      "side": 1,
+      "message": "Initially I was considering lxml because its known to be faster, but it added too many dependencies for the building environment.",
+      "parentUuid": "1a622d24_b2a7fb4e",
       "range": {
         "startLine": 20,
         "startChar": 20,
@@ -104,6 +164,24 @@
       "writtenOn": "2016-12-12T23:13:17Z",
       "side": 1,
       "message": "Not sure this helps, an empty string or None will fail eventually. nbd",
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_abf9464f",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2016-12-13T13:57:24Z",
+      "side": 1,
+      "message": "I agree. I will remove this.",
+      "parentUuid": "1a622d24_72ad6331",
       "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
@@ -184,6 +262,24 @@
       "writtenOn": "2016-12-12T23:13:17Z",
       "side": 1,
       "message": "The changelog date should technically be the date the RPM was defined, not the snapshot artifact built, but it\u0027s pretty trivial imho, this is fine",
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_abe2e69c",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2016-12-13T13:57:24Z",
+      "side": 1,
+      "message": "Should I change the logic here? Say if I run this today the changelog_date should be \u0027Tue Dec 13 2016\u0027?",
+      "parentUuid": "1a622d24_324acb80",
       "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
