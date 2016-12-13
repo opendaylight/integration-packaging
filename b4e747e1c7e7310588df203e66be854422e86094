@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_35ed95c4",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-13T07:56:04Z",
+      "side": 1,
+      "message": "I am using this date for rpm_release in autorelease/snapshot builds.",
+      "parentUuid": "1a622d24_9e5e4b44",
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_5e3cb3e2",
         "filename": "rpm/build.py",
         "patchSetId": 17
@@ -47,6 +65,30 @@
       "writtenOn": "2016-12-12T19:06:28Z",
       "side": 1,
       "message": "Why not just search for \"autorelease-\"?",
+      "range": {
+        "startLine": 71,
+        "startChar": 33,
+        "endLine": 71,
+        "endChar": 44
+      },
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_75ceed5b",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-13T07:56:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_5e3cb3e2",
       "range": {
         "startLine": 71,
         "startChar": 33,
@@ -82,6 +124,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_152cd901",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-13T07:56:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_1e323b10",
+      "range": {
+        "startLine": 74,
+        "startChar": 79,
+        "endLine": 74,
+        "endChar": 88
+      },
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_9e25abc4",
         "filename": "rpm/build.py",
         "patchSetId": 17
@@ -93,6 +159,30 @@
       "writtenOn": "2016-12-12T19:06:28Z",
       "side": 1,
       "message": "I would probably search for \u003cbuild_id\u003e.tar.gz, but I guess this works",
+      "range": {
+        "startLine": 79,
+        "startChar": 32,
+        "endLine": 79,
+        "endChar": 59
+      },
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_f5303d58",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-13T07:56:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_9e25abc4",
       "range": {
         "startLine": 79,
         "startChar": 32,
@@ -128,6 +218,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_550db18f",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-13T07:56:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_7e224fba",
+      "range": {
+        "startLine": 81,
+        "startChar": 10,
+        "endLine": 81,
+        "endChar": 16
+      },
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_be2ce7ac",
         "filename": "rpm/build.py",
         "patchSetId": 17
@@ -145,6 +259,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_953f4925",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-13T07:56:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_be2ce7ac",
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_de2f23a0",
         "filename": "rpm/build.py",
         "patchSetId": 17
@@ -156,6 +288,24 @@
       "writtenOn": "2016-12-12T19:06:28Z",
       "side": 1,
       "message": "Just set above, vs using this intermediate var",
+      "revId": "b4e747e1c7e7310588df203e66be854422e86094",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_753c2d30",
+        "filename": "rpm/build.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-13T07:56:04Z",
+      "side": 1,
+      "message": "Do you mean that I should add it to the dictionary where I am extracting rpm_release value?",
+      "parentUuid": "1a622d24_de2f23a0",
       "revId": "b4e747e1c7e7310588df203e66be854422e86094",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
