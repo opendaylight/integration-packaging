@@ -4,38 +4,39 @@ use_spaces = True
 
 [DOCS]
 bears = SpaceConsistencyBear, LineLengthBear
-files = ./**/*.rst
+#files = ./**/*.rst
 default_actions = SpaceConsistencyBear: ApplyPatchAction
 
 [markdown]
 bears = MarkdownBear
-files = ./**/*.markdown, ./**/*.md
+#files = ./**/*.markdown, ./**/*.md
 default_actions = MarkdownBear: ApplyPatchAction
 
 [dockerfile]
 bears = DockerfileLintBear
-files = ./**/Dockerfile
+#files = ./**/Dockerfile
 
 [json]
 bears = JSONFormatBear
-files = ./**/*.json
+#files = ./**/*.json
 default_actions = JSONFormatBear: ApplyPatchAction
 
 [shellcheck]
 bears = ShellCheckBear
-files = ./**/*.sh
+#files = ./**/*.sh
 
 [python]
 bears = PyUnusedCodeBear
 files = ./**/*.py
+ignore = docs/conf.py, .*/**
 default_actions = PyUnusedCodeBear: ApplyPatchAction
 
 [autopep8]
 bears = PEP8Bear
-files = ./**/*.py
+#files = ./**/*.py
 default_actions = PEP8Bear: ApplyPatchAction
 
 [yaml]
 bears = YAMLLintBear
 yamllint_config = .yamllint
-files = ./**/*yaml, ./**/*.yml
+#files = ./**/*yaml, ./**/*.yml
