@@ -76,6 +76,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_1c0fde31",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-13T20:41:24Z",
+      "side": 1,
+      "message": "Is this not the right syntax for docs generation? \"Type of url param is expected to be string\"",
+      "parentUuid": "1a622d24_26abadd9",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_46a6a911",
         "filename": "rpm/build.py",
         "patchSetId": 23
@@ -104,6 +122,24 @@
       "writtenOn": "2016-12-13T14:48:40Z",
       "side": 1,
       "message": "This is an unnecessary comment. I can tell it\u0027s setting an environment variable from the code.",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_a17e87ac",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-13T20:41:24Z",
+      "side": 1,
+      "message": "I like that it quickly tells me why it\u0027s setting an env var",
+      "parentUuid": "1a622d24_86960193",
       "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
@@ -144,6 +180,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_7c13725c",
+        "filename": "rpm/test_build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-13T20:41:24Z",
+      "side": 1,
+      "message": "Maybe we should do this for many files in a different commit. I don\u0027t think we have a single license header in Int/Pack",
+      "parentUuid": "1a622d24_26472d21",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_864ba12a",
         "filename": "rpm/test_build.py",
         "patchSetId": 23
@@ -155,6 +209,24 @@
       "writtenOn": "2016-12-13T14:48:40Z",
       "side": 1,
       "message": "I don\u0027t think this pydoc is necessary here. Move it into the class. If you need to explain this.",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_5c10364e",
+        "filename": "rpm/test_build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-13T20:41:24Z",
+      "side": 1,
+      "message": "meh /me likes docs, generally thinks all modules should have docstrings",
+      "parentUuid": "1a622d24_864ba12a",
       "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
