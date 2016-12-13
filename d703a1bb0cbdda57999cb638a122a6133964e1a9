@@ -141,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_dc528612",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-13T20:47:57Z",
+      "side": 1,
+      "message": "oh I think i understand what you\u0027re trying to do now...\n\nHere\u0027s an example of how to document this stuff. I like this format because it makes things neat and clear.",
+      "parentUuid": "1a622d24_1c0fde31",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_46a6a911",
         "filename": "rpm/build.py",
         "patchSetId": 23
@@ -187,6 +205,24 @@
       "side": 1,
       "message": "I like that it quickly tells me why it\u0027s setting an env var",
       "parentUuid": "1a622d24_86960193",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_3c58da31",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-13T20:47:57Z",
+      "side": 1,
+      "message": "Fair",
+      "parentUuid": "1a622d24_a17e87ac",
       "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
