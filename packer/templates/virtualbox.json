@@ -1,71 +1,70 @@
 {
-  "variables": {
-    "odl_version": null,
-    "os_name": null,
-    "os_version": null,
-    "guest_os_type": null,
-    "docker_repo": null,
-    "rpm_repo_file": null,
-    "rpm_repo_url": null
-  },
-  "builders": [
-    {
-      "type": "virtualbox-iso",
-      "guest_os_type": "{{ user `guest_os_type` }}",
-      "iso_urls": "{{ user `iso_urls` }}",
-      "iso_checksum": "{{ user `iso_checksum` }}",
-      "iso_checksum_type": "sha256",
-      "headless": "false",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
-      "ssh_wait_timeout": "30m",
-      "shutdown_command": "sudo shutdown -P now",
-      "http_directory": ".",
-      "boot_command": [
-        "<tab>text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/provision/{{ user `os_name` }}_kickstart.cfg<enter>"
-      ],
-      "vboxmanage": [
-        [
-          "modifyvm",
-          "{{ .Name }}",
-          "--memory",
-          "1024"
-        ],
-        [
-          "modifyvm",
-          "{{ .Name }}",
-          "--cpus",
-          "2"
-        ]
-      ]
-    }
-  ],
-  "provisioners": [
-    {
-      "type": "shell",
-      "scripts":
-        [
-          "provision/config_virtualbox_{{ user `os_name`}}.sh",
-          "provision/config_vagrant.sh",
-          "provision/config_ansible_{{ user `os_name`}}.sh",
-          "provision/config_ssh.sh"
-        ]
+    "variables": {
+        "odl_version": null,
+        "os_name": null,
+        "os_version": null,
+        "guest_os_type": null,
+        "docker_repo": null,
+        "rpm_repo_file": null,
+        "rpm_repo_url": null
     },
-    {
-      "type": "ansible-local",
-      "playbook_file": "provision/install_odl.yml",
-      "extra_arguments": [
-        "--extra-vars",
-        "\"rpm_repo_file={{ user `rpm_repo_file` }}",
-        "rpm_repo_url={{ user `rpm_repo_url` }}\""
-      ]
-    }
-  ],
-  "post-processors": [
-    {
-      "type": "vagrant",
-      "compression_level": "9",
-      "output": "opendaylight-{{ user `odl_version` }}-{{ user `os_name` }}-{{ user `os_version` }}-virtualbox.box"
-    }
-  ]
+    "builders": [
+        {
+            "type": "virtualbox-iso",
+            "guest_os_type": "{{ user `guest_os_type` }}",
+            "iso_urls": "{{ user `iso_urls` }}",
+            "iso_checksum": "{{ user `iso_checksum` }}",
+            "iso_checksum_type": "sha256",
+            "headless": "false",
+            "ssh_username": "vagrant",
+            "ssh_password": "vagrant",
+            "ssh_wait_timeout": "30m",
+            "shutdown_command": "sudo shutdown -P now",
+            "http_directory": ".",
+            "boot_command": [
+                "<tab>text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/provision/{{ user `os_name` }}_kickstart.cfg<enter>"
+            ],
+            "vboxmanage": [
+                [
+                    "modifyvm",
+                    "{{ .Name }}",
+                    "--memory",
+                    "1024"
+                ],
+                [
+                    "modifyvm",
+                    "{{ .Name }}",
+                    "--cpus",
+                    "2"
+                ]
+            ]
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "scripts": [
+                "provision/config_virtualbox_{{ user `os_name`}}.sh",
+                "provision/config_vagrant.sh",
+                "provision/config_ansible_{{ user `os_name`}}.sh",
+                "provision/config_ssh.sh"
+            ]
+        },
+        {
+            "type": "ansible-local",
+            "playbook_file": "provision/install_odl.yml",
+            "extra_arguments": [
+                "--extra-vars",
+                "\"rpm_repo_file={{ user `rpm_repo_file` }}",
+                "rpm_repo_url={{ user `rpm_repo_url` }}\""
+            ]
+        }
+    ],
+    "post-processors": [
+        {
+            "type": "vagrant",
+            "compression_level": "9",
+            "output": "opendaylight-{{ user `odl_version` }}-{{ user `os_name` }}-{{ user `os_version` }}-virtualbox.box"
+        }
+    ]
 }

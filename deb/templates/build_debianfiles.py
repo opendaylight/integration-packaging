@@ -21,13 +21,15 @@ debian_files_static = ["compat", "karaf", "opendaylight.install",
                        "opendaylight.postrm", "opendaylight.postinst",
                        "opendaylight.upstart"]
 
-# Path to the directory that contains this file is assumed to be the debian templates dir
+# Path to the directory that contains this file is assumed to be the
+# debian templates dir
 templates_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Create the Jinja2 Environment
 env = Environment(loader=FileSystemLoader(templates_dir))
 
-# Python string Template, specialized into an Opendaylight directory name per-build
+# Python string Template, specialized into an Opendaylight directory name
+# per-build
 odl_dir_template = Template("opendaylight/opendaylight-$version_major.$version_minor."
                             "$version_patch-$pkg_version/")
 odl_deb_template = Template("opendaylight/opendaylight_$version_major.$version_minor."

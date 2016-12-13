@@ -1,46 +1,45 @@
 {
-  "variables": {
-    "odl_version": null,
-    "os_name": null,
-    "os_version": null,
-    "docker_repo": null,
-    "rpm_repo_file": null,
-    "rpm_repo_url": null
-  },
-  "builders": [
-    {
-      "type": "docker",
-      "image": "{{ user `os_name` }}:{{ user `os_version` }}",
-      "pull": false,
-      "commit": true
-    }
-  ],
-  "provisioners": [
-    {
-      "type": "shell",
-      "scripts":
-        [
-          "provision/config_docker_{{ user `os_name`}}.sh",
-          "provision/config_ansible_{{ user `os_name`}}.sh",
-          "provision/config_ssh.sh"
-        ]
+    "variables": {
+        "odl_version": null,
+        "os_name": null,
+        "os_version": null,
+        "docker_repo": null,
+        "rpm_repo_file": null,
+        "rpm_repo_url": null
     },
-    {
-      "type": "ansible-local",
-      "playbook_file": "provision/install_odl.yml",
-      "extra_arguments": [
-        "--extra-vars",
-        "\"rpm_repo_file={{ user `rpm_repo_file` }}",
-        "rpm_repo_url={{ user `rpm_repo_url` }}\""
-      ]
-    }
-  ],
-  "post-processors": [
-    {
-      "type": "docker-tag",
-      "repository": "{{ user `docker_repo` }}",
-      "tag": "{{ user `odl_version` }}",
-      "force": false
-    }
-  ]
+    "builders": [
+        {
+            "type": "docker",
+            "image": "{{ user `os_name` }}:{{ user `os_version` }}",
+            "pull": false,
+            "commit": true
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "scripts": [
+                "provision/config_docker_{{ user `os_name`}}.sh",
+                "provision/config_ansible_{{ user `os_name`}}.sh",
+                "provision/config_ssh.sh"
+            ]
+        },
+        {
+            "type": "ansible-local",
+            "playbook_file": "provision/install_odl.yml",
+            "extra_arguments": [
+                "--extra-vars",
+                "\"rpm_repo_file={{ user `rpm_repo_file` }}",
+                "rpm_repo_url={{ user `rpm_repo_url` }}\""
+            ]
+        }
+    ],
+    "post-processors": [
+        {
+            "type": "docker-tag",
+            "repository": "{{ user `docker_repo` }}",
+            "tag": "{{ user `odl_version` }}",
+            "force": false
+        }
+    ]
 }

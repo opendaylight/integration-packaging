@@ -11,6 +11,7 @@ from mininet.node import RemoteController
 
 class SingleSwitchTopo(Topo):
     """Single switch connected to n hosts."""
+
     def build(self, n=2):
         switch = self.addSwitch("s1")
         # Python's range(N) generates 0..N-1
@@ -23,7 +24,8 @@ def simple_test():
     """Create and test a simple network."""
     topo = SingleSwitchTopo(n=4)
     net = Mininet(topo=topo, controller=None)
-    net.addController("c0", controller=RemoteController, ip="127.0.0.1", port=6633)
+    net.addController("c0", controller=RemoteController,
+                      ip="127.0.0.1", port=6633)
     net.start()
     time.sleep(10)
     print "Testing network connectivity"
