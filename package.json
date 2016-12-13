@@ -1,0 +1,7 @@
+{
+  "name": "packaging",
+  "dependencies": {
+    "remark-cli": "~2",
+    "dockerfile_lint": "~0"
+  }
+}
