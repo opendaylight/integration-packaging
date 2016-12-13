@@ -37,4 +37,5 @@ default_actions = PEP8Bear: ApplyPatchAction
 
 [yaml]
 bears = YAMLLintBear
+yamllint_config = .yamllint
 files = ./**/*yaml, ./**/*.yml
