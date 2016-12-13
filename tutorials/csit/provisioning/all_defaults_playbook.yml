@@ -3,5 +3,5 @@
   become: yes
   roles:
     - role: opendaylight
-      # Accept all default vars
-      # https://github.com/dfarrell07/ansible-opendaylight/blob/master/vars/main.yml
+    # Accept all default vars
+    # https://github.com/dfarrell07/ansible-opendaylight/blob/master/vars/main.yml
