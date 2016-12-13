@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_3c21fa9f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 23
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-13T20:43:43Z",
+      "side": 1,
+      "message": "^^also shouldn\u0027t talk about changes internal to the Gerrit, just describe the commit as a whole",
+      "parentUuid": "1a622d24_fc2662b9",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 10
+      },
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_46422911",
         "filename": "rpm/build.py",
         "patchSetId": 23
