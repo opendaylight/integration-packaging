@@ -1,0 +1,180 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_46422911",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-13T14:48:40Z",
+      "side": 1,
+      "message": "We should include a license header.",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_86c44193",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-13T14:48:40Z",
+      "side": 1,
+      "message": "PEP8 states that imports should be done in alphabetical order when possible. Organized by:\n\n1) python stdlib\n2) 3rd party\n3) project libraries.",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_069cb1bf",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-13T14:48:40Z",
+      "side": 1,
+      "message": "No need to trailing period in summary line.",
+      "range": {
+        "startLine": 47,
+        "startChar": 71,
+        "endLine": 47,
+        "endChar": 72
+      },
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_26abadd9",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-13T14:48:40Z",
+      "side": 1,
+      "message": "What is a type url?",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_46a6a911",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-13T14:48:40Z",
+      "side": 1,
+      "message": "A continuation line should be 4 spaces from the previous line for pydoc to generate this correctly.",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_86960193",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-13T14:48:40Z",
+      "side": 1,
+      "message": "This is an unnecessary comment. I can tell it\u0027s setting an environment variable from the code.",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_06eaf10e",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-13T14:48:40Z",
+      "side": 1,
+      "message": "If you move what\u0027s after the parentheses down one line and indent by 4 spaces, you will get more columns available to you.\n\n odl_date \u003d subprocess.Popen(\n     \"curl -s $date_url | grep tar.gz -A1 | tail -n1 ....",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_26472d21",
+        "filename": "rpm/test_build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-13T14:48:40Z",
+      "side": 1,
+      "message": "We need a license header at the top of the file.",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_864ba12a",
+        "filename": "rpm/test_build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-13T14:48:40Z",
+      "side": 1,
+      "message": "I don\u0027t think this pydoc is necessary here. Move it into the class. If you need to explain this.",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_666f6593",
+        "filename": "rpm/test_build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-13T14:48:40Z",
+      "side": 1,
+      "message": "If you set a class variable called:\n\n nexus_url \u003d \"https://nexus.opendaylight.org/content/repositories\n\nThen you can set all the URLs to\n\n url \u003d \"%s/public/org/opendaylight/...\" % nexus_url\n\n\n\nIn case you weren\u0027t familiar the keyword \"repositories\" will match on all repository types including \"groups\", \"hosted\", etc...",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
