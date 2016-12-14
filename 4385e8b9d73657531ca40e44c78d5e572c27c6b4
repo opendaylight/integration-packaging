@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a622d24_8f4e0d6e",
+        "filename": "rpm/build.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-14T19:01:45Z",
+      "side": 1,
+      "message": "You\u0027re following the examples in the current code perfectly, which is great. Thanh just pointed out that the current code isn\u0027t following OpenStack (~best practices), so maybe better to change but nbd https://github.com/openstack-infra/jenkins-job-builder/blob/e8f338b49a02ab8987058d48ec4cded8e7278157/jenkins_jobs/modules/builders.py#L96-L165",
+      "revId": "4385e8b9d73657531ca40e44c78d5e572c27c6b4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_c4ff4c66",
         "filename": "rpm/build.py",
         "patchSetId": 3
