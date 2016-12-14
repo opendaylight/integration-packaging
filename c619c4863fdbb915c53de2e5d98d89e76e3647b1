@@ -346,6 +346,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_044024a4",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-14T17:56:01Z",
+      "side": 1,
+      "message": "That would be better, yes",
+      "parentUuid": "1a622d24_abe2e69c",
+      "revId": "c619c4863fdbb915c53de2e5d98d89e76e3647b1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_725ba354",
         "filename": "rpm/build.py",
         "patchSetId": 1
