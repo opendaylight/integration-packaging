@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a622d24_2ffff9ab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-14T22:11:50Z",
+      "side": 1,
+      "message": "You can make these longer than the first line, FYI\n\nhttp://chris.beams.io/posts/git-commit/",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 28
+      },
+      "revId": "4385e8b9d73657531ca40e44c78d5e572c27c6b4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_8f4e0d6e",
         "filename": "rpm/build.py",
         "patchSetId": 3
