@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_c4ff4c66",
+        "filename": "rpm/build.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-14T17:50:15Z",
+      "side": 1,
+      "message": "You\u0027re assigning the codename in the fn, so don\u0027t need param. Not a big deal since once we have logic to parse versions from URLs, you\u0027ll want to move to using that and remove patch+rpm versions also.",
+      "revId": "4385e8b9d73657531ca40e44c78d5e572c27c6b4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
