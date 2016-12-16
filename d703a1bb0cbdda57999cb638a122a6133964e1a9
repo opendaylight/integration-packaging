@@ -66,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_fd63f2da",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-16T11:08:18Z",
+      "side": 1,
+      "message": "Should I include the license and if so should it be below the shebang line? I have included the license format I found on OpenDaylight wiki. Can you please tell what company/individual should the license have?",
+      "parentUuid": "1a622d24_46422911",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_86c44193",
         "filename": "rpm/build.py",
         "patchSetId": 23
@@ -83,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_7d86c266",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-16T11:08:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_86c44193",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_069cb1bf",
         "filename": "rpm/build.py",
         "patchSetId": 23
@@ -94,6 +130,30 @@
       "writtenOn": "2016-12-13T14:48:40Z",
       "side": 1,
       "message": "No need to trailing period in summary line.",
+      "range": {
+        "startLine": 47,
+        "startChar": 71,
+        "endLine": 47,
+        "endChar": 72
+      },
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_7dd40247",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-16T11:08:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_069cb1bf",
       "range": {
         "startLine": 47,
         "startChar": 71,
@@ -230,6 +290,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_1ddeae6d",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-16T11:08:18Z",
+      "side": 1,
+      "message": "Should I include \"returns:\" after the changes in the earlier format?",
+      "parentUuid": "1a622d24_46a6a911",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_86960193",
         "filename": "rpm/build.py",
         "patchSetId": 23
@@ -283,6 +361,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_9dd11e5a",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-16T11:08:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_3c58da31",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_06eaf10e",
         "filename": "rpm/build.py",
         "patchSetId": 23
@@ -294,6 +390,24 @@
       "writtenOn": "2016-12-13T14:48:40Z",
       "side": 1,
       "message": "If you move what\u0027s after the parentheses down one line and indent by 4 spaces, you will get more columns available to you.\n\n odl_date \u003d subprocess.Popen(\n     \"curl -s $date_url | grep tar.gz -A1 | tail -n1 ....",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_3de3aa34",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-16T11:08:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_06eaf10e",
       "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
