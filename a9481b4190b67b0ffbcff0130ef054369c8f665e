@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_2d78978e",
+        "filename": "rpm/build.py",
+        "patchSetId": 26
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-17T20:53:02Z",
+      "side": 1,
+      "message": "Running the tests, the snapshot build examples are failing\n\n]$ python -m unittest test_build                                                                                                                                *[review/girish_sukhatankar/41110] \n...F...F\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nFAIL: test_boron_snapshot_url (test_build.TestExtractVersion)\nTest URL of ODL Boron SR2 snapshot.\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"test_build.py\", line 75, in test_boron_snapshot_url\n    self.assertEqual(version[\"rpm_release\"], \"0.1.20161212snap530\")\nAssertionError: \u00270.1.20161215snap530\u0027 !\u003d \u00270.1.20161212snap530\u0027\n\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nFAIL: test_carbon_snapshot_url (test_build.TestExtractVersion)\nTest URL of ODL Carbon snapshot.\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"test_build.py\", line 84, in test_carbon_snapshot_url\n    self.assertEqual(version[\"rpm_release\"], \"0.1.20161212snap2486\")\nAssertionError: \u00270.1.20161217snap2486\u0027 !\u003d \u00270.1.20161212snap2486\u0027\n\n----------------------------------------------------------------------\nRan 8 tests in 7.334s\n\nFAILED (failures\u003d2)\n\nThe problem is date in the snapshot case. The shell command I gave you finds the most recent build from the given base URL, which for shapshots doesn\u0027t give us the right build (for autorelease the dir structure is such that it works). However, this logic wasn\u0027t meant for snapshots, because they have the date info in the URL. Just need to parse that out.",
+      "revId": "a9481b4190b67b0ffbcff0130ef054369c8f665e",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
