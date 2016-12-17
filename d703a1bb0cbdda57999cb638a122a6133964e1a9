@@ -84,6 +84,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_0d4cbb6f",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-17T20:42:51Z",
+      "side": 1,
+      "message": "\u003e Can you please tell what company/individual should the license have?\n\n+1 to this question, I also don\u0027t know (and always dislike this about license headers). Maybe we can just put Integration/Packaging for now?",
+      "parentUuid": "1a622d24_fd63f2da",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_86c44193",
         "filename": "rpm/build.py",
         "patchSetId": 23
@@ -302,6 +320,24 @@
       "side": 1,
       "message": "Should I include \"returns:\" after the changes in the earlier format?",
       "parentUuid": "1a622d24_46a6a911",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ed469f4e",
+        "filename": "rpm/build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-17T20:42:51Z",
+      "side": 1,
+      "message": "greping for \"returns\" in the repo Thanh linked to as an example, I see none used this way in docstrings. So I guess not",
+      "parentUuid": "1a622d24_1ddeae6d",
       "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
