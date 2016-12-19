@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_417afcf1",
+        "filename": "rpm/test_build.py",
+        "patchSetId": 28
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2016-12-19T19:08:08Z",
+      "side": 1,
+      "message": "This file missing license header (Basically if it\u0027s code, it should have a license header).",
+      "revId": "b71a2a0156634d4b5d0d16153c1c0cd9600dacf0",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
