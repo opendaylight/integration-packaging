@@ -1,0 +1,8 @@
+Verified+1: jenkins-releng <jenkins-releng@opendaylight.org>
+Code-Review+2: Daniel Farrell <dfarrell@redhat.com>
+Code-Review+1: Umesh Kumar Singla <umeshksingla@gmail.com>
+Submitted-by: Daniel Farrell <dfarrell@redhat.com>
+Submitted-at: Mon, 19 Dec 2016 19:10:48 +0000
+Reviewed-on: https://git.opendaylight.org/gerrit/49319
+Project: integration/packaging
+Branch: refs/heads/master
