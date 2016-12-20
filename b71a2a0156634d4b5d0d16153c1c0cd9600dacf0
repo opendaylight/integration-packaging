@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_0a73f415",
+        "filename": "rpm/build.py",
+        "patchSetId": 28
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2016-12-20T23:44:25Z",
+      "side": 1,
+      "message": "true",
+      "parentUuid": "1a622d24_27d71025",
+      "range": {
+        "startLine": 62,
+        "startChar": 57,
+        "endLine": 62,
+        "endChar": 59
+      },
+      "revId": "b71a2a0156634d4b5d0d16153c1c0cd9600dacf0",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_417afcf1",
         "filename": "rpm/test_build.py",
         "patchSetId": 28
