@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a622d24_27d71025",
+        "filename": "rpm/build.py",
+        "patchSetId": 28
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 6794
+      },
+      "writtenOn": "2016-12-20T05:40:51Z",
+      "side": 1,
+      "message": "This is not white space - Referring to comment above.",
+      "range": {
+        "startLine": 62,
+        "startChar": 57,
+        "endLine": 62,
+        "endChar": 59
+      },
+      "revId": "b71a2a0156634d4b5d0d16153c1c0cd9600dacf0",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_417afcf1",
         "filename": "rpm/test_build.py",
         "patchSetId": 28
