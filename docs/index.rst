@@ -15,3 +15,6 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   autorelease-builds
+   distribution-job-builds
+   packages
