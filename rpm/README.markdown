@@ -396,8 +396,8 @@ $ sudo yum install -y opendaylight
 
 ## Templates vs Macros
 
-This section documents _why_ we use the YAML+Py+JinJa2 design we do, whereas
-the sections above document _how_.
+This section documents *why* we use the YAML+Py+JinJa2 design we do, whereas
+the sections above document *how*.
 
 Typically, RPM builds use the macro mechanism provided by RPM spec files
 and the `rpmbuild` tool to customize specs for specific builds. This works
@@ -425,20 +425,34 @@ templates to build simi-static (only default macros) RPM spec files emerged.
 The specifics (YAML, Python, JinJa2) were chosen because of their use in
 other tools used by [Int/Pack][15], like Packer, Ansible and Puppet.
 
-
 [1]: http://cbs.centos.org/koji/
+
 [2]: https://trello.com/c/cgQmevT8/209-additional-access-to-centos-cbs
+
 [3]: https://bugs.centos.org/
+
 [4]: https://bugs.centos.org/view.php?id=8879
+
 [5]: https://wiki.centos.org/HowTos/CommunityBuildSystem#head-00dad77f5720f3a984b0fac9f9bacac52047f73f
+
 [6]: https://wiki.opendaylight.org/view/User:Dfarrell07
+
 [7]: https://wiki.centos.org/HowTos/CommunityBuildSystem
+
 [8]: https://bugs.centos.org/view.php?id=9472
+
 [9]: http://cbs.centos.org/repos/
+
 [10]: https://github.com/opendaylight/integration-packaging/tree/master/rpm/example_repo_configs
+
 [11]: https://bugs.centos.org/view.php?id=9098#c23768
+
 [12]: https://wiki.opendaylight.org/view/Simultaneous_Release:Helium_Release_Plan#Schedule
+
 [13]: https://wiki.opendaylight.org/view/Simultaneous_Release:Lithium_Release_Plan#Schedule
+
 [14]: https://wiki.opendaylight.org/view/Simultaneous_Release:Beryllium_Release_Plan#Schedule
+
 [15]: https://wiki.opendaylight.org/view/Integration/Packaging
+
 [16]: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=tree;h=refs/heads/master;hb=refs/heads/master

@@ -5,7 +5,7 @@
 KARAF_SHELL_PORT=8101
 
 # This could be done with public key crypto, but sshpass is easier
-if ! command -v sshpass &> /dev/null; then
+if ! command -v sshpass & > /dev/null; then
     echo "Installing sshpass. It's used connecting non-interactively"
     if ! sudo yum install -y sshpass; then
         echo "Couldn't find sshpass pkg, trying to install EPEL"
