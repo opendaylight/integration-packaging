@@ -224,14 +224,6 @@ def build_snapshot_rpm(build):
         build['download_url'] = snapshot_url
 
         # Get changelog_date from the snapshot URL
-        # eg: 'distribution-karaf-0.5.2-20161202.230609-363.tar.gz'
-        # '\d{8}' searches for the date in the url
-        extract_date = re.search(r'\d{8}', snapshot_url)
-        extract_date = extract_date.group(0)
-        year = int(extract_date[:4])
-        month = int(extract_date[4:6])
-        date = int(extract_date[6:])
-
         # %a: Abbreviated weekday name
         # %b: Abbreviated month name
         # %d: Zero padded decimal number
@@ -239,12 +231,14 @@ def build_snapshot_rpm(build):
         # `changelog_date` is in the format: 'Sat Dec 10 2016'
         # Docs:
         # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
-        build['changelog_date'] = datetime.date(year,
-                                                month,
-                                                date).strftime("%a %b %d %Y")
+        build['changelog_date'] = datetime.date.today().strftime("%a %b %d %Y")
 
-        # Assign codename
-        build['codename'] = "SNAPSHOT"
+        # Call `extract_version` function to get version information
+        # except Major and Minor version which are already present
+        version = extract_version(build['download_url'])
+        build['version_patch'] = version['version_patch']
+        build['rpm_release'] = version['rpm_release']
+        build['codename'] = version['codename']
         urlpath.close()
 
         build_rpm(build)
@@ -262,20 +256,15 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(conflict_handler='resolve')
     existing_build_group = parser.add_argument_group("Existing build")
     existing_build_group.add_argument(
-        "-v", "--version", action="append", metavar="major minor patch rpm",
-        nargs="*", help="RPM version(s) to build"
+        "-u", "--url", action="append", nargs="*",
+        help="Tarball(s) to repackage into RPM(s)"
     )
+
     new_build_group = parser.add_argument_group("New build")
     new_build_group.add_argument(
-        "--major", help="Major (element) version to build")
-    new_build_group.add_argument("--minor", help="Minor (SR) version to build")
-    new_build_group.add_argument("--patch", help="Patch version to build")
-    new_build_group.add_argument("--rpm",   help="RPM version to build")
+        "--download_url", help="Tarball to repackage into RPM")
     new_build_group.add_argument(
         "--sysd_commit", help="Version of ODL unitfile to package")
-    new_build_group.add_argument("--codename", help="Codename for ODL version")
-    new_build_group.add_argument(
-        "--download_url", help="Tarball to repackage into RPM")
     new_build_group.add_argument(
         "--changelog_date", help="Date this RPM was defined")
     new_build_group.add_argument(
@@ -288,17 +277,12 @@ if __name__ == "__main__":
     latest_snap_group = parser.add_argument_group("Latest snapshot build")
     latest_snap_group.add_argument("--build-latest-snap", action='store_true',
                                    help="Build RPM from the latest snpashot")
-    latest_snap_group.add_argument("--major", required='true',
-                                   help="Stable branch from which "
+    latest_snap_group.add_argument("--major", help="Stable branch from which "
                                    "to build the snapshot")
     latest_snap_group.add_argument("--minor", help="Minor version of the "
                                    "stable branch to build the snapshot")
-    latest_snap_group.add_argument("--patch", help="Patch version to build")
-    latest_snap_group.add_argument("--rpm",   help="RPM version to build")
     latest_snap_group.add_argument("--sysd_commit",
                                    help="Version of ODL unitfile to package")
-    latest_snap_group.add_argument("--codename",
-                                   help="Codename for ODL snapshot")
     latest_snap_group.add_argument("--changelog_name",
                                    help="Name of person who defined RPM")
     latest_snap_group.add_argument("--changelog_email",
@@ -313,38 +297,37 @@ if __name__ == "__main__":
 
     # Build list of RPM builds to perform
     builds = []
-    if args.version:
-        # Build a list of requested versions as dicts of version components
-        versions = []
-        version_keys = ["version_major", "version_minor", "version_patch",
-                        "rpm_release"]
-        # For each version arg, match all version components to build_vars name
-        for version in args.version:
-            versions.append(dict(zip(version_keys, version)))
+    if args.url:
+        # Build a list of download_url as dicts
+        urls = []
+        url_key = ["download_url"]
+        for url in args.url:
+            urls.append(dict(zip(url_key, url)))
 
-        # Find every RPM build that matches any version argument
-        # A passed version "matches" a build when the provided version
-        # components are a subset of the version components of a build. Any
-        # version components that aren't passed are simply not checked, so
-        # they can't fail the match, effectively wild-carding them.
+        # Find every RPM build that matches the given url arg
+        # A passed url "matches" a build when the provided url is exactly
+        # same as download_url of a build.
         for build in build_vars["builds"]:
-            for version in versions:
+            for url in urls:
                 # Converts both dicts' key:value pairs to lists of tuples and
-                # checks that each tuple in the version list is present in the
+                # checks that each tuple in the url list is present in the
                 # build list.
-                if all(item in build.items() for item in version.items()):
+                if all(item in build.items() for item in url.items()):
+                    # Extract version information from the download_url and
+                    # update build dict
+                    version = extract_version(url['download_url'])
+                    build.update(version)
                     builds.append(build)
     else:
-        builds.append({"version_major": args.major,
-                       "version_minor": args.minor,
-                       "version_patch": args.patch,
-                       "rpm_release": args.rpm,
+        build = {}
+        build.update({"download_url": args.download_url,
                        "sysd_commit": args.sysd_commit,
-                       "codename": args.codename,
-                       "download_url": args.download_url,
                        "changelog_date": args.changelog_date,
                        "changelog_name": args.changelog_name,
                        "changelog_email": args.changelog_email})
+        version = extract_version(args.download_url)
+        build.update(version)
+        builds.append(build)
 
     # If the flag `--build-latest-snap` is true, extract information
     # from the snapshot URL, else directly build the RPM
