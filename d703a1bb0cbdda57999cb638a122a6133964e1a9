@@ -534,6 +534,24 @@
       "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_180fdc2f",
+        "filename": "rpm/test_build.py",
+        "patchSetId": 23
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6158
+      },
+      "writtenOn": "2016-12-29T07:26:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_666f6593",
+      "revId": "d703a1bb0cbdda57999cb638a122a6133964e1a9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
