@@ -30,7 +30,9 @@
             "scripts": [
                 "provision/config_vagrant.sh",
                 "provision/config_ansible_{{ user `os_name`}}.sh",
-                "provision/config_ssh.sh"
+                "provision/config_ssh.sh",
+                "provision/cleanup_{{ user `os_name`}}.sh",
+                "provision/minimize.sh"
             ]
         },
         {
