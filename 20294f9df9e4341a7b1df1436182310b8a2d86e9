@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a622d24_da7a4ef0",
+        "filename": "docs/debs.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-03T19:06:11Z",
+      "side": 1,
+      "message": "Lots of this is done",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 67
+      },
+      "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_3a226201",
         "filename": "docs/packages.rst",
         "patchSetId": 5
@@ -19,6 +42,23 @@
         "endLine": 8,
         "endChar": 13
       },
+      "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_7a1cdac1",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-03T19:06:11Z",
+      "side": 1,
+      "message": "I would consider a layout something like:\n\n# RPMs\n\n## Automated RPM Builds\n\n### Build RPM Job\n\n### Build Latest Snapshot Job\n\n## CentOS Community Build System\n\nIf we cover manually using build.py (like you do for snapshots), we should include all the ways to use it. I\u0027m okay with not covering that here, letting packaging/rpm/README.markdown cover it.",
       "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
