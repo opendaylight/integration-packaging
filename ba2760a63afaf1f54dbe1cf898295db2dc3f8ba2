@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_46214eb3",
+        "filename": "packer/provision/cleanup_centos.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-03T16:03:56Z",
+      "side": 1,
+      "message": "Some inline docs about what this is doing and why would be nice",
+      "revId": "ba2760a63afaf1f54dbe1cf898295db2dc3f8ba2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_a6302202",
+        "filename": "packer/provision/cleanup_fedora.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-03T16:03:56Z",
+      "side": 1,
+      "message": "Maybe better to use dnf here, since we expect Fedora",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 3
+      },
+      "revId": "ba2760a63afaf1f54dbe1cf898295db2dc3f8ba2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
