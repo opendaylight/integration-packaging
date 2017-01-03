@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_ba64b249",
+        "filename": "docs/debs.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-03T19:28:10Z",
+      "side": 1,
+      "message": "I initially just took it from the original wiki. I\u0027ll add the details now, what all I find under this section from Trello descriptions or #40190 patch comments.",
+      "parentUuid": "1a622d24_da7a4ef0",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 67
+      },
+      "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_3a226201",
         "filename": "docs/packages.rst",
         "patchSetId": 5
