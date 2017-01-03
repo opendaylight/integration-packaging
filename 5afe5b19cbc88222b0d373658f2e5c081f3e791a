@@ -16,6 +16,24 @@
       "revId": "5afe5b19cbc88222b0d373658f2e5c081f3e791a",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_5ad2be00",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-01-03T17:43:48Z",
+      "side": 1,
+      "message": "I was in the assumption that we are moving away from passing version and heading to passing URL\u0027s. I completely agree this is a major backwards incompatible API change. I will add the -v flag, but I feel it will be a good option to keep the -u flag too.",
+      "parentUuid": "1a622d24_9af296d0",
+      "revId": "5afe5b19cbc88222b0d373658f2e5c081f3e791a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
