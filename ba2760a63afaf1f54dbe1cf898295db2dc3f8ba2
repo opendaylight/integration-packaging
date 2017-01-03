@@ -39,6 +39,30 @@
       "revId": "ba2760a63afaf1f54dbe1cf898295db2dc3f8ba2",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ba35d2f8",
+        "filename": "packer/provision/cleanup_fedora.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-03T22:06:59Z",
+      "side": 1,
+      "message": "we didn\u0027t get dnf in the final patch.\n\nif we want it, it\u0027s here:\n\nhttps://git.opendaylight.org/gerrit/#/c/49988/",
+      "parentUuid": "1a622d24_a6302202",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 3
+      },
+      "revId": "ba2760a63afaf1f54dbe1cf898295db2dc3f8ba2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
