@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_9af296d0",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-03T17:19:00Z",
+      "side": 1,
+      "message": "This is a fairly major backwards-incompatible API change. Need to update the README here and Deployment wiki at least https://wiki.opendaylight.org/view/Deployment#RPM_Building\n\nI\u0027m also a fan of `./build.py -v 5 0` and similar simple commands, vs digging up URLs for common builds. One option would be to keep the current -v arg and when iterating over pre-defined builds below, instead of matching URLs, extract the version info from the pre-defined URL and compare it to the passed-by-arg version info.",
+      "revId": "5afe5b19cbc88222b0d373658f2e5c081f3e791a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}

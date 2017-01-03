@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_5a963e4d",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-03T17:19:00Z",
+      "side": 0,
+      "message": "(thinking about keeping -v from above) you could keep most of this old logic (more below)",
+      "revId": "5704cfb9a7b835341919a347da80524696177701",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_9aa0d6a0",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-03T17:19:00Z",
+      "side": 0,
+      "message": "(thinking about keeping -v from above) you could extract the version info from each build\u0027s URL here",
+      "revId": "5704cfb9a7b835341919a347da80524696177701",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_7a9b3a72",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-03T17:19:00Z",
+      "side": 0,
+      "message": "(thinking about keeping -v from above) You could used the newly-extracted version info here",
+      "range": {
+        "startLine": 335,
+        "startChar": 31,
+        "endLine": 335,
+        "endChar": 36
+      },
+      "revId": "5704cfb9a7b835341919a347da80524696177701",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
