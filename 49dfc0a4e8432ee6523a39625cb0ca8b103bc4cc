@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_3a3d42bc",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-03T16:28:31Z",
+      "side": 1,
+      "message": "We have a TODO make these vars more consistent, but at the moment there are differences between the deb and RPM var keys. For example, this should be rpm_relese for the RPM https://trello.com/c/he0tH1ne/382-change-rpm-version-to-pkg-version-in-rpm",
+      "range": {
+        "startLine": 120,
+        "startChar": 4,
+        "endLine": 120,
+        "endChar": 15
+      },
+      "revId": "49dfc0a4e8432ee6523a39625cb0ca8b103bc4cc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_9a4c5672",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-03T16:28:31Z",
+      "side": 1,
+      "message": "Java version is not current used by the RPM logic",
+      "range": {
+        "startLine": 124,
+        "startChar": 4,
+        "endLine": 124,
+        "endChar": 16
+      },
+      "revId": "49dfc0a4e8432ee6523a39625cb0ca8b103bc4cc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_7a47ba4b",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-03T16:28:31Z",
+      "side": 1,
+      "message": "Different date format for RPM changelog, see examples above",
+      "revId": "49dfc0a4e8432ee6523a39625cb0ca8b103bc4cc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_da752e99",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-03T16:28:31Z",
+      "side": 1,
+      "message": "No time for RPM changelog",
+      "revId": "49dfc0a4e8432ee6523a39625cb0ca8b103bc4cc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
