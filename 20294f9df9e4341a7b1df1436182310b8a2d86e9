@@ -65,6 +65,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_9a78d6f3",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2017-01-03T19:13:01Z",
+      "side": 1,
+      "message": "Keep in mind that this is not restructuredtext syntax.",
+      "parentUuid": "1a622d24_7a1cdac1",
+      "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_fa10eaa9",
         "filename": "docs/rpms.rst",
         "patchSetId": 5
