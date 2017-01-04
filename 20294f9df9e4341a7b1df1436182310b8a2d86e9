@@ -131,6 +131,42 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_a4d77522",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-04T21:58:12Z",
+      "side": 1,
+      "message": "I\u0027ll restructure the layout. Covering all the ways to use build.py might take a while. Presently, rpm/README [0] covers details about build.py but not how to use it. Do you wish to include them now? I think a separate trello card can be made here.\n\n[0]: https://github.com/opendaylight/integration-packaging/tree/master/rpm#building-srpmsrpms",
+      "parentUuid": "1a622d24_7a1cdac1",
+      "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_64ff1dab",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-04T21:58:12Z",
+      "side": 1,
+      "message": "Are you talking about the syntax in Daniel\u0027s comment above or the syntax overall?",
+      "parentUuid": "1a622d24_9a78d6f3",
+      "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_fa10eaa9",
         "filename": "docs/rpms.rst",
         "patchSetId": 5
