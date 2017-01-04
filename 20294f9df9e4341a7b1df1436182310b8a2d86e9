@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_5a559e4e",
+        "filename": "docs/packages.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-04T21:34:57Z",
+      "side": 1,
+      "message": "I\u0027d rather have a quick look at the entire doc to replace such references.",
+      "parentUuid": "1a622d24_3a226201",
+      "range": {
+        "startLine": 6,
+        "startChar": 68,
+        "endLine": 8,
+        "endChar": 13
+      },
+      "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_7a1cdac1",
         "filename": "docs/rpms.rst",
         "patchSetId": 5
@@ -118,6 +142,30 @@
       "writtenOn": "2017-01-03T18:57:11Z",
       "side": 1,
       "message": "These are no longer needed, they are extracted from the URL",
+      "range": {
+        "startLine": 25,
+        "startChar": 56,
+        "endLine": 25,
+        "endChar": 91
+      },
+      "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_9a4f36bd",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-04T21:34:57Z",
+      "side": 1,
+      "message": "Sure, I\u0027ll check the doc for extract version from URL function and change it accordingly.",
+      "parentUuid": "1a622d24_fa10eaa9",
       "range": {
         "startLine": 25,
         "startChar": 56,
