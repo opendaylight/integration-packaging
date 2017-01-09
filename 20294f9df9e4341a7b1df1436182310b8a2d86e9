@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_f15d9b7a",
+        "filename": "docs/packages.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-09T22:08:59Z",
+      "side": 1,
+      "message": "Not sure I follow",
+      "parentUuid": "1a622d24_5a559e4e",
+      "range": {
+        "startLine": 6,
+        "startChar": 68,
+        "endLine": 8,
+        "endChar": 13
+      },
+      "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_7a1cdac1",
         "filename": "docs/rpms.rst",
         "patchSetId": 5
@@ -161,6 +185,42 @@
       "side": 1,
       "message": "Are you talking about the syntax in Daniel\u0027s comment above or the syntax overall?",
       "parentUuid": "1a622d24_9a78d6f3",
+      "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_b167a34c",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-09T22:08:59Z",
+      "side": 1,
+      "message": "\u003e Are you talking about the syntax in Daniel\u0027s comment above or the syntax overall?\n\nHe\u0027s talking about my shorthand syntax for headers.",
+      "parentUuid": "1a622d24_64ff1dab",
+      "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_1159378e",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-09T22:08:59Z",
+      "side": 1,
+      "message": "rpm/README is pretty out of date too, needs work. Feel free to raise a Trello card. I\u0027m fine with just linking to rpm/README to doc manually using build.py",
+      "parentUuid": "1a622d24_a4d77522",
       "revId": "20294f9df9e4341a7b1df1436182310b8a2d86e9",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
