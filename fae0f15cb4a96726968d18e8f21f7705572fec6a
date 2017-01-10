@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a622d24_7ef82ec3",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "Do lines like this pass linting?",
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_ca3381a9",
         "filename": "docs/autorelease-builds.rst",
         "patchSetId": 7
@@ -13,6 +30,30 @@
       "writtenOn": "2017-01-10T20:30:25Z",
       "side": 1,
       "message": "there is no more Lithium, afaik",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 120
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_befe46ac",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "1a622d24_ca3381a9",
       "range": {
         "startLine": 17,
         "startChar": 0,
@@ -42,6 +83,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_1e2f7a40",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "1a622d24_6a222d53",
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_aa18c51e",
         "filename": "docs/autorelease-builds.rst",
         "patchSetId": 7
@@ -53,6 +112,30 @@
       "writtenOn": "2017-01-10T20:30:25Z",
       "side": 1,
       "message": "isn\u0027t it just \"console.log.gz\"",
+      "range": {
+        "startLine": 27,
+        "startChar": 38,
+        "endLine": 27,
+        "endChar": 59
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_9ed0aa20",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "Yes, that does seem to be the case now",
+      "parentUuid": "1a622d24_aa18c51e",
       "range": {
         "startLine": 27,
         "startChar": 38,
@@ -88,6 +171,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_fe8f1e28",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "I think the implication was supposed to be that each build is 10GB, and we have 3 per day, and we keep 60 days of them. I think I meant to be quoting Thanh or Andy at the time I wrote this, but in retrospect 10GB seems like too much. Maybe better to remove.",
+      "parentUuid": "1a622d24_6ae98de5",
+      "range": {
+        "startLine": 34,
+        "startChar": 56,
+        "endLine": 34,
+        "endChar": 78
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_8aece9f4",
         "filename": "docs/autorelease-builds.rst",
         "patchSetId": 7
@@ -111,6 +218,99 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_9efa6a73",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "Yes, seems to no longer be true. I guess need to change it to something like \"from the \u003cbranch\u003e-distribution-test job\u0027s Jenkins page, find the job that started just after the autorelease in question finished. Open it and explore the Subproject Builds for test results.\" With appropriate links",
+      "parentUuid": "1a622d24_8aece9f4",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 108
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_9e41caab",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "Needs to be updated to 4.5 here and below",
+      "range": {
+        "startLine": 47,
+        "startChar": 59,
+        "endLine": 47,
+        "endChar": 62
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_de47c2ba",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "Needs to be updated to 5.3 here and below. Maybe add 6.0",
+      "range": {
+        "startLine": 49,
+        "startChar": 1,
+        "endLine": 49,
+        "endChar": 6
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_fe19ded7",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "Maybe could update to 5.2, latest release",
+      "range": {
+        "startLine": 68,
+        "startChar": 70,
+        "endLine": 68,
+        "endChar": 89
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_6aa50da1",
         "filename": "docs/distribution-job-builds.rst",
         "patchSetId": 7
@@ -122,6 +322,24 @@
       "writtenOn": "2017-01-10T20:30:25Z",
       "side": 1,
       "message": "I\u0027m not sure if it\u0027s relevant here or not, but something people find useful is the \u0027distribution-check\u0027 job which builds a full distribution from an unmerged gerrit patch.\n\nso you go to some link like this [0] which came from a\ngerrit patch like this [1]  and you can get the \ndistribution created from that patch and then do with it as you please (e.g. run more CSIT, pull it locally to beat\nup, etc)\n\n[0] https://jenkins.opendaylight.org/releng/job/netvirt-distribution-check-boron/700/\n[1] https://git.opendaylight.org/gerrit/#/c/50127/",
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_de6a2280",
+        "filename": "docs/distribution-job-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "This is the Custom Distros section below. +1 to adding more info there as appropriate",
+      "parentUuid": "1a622d24_6aa50da1",
       "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
@@ -151,6 +369,29 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_be5006d5",
+        "filename": "docs/packages.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "I would consider removing this. Doesn\u0027t add much value, lots of words.",
+      "range": {
+        "startLine": 5,
+        "startChar": 7,
+        "endLine": 8,
+        "endChar": 42
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_cabd41b9",
         "filename": "docs/rpms.rst",
         "patchSetId": 7
@@ -167,6 +408,99 @@
         "startChar": 66,
         "endLine": 34,
         "endChar": 120
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_3e1076a7",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "Would not be used in latest snap builds",
+      "range": {
+        "startLine": 34,
+        "startChar": 56,
+        "endLine": 34,
+        "endChar": 65
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_fe80bec1",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "All of this is good, but not really relevant to the Jenkins job to build latest snapshots. They need to know about the JJB params to pass, not the CLI flags.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 193
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_3e451617",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "It defines which version of ODL\u0027s systemd unitfile should be in this build. Need to pin to an exact version in RPM specfile, and need hash to download exact version in cache scripts.",
+      "parentUuid": "1a622d24_cabd41b9",
+      "range": {
+        "startLine": 34,
+        "startChar": 66,
+        "endLine": 34,
+        "endChar": 120
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_be72c60e",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T22:13:10Z",
+      "side": 1,
+      "message": "This is kinda wrong in its new context - only CBS builds are permanently archived, not the other builds described here",
+      "range": {
+        "startLine": 47,
+        "startChar": 67,
+        "endLine": 48,
+        "endChar": 10
       },
       "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
