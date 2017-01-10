@@ -1,0 +1,176 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_ca3381a9",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-10T20:30:25Z",
+      "side": 1,
+      "message": "there is no more Lithium, afaik",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 120
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_6a222d53",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-10T20:30:25Z",
+      "side": 1,
+      "message": "but we do have Carbon:\nhttps://jenkins.opendaylight.org/releng/view/autorelease/job/autorelease-release-carbon/",
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_aa18c51e",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-10T20:30:25Z",
+      "side": 1,
+      "message": "isn\u0027t it just \"console.log.gz\"",
+      "range": {
+        "startLine": 27,
+        "startChar": 38,
+        "endLine": 27,
+        "endChar": 59
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_6ae98de5",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-10T20:30:25Z",
+      "side": 1,
+      "message": "is the implication that we require 5GB per month per release to store autorelease artifacts?",
+      "range": {
+        "startLine": 34,
+        "startChar": 56,
+        "endLine": 34,
+        "endChar": 78
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_8aece9f4",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-10T20:30:25Z",
+      "side": 1,
+      "message": "I\u0027m not sure if this is accurate.",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 108
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_6aa50da1",
+        "filename": "docs/distribution-job-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-10T20:30:25Z",
+      "side": 1,
+      "message": "I\u0027m not sure if it\u0027s relevant here or not, but something people find useful is the \u0027distribution-check\u0027 job which builds a full distribution from an unmerged gerrit patch.\n\nso you go to some link like this [0] which came from a\ngerrit patch like this [1]  and you can get the \ndistribution created from that patch and then do with it as you please (e.g. run more CSIT, pull it locally to beat\nup, etc)\n\n[0] https://jenkins.opendaylight.org/releng/job/netvirt-distribution-check-boron/700/\n[1] https://git.opendaylight.org/gerrit/#/c/50127/",
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_aac60566",
+        "filename": "docs/distribution-job-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-10T20:30:25Z",
+      "side": 1,
+      "message": "no comma",
+      "range": {
+        "startLine": 25,
+        "startChar": 68,
+        "endLine": 25,
+        "endChar": 69
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_cabd41b9",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-10T20:30:25Z",
+      "side": 1,
+      "message": "what does this do? sorry if it\u0027s a n00b question.",
+      "range": {
+        "startLine": 34,
+        "startChar": 66,
+        "endLine": 34,
+        "endChar": 120
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
