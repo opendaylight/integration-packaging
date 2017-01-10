@@ -350,6 +350,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_4180f745",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T23:06:34Z",
+      "side": 1,
+      "message": "I think those links will again include the build numbers which might not be available after some time, otherwise \u0027ll update the description.",
+      "parentUuid": "1a622d24_9efa6a73",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 108
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_9e41caab",
         "filename": "docs/autorelease-builds.rst",
         "patchSetId": 7
