@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_81ae8fe4",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T23:02:18Z",
+      "side": 1,
+      "message": "the URLs do not pass at all. I was considering writing them down at the end of the file to avoid them hanging around.",
+      "parentUuid": "1a622d24_7ef82ec3",
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_ca3381a9",
         "filename": "docs/autorelease-builds.rst",
         "patchSetId": 7
@@ -66,6 +84,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_3e16b655",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T23:02:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_ca3381a9",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 120
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_6a222d53",
         "filename": "docs/autorelease-builds.rst",
         "patchSetId": 7
@@ -95,6 +137,24 @@
       "side": 1,
       "message": "+1",
       "parentUuid": "1a622d24_6a222d53",
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_5e11f25b",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T23:02:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_1e2f7a40",
       "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
@@ -219,6 +279,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_1e1bfa81",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T23:02:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_fe8f1e28",
+      "range": {
+        "startLine": 34,
+        "startChar": 56,
+        "endLine": 34,
+        "endChar": 78
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_8aece9f4",
         "filename": "docs/autorelease-builds.rst",
         "patchSetId": 7
@@ -312,6 +396,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_a13c6bc9",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T23:02:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_de47c2ba",
+      "range": {
+        "startLine": 49,
+        "startChar": 1,
+        "endLine": 49,
+        "endChar": 6
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_fe19ded7",
         "filename": "docs/autorelease-builds.rst",
         "patchSetId": 7
@@ -323,6 +431,30 @@
       "writtenOn": "2017-01-10T22:13:10Z",
       "side": 1,
       "message": "Maybe could update to 5.2, latest release",
+      "range": {
+        "startLine": 68,
+        "startChar": 70,
+        "endLine": 68,
+        "endChar": 89
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_be2ac68d",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T23:02:18Z",
+      "side": 1,
+      "message": "Done, changed to 0.5.2 Boron SR2",
+      "parentUuid": "1a622d24_fe19ded7",
       "range": {
         "startLine": 68,
         "startChar": 70,
@@ -393,6 +525,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_017c3f82",
+        "filename": "docs/distribution-job-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T23:02:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a622d24_aac60566",
+      "range": {
+        "startLine": 25,
+        "startChar": 68,
+        "endLine": 25,
+        "endChar": 69
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_be5006d5",
         "filename": "docs/packages.rst",
         "patchSetId": 7
@@ -404,6 +560,30 @@
       "writtenOn": "2017-01-10T22:13:10Z",
       "side": 1,
       "message": "I would consider removing this. Doesn\u0027t add much value, lots of words.",
+      "range": {
+        "startLine": 5,
+        "startChar": 7,
+        "endLine": 8,
+        "endChar": 42
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_01071f1a",
+        "filename": "docs/packages.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T23:02:18Z",
+      "side": 1,
+      "message": "Removed. Any info to add you think might be relevant here? It\u0027s just a intro though.",
+      "parentUuid": "1a622d24_be5006d5",
       "range": {
         "startLine": 5,
         "startChar": 7,
@@ -533,6 +713,54 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_61089328",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T23:02:18Z",
+      "side": 1,
+      "message": "Done. sorry, missed.",
+      "parentUuid": "1a622d24_3e1076a7",
+      "range": {
+        "startLine": 34,
+        "startChar": 56,
+        "endLine": 34,
+        "endChar": 65
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_2177bba1",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T23:02:18Z",
+      "side": 1,
+      "message": "I think the section has changed its scope from the time I started working on it. I\u0027ll remove this for now from here and then this will be a part of new Trello card to document ways to manually using build.py script. will add the relevant details about JJB params.",
+      "parentUuid": "1a622d24_fe80bec1",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 193
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_be72c60e",
         "filename": "docs/rpms.rst",
         "patchSetId": 7
@@ -544,6 +772,30 @@
       "writtenOn": "2017-01-10T22:13:10Z",
       "side": 1,
       "message": "This is kinda wrong in its new context - only CBS builds are permanently archived, not the other builds described here",
+      "range": {
+        "startLine": 47,
+        "startChar": 67,
+        "endLine": 48,
+        "endChar": 10
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_81396fd9",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T23:02:18Z",
+      "side": 1,
+      "message": "will change from \u0027previously\u0027 to \u0027above\u0027.",
+      "parentUuid": "1a622d24_be72c60e",
       "range": {
         "startLine": 47,
         "startChar": 67,
