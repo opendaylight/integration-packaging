@@ -148,6 +148,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_7ec30e89",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T22:18:34Z",
+      "side": 1,
+      "message": "It\u0027s _console-output.log.gz previously like before September 2016 or sth, and after that it is console.log.gz. I\u0027ll include both here to let the reader know. I\u0027d like to know the reason though here.\nBut one thing I do not get is, why do the files in small numbered directories (like 121 or 130) are more recent than the large-numbered like 230, 231? are they sort of job-specific?",
+      "parentUuid": "1a622d24_aa18c51e",
+      "range": {
+        "startLine": 27,
+        "startChar": 38,
+        "endLine": 27,
+        "endChar": 59
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_6ae98de5",
         "filename": "docs/autorelease-builds.rst",
         "patchSetId": 7
@@ -472,6 +496,30 @@
       "writtenOn": "2017-01-10T22:13:10Z",
       "side": 1,
       "message": "It defines which version of ODL\u0027s systemd unitfile should be in this build. Need to pin to an exact version in RPM specfile, and need hash to download exact version in cache scripts.",
+      "parentUuid": "1a622d24_cabd41b9",
+      "range": {
+        "startLine": 34,
+        "startChar": 66,
+        "endLine": 34,
+        "endChar": 120
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_be46464d",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 6900
+      },
+      "writtenOn": "2017-01-10T22:18:34Z",
+      "side": 1,
+      "message": "I do not know exactly, but that\u0027s how it is being documented everywhere \"Version of ODL systemd unitfile to download and package in ODL RPM\"",
       "parentUuid": "1a622d24_cabd41b9",
       "range": {
         "startLine": 34,
