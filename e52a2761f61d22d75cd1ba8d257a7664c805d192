@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_6f987fc0",
+        "filename": "docs/debs.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T18:03:06Z",
+      "side": 1,
+      "message": "It actually accepts all build params as JJB vars, passing them as args to the build.py script. The current build-deb-master job doesn\u0027t touch build_vars.yaml at all.",
+      "range": {
+        "startLine": 17,
+        "startChar": 71,
+        "endLine": 18,
+        "endChar": 36
+      },
+      "revId": "e52a2761f61d22d75cd1ba8d257a7664c805d192",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_0f458b16",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T18:03:06Z",
+      "side": 1,
+      "message": "Doesn\u0027t typically use build_vars.yaml\n\nmaybe something like \"given Jenkins build parameters\" and link to https://jenkins.opendaylight.org/releng/job/packaging-build-deb-master/build?delay\u003d0sec",
+      "range": {
+        "startLine": 16,
+        "startChar": 35,
+        "endLine": 17,
+        "endChar": 38
+      },
+      "revId": "e52a2761f61d22d75cd1ba8d257a7664c805d192",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ef600fa7",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-10T18:03:06Z",
+      "side": 1,
+      "message": "Maybe not good to say if it\u0027s new or not, requires maintenance to maintain for little value",
+      "range": {
+        "startLine": 38,
+        "startChar": 55,
+        "endLine": 38,
+        "endChar": 58
+      },
+      "revId": "e52a2761f61d22d75cd1ba8d257a7664c805d192",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
