@@ -2,8 +2,10 @@
 # Install Ansible, as required for Packer's ansible-local provisioner.
 # Also installs EPEL (dependency).
 
-# Echo commands as they are run
-set -x
+# Options:
+#   -x: Echo commands
+#   -e: Fail on errors
+set -ex
 
 # Install Ansible, required for Packer's ansible-local provisioner
 # Git is required by the ansible-galaxy tool when installing roles

@@ -1,5 +1,10 @@
 #!/bin/bash -eux
 
+# Options:
+#   -x: Echo commands
+#   -e: Fail on errors
+set -ex
+
 sudo yum -y remove gcc cpp kernel-devel kernel-headers perl
 sudo yum -y clean all
 

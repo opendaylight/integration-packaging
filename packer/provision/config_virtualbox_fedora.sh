@@ -2,8 +2,10 @@
 # Called by packer to install VirtualBox Guess Additions, which
 # required by Vagrant for things like mounting shared dirs.
 
-# Echo commands as they are run
-set -x
+# Options:
+#   -x: Echo commands
+#   -e: Fail on errors
+set -ex
 
 # Install utilities required by VB Guest Additions install
 # TODO: Is all of @Base and @Core strictly required?

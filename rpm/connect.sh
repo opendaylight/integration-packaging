@@ -1,6 +1,11 @@
 #!/usr/bin/env sh
 # Connect to ODL Karaf shell. Mostly used for testing.
 
+# Options:
+#   -x: Echo commands
+#   -e: Fail on errors
+set -ex
+
 # Port that the Karaf shell listens on
 KARAF_SHELL_PORT=8101
 

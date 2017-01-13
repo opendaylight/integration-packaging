@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # Called by packer to do any Docker-specific config
 
-# Echo commands as they are run
-set -x
+# Options:
+#   -x: Echo commands
+#   -e: Fail on errors
+set -ex
 
 # Install minimal set of packages
 # Need to do this as root but don't have sudo installed (Docker), so `su -c`
