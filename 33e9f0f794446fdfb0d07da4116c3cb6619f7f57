@@ -50,6 +50,24 @@
       "revId": "33e9f0f794446fdfb0d07da4116c3cb6619f7f57",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_901ec90a",
+        "filename": "packer/provision/minimize.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-13T03:15:59Z",
+      "side": 0,
+      "message": "Exporting LibVirt VMs doesn\u0027t fail, but I still get 1.5G boxes http://pastebin.com/BkyKAVc1",
+      "parentUuid": "1a622d24_1033d9ab",
+      "revId": "33e9f0f794446fdfb0d07da4116c3cb6619f7f57",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
