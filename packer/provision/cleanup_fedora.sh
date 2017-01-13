@@ -1,4 +1,4 @@
 #!/bin/bash -eux
 
-dnf -y remove gcc cpp kernel-devel kernel-headers perl
-dnf -y clean all
+sudo dnf -y remove gcc cpp kernel-devel kernel-headers perl
+sudo dnf -y clean all
