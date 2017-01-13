@@ -33,6 +33,23 @@
       "revId": "33e9f0f794446fdfb0d07da4116c3cb6619f7f57",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_1033d9ab",
+        "filename": "packer/provision/minimize.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-13T03:07:10Z",
+      "side": 0,
+      "message": "I think something is not working here. The build almost finishes, but committing a container fails with I/O errors (pointing at some random file that I don\u0027t think matters)\n\nhttp://pastebin.com/evRr8vZT\n\nLooks similar to\n\nhttps://github.com/docker/docker/issues/7105\n\nWhich is related to large containers",
+      "revId": "33e9f0f794446fdfb0d07da4116c3cb6619f7f57",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
