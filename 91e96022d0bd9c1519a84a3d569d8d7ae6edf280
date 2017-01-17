@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a622d24_f8271210",
+        "filename": "docker/openstack/compute/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2616
+      },
+      "writtenOn": "2017-01-17T22:06:08Z",
+      "side": 1,
+      "message": "Should this be Int/Packaging?",
+      "range": {
+        "startLine": 2,
+        "startChar": 12,
+        "endLine": 2,
+        "endChar": 46
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
