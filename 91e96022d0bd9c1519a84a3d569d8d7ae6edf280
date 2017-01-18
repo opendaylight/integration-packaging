@@ -22,6 +22,99 @@
       "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_4e6bdb1d",
+        "filename": "docker/openstack/compute/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-18T22:17:41Z",
+      "side": 1,
+      "message": "yeah, or maybe just \"Integration\" only, as I really hope it becomes useful in test, but we are storing in packaging so \nit\u0027s generic to the larger project I guess.",
+      "parentUuid": "1a622d24_f8271210",
+      "range": {
+        "startLine": 2,
+        "startChar": 12,
+        "endLine": 2,
+        "endChar": 46
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ae76ef03",
+        "filename": "docker/openstack/compute/build_compute.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-18T22:17:41Z",
+      "side": 1,
+      "message": "what happens if we don\u0027t have these proxy vars set?",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 75
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_8e71730e",
+        "filename": "docker/openstack/compute/run_compute.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-18T22:17:41Z",
+      "side": 1,
+      "message": "same question. do we have to have some proxy var set in our environment to run these things?",
+      "range": {
+        "startLine": 20,
+        "startChar": 4,
+        "endLine": 20,
+        "endChar": 65
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_ee63c73f",
+        "filename": "docker/openstack/compute/start.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-01-18T22:17:41Z",
+      "side": 1,
+      "message": "why is one uncommented, and the other is not?",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 23
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
