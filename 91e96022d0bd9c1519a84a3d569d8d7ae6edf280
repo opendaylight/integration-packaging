@@ -2,6 +2,69 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a622d24_c50226b3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-19T17:17:58Z",
+      "side": 1,
+      "message": "Maybe make oneline",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 25
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_a5fd6ab3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-19T17:17:58Z",
+      "side": 1,
+      "message": "Good job doing this, I need to learn how",
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_65f7d2d3",
+        "filename": "docker/openstack/compute/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-01-19T17:17:58Z",
+      "side": 1,
+      "message": "Have you tried it on 16? Would be good to use latest LTS if it works.",
+      "range": {
+        "startLine": 1,
+        "startChar": 15,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_f8271210",
         "filename": "docker/openstack/compute/Dockerfile",
         "patchSetId": 4
