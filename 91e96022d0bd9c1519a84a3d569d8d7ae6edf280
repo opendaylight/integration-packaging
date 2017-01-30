@@ -158,6 +158,30 @@
     },
     {
       "key": {
+        "uuid": "1a622d24_8d05f047",
+        "filename": "docker/openstack/compute/run_compute.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5969
+      },
+      "writtenOn": "2017-01-30T22:58:19Z",
+      "side": 1,
+      "message": "If your host environment doesn\u0027t have proxies defined, they will be set as empty in the container.",
+      "parentUuid": "1a622d24_8e71730e",
+      "range": {
+        "startLine": 20,
+        "startChar": 4,
+        "endLine": 20,
+        "endChar": 65
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_ee63c73f",
         "filename": "docker/openstack/compute/start.sh",
         "patchSetId": 4
@@ -181,6 +205,30 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_18a0a68f",
+        "filename": "docker/openstack/compute/start.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5969
+      },
+      "writtenOn": "2017-01-30T22:58:19Z",
+      "side": 1,
+      "message": "As I mentioned in another comment, this is an artifact of an old method for passing in environment variables.  It will be removed in a future patch.  I think the SERV_HOST address is wrong too.",
+      "parentUuid": "1a622d24_ee63c73f",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 23
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fafc7978_d8873e0e",
         "filename": "docker/openstack/compute/start.sh",
         "patchSetId": 4
@@ -192,6 +240,30 @@
       "writtenOn": "2017-01-30T22:30:24Z",
       "side": 1,
       "message": "I guess you\u0027re working on this, but just noting that STACK_PASS is currently commented out",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 40
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_38a3ea9f",
+        "filename": "docker/openstack/compute/start.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 5969
+      },
+      "writtenOn": "2017-01-30T22:58:19Z",
+      "side": 1,
+      "message": "This is definitely a WIP :)\nI\u0027ve been playing with a couple of methods of putting environment variables into the container.  This is an artifact of an older mechanism.  It will be removed shortly.",
+      "parentUuid": "fafc7978_d8873e0e",
       "range": {
         "startLine": 22,
         "startChar": 0,
