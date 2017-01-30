@@ -22,6 +22,53 @@
       "revId": "82214bc1ba3274537f0ba47b8b61214ec7037adf",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_d89e1e56",
+        "filename": "docker/openstack/compute/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 5969
+      },
+      "writtenOn": "2017-01-30T22:58:19Z",
+      "side": 1,
+      "message": "There will likely be some updates needed to migrate from 14.04 to 16.04 due to init system changes between the versions.  Once that\u0027s validated, I think everything else should work fine.  \nOne minor change is needing to use \u0027FORCE\u003dTrue\u0027 in devstack on 16.04.",
+      "parentUuid": "fafc7978_b8887a23",
+      "range": {
+        "startLine": 1,
+        "startChar": 15,
+        "endLine": 1,
+        "endChar": 20
+      },
+      "revId": "82214bc1ba3274537f0ba47b8b61214ec7037adf",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_d8b57ece",
+        "filename": "docker/openstack/compute/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5969
+      },
+      "writtenOn": "2017-01-30T22:58:19Z",
+      "side": 1,
+      "message": "-COPY    local.conf.compute /home/stack/devstack/\n+COPY    local.conf /home/stack/devstack/",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 48
+      },
+      "revId": "82214bc1ba3274537f0ba47b8b61214ec7037adf",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
