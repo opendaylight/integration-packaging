@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_72729b7d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2616
+      },
+      "writtenOn": "2017-02-02T20:37:56Z",
+      "side": 1,
+      "message": "Agreed.",
+      "parentUuid": "1a622d24_c50226b3",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 25
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_a5fd6ab3",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_b26c039e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2616
+      },
+      "writtenOn": "2017-02-02T20:37:56Z",
+      "side": 1,
+      "message": "Something I learned submitting patches for OpenStack. Agree would be good practice to have for ODL.",
+      "parentUuid": "1a622d24_a5fd6ab3",
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_65f7d2d3",
         "filename": "docker/openstack/compute/Dockerfile",
         "patchSetId": 4
@@ -53,6 +95,30 @@
       "writtenOn": "2017-01-19T17:17:58Z",
       "side": 1,
       "message": "Have you tried it on 16? Would be good to use latest LTS if it works.",
+      "range": {
+        "startLine": 1,
+        "startChar": 15,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_92529fdb",
+        "filename": "docker/openstack/compute/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2616
+      },
+      "writtenOn": "2017-02-02T20:37:56Z",
+      "side": 1,
+      "message": "Happy to try this on 16. Also would prefer to have this on centos 7.",
+      "parentUuid": "1a622d24_65f7d2d3",
       "range": {
         "startLine": 1,
         "startChar": 15,
@@ -112,6 +178,53 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_f25e8be8",
+        "filename": "docker/openstack/compute/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2616
+      },
+      "writtenOn": "2017-02-02T20:37:56Z",
+      "side": 1,
+      "message": "Agreed.",
+      "parentUuid": "1a622d24_4e6bdb1d",
+      "range": {
+        "startLine": 2,
+        "startChar": 12,
+        "endLine": 2,
+        "endChar": 46
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a622d24_eb4d799b",
+        "filename": "docker/openstack/compute/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2616
+      },
+      "writtenOn": "2017-02-02T20:37:56Z",
+      "side": 1,
+      "message": "Fix comment as this will only be used for compute, as we decided to put control in separate container.",
+      "range": {
+        "startLine": 23,
+        "startChar": 5,
+        "endLine": 23,
+        "endChar": 59
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_ae76ef03",
         "filename": "docker/openstack/compute/build_compute.sh",
         "patchSetId": 4
@@ -123,6 +236,30 @@
       "writtenOn": "2017-01-18T22:17:41Z",
       "side": 1,
       "message": "what happens if we don\u0027t have these proxy vars set?",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 75
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_12150ff1",
+        "filename": "docker/openstack/compute/build_compute.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2616
+      },
+      "writtenOn": "2017-02-02T20:37:56Z",
+      "side": 1,
+      "message": "It sets http_proxy\u003d\"\" etc in docker ENV. Should have no effect being empty. Though it\u0027s worth having no_proxy set here.",
+      "parentUuid": "1a622d24_ae76ef03",
       "range": {
         "startLine": 7,
         "startChar": 4,
@@ -182,6 +319,30 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_72f9fbc7",
+        "filename": "docker/openstack/compute/run_compute.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2616
+      },
+      "writtenOn": "2017-02-02T20:37:56Z",
+      "side": 1,
+      "message": "Agree, these don\u0027t harm anything. See previous comment.",
+      "parentUuid": "1a622d24_8d05f047",
+      "range": {
+        "startLine": 20,
+        "startChar": 4,
+        "endLine": 20,
+        "endChar": 65
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_ee63c73f",
         "filename": "docker/openstack/compute/start.sh",
         "patchSetId": 4
@@ -229,6 +390,30 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_b20363b7",
+        "filename": "docker/openstack/compute/start.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2616
+      },
+      "writtenOn": "2017-02-02T20:37:56Z",
+      "side": 1,
+      "message": "Yes. Should and will be removed.",
+      "parentUuid": "fafc7978_18a0a68f",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 23
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fafc7978_d8873e0e",
         "filename": "docker/openstack/compute/start.sh",
         "patchSetId": 4
@@ -264,6 +449,30 @@
       "side": 1,
       "message": "This is definitely a WIP :)\nI\u0027ve been playing with a couple of methods of putting environment variables into the container.  This is an artifact of an older mechanism.  It will be removed shortly.",
       "parentUuid": "fafc7978_d8873e0e",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 40
+      },
+      "revId": "91e96022d0bd9c1519a84a3d569d8d7ae6edf280",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_9200dfab",
+        "filename": "docker/openstack/compute/start.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2616
+      },
+      "writtenOn": "2017-02-02T20:37:56Z",
+      "side": 1,
+      "message": "Agreed.",
+      "parentUuid": "fafc7978_38a3ea9f",
       "range": {
         "startLine": 22,
         "startChar": 0,
