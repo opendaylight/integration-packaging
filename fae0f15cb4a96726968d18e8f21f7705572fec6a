@@ -250,6 +250,30 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_178981eb",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-02T18:01:01Z",
+      "side": 1,
+      "message": "Yeah, build numbers are per-job",
+      "parentUuid": "1a622d24_7ec30e89",
+      "range": {
+        "startLine": 27,
+        "startChar": 38,
+        "endLine": 27,
+        "endChar": 59
+      },
+      "revId": "fae0f15cb4a96726968d18e8f21f7705572fec6a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a622d24_6ae98de5",
         "filename": "docs/autorelease-builds.rst",
         "patchSetId": 7
