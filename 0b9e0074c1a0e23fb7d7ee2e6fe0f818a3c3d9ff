@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_5e2afd7e",
+        "filename": "docker/openstack/compute/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-02-03T22:22:33Z",
+      "side": 1,
+      "message": "do you want to do this without tabs?",
+      "range": {
+        "startLine": 1,
+        "startChar": 4,
+        "endLine": 1,
+        "endChar": 7
+      },
+      "revId": "0b9e0074c1a0e23fb7d7ee2e6fe0f818a3c3d9ff",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_be2169a1",
+        "filename": "docker/openstack/compute/local.conf",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-02-03T22:22:33Z",
+      "side": 1,
+      "message": "only an fyi, but our netvirt csit jobs save off their local.conf files. like this:\n\nhttps://logs.opendaylight.org/releng/jenkins092/netvirt-csit-1node-openstack-mitaka-upstream-transparent-boron/266/archives/control/local.conf.gz\n\njust thought to share in case it wasn\u0027t well known.",
+      "revId": "0b9e0074c1a0e23fb7d7ee2e6fe0f818a3c3d9ff",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_9e2465b0",
+        "filename": "docker/openstack/host_system/docker-unconfined",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-02-03T22:22:33Z",
+      "side": 1,
+      "message": "ws",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 2
+      },
+      "revId": "0b9e0074c1a0e23fb7d7ee2e6fe0f818a3c3d9ff",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
