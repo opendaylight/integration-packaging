@@ -1,0 +1,28 @@
+##############################################################################
+# Copyright (c) 2017 Alexis de Talhouët.  All rights reserved.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Eclipse Public License v1.0 which accompanies this distribution,
+# and is available at http://www.eclipse.org/legal/epl-v10.html
+##############################################################################
+
+version: '2'
+
+services:
+  odl-node:
+    build: .
+    image: odl-node
+    container_name: odl-${NODE_NUMBER}
+    hostname: odl-${NODE_NUMBER}
+    privileged: true
+    stdin_open: true
+    tty: true
+    networks:
+      default:
+          ipv4_address: 192.168.50.15${NODE_NUMBER}
+    command: nohup /root/scripts/setup_odl.sh
+
+networks:
+    default:
+        external: 
+            name: odl-cluster-network
