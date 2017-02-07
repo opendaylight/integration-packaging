@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_f86c9b9e",
+        "filename": "tutorials/cluster-nodes/Vagrantfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 3675
+      },
+      "writtenOn": "2017-02-07T18:17:09Z",
+      "side": 1,
+      "message": "Copy is required because when Vagrant mount resources, it keeps them in sync with the host.\n\nAs the VM will modify the content of opendaylight/ folder (cluster setup script), we must not modify the folder that was mounted, as it\u0027s in sync with Vagrant, so we must use and modify a copy of it.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 43
+      },
+      "revId": "be5e8369e0111fbc787aeedfbdecc02ffbf5d839",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
