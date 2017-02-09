@@ -22,6 +22,52 @@
       "revId": "be5e8369e0111fbc787aeedfbdecc02ffbf5d839",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_1f569ed2",
+        "filename": "tutorials/cluster-nodes/scripts/config.properties",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-02-09T05:04:41Z",
+      "side": 1,
+      "message": "um, does this work? I mean, can I put 300 and see if my\nbeefy server will put 300 ODLs in a cluster with a single\nclick? that would be super cool...",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 14
+      },
+      "revId": "be5e8369e0111fbc787aeedfbdecc02ffbf5d839",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_5f5f86e5",
+        "filename": "tutorials/cluster-nodes/scripts/setup_odl.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-02-09T05:04:41Z",
+      "side": 1,
+      "message": "ah, this is where the 300 node cluster idea would break. but,\nnot something we can\u0027t code around in this section at least.",
+      "range": {
+        "startLine": 40,
+        "startChar": 32,
+        "endLine": 40,
+        "endChar": 36
+      },
+      "revId": "be5e8369e0111fbc787aeedfbdecc02ffbf5d839",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
