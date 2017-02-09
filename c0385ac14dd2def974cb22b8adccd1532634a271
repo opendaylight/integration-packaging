@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_eefe86ad",
+        "filename": "docker/openstack/compute/build_compute.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-09T21:47:33Z",
+      "side": 1,
+      "message": "trivial rm",
+      "range": {
+        "startLine": 17,
+        "startChar": 20,
+        "endLine": 17,
+        "endChar": 21
+      },
+      "revId": "c0385ac14dd2def974cb22b8adccd1532634a271",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_0e04aabe",
+        "filename": "docker/openstack/compute/build_compute.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-09T21:47:33Z",
+      "side": 1,
+      "message": "This ends up printing \"docker run -it --rm --env http_proxy\u003d --env https_proxy\u003d --env no_proxy\u003d s3p/compute:v0.2 bash\". Initially thought this would not work b/c empty vars, but turns out it handles them np, so this is fine",
+      "revId": "c0385ac14dd2def974cb22b8adccd1532634a271",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_8e27fa63",
+        "filename": "docker/openstack/compute/run_compute.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-09T21:47:33Z",
+      "side": 1,
+      "message": "I guess also depends on existence of service-node",
+      "revId": "c0385ac14dd2def974cb22b8adccd1532634a271",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_4e2d1246",
+        "filename": "docker/openstack/compute/run_compute.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-09T21:47:33Z",
+      "side": 1,
+      "message": "I guess most people will not have this service-node, maybe would be good to clarify what\u0027s expected vs failing at check below",
+      "revId": "c0385ac14dd2def974cb22b8adccd1532634a271",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_aef47ecf",
+        "filename": "docker/openstack/compute/start.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-09T21:47:33Z",
+      "side": 1,
+      "message": "Would be good to set the executable bits on these .sh files",
+      "revId": "c0385ac14dd2def974cb22b8adccd1532634a271",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
