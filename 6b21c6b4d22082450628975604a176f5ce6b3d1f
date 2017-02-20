@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_49afa22a",
+        "filename": "docker/openstack/service/.gitignore",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-20T19:09:56Z",
+      "side": 1,
+      "message": "*logs will catch this",
+      "revId": "6b21c6b4d22082450628975604a176f5ce6b3d1f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_89a50a49",
+        "filename": "docker/openstack/service/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-20T19:09:56Z",
+      "side": 1,
+      "message": "No hard tabs please (sorry about linting not catching this, not quite done with that TODO)",
+      "range": {
+        "startLine": 1,
+        "startChar": 4,
+        "endLine": 1,
+        "endChar": 7
+      },
+      "revId": "6b21c6b4d22082450628975604a176f5ce6b3d1f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_495de246",
+        "filename": "docker/openstack/service/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-20T19:09:56Z",
+      "side": 1,
+      "message": "I think you have this as Integration/* elsewhere, which imho is better. Will likely be sorted out as you manually rebase this",
+      "range": {
+        "startLine": 2,
+        "startChar": 24,
+        "endLine": 2,
+        "endChar": 32
+      },
+      "revId": "6b21c6b4d22082450628975604a176f5ce6b3d1f",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
