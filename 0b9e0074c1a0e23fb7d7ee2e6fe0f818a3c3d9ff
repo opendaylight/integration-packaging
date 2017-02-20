@@ -25,6 +25,110 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_49016237",
+        "filename": "docker/openstack/compute/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-20T18:42:00Z",
+      "side": 1,
+      "message": "Yeah, this will fail linting once we have it running properly",
+      "parentUuid": "fafc7978_5e2afd7e",
+      "range": {
+        "startLine": 1,
+        "startChar": 4,
+        "endLine": 1,
+        "endChar": 7
+      },
+      "revId": "0b9e0074c1a0e23fb7d7ee2e6fe0f818a3c3d9ff",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_e99776ea",
+        "filename": "docker/openstack/compute/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-20T18:42:00Z",
+      "side": 1,
+      "message": "Newline before this for consistency?",
+      "revId": "0b9e0074c1a0e23fb7d7ee2e6fe0f818a3c3d9ff",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_498842c5",
+        "filename": "docker/openstack/compute/build_compute.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-20T18:42:00Z",
+      "side": 1,
+      "message": "Is this useful?",
+      "revId": "0b9e0074c1a0e23fb7d7ee2e6fe0f818a3c3d9ff",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_09a3da4f",
+        "filename": "docker/openstack/compute/build_compute.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-20T18:42:00Z",
+      "side": 1,
+      "message": "We could push this to the ODL \"official\" DockerHub https://hub.docker.com/r/opendaylight/",
+      "range": {
+        "startLine": 4,
+        "startChar": 11,
+        "endLine": 4,
+        "endChar": 14
+      },
+      "revId": "0b9e0074c1a0e23fb7d7ee2e6fe0f818a3c3d9ff",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_698b86c3",
+        "filename": "docker/openstack/compute/build_compute.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-20T18:42:00Z",
+      "side": 1,
+      "message": "I think Docker typically uses tags in this format https://github.com/opendaylight/integration-packaging/blob/master/packer/vars/opendaylight-5.2.0.json#L2",
+      "range": {
+        "startLine": 5,
+        "startChar": 10,
+        "endLine": 5,
+        "endChar": 14
+      },
+      "revId": "0b9e0074c1a0e23fb7d7ee2e6fe0f818a3c3d9ff",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fafc7978_be2169a1",
         "filename": "docker/openstack/compute/local.conf",
         "patchSetId": 1
@@ -36,6 +140,40 @@
       "writtenOn": "2017-02-03T22:22:33Z",
       "side": 1,
       "message": "only an fyi, but our netvirt csit jobs save off their local.conf files. like this:\n\nhttps://logs.opendaylight.org/releng/jenkins092/netvirt-csit-1node-openstack-mitaka-upstream-transparent-boron/266/archives/control/local.conf.gz\n\njust thought to share in case it wasn\u0027t well known.",
+      "revId": "0b9e0074c1a0e23fb7d7ee2e6fe0f818a3c3d9ff",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_898eaace",
+        "filename": "docker/openstack/compute/local.conf",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-20T18:42:00Z",
+      "side": 1,
+      "message": "These shouldn\u0027t be uncommented by default?",
+      "revId": "0b9e0074c1a0e23fb7d7ee2e6fe0f818a3c3d9ff",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_c9c392eb",
+        "filename": "docker/openstack/host_system/docker-unconfined",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-02-20T18:42:00Z",
+      "side": 1,
+      "message": "What type of file is this? No extension or shebang",
       "revId": "0b9e0074c1a0e23fb7d7ee2e6fe0f818a3c3d9ff",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
