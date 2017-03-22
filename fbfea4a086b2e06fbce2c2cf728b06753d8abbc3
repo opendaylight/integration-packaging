@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_c6610dd5",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2017-03-22T13:19:02Z",
+      "side": 1,
+      "message": "Successful snapshot build: https://jenkins.opendaylight.org/sandbox/job/packaging-build-rpm-snap-master/2/\n\nrpm build:https://jenkins.opendaylight.org/sandbox/job/packaging-build-rpm-master/2/\n^This fails because the download_url no longer exists.",
+      "range": {
+        "startLine": 313,
+        "startChar": 8,
+        "endLine": 313,
+        "endChar": 19
+      },
+      "revId": "fbfea4a086b2e06fbce2c2cf728b06753d8abbc3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
