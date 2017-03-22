@@ -290,13 +290,27 @@ if __name__ == "__main__":
     builds = []
 
     # Check if `changelog_date` has been passed as an arg
-    # The current datetime should be the default date for RPM changelog dates
+    # The current datetime should be the default date for RPM changelog date
     # but can still accept optional `changelog_date` param
     if args.changelog_date:
         date_flag = 1
     else:
         date_flag = 0
         changelog_date = datetime.date.today().strftime("%a %b %d %Y")
+
+    # Check if `sysd_commit` has been passed as an arg
+    # Use latest Int/Pack repo commit hash as sysd_commit var
+    # unless passed by param
+    if args.sysd_commit:
+        sysd_flag = 1
+    else:
+        sysd_flag = 0
+        int_pack_repo = "https://github.com/opendaylight/integration-packaging.git"
+        # Get the commit hash at the tip of the master branch
+        args1 = ['git', 'ls-remote', int_pack_repo, "HEAD"]
+        args2 = ['awk', '{print $1}']
+        references = subprocess.Popen(args1, stdout=subprocess.PIPE, shell=False)
+        sysd_commit = subprocess.check_output(args2, stdin=references.stdout, shell=False).strip()
 
     if args.version:
         # Build a list of requested versions as dicts of version components
@@ -330,12 +344,15 @@ if __name__ == "__main__":
                     if date_flag == 0:
                         build.update({"changelog_date": changelog_date})
 
+                    # Use latest Int/Pack repo commit hash as sysd_commit var
+                    if sysd_flag == 0:
+                        build.update({"sysd_commit": sysd_commit})
+
                     builds.append(build)
     else:
         build = {}
         # Common parameters for all new and snapshot builds
-        build.update({"sysd_commit": args.sysd_commit,
-                      "changelog_name": args.changelog_name,
+        build.update({"changelog_name": args.changelog_name,
                       "changelog_email": args.changelog_email})
 
         # Set current datetime if no `changelog_date` arg is passed
@@ -346,6 +363,12 @@ if __name__ == "__main__":
             build.update({"changelog_date": changelog_date})
         else:
             build.update({"changelog_date": args.changelog_date})
+
+        # Use latest Int/Pack repo commit hash as sysd_commit var
+        if sysd_flag == 0:
+            build.update({"sysd_commit": sysd_commit})
+        else:
+            build.update({"sysd_commit": args.sysd_commit})
 
         # If build_latest_snap flag is set, update major minor version to build
         if args.build_latest_snap:
