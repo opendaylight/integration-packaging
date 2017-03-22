@@ -63,19 +63,24 @@ def extract_version(url):
     :arg str url: URL of the ODL tarball build for building RPMs
 
     """
-    # Substitute the part of the build URL not required with empty string
-    date_url = re.sub('distribution-karaf-.*\.tar\.gz$', '', url)
-    # Set date_url as an environment variable for it to be used in a subprocess
-    os.environ["date_url"] = date_url
-    # Extract ODL artifact's date by scraping data from the build URL
-    odl_date = subprocess.Popen(
-        "curl -s $date_url | grep tar.gz -A1 | tail -n1 | sed \"s/<td>//g\""
-        "| sed \"s/\\n//g\" | awk '{print $3,$2,$6}' ",
-        shell=True, stdout=subprocess.PIPE,
-        stdin=subprocess.PIPE).stdout.read().rstrip().strip("</td>")
-    date = datetime.datetime.strptime(odl_date, "%d %b %Y").strftime('%Y%m%d')
-
     if "autorelease" in url:
+        # Autorelease URL does not include a date and hence date extraction
+        # logic is needed for RPM versioning.
+        # Docs:
+        #   https://wiki.opendaylight.org/view/Integration/Packaging/Versioning
+        # Substitute the part of the build URL not required with empty string
+        date_url = re.sub('distribution-karaf-.*\.tar\.gz$', '', url)
+        # Set date_url as an environment variable for it to be used in
+        # a subprocess
+        os.environ["date_url"] = date_url
+        # Extract ODL artifact's date by scraping data from the build URL
+        odl_date = subprocess.Popen(
+            "curl -s $date_url | grep tar.gz -A1 | tail -n1 |"
+            "sed \"s/<td>//g\" | sed \"s/\\n//g\" | awk '{print $3,$2,$6}' ",
+            shell=True, stdout=subprocess.PIPE,
+            stdin=subprocess.PIPE).stdout.read().rstrip().strip("</td>")
+        date = datetime.datetime.strptime(odl_date, "%d %b %Y").strftime(
+                                                                '%Y%m%d')
         # Search the ODL autorelease build URL to match the Build ID that
         # follows "autorelease-". eg:
         # https://nexus.opendaylight.org/content/repositories/autorelease-1533/
@@ -103,7 +108,7 @@ def extract_version(url):
         raise ValueError("Unrecognized URL {}".format(url))
 
     version = {}
-    # Search the ODL build URL to match 0.major.minor-codename-SR and extarct
+    # Search the ODL build URL to match 0.major.minor-codename-SR and extract
     # version information. eg: release:
     # https://nexus.opendaylight.org/content/repositories/public/org/
     #  opendaylight/integration/distribution-karaf/0.3.3-Lithium-SR3/
@@ -223,16 +228,6 @@ def build_snapshot_rpm(build):
         # Get download_url
         build['download_url'] = snapshot_url
 
-        # Get changelog_date from the snapshot URL
-        # %a: Abbreviated weekday name
-        # %b: Abbreviated month name
-        # %d: Zero padded decimal number
-        # %Y: Year
-        # `changelog_date` is in the format: 'Sat Dec 10 2016'
-        # Docs:
-        # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
-        build['changelog_date'] = datetime.date.today().strftime("%a %b %d %Y")
-
         # Call `extract_version` function to get version information
         # except Major and Minor version which are already present
         version = extract_version(build['download_url'])
@@ -297,6 +292,16 @@ if __name__ == "__main__":
 
     # Build list of RPM builds to perform
     builds = []
+
+    # Check if `changelog_date` has been passed as an arg
+    # The current datetime should be the default date for RPM changelog dates
+    # but can still accept optional `changelog_date` param
+    # `changelog_date` is in the format: 'Sat Dec 10 2016'
+    # Docs:
+    #   https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
+    if not args.changelog_date:
+        args.changelog_date = datetime.date.today().strftime("%a %b %d %Y")
+
     if args.version:
         # Build a list of requested versions as dicts of version components
         versions = []
@@ -326,16 +331,16 @@ if __name__ == "__main__":
         build = {}
         # Common parameters for all new and snapshot builds
         build.update({"sysd_commit": args.sysd_commit,
-                      "changelog_date": args.changelog_date,
                       "changelog_name": args.changelog_name,
-                      "changelog_email": args.changelog_email})
-        # If build_latest_snap flag is set, update major minor version to build
-        if args.build_latest_snap:
-            build.update({"version_major": args.major,
-                          "version_minor": args.minor})
-        # If new build, update download_url
-        else:
-            build.update({"download_url": args.download_url})
+                      "changelog_email": args.changelog_email,
+                      "changelog_date": args.changelog_date,
+                      "version_major": args.major,
+                      "version_minor": args.minor,
+                      "download_url": args.download_url
+                      })
+
+        # If download_url is given, get version info
+        if args.download_url:
             version = extract_version(args.download_url)
             build.update(version)
 
