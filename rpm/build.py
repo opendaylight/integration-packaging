@@ -64,6 +64,10 @@ def extract_version(url):
 
     """
     if "autorelease" in url:
+        # Autorelease URL does not include a date and hence date extraction
+        # logic is needed for RPM versioning.
+        # Docs:
+        #   https://wiki.opendaylight.org/view/Integration/Packaging/Versioning
         # Substitute the part of the build URL not required with empty string
         date_url = re.sub('distribution-karaf-.*\.tar\.gz$', '', url)
         # Set date_url as an environment variable for it to be used in
@@ -235,6 +239,21 @@ def build_snapshot_rpm(build):
         build_rpm(build)
 
 
+def get_sysd_commit():
+    """Get latest Int/Pack repo commit hash"""
+
+    int_pack_repo = "https://github.com/opendaylight/integration-packaging.git"
+    # Get the commit hash at the tip of the master branch
+    args_git = ['git', 'ls-remote', int_pack_repo, "HEAD"]
+    args_awk = ['awk', '{print $1}']
+    references = subprocess.Popen(args_git, stdout=subprocess.PIPE,
+                                  shell=False)
+    sysd_commit = subprocess.check_output(args_awk, stdin=references.stdout,
+                                          shell=False).strip()
+
+    return sysd_commit
+
+
 # When run as a script, accept a set of builds and execute them
 if __name__ == "__main__":
     # Load RPM build variables from a YAML config file
@@ -290,13 +309,19 @@ if __name__ == "__main__":
     builds = []
 
     # Check if `changelog_date` has been passed as an arg
-    # The current datetime should be the default date for RPM changelog dates
+    # The current datetime should be the default date for RPM changelog date
     # but can still accept optional `changelog_date` param
-    if args.changelog_date:
-        date_flag = 1
-    else:
-        date_flag = 0
-        changelog_date = datetime.date.today().strftime("%a %b %d %Y")
+    # `changelog_date` is in the format: 'Sat Dec 10 2016'
+    # Docs:
+    #   https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
+    if not args.changelog_date:
+        args.changelog_date = datetime.date.today().strftime("%a %b %d %Y")
+
+    # Check if `sysd_commit` has been passed as an arg
+    # Use latest Int/Pack repo commit hash as sysd_commit var
+    # unless passed by param
+    if not args.sysd_commit:
+        args.sysd_commit = get_sysd_commit()
 
     if args.version:
         # Build a list of requested versions as dicts of version components
@@ -322,39 +347,21 @@ if __name__ == "__main__":
                 if all(item in version_info.items()
                        for item in version.items()):
                     build.update(version_info)
-
-                    # Set current datetime if no `changelog_date` arg is passed
-                    # `changelog_date` is in the format: 'Sat Dec 10 2016'
-                    # Docs:
-                    # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
-                    if date_flag == 0:
-                        build.update({"changelog_date": changelog_date})
-
                     builds.append(build)
     else:
         build = {}
         # Common parameters for all new and snapshot builds
         build.update({"sysd_commit": args.sysd_commit,
                       "changelog_name": args.changelog_name,
-                      "changelog_email": args.changelog_email})
+                      "changelog_email": args.changelog_email,
+                      "changelog_date": args.changelog_date,
+                      "version_major": args.major,
+                      "version_minor": args.minor,
+                      "download_url": args.download_url
+                      })
 
-        # Set current datetime if no `changelog_date` arg is passed
-        # `changelog_date` is in the format: 'Sat Dec 10 2016'
-        # Docs:
-        # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
-        if date_flag == 0:
-            build.update({"changelog_date": changelog_date})
-        else:
-            build.update({"changelog_date": args.changelog_date})
-
-        # If build_latest_snap flag is set, update major minor version to build
-        if args.build_latest_snap:
-            build.update({"version_major": args.major,
-                          "version_minor": args.minor})
-
-        # If new build, update download_url
-        else:
-            build.update({"download_url": args.download_url})
+        # If download_url is given, get version info
+        if args.download_url:
             version = extract_version(args.download_url)
             build.update(version)
 
