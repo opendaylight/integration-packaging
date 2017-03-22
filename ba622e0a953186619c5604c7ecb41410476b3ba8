@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_b1724847",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2017-03-22T09:52:04Z",
+      "side": 0,
+      "message": "I guess this  logic is being used only for autorelease builds",
+      "range": {
+        "startLine": 66,
+        "startChar": 1,
+        "endLine": 76,
+        "endChar": 78
+      },
+      "revId": "ba622e0a953186619c5604c7ecb41410476b3ba8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
