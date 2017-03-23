@@ -182,6 +182,30 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_b326c266",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2017-03-23T22:21:46Z",
+      "side": 1,
+      "message": "Yes. That\u0027s how I implemented it finally.",
+      "parentUuid": "fafc7978_135d0e16",
+      "range": {
+        "startLine": 368,
+        "startChar": 11,
+        "endLine": 368,
+        "endChar": 25
+      },
+      "revId": "fbfea4a086b2e06fbce2c2cf728b06753d8abbc3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fafc7978_b08358cb",
         "filename": "rpm/build_vars.yaml",
         "patchSetId": 2
