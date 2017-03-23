@@ -2,6 +2,46 @@
   "comments": [
     {
       "key": {
+        "uuid": "fafc7978_b00cf895",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-23T19:36:56Z",
+      "side": 1,
+      "message": "Maybe we can extract this to a function?",
+      "revId": "fbfea4a086b2e06fbce2c2cf728b06753d8abbc3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_900f3488",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 310,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-23T19:36:56Z",
+      "side": 1,
+      "message": "Calling this args_git and args_awk comes to mind, but if you prefer argsn that\u0027s fine, nbd to me",
+      "range": {
+        "startLine": 310,
+        "startChar": 8,
+        "endLine": 310,
+        "endChar": 13
+      },
+      "revId": "fbfea4a086b2e06fbce2c2cf728b06753d8abbc3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fafc7978_c6610dd5",
         "filename": "rpm/build.py",
         "patchSetId": 2
@@ -19,6 +59,92 @@
         "endLine": 313,
         "endChar": 19
       },
+      "revId": "fbfea4a086b2e06fbce2c2cf728b06753d8abbc3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_1044e4b5",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-23T19:36:56Z",
+      "side": 1,
+      "message": "Cool, good implementation",
+      "range": {
+        "startLine": 313,
+        "startChar": 33,
+        "endLine": 313,
+        "endChar": 45
+      },
+      "revId": "fbfea4a086b2e06fbce2c2cf728b06753d8abbc3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_d0209cfa",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-23T19:36:56Z",
+      "side": 1,
+      "message": "Any reason we can\u0027t keep checking args.sysd_commit vs having this flag?\n\nUpdate: I see you\u0027re following the example of date_flag. I guess I should have pointed out that we need need the flag when reviewing that code. Can change both or just yours imho.",
+      "range": {
+        "startLine": 348,
+        "startChar": 23,
+        "endLine": 348,
+        "endChar": 37
+      },
+      "revId": "fbfea4a086b2e06fbce2c2cf728b06753d8abbc3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_302008f7",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-23T19:36:56Z",
+      "side": 1,
+      "message": "Same \"do we need this flag\" feedback",
+      "range": {
+        "startLine": 368,
+        "startChar": 11,
+        "endLine": 368,
+        "endChar": 25
+      },
+      "revId": "fbfea4a086b2e06fbce2c2cf728b06753d8abbc3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_b08358cb",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-23T19:36:56Z",
+      "side": 1,
+      "message": "I think we should keep the sysd hash for these. The old builds were actually made with those old versions, do actually ship them. Shouldn\u0027t update the config here unless we do a package_version bump to include the new sysd file.",
       "revId": "fbfea4a086b2e06fbce2c2cf728b06753d8abbc3",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
