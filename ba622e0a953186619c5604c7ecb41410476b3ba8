@@ -22,6 +22,53 @@
       "revId": "ba622e0a953186619c5604c7ecb41410476b3ba8",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_30fc883e",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-23T20:15:19Z",
+      "side": 0,
+      "message": "Yeah, I had to think about this a good bit. I think we\u0027re actually handling three cases - snapshot, autorelease and autorelease moved to a proper release nexus repo. There are examples of the three types of links on the original trello:\n\nhttps://trello.com/c/s59ygFhk/365-extract-version-logic-from-url-in-rpm-build-scripts\n\nSo we want that date extraction logic for both cases that don\u0027t include a date in the URL - autorelease and \"proper\" release.\n\nMaybe you can add some inline docs to make this clear? Thanks!",
+      "parentUuid": "fafc7978_b1724847",
+      "range": {
+        "startLine": 66,
+        "startChar": 1,
+        "endLine": 76,
+        "endChar": 78
+      },
+      "revId": "ba622e0a953186619c5604c7ecb41410476b3ba8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_d0aa5c19",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-23T20:15:19Z",
+      "side": 0,
+      "message": "Kinda hard to reason about with all the conditionals, but I think moving this to below ends up working for all cases.",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 234,
+        "endChar": 79
+      },
+      "revId": "ba622e0a953186619c5604c7ecb41410476b3ba8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }

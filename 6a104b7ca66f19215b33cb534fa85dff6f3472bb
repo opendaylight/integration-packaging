@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_d0837ca7",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-23T20:15:19Z",
+      "side": 1,
+      "message": "Ah, I see the date_flag I talked about on your other open gerrit was introduced here, that makes sense. Maybe let\u0027s just check args.changelog_date, unless there\u0027s some good reason to have a flag I\u0027m missing.",
+      "range": {
+        "startLine": 296,
+        "startChar": 8,
+        "endLine": 296,
+        "endChar": 17
+      },
+      "revId": "6a104b7ca66f19215b33cb534fa85dff6f3472bb",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_30aac819",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-23T20:15:19Z",
+      "side": 1,
+      "message": "We should keep these dates - they are actually when those RPMs were defined, they are the dates in the .spec files currently being shipped. If we change them, we need to ship updated RPMs.",
+      "revId": "6a104b7ca66f19215b33cb534fa85dff6f3472bb",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
