@@ -134,6 +134,30 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_1053443a",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2017-03-23T20:24:54Z",
+      "side": 1,
+      "message": "Actually, I didn\u0027t want to initialize the var `sysd_commit` every time `args.sysd_commit` was not passed as argument. Hence, I thought it would be better to have a flag instead of repeating the code. But as you said above, this can be solved if we extract the code to a function. Will change this and the `date_flag`.",
+      "parentUuid": "fafc7978_302008f7",
+      "range": {
+        "startLine": 368,
+        "startChar": 11,
+        "endLine": 368,
+        "endChar": 25
+      },
+      "revId": "fbfea4a086b2e06fbce2c2cf728b06753d8abbc3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fafc7978_b08358cb",
         "filename": "rpm/build_vars.yaml",
         "patchSetId": 2
