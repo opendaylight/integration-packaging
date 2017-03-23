@@ -69,6 +69,30 @@
       "revId": "ba622e0a953186619c5604c7ecb41410476b3ba8",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_33be5200",
+        "filename": "rpm/build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2017-03-23T21:54:19Z",
+      "side": 0,
+      "message": "I realised that we don\u0027t actually need the below conditionals. We can do without them.",
+      "parentUuid": "fafc7978_d0aa5c19",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 234,
+        "endChar": 79
+      },
+      "revId": "ba622e0a953186619c5604c7ecb41410476b3ba8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }

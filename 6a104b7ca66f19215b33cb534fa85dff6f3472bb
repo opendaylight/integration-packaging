@@ -39,6 +39,24 @@
       "revId": "6a104b7ca66f19215b33cb534fa85dff6f3472bb",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_73373ab1",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2017-03-23T21:54:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fafc7978_30aac819",
+      "revId": "6a104b7ca66f19215b33cb534fa85dff6f3472bb",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
