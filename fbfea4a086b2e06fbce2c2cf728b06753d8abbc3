@@ -158,6 +158,30 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_135d0e16",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-23T21:07:43Z",
+      "side": 1,
+      "message": "Maybe I don\u0027t follow, but it seems like you could still initialize sysd_commit in the same way. Just don\u0027t set sysd_flag in the first conditional and reference args.sysd_commit in the 2nd and 3rd conditionals.",
+      "parentUuid": "fafc7978_1053443a",
+      "range": {
+        "startLine": 368,
+        "startChar": 11,
+        "endLine": 368,
+        "endChar": 25
+      },
+      "revId": "fbfea4a086b2e06fbce2c2cf728b06753d8abbc3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fafc7978_b08358cb",
         "filename": "rpm/build_vars.yaml",
         "patchSetId": 2
