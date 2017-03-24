@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_11418339",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-24T15:16:53Z",
+      "side": 1,
+      "message": "Ah, thanks for adding these, I hadn\u0027t realized that we would need this. Not sure if you meant to add them here or in 53660? Doesn\u0027t matter much imho.",
+      "range": {
+        "startLine": 24,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 37
+      },
+      "revId": "6af7eea5e5bd721abcdacf98abd20a7ebafb3d44",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
