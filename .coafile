@@ -24,7 +24,7 @@ default_actions = JSONFormatBear: ApplyPatchAction
 
 [shellcheck]
 bears = ShellCheckBear
-#files = ./**/*.sh
+#files = **/*.sh
 
 [python]
 bears = PyUnusedCodeBear
@@ -33,8 +33,7 @@ default_actions = PyUnusedCodeBear: ApplyPatchAction
 
 [autopep8]
 bears = PEP8Bear
-#files = ./**/*.py
-default_actions = PEP8Bear: ApplyPatchAction
+files = ./**/*.py
 
 [yaml]
 bears = YAMLLintBear
