@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "fafc7978_93e0defb",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 6047
+      },
+      "writtenOn": "2017-03-24T15:36:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fafc7978_b00cf895",
+      "revId": "fbfea4a086b2e06fbce2c2cf728b06753d8abbc3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fafc7978_900f3488",
         "filename": "rpm/build.py",
         "patchSetId": 2
