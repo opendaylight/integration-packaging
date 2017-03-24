@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_b1aeb796",
+        "filename": "rpm/build.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-24T16:54:18Z",
+      "side": 1,
+      "message": "I guess it ends up working out to move the above version-finding logic into the autorelease conditional because we don\u0027t need the RPM\u0027s date (for part of version) for release RPMs. The unittests pass with all styles of dates, so I guess this works (yay unittests)",
+      "range": {
+        "startLine": 105,
+        "startChar": 4,
+        "endLine": 105,
+        "endChar": 51
+      },
+      "revId": "90e2a4a5bcbc821fc9b1e42cbc583f4a4403c30a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
