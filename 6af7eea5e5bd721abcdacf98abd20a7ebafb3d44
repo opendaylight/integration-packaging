@@ -22,6 +22,30 @@
       "revId": "6af7eea5e5bd721abcdacf98abd20a7ebafb3d44",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_f1d79f4d",
+        "filename": "rpm/build_vars.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-24T15:19:04Z",
+      "side": 1,
+      "message": "Update: I see you are doing this in 53660, just need to not do here and instead leave the sysd_commit vars.",
+      "parentUuid": "fafc7978_11418339",
+      "range": {
+        "startLine": 24,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 37
+      },
+      "revId": "6af7eea5e5bd721abcdacf98abd20a7ebafb3d44",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
