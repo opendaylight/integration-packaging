@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_717c4fec",
+        "filename": "rpm/test_build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-03-24T17:16:15Z",
+      "side": 1,
+      "message": "3",
+      "range": {
+        "startLine": 59,
+        "startChar": 21,
+        "endLine": 59,
+        "endChar": 22
+      },
+      "revId": "df5a2167b5defe818b31943d35df081125c3dbe2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_d1837bca",
+        "filename": "rpm/test_build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-03-24T17:16:15Z",
+      "side": 1,
+      "message": "you wanna add sr2 here?",
+      "revId": "df5a2167b5defe818b31943d35df081125c3dbe2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
