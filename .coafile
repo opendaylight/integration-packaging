@@ -33,7 +33,7 @@ default_actions = PyUnusedCodeBear: ApplyPatchAction
 
 [autopep8]
 bears = PEP8Bear
-#files = ./**/*.py
+files = ./**/*.py
 default_actions = PEP8Bear: ApplyPatchAction
 
 [yaml]
