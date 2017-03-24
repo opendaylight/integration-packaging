@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_d45a4982",
+        "filename": ".coafile",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-03-24T21:13:23Z",
+      "side": 1,
+      "message": "in int/test we don\u0027t have this leading ./  not sure what\u0027s\nbest practice but I assume this works.",
+      "range": {
+        "startLine": 36,
+        "startChar": 8,
+        "endLine": 36,
+        "endChar": 10
+      },
+      "revId": "17c120aa8a659c3e6cd2817e43b974080bd32962",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
