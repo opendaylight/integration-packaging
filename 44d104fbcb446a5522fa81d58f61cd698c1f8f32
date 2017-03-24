@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_47906995",
+        "filename": ".coafile",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2017-03-24T23:33:52Z",
+      "side": 0,
+      "message": "Ooops just realized I accidently removed this. I\u0027ll add it back.",
+      "revId": "44d104fbcb446a5522fa81d58f61cd698c1f8f32",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
