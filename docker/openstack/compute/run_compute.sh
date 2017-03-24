@@ -30,6 +30,7 @@ _no_proxy=localhost,10.0.0.0/8,192.168.0.0/16,172.17.0.0/16,127.0.0.1,127.0.0.0/
 #    COMMAND="$1"
 #fi
 
+# noqa ShellCheckBear
 SERVICE_NODE_NAME="service-node"
 # check to see that service-node is running first and get its IP from Docker
 SERVICE_NODE_IP=$(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" service-node)
@@ -39,7 +40,9 @@ if [ -z "$SERVICE_NODE_IP" ] ; then
 fi
 SERV_HOST=$SERVICE_NODE_IP
 docker run -dit --name ${NAME} --hostname ${NAME} \
+    # noqa ShellCheckBear
     --env http_proxy=$http_proxy --env https_proxy=$https_proxy \
+    # noqa ShellCheckBear
     --env no_proxy=$_no_proxy \
     --env ODL_NETWORK=$ODL_NETWORK \
     --env STACK_PASS=$STACK_PASS \

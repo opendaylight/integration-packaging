@@ -24,7 +24,7 @@ default_actions = JSONFormatBear: ApplyPatchAction
 
 [shellcheck]
 bears = ShellCheckBear
-#files = **/*.sh
+files = ./**/*.sh
 
 [python]
 bears = PyUnusedCodeBear
