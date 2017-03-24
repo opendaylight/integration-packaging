@@ -13,11 +13,12 @@
 # Shard configuration:
 # see (configure-cluster-ipdetect.sh)[https://github.com/opendaylight/integration-distribution/blob/release/boron-sr2/distribution-karaf/src/main/assembly/bin/configure-cluster-ipdetect.sh]
 
+# noqa ShellCheckBear
 SCRIPTS="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source $SCRIPTS/config.properties
+. $SCRIPTS/config.properties
 
-function install_packages {
+install_packages() {
     # required if using Docker, else could be commented-out
     sudo apt-get update -y
     sudo apt-get -y install software-properties-common
@@ -31,7 +32,7 @@ function install_packages {
     export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 }
 
-function start_odl {
+start_odl() {
     cd $HOME/opendaylight
 
     seed_nodes=""
@@ -55,6 +56,7 @@ start_odl
 
 # For the docker container, we have to let the container
 # live else it will stop once the setup is ready
+# noqa ShellCheckBear
 while [ 1 ];
 do
   sleep 10

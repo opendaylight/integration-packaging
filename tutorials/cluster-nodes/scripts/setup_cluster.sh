@@ -12,17 +12,18 @@
 # distribution to deploy on the nodes, or will download it, and it will
 # trigger vagrant or docker to build the cluster.
 
+# noqa ShellCheckBear
 SCRIPTS="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT="$( cd "$SCRIPTS" && cd .. && pwd)"
 
-function setup_env {
-    source $SCRIPTS/config.properties
+setup_env() {
+    . $SCRIPTS/config.properties
     export NUM_OF_NODES=$NUM_OF_NODES
     echo "Cluster will be deployed using $ODL_VERSION."
     echo "The cluster will have $NUM_OF_NODES nodes."
 }
 
-function dowload_odl {
+dowload_odl() {
     if [ ! -d "$ROOT/opendaylight" ]; then
         echo "Download OpenDaylight distribution"
         mkdir opendaylight
@@ -32,7 +33,7 @@ function dowload_odl {
     fi
 }
 
-function setup_odl {
+setup_odl() {
     env_banner
     cd $ROOT/opendaylight
 
@@ -47,23 +48,24 @@ function setup_odl {
     # the custom_shard_config.txt located under /bin
 }
 
-function spwan_vms {
+spwan_vms() {
     env_banner
     cd $ROOT
     vagrant destroy -f
     vagrant up
 }
 
-function spwan_containers {
+spwan_containers() {
     env_banner
     # create docker network specific to ODL cluster
-    if [ `docker network ls | grep -w odl-cluster-network | wc -l | xargs echo ` == 0 ]; then
+    if [ "`docker network ls | grep -w odl-cluster-network | wc -l | xargs echo `" = 0 ]; then
         echo "Docker network for OpenDaylight don't exist - creating ..."
         docker network create -o com.docker.network.bridge.enable_icc=true -o com.docker.network.bridge.enable_ip_masquerade=true --subnet 192.168.50.0/24 --gateway 192.168.50.1  odl-cluster-network
     fi
 
     # create all the containers
     MAX=$NUM_OF_NODES
+    # noqa ShellCheckBear
     for ((i=1; i<=MAX; i++))
     do
         export NODE_NUMBER=$i
@@ -72,7 +74,7 @@ function spwan_containers {
     done
 }
 
-function prerequisites {
+prerequisites() {
     cat <<EOF
 ################################################
 ##              Setup environment             ##
@@ -95,7 +97,7 @@ EOF
     setup_odl
 }
 
-function env_banner {
+env_banner() {
 cat <<EOF
 ################################################
 ##             Spawn cluster nodes            ##
@@ -103,7 +105,7 @@ cat <<EOF
 EOF
 }
 
-function end_banner {
+end_banner() {
 cat <<EOF
 ################################################
 ##          Your environment is setup         ##
@@ -132,10 +134,10 @@ if [ -z $p ]; then
     usage
 fi
 
-if [ $p == "docker" ]; then
+if [ $p = "docker" ]; then
     prerequisites
     spwan_containers
-elif [ $p == "vagrant" ]; then
+elif [ $p = "vagrant" ]; then
     prerequisites
     spwan_vms
 else

@@ -23,12 +23,12 @@ default_actions = JSONFormatBear: ApplyPatchAction
 
 [shellcheck]
 bears = ShellCheckBear
-#files = ./**/*.sh
+files = ./**/*.sh
 
 [python]
 bears = PyUnusedCodeBear
 files = ./**/*.py
-ignore = docs/conf.py, .*/**
+ignore = docs/conf.py, .tox/**
 default_actions = PyUnusedCodeBear: ApplyPatchAction
 
 [autopep8]
