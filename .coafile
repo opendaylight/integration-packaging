@@ -1,5 +1,6 @@
 [Default]
-ignore = .tox/**, .gitignore, .gitreview, .gitmodules, **/provisioning/roles/**
+ignore = .tox/**, .gitignore, .gitreview, .gitmodules, **/provisioning/roles/**, \
+         node_modules/**, ansible/ansible-opendaylight/**, docs/conf.py
 use_spaces = True
 
 [DOCS]
@@ -28,7 +29,6 @@ bears = ShellCheckBear
 [python]
 bears = PyUnusedCodeBear
 files = ./**/*.py
-ignore = docs/conf.py, .*/**
 default_actions = PyUnusedCodeBear: ApplyPatchAction
 
 [autopep8]
@@ -39,4 +39,4 @@ default_actions = PEP8Bear: ApplyPatchAction
 [yaml]
 bears = YAMLLintBear
 yamllint_config = .yamllint
-#files = ./**/*yaml, ./**/*.yml
+files = ./**/*.yaml, ./**/*.yml

@@ -5,6 +5,7 @@
 # terms of the Eclipse Public License v1.0 which accompanies this distribution,
 # and is available at http://www.eclipse.org/legal/epl-v10.html
 ##############################################################################
+---
 
 version: '2'
 
@@ -19,10 +20,10 @@ services:
     tty: true
     networks:
       default:
-          ipv4_address: 192.168.50.15${NODE_NUMBER}
+        ipv4_address: 192.168.50.15${NODE_NUMBER}
     command: nohup /root/scripts/setup_odl.sh
 
 networks:
-    default:
-        external:
-            name: odl-cluster-network
+  default:
+    external:
+      name: odl-cluster-network
