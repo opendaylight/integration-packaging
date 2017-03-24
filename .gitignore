@@ -7,6 +7,9 @@
 # Tox
 .tox/
 
+# Coala
+node_modules
+
 # Python
 .idea
 *.pyc
