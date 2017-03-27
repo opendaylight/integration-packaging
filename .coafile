@@ -25,7 +25,6 @@ files = **.rst
 
 [markdown]
 bears = MarkdownBear
-enabled = False
 files = **.markdown, **.md
 default_actions = MarkdownBear: ApplyPatchAction
 
