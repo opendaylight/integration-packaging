@@ -19,7 +19,7 @@ bears = DockerfileLintBear
 
 [json]
 bears = JSONFormatBear
-#files = ./**/*.json
+files = ./**/*.json
 default_actions = JSONFormatBear: ApplyPatchAction
 
 [shellcheck]
