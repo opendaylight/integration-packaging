@@ -37,14 +37,14 @@ enabling the other.
 
 From a high level, the builds:
 
-* Download and verify the CentOS ISO specified in the variables file.
-* Boot the ISO and do low-level configuration via a Kickstart template.
-* Run a set of shell scripts, listed in the template's shell provisioner
+- Download and verify the CentOS ISO specified in the variables file.
+- Boot the ISO and do low-level configuration via a Kickstart template.
+- Run a set of shell scripts, listed in the template's shell provisioner
   section, to do any configuration required by the builder (VBox, Docker),
   other provisioners (Ansible) or post-processors (Vagrant, Docker).
-* Install and configure the version of OpenDaylight specified in the variables
+- Install and configure the version of OpenDaylight specified in the variables
   file using the [ansible-opendaylight role][3].
-* Export, compress and package the VM as a Vagrant base box or Docker image.
+- Export, compress and package the VM as a Vagrant base box or Docker image.
 
 ## Running
 
@@ -200,9 +200,12 @@ to run OpenDaylight as the container's process.
 $ docker run -ti opendaylight/odl:4.1.0 /opt/opendaylight/bin/karaf
 ```
 
-
 [1]: https://www.packer.io/
+
 [2]: https://www.packer.io/intro/getting-started/setup.html
+
 [3]: https://github.com/dfarrell07/ansible-opendaylight
+
 [4]: https://atlas.hashicorp.com/opendaylight/boxes/odl
+
 [5]: https://hub.docker.com/r/opendaylight/
