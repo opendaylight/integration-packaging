@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 """Read YAML description of RPM builds and cache the required artifacts."""
 
-import sys
 import os
-import urllib
-import tarfile
 from string import Template
+import sys
+import tarfile
+import urllib
 
 try:
     import yaml

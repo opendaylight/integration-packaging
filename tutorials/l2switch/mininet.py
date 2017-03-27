@@ -3,10 +3,10 @@
 
 import time
 
-from mininet.topo import Topo
-from mininet.net import Mininet
 from mininet.log import setLogLevel
+from mininet.net import Mininet
 from mininet.node import RemoteController
+from mininet.topo import Topo
 
 
 class SingleSwitchTopo(Topo):

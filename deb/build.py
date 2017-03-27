@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 """Build OpenDaylight's .debs using YAML build configs and Jinja2 templates."""
 
-import os
-import sys
-import shutil
 import argparse
-import subprocess
+import os
+import shutil
 from string import Template
+import subprocess
+import sys
+
+import cache.cache as cache
+import templates.build_debianfiles as build_debfiles
 
 try:
     import yaml
@@ -15,8 +18,6 @@ except ImportError:
     sys.stderr.write("Else, install the Python libs it installs.\n")
     raise
 
-import cache.cache as cache
-import templates.build_debianfiles as build_debfiles
 
 # Common paths used in this script
 # This file is assumed to be in the root of the .deb build logic's dir

@@ -15,11 +15,13 @@ import datetime
 import os
 import re
 import shutil
+from string import Template
 import subprocess
 import sys
-
-from string import Template
 from urllib2 import urlopen
+
+import cache.cache as cache
+import specs.build_specs as build_specs
 
 try:
     from bs4 import BeautifulSoup
@@ -31,8 +33,6 @@ except ImportError:
     sys.stderr.write("Else, do `pip install -r requirements.txt` in a venv.\n")
     raise
 
-import cache.cache as cache
-import specs.build_specs as build_specs
 
 # Common paths used in this script
 # This file is assumed to be in the root of the RPM build logic's dir structure

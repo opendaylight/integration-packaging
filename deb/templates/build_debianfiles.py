@@ -3,10 +3,10 @@
 
 import os
 import re
-import sys
 import shutil
-import urllib
 from string import Template
+import sys
+import urllib
 
 try:
     import yaml

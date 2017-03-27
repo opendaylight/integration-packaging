@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """Read YAML description of ODL builds and cache the required artifacts."""
 
-import sys
 import os
+import sys
 import urllib
 
 try:

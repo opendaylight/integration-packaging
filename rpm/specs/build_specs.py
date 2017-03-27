@@ -2,8 +2,8 @@
 """Build RPM .spec files from YAML RPM config and a Jinja2 .spec template."""
 
 import os
-import sys
 from string import Template
+import sys
 
 try:
     import yaml
