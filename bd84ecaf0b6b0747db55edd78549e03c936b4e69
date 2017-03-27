@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_c7e1ee2b",
+        "filename": "tox.ini",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-27T21:29:00Z",
+      "side": 1,
+      "message": "I\u0027m copying this from RelEng/Builder for GitCommitBear",
+      "revId": "bd84ecaf0b6b0747db55edd78549e03c936b4e69",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
