@@ -45,29 +45,29 @@ by OpenDaylight generally. For most real-world sets of installed Karaf
 features, only a small subset of these ports will actually be used by
 ODL.
 
-* 162 - SNMP4SDN (only when started as root)
-* 179 - BGP
-* 1088 - JMX access
-* 1790 - BGP/PCEP
-* 1830 - Netconf
-* 2400 - OSGi console
-* 2550 - ODL Clustering
-* 2551 - ODL Clustering
-* 2552 - ODL Clustering
-* 4189 - PCEP
-* 4342 - Lisp Flow Mapping
-* 5005 - JConsole
-* 5666 - ODL Internal clustering RPC
-* 6633 - OpenFlow
-* 6640 - OVSDB
-* 6653 - OpenFlow
-* 7800 - ODL Clustering
-* 8000 - Java debug access
-* 8080 - OpenDaylight web portal
-* 8101 - KarafSSH
-* 8181 - MD-SAL RESTConf and DLUX
-* 8383 - Netconf
-* 12001 - ODL Clustering
+- 162 - SNMP4SDN (only when started as root)
+- 179 - BGP
+- 1088 - JMX access
+- 1790 - BGP/PCEP
+- 1830 - Netconf
+- 2400 - OSGi console
+- 2550 - ODL Clustering
+- 2551 - ODL Clustering
+- 2552 - ODL Clustering
+- 4189 - PCEP
+- 4342 - Lisp Flow Mapping
+- 5005 - JConsole
+- 5666 - ODL Internal clustering RPC
+- 6633 - OpenFlow
+- 6640 - OVSDB
+- 6653 - OpenFlow
+- 7800 - ODL Clustering
+- 8000 - Java debug access
+- 8080 - OpenDaylight web portal
+- 8101 - KarafSSH
+- 8181 - MD-SAL RESTConf and DLUX
+- 8383 - Netconf
+- 12001 - ODL Clustering
 
 By default ports will be mapped to random ports on the host system. The
 mappings can be discovered using the `docker ps` command.
@@ -77,8 +77,10 @@ the `-p <host-port>:<container-port>` flag with `docker run`. Note that
 [container linking][4] is generally recommend over hard-wiring ports with
 `-p`.
 
-
 [1]: https://www.opendaylight.org/software/downloads/lithium
+
 [2]: https://registry.hub.docker.com/u/mgkwill/odl/
+
 [3]: https://docs.docker.com/reference/run/
+
 [4]: https://docs.docker.com/userguide/dockerlinks/
