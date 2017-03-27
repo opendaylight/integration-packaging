@@ -1,42 +1,83 @@
-[Default]
-ignore = .tox/**, .gitignore, .gitreview, .gitmodules, **/provisioning/roles/**, \
-         node_modules/**, ansible/ansible-opendaylight/**, docs/conf.py
-use_spaces = True
+[default]
+ignore = .tox/**, .git/**, .gitignore, .gitreview, .gitmodules,
+    **/provisioning/roles/**, node_modules/**, **.sw?,
+    ansible/ansible-opendaylight/**, puppet/puppet-opendaylight/**,
+    docs/conf.py, **/.vagrant/**, **.box, **postman_collection**,
+    **packer_cache**, **.tar.gz, **.rpm, **.pyc
 
-[DOCS]
-bears = SpaceConsistencyBear, LineLengthBear
-#files = ./**/*.rst
+[spacing]
+bears = SpaceConsistencyBear
+enabled = False
+use_spaces = True
+enforce_newline_at_EOF = False
+files = **
 default_actions = SpaceConsistencyBear: ApplyPatchAction
+
+[linelength]
+bears = LineLengthBear
+enabled = False
+max_line_length = 100
+
+[rest]
+bears = RSTcheckBear, reSTLintBear
+enabled = False
+files = **.rst
 
 [markdown]
 bears = MarkdownBear
-#files = ./**/*.markdown, ./**/*.md
+enabled = False
+files = **.markdown, **.md
 default_actions = MarkdownBear: ApplyPatchAction
 
 [dockerfile]
 bears = DockerfileLintBear
-#files = ./**/Dockerfile
+enabled = False
+files = **Dockerfile
 
 [json]
 bears = JSONFormatBear
-files = ./**/*.json
+files = **.json
 default_actions = JSONFormatBear: ApplyPatchAction
 
-[shellcheck]
+[shell]
 bears = ShellCheckBear
-files = ./**/*.sh
+files = **.sh
 
 [python]
-bears = PyUnusedCodeBear
-files = ./**/*.py
-default_actions = PyUnusedCodeBear: ApplyPatchAction
+bears = PEP8Bear, PyUnusedCodeBear, PyImportSortBear
+files = **.py
+default_actions = PyUnusedCodeBear: ApplyPatchAction,
+    PyImportSortBear: ApplyPatchAction
 
-[autopep8]
-bears = PEP8Bear
-files = ./**/*.py
-default_actions = PEP8Bear: ApplyPatchAction
+[python-hard]
+bears = PyLintBear, PyFlakesBear
+enabled = False
+files = **.py
 
 [yaml]
 bears = YAMLLintBear
 yamllint_config = .yamllint
-files = ./**/*.yaml, ./**/*.yml
+files = **.yaml, **.yml
+
+[ruby]
+bears = RubySyntaxBear, RubySmellBear, RuboCopBear
+files = **.rb
+enabled = False
+
+[puppet]
+bears = PuppetLintBear
+enabled = False
+
+[jinja]
+bears = Jinja2Bear
+files = rpm/specs/opendaylight.spec, deb/templates/**_template**
+
+[git]
+bears = GitCommitBear
+ignore_length_regex = Signed-off-by,
+    Also-by,
+    Co-authored-by,
+
+[xml]
+bears = XMLBear
+enabled = False
