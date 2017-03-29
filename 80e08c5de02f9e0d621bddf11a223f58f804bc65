@@ -46,6 +46,30 @@
       "revId": "80e08c5de02f9e0d621bddf11a223f58f804bc65",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_ac5da317",
+        "filename": ".coafile",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2017-03-29T17:13:36Z",
+      "side": 1,
+      "message": "Not necessarily. Just a warning that if we enable it that means there will be a lot of `# noqa` lines that we would need to add. (Basically every directive of Sphinx)",
+      "parentUuid": "fafc7978_ac46434d",
+      "range": {
+        "startLine": 22,
+        "startChar": 22,
+        "endLine": 22,
+        "endChar": 34
+      },
+      "revId": "80e08c5de02f9e0d621bddf11a223f58f804bc65",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
