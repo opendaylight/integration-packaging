@@ -28,7 +28,6 @@ default_actions = MarkdownBear: ApplyPatchAction
 
 [dockerfile]
 bears = DockerfileLintBear
-enabled = False
 files = **Dockerfile
 
 [json]
