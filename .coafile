@@ -77,4 +77,4 @@ ignore_length_regex = Signed-off-by,
 
 [xml]
 bears = XMLBear
-enabled = False
+files = **.xml
