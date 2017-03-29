@@ -70,6 +70,30 @@
       "revId": "80e08c5de02f9e0d621bddf11a223f58f804bc65",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_0cd14f57",
+        "filename": ".coafile",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-03-29T17:20:52Z",
+      "side": 1,
+      "message": "I wonder if RSTcheckBear is just doing fewer checks or if it\u0027s smarter about Sphinx? If fewer checks, and since we only have two ignores, maybe good to keep rsSTLintBear.",
+      "parentUuid": "fafc7978_ac5da317",
+      "range": {
+        "startLine": 22,
+        "startChar": 22,
+        "endLine": 22,
+        "endChar": 34
+      },
+      "revId": "80e08c5de02f9e0d621bddf11a223f58f804bc65",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
