@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_acf76358",
+        "filename": ".coafile",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2017-03-29T18:31:23Z",
+      "side": 1,
+      "message": "Should be **/*.xml",
+      "revId": "82ca8e2736f399d4794a4b66639b42bfce8efcf7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
