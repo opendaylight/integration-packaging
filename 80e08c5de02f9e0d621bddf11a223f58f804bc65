@@ -94,6 +94,30 @@
       "revId": "80e08c5de02f9e0d621bddf11a223f58f804bc65",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fafc7978_6cfd7b3b",
+        "filename": ".coafile",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2017-03-29T18:30:51Z",
+      "side": 1,
+      "message": "It does fewer checks. It\u0027s checking for REST markup whereas reSTLintBear not only checks markup but also directives. (the things like `.. note::`) but the problem with directive checking is it has to understand the code so fails when it can\u0027t.",
+      "parentUuid": "fafc7978_0cd14f57",
+      "range": {
+        "startLine": 22,
+        "startChar": 22,
+        "endLine": 22,
+        "endChar": 34
+      },
+      "revId": "80e08c5de02f9e0d621bddf11a223f58f804bc65",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
