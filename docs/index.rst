@@ -12,6 +12,7 @@ Puppet) and pre-built images (containers, Vagrant base boxes).
 
 Contents:
 
+.. noqa
 .. toctree::
    :maxdepth: 2
 
