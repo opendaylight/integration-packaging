@@ -6,7 +6,7 @@ case "$1" in
     configure)
         adduser --system --disabled-password --disabled-login --home /opt/opendaylight \
                 --no-create-home --quiet --force-badname --group odl
-		chown -R odl:odl /opt/opendaylight/
+        chown -R odl:odl /opt/opendaylight/
         ;;
 esac
 

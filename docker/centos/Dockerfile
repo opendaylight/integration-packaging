@@ -1,5 +1,5 @@
 # OpenDaylight Lithium 0.3.0 DockerFile
-# Based on CentOS 
+# Based on CentOS
 # https://registry.hub.docker.com/_/centos/
 FROM centos:7
 MAINTAINER OpenDaylight Project <info@opendaylight.org>

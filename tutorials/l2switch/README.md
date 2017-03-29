@@ -121,7 +121,7 @@ The parameters mentioned in the above commands are used for the following functi
 
 ## Basic Mininet CLI Operations
 
-One you build the topology, you will gain access into the Mininet CLI. 
+One you build the topology, you will gain access into the Mininet CLI.
 
 To Display Mininet CLI commands:
 

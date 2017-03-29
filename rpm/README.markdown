@@ -287,15 +287,15 @@ Additionally, here's an example of connecting manually (password: `karaf`):
 [vagrant@localhost vagrant]$ ssh -p 8101 -o StrictHostKeyChecking=no karaf@localhost
 Authenticated with partial success.
 Password authentication
-Password: 
-                                                                                           
-    ________                       ________                .__  .__       .__     __       
-    \_____  \ ______   ____   ____ \______ \ _____  ___.__.|  | |__| ____ |  |___/  |_     
-     /   |   \\____ \_/ __ \ /    \ |    |  \\__  \<   |  ||  | |  |/ ___\|  |  \   __\    
-    /    |    \  |_> >  ___/|   |  \|    `   \/ __ \\___  ||  |_|  / /_/  >   Y  \  |      
-    \_______  /   __/ \___  >___|  /_______  (____  / ____||____/__\___  /|___|  /__|      
-            \/|__|        \/     \/        \/     \/\/            /_____/      \/          
-                                                                                           
+Password:
+
+    ________                       ________                .__  .__       .__     __
+    \_____  \ ______   ____   ____ \______ \ _____  ___.__.|  | |__| ____ |  |___/  |_
+     /   |   \\____ \_/ __ \ /    \ |    |  \\__  \<   |  ||  | |  |/ ___\|  |  \   __\
+    /    |    \  |_> >  ___/|   |  \|    `   \/ __ \\___  ||  |_|  / /_/  >   Y  \  |
+    \_______  /   __/ \___  >___|  /_______  (____  / ____||____/__\___  /|___|  /__|
+            \/|__|        \/     \/        \/     \/\/            /_____/      \/
+
 
 Hit '<tab>' for a list of available commands
 and '[cmd] --help' for help on a specific command.
