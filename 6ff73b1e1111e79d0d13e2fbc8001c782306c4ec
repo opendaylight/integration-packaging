@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc7978_09bdc168",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-03-29T16:39:56Z",
+      "side": 1,
+      "message": "ha. I found something, although a relic :)",
+      "range": {
+        "startLine": 124,
+        "startChar": 70,
+        "endLine": 124,
+        "endChar": 71
+      },
+      "revId": "6ff73b1e1111e79d0d13e2fbc8001c782306c4ec",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
