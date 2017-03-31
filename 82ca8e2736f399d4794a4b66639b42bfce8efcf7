@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "fafc7978_5a3adbcd",
+        "filename": ".coafile",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2046
+      },
+      "writtenOn": "2017-03-31T16:04:44Z",
+      "side": 1,
+      "message": "Whoa, this file enables many checks. I guess we have a compatible .editorconfig file to go with it?\n\nAnyway, my question is: Does coala support inheritance? Ideally, Odlparent would host a big coala file with reasonable defaults (like it does with odlparent:odlparent pom file and checkstyle configuration) and projects would contain just a small file with overrides (such as line 2 here).",
+      "revId": "82ca8e2736f399d4794a4b66639b42bfce8efcf7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fafc7978_acf76358",
         "filename": ".coafile",
         "patchSetId": 1
