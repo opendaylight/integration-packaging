@@ -11,7 +11,8 @@ LABEL name="Int/Pack deb-building container" \
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install system-level requirements
-RUN apt-get install -y \
+RUN apt-get update && \
+    apt-get install -y \
     build-essential \
     sudo \
     devscripts \
