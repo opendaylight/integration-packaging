@@ -100,3 +100,15 @@ builds:
     changelog_time: "12:02:00 +0200"
     changelog_name: "Romanos Skiadas"
     changelog_email: "rski@intracom-telecom.com"
+  - version_major: "6"
+    version_minor: "0"
+    version_patch: "0"
+    pkg_version: "1"
+    codename: Carbon
+    download_url: "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/0.6.0-Carbon/distribution-karaf-0.6.0-Carbon.tar.gz"
+    sysd_commit: 07f7c83b0ef46ad3809e5be03e09a77fe554eeae
+    java_version: "8"
+    changelog_date: "Sat, 27 May 2017"
+    changelog_time: "20:30:00 +0530"
+    changelog_name: "Akshita Jha"
+    changelog_email: "zenith158@gmail.com"
