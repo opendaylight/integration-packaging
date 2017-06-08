@@ -12,11 +12,12 @@
 # distribution to deploy on the nodes, or will download it, and it will
 # trigger vagrant or docker to build the cluster.
 
-# noqa ShellCheckBear
+# shellcheck disable=SC2039
 SCRIPTS="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT="$( cd "$SCRIPTS" && cd .. && pwd)"
 
 setup_env() {
+    # shellcheck disable=SC1090
     . $SCRIPTS/config.properties
     export NUM_OF_NODES=$NUM_OF_NODES
     echo "Cluster will be deployed using $ODL_VERSION."
@@ -35,7 +36,7 @@ dowload_odl() {
 
 setup_odl() {
     env_banner
-    cd $ROOT/opendaylight
+    cd $ROOT/opendaylight || exit
 
     # for the OSX users, know that BSD-sed doesn't work the same as GNU-sed, hence this command won't work.
     # see http://stackoverflow.com/a/27834828/6937994
@@ -50,7 +51,7 @@ setup_odl() {
 
 spwan_vms() {
     env_banner
-    cd $ROOT
+    cd $ROOT || exit
     vagrant destroy -f
     vagrant up
 }
