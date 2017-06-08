@@ -30,7 +30,7 @@ ip=`/sbin/ip -o -4 addr list eth0 | awk '{print $4}' | cut -d/ -f1`
 #sudo service openvswitch-switch start
 
 # set the correct branch in devstack
-cd $DEVSTACK_HOME
+cd $DEVSTACK_HOME || exit
 git fetch
 git checkout -b ${BRANCH_NAME} -t ${TAG_NAME}
 

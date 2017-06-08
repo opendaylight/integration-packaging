@@ -13,9 +13,10 @@
 # Shard configuration:
 # see (configure-cluster-ipdetect.sh)[https://github.com/opendaylight/integration-distribution/blob/release/boron-sr2/distribution-karaf/src/main/assembly/bin/configure-cluster-ipdetect.sh]
 
-# noqa ShellCheckBear
+# shellcheck disable=SC2039
 SCRIPTS="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# shellcheck disable=SC1090
 . $SCRIPTS/config.properties
 
 install_packages() {
@@ -33,7 +34,7 @@ install_packages() {
 }
 
 start_odl() {
-    cd $HOME/opendaylight
+    cd $HOME/opendaylight || exit
 
     seed_nodes=""
     for i in $(seq $NUM_OF_NODES)
