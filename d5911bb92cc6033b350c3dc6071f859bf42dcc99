@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1af78d9a_1521989f",
+        "filename": "docs/autorelease-builds.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-06-17T00:07:47Z",
+      "side": 1,
+      "message": "i\u0027m not sure yet, but this may be different in nitrogen? we\ncan update later, when we finally know how it will look\nafter this karaf4 migration is done.",
+      "range": {
+        "startLine": 35,
+        "startChar": 5,
+        "endLine": 35,
+        "endChar": 53
+      },
+      "revId": "d5911bb92cc6033b350c3dc6071f859bf42dcc99",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
