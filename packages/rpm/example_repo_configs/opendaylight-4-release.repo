@@ -1,0 +1,5 @@
+[opendaylight-4-release]
+name=CentOS CBS OpenDaylight Beryllium release repository
+baseurl=http://cbs.centos.org/repos/nfv7-opendaylight-4-release/$basearch/os/
+enabled=1
+gpgcheck=0
