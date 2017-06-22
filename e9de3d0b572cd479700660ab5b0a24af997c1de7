@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "fa2559ec_74b915e9",
+        "filename": "packages/deb/README.markdown",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-06-22T10:54:33Z",
+      "side": 1,
+      "message": "I was planning on refactoring the documentation after the refactoring logic has been finalised.",
+      "parentUuid": "fa2559ec_f1f8774b",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa2559ec_b1feff36",
         "filename": "packages/deb/cache/cache.py",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2017-06-22T09:55:52Z",
       "side": 1,
       "message": "Probably this cache logic should be common",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_14c89973",
+        "filename": "packages/deb/cache/cache.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-06-22T10:54:33Z",
+      "side": 1,
+      "message": "Sure, working on it now.",
+      "parentUuid": "fa2559ec_b1feff36",
       "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "fa2559ec_94abe988",
+        "filename": "packages/deb/opendaylight/opendaylight-5.4.0-20170608rel1849/debian/changelog",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-06-22T10:54:33Z",
+      "side": 1,
+      "message": "Aargh! This was the snapshot release I was testing with. Did not mean to push these. Will remove it in my next revision.",
+      "parentUuid": "fa2559ec_519503e3",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa2559ec_919f7b03",
         "filename": "packages/rpm/.gitignore",
         "patchSetId": 1
@@ -64,6 +118,30 @@
       "writtenOn": "2017-06-22T09:55:52Z",
       "side": 1,
       "message": "Can be in common .gitignore",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 5
+      },
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_74b0f5f4",
+        "filename": "packages/rpm/.gitignore",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-06-22T10:54:33Z",
+      "side": 1,
+      "message": "Sure, will do this.",
+      "parentUuid": "fa2559ec_919f7b03",
       "range": {
         "startLine": 2,
         "startChar": 0,
@@ -110,6 +188,24 @@
     },
     {
       "key": {
+        "uuid": "fa2559ec_d4944146",
+        "filename": "packages/rpm/example_repo_configs/opendaylight-7-testing.repo",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-06-22T10:54:33Z",
+      "side": 1,
+      "message": "Please let me know if I can help in this.",
+      "parentUuid": "fa2559ec_71bbe772",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa2559ec_31684ff5",
         "filename": "packages/rpm/specs/opendaylight-3.3.0-2.spec",
         "patchSetId": 1
@@ -138,6 +234,47 @@
       "writtenOn": "2017-06-22T09:55:52Z",
       "side": 1,
       "message": "Maybe should be follow-up patch, but reminder to self et al that we should update these to include Carbon and Nitrogen pre-release. Also should run these via tox so they get triggered in verify jobs.\n\nRaised a card to track\n\nhttps://trello.com/c/Alz6cdLJ/531-update-packaging-unit-tests-for-latest-versions-trigger-via-tox",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_f4c0652c",
+        "filename": "packages/test_build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-06-22T10:54:33Z",
+      "side": 1,
+      "message": "Yes, can be done in a separate follow-up patch.",
+      "parentUuid": "fa2559ec_916dbb07",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_94b009df",
+        "filename": "packages/test_build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-06-22T10:54:33Z",
+      "side": 1,
+      "message": "As I had commented here that this BORON-SR3 URL does not exist. Which leads to 1 failure in tests. Needs updating.",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 42
+      },
       "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
