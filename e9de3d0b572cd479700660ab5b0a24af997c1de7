@@ -1,0 +1,146 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa2559ec_f1f8774b",
+        "filename": "packages/deb/README.markdown",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-22T09:55:52Z",
+      "side": 1,
+      "message": "Should probably be refactored into a common README",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_b1feff36",
+        "filename": "packages/deb/cache/cache.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-22T09:55:52Z",
+      "side": 1,
+      "message": "Probably this cache logic should be common",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_519503e3",
+        "filename": "packages/deb/opendaylight/opendaylight-5.4.0-20170608rel1849/debian/changelog",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-22T09:55:52Z",
+      "side": 1,
+      "message": "Humm, not sure what these 5.4.0-20170608rel1849/* files are (due to staleness of deb memories maybe) - did you mean to include them?",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_919f7b03",
+        "filename": "packages/rpm/.gitignore",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-22T09:55:52Z",
+      "side": 1,
+      "message": "Can be in common .gitignore",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 5
+      },
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_b1855faf",
+        "filename": "packages/rpm/connect.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-22T09:55:52Z",
+      "side": 1,
+      "message": "Can be common, or can just remove and have people ssh in manually",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_71bbe772",
+        "filename": "packages/rpm/example_repo_configs/opendaylight-7-testing.repo",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-22T09:55:52Z",
+      "side": 1,
+      "message": "Humm, I\u0027m realizing that changing the path for these is going to break lots of people who curl them down in downstream logic. We\u0027re going to have to do it anyway I think, but should try to track down places and have patches ready before we merge this. Ansible role uses these for sure.",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_31684ff5",
+        "filename": "packages/rpm/specs/opendaylight-3.3.0-2.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-22T09:55:52Z",
+      "side": 1,
+      "message": "Maybe we should get rid of these in-repo specs? We\u0027re not really using them in practice, just calling the scripts from Jenkins jobs. I guess it looks kinda bad that they are way behind actual releases.",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2559ec_916dbb07",
+        "filename": "packages/test_build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-22T09:55:52Z",
+      "side": 1,
+      "message": "Maybe should be follow-up patch, but reminder to self et al that we should update these to include Carbon and Nitrogen pre-release. Also should run these via tox so they get triggered in verify jobs.\n\nRaised a card to track\n\nhttps://trello.com/c/Alz6cdLJ/531-update-packaging-unit-tests-for-latest-versions-trigger-via-tox",
+      "revId": "e9de3d0b572cd479700660ab5b0a24af997c1de7",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
