@@ -1,0 +1,8 @@
+description "OpenDaylight SDN Controller"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+respawn
+respawn limit 5 60
+
+exec /opt/opendaylight/bin/start

@@ -3,7 +3,8 @@ ignore = .tox/**, .git/**, .gitignore, .gitreview, .gitmodules,
     **/provisioning/roles/**, node_modules/**, **.sw?, **.orig,
     ansible/ansible-opendaylight/**, puppet/puppet-opendaylight/**,
     docs/conf.py, **/.vagrant/**, **.box, **postman_collection**,
-    **packer_cache**, **.tar.gz, **.rpm, **.pyc, deb/templates/rules_template
+    **packer_cache**, **.tar.gz, **.rpm, **.pyc, deb/templates/rules_template,
+    packages/deb/templates/rules_template
 
 [spacing]
 bears = SpaceConsistencyBear

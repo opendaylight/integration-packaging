@@ -1,0 +1,5 @@
+[opendaylight-50-release]
+name=CentOS CBS OpenDaylight Boron repository
+baseurl=http://cbs.centos.org/repos/nfv7-opendaylight-50-release/$basearch/os/
+enabled=1
+gpgcheck=0
