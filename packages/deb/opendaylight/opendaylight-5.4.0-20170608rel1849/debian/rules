@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+VERSION_MAJOR = 5
+VERSION_MINOR = 4
+VERSION_PATCH = 0
+PKG_VERSION = 20170608rel1849
+CODENAME = "Boron-SR4"
+VERSION = 0.$(VERSION_MAJOR).$(VERSION_MINOR)-$(CODENAME)
+PACKAGEVERSION = $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)-$(PKG_VERSION)
+TARBALL = $(notdir https://nexus.opendaylight.org/content/repositories/autorelease-1849/org/opendaylight/integration/distribution-karaf/0.5.4-Boron-SR4/distribution-karaf-0.5.4-Boron-SR4.tar.gz)
+
+%:
+	dh $@ --with systemd
+
+override_dh_auto_clean:
+override_dh_auto_test:
+override_dh_auto_build:
+override_dh_usrlocal:
+override_dh_auto_install:
+	tar -xf $(TARBALL)
+	mkdir -p ./debian/opendaylight/opt/opendaylight/
+	cp -r ./distribution-karaf-$(VERSION)/* ./debian/opendaylight/opt/opendaylight/
+
+override_dh_gencontrol:
+	dh_gencontrol -- -v$(PACKAGEVERSION)
