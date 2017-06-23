@@ -37,15 +37,15 @@ artifacts. Autorelease build artifacts are persevered for 60 days.
 
 Autorelease jobs trigger OpenDaylight's distribution tests when they complete.
 To see the test results, go to integration-distribution-test-<branch> job's
-Jenkins page, find the job that started after the autorelease in question
+Jenkins page and find the job that started after the autorelease in question
 finished. Open it and explore the subprojects section for test results of all
 the jobs triggered. For example, in case of Nitrogen, you can find the list and
 the results of jobs triggered `here`_.
 
-The latest successful autorelease builds can also be easily found by using the
-`staging/org/opendaylight/integration/distribution-karaf/`_
-and look for 0.5.4-Boron-SR4 or 0.6.1-Carbon-SR1, 0.7.0-Nitrogen  or similar
-staging repositories. However, the artifacts in these repositories are not
+The latest successful autorelease builds can also be easily found in Nexus at
+`staging/org/opendaylight/integration/distribution-karaf/`_. Look for
+0.5.4-Boron-SR4, 0.6.1-Carbon-SR1, 0.7.0-Nitrogen or similar staging
+repositories. Note that the artifacts in these repositories are not
 static - they are replaced each time new artifacts are generated. Use the
 "autorelease-XXXX" repositories described above for semi-persistent URLs.
 

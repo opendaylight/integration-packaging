@@ -11,7 +11,7 @@ example with yet-to-be merged patches that need system testing.
 
 .. noqa
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
    rpms
    debs

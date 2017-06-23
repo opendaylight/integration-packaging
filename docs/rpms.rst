@@ -5,11 +5,11 @@ OpenDaylight has a mature RPM Continuous Delivery pipeline. Every autorelease
 build is automatically packaged as an RPM, and even if autorelease is broken
 a daily job builds the latest distribution snapshot build into an RPM.
 
-RPMs can be passed to test jobs that install them, start OpenDaylight with it's
+RPMs can be passed to test jobs that install them, start OpenDaylight with its
 systemd service, connect to the Karaf shell and verify basic functionality.
 
 RPMs are hosted on the CentOS Community Build system repositories. Some repos
-are updated very frequently with the latest builds, while others are permeate
+are updated very frequently with the latest builds, while others are permanent
 homes of official releases.
 
 Developers can build custom RPMs with pre-merge patches for testing by first
@@ -26,23 +26,25 @@ packaging-build-rpm
 ^^^^^^^^^^^^^^^^^^^
 
 The `packaging-build-rpm job`_ is the primary way to build an RPM from an
-OpenDaylight distribution (built by autorelease or the snapshot distribution
-job). It accepts a set of `parameters`_ that can be used to configure the build
-and passes them to the `RPM build logic in Integration/Packaging's repo`_. The
-resulting artifacts are hosted on Jenkins for up to a week. The job actually
-produces both a noarch RPM and source RPM. The noarch RPM can be passed to test
-jobs for validation. The source RPM can be downloaded to a system with the
-required credentials and then pushed to the CentOS Community Build system to
-be built into a noarch RPM on their servers and hosted in their repos.
+OpenDaylight distribution (built by `autorelease <autorelease-builds.html>`_
+or the `snapshot distribution <distribution-job-builds.html>` job). It accepts
+a set of `parameters`_ that can be used to configure the build and passes them
+to the `RPM build logic in Integration/Packaging's repo`_. The resulting
+artifacts are hosted on Jenkins for up to a week. The job actually produces
+both a noarch RPM and source RPM. The noarch RPM can be passed to test jobs for
+validation. The source RPM can be downloaded to a system with the required
+credentials and then pushed to the CentOS Community Build system to be built
+into a noarch RPM on their servers and hosted in their repos.
 
 packaging-build-rpm-snap
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-The `packaging-build-rpm-snap job`_ packages the most recent snapshot
-distribution build from a given branch as an RPM. This could be used by a
-developer to test code that was just merged, but which has not been included
-in an autorelease build yet. The job is also triggered daily, to ensure that
-OpenDaylight's Continuous Delivery pipeline is fed new builds even if
+The `packaging-build-rpm-snap job`_ packages the most recent `snapshot
+distribution <distribution-job-builds.html>` build from a given branch as an
+RPM. This could be used by a developer to test code that was just merged, but
+which has not been included in an `autorelease build
+<autorelease-builds.html>`_ yet. The job is also triggered daily, to ensure
+that OpenDaylight's Continuous Delivery pipeline is fed new builds even if
 autorelease is broken.
 
 Test Jobs
@@ -66,7 +68,7 @@ While most RPM builds are triggered automatically in OpenDaylight's Jenkins,
 some RPMs are promoted to be hosted in OpenDaylight's CentOS repositories.
 There are a series of repos that are updated at varying frequencies, from
 testing repos that are updated with pre-release versions very frequently to
-release repos that are the permeate home of official OpenDaylight releases.
+release repos that are the permanent home of official OpenDaylight releases.
 
 Testing Repositories
 ....................
@@ -92,7 +94,7 @@ Repositories with both a major and minor version number (52, 53, 60) are pinned
 to a specific OpenDaylight release or service release (Boron SR2 5.2.0, Boron
 SR3 5.3.0, Carbon 6.0.0). Repositories with only a major version (5, 6) will
 always host the latest service release from that major release. If a new SR
-come out, the repo will get the update (Boron SR4 will replace Boron SR3).
+comes out, the repo will get the update (Boron SR4 will replace Boron SR3).
 
 Release repos for the latest Boron and Carbon service releases:
 
@@ -132,10 +134,10 @@ Custom RPMs
 -----------
 
 It's possible for developers to build custom RPMs, typically with unmerged
-patches that need system testing. First, use the integration-multipatch-test
+patches that need system testing. First, use the `integration-multipatch-test`_
 job to create a custom distribution that includes the set of unmerged patches.
-See the `Custom Distributions <distribution-job-builds.rst#Custom
-Distributions>`_ section for extensive docs. Once you have a custom
+See the `Custom Distributions <distribution-job-builds.html#custom-
+distributions>`_ section for extensive docs. Once you have a custom
 distribution artifact, pass it to the `packaging-build-rpm job`_ to package it
 as an RPM. See the `packaging-build-rpm`_ section for docs.
 
@@ -155,3 +157,4 @@ as an RPM. See the `packaging-build-rpm`_ section for docs.
 .. _nfv7-opendaylight-53-release: http://cbs.centos.org/repos/nfv7-opendaylight-53-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-60-release: http://cbs.centos.org/repos/nfv7-opendaylight-60-release/x86_64/os/Packages/
 .. _example repo config files for each official repository: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=tree;f=rpm/example_repo_configs;hb=refs/heads/master
+.. _integration-multipatch-test: https://jenkins.opendaylight.org/releng/search/?q=integration-multipatch-test
