@@ -53,9 +53,9 @@ cp ../../BUILD/%name-{{ sysd_commit }}.service/%name-{{ sysd_commit }}.service $
 %postun
 # When the RPM is removed, the subdirs containing new files wouldn't normally
 #   be deleted. Manually clean them up.
-#   Warning: This does assume there's no data there that should be preserved
+# Don't remove snapshot and journal dirs to preserve DB during upgrades
 if [ $1 -eq 0 ]; then
-    rm -rf $RPM_BUILD_ROOT/opt/%name
+    find $RPM_BUILD_ROOT/opt/%name -type f -not -name 'journal*' -not -name 'snapshots*' | xargs rm -rf
 fi
 
 %files
