@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da2a55be_3eff7d03",
+        "filename": "packages/rpm/example_repo_configs/opendaylight-53-release.repo",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-27T17:00:48Z",
+      "side": 1,
+      "message": "You should rebase to get the new 54-release.repo file",
+      "revId": "0f5ac3f3c0216af118bf5f876b4733409bb1bea8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_9e0f892e",
+        "filename": "packages/rpm/specs/opendaylight-3.3.0-2.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-27T17:00:48Z",
+      "side": 1,
+      "message": "Reminder that imho we should remove these populated templates",
+      "revId": "0f5ac3f3c0216af118bf5f876b4733409bb1bea8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
