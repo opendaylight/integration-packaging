@@ -52,10 +52,11 @@ cp ../../BUILD/%name-{{ sysd_commit }}.service/%name-{{ sysd_commit }}.service $
 
 %postun
 # When the RPM is removed, the subdirs containing new files wouldn't normally
-#   be deleted. Manually clean them up.
-#   Warning: This does assume there's no data there that should be preserved
+# be deleted. Manually clean them up.
+# Don't remove snapshot and journal dirs to preserve DB during upgrades
+# These files don't exist until after ODL is started, so can't preserve with config(noreplace)
 if [ $1 -eq 0 ]; then
-    rm -rf $RPM_BUILD_ROOT/opt/%name
+    find $RPM_BUILD_ROOT/opt/%name -type f -not -name 'journal*' -not -name 'snapshots*' -delete
 fi
 
 %files
@@ -63,6 +64,9 @@ fi
 %attr(-,odl,odl) /opt/%name
 # Configure systemd unitfile user/group/mode
 %attr(0644,root,root) %{_unitdir}/%name.service
+
+# Don't overwrite etc/* config for logging, features, SNAT, ACLService, etc. during upgrades
+%config(noreplace) /opt/%name/etc/*
 
 %changelog
 * {{ changelog_date }} {{ changelog_name }} <{{ changelog_email }}> - {{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ rpm_release }}
