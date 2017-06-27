@@ -53,9 +53,9 @@ cp ../../BUILD/%name-{{ sysd_commit }}.service/%name-{{ sysd_commit }}.service $
 %postun
 # When the RPM is removed, the subdirs containing new files wouldn't normally
 #   be deleted. Manually clean them up.
-#   Warning: This does assume there's no data there that should be preserved
+# Don't remove snapshot and journal dirs to preserve DB during upgrades
 if [ $1 -eq 0 ]; then
-    rm -rf $RPM_BUILD_ROOT/opt/%name
+    find $RPM_BUILD_ROOT/opt/%name -type f -not -name 'journal*' -not -name 'snapshots*' | xargs rm -rf
 fi
 
 %files
@@ -63,6 +63,9 @@ fi
 %attr(-,odl,odl) /opt/%name
 # Configure systemd unitfile user/group/mode
 %attr(0644,root,root) %{_unitdir}/%name.service
+
+# Donot overwrite etc/* files contaning configs about logging, features, SNAT and ACLService
+%config(noreplace) /opt/%name/etc/*
 
 %changelog
 * {{ changelog_date }} {{ changelog_name }} <{{ changelog_email }}> - {{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ rpm_release }}
