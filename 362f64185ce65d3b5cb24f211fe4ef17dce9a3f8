@@ -1,0 +1,159 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da2a55be_5d2b4d82",
+        "filename": "packages/.gitignore",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-29T21:14:14Z",
+      "side": 1,
+      "message": "This is in the top level .gitignore, not needed here",
+      "revId": "362f64185ce65d3b5cb24f211fe4ef17dce9a3f8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_5d522d14",
+        "filename": "packages/Vagrantfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-29T21:14:14Z",
+      "side": 1,
+      "message": "If we did these outside of the OS conditionals, on config, could we de-duplicate them? not a big deal, don\u0027t spend lots of time on it",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 69
+      },
+      "revId": "362f64185ce65d3b5cb24f211fe4ef17dce9a3f8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_dd361de7",
+        "filename": "packages/Vagrantfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-29T21:14:14Z",
+      "side": 1,
+      "message": "trivial formatting problem",
+      "range": {
+        "startLine": 40,
+        "startChar": 57,
+        "endLine": 40,
+        "endChar": 59
+      },
+      "revId": "362f64185ce65d3b5cb24f211fe4ef17dce9a3f8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_fd404137",
+        "filename": "packages/Vagrantfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-29T21:14:14Z",
+      "side": 1,
+      "message": "Should we do this before the apt-get update above?",
+      "range": {
+        "startLine": 101,
+        "startChar": 0,
+        "endLine": 105,
+        "endChar": 7
+      },
+      "revId": "362f64185ce65d3b5cb24f211fe4ef17dce9a3f8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_7d74519c",
+        "filename": "packages/build.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-29T21:14:14Z",
+      "side": 1,
+      "message": "Why is it not required for both?",
+      "range": {
+        "startLine": 35,
+        "startChar": 8,
+        "endLine": 35,
+        "endChar": 59
+      },
+      "revId": "362f64185ce65d3b5cb24f211fe4ef17dce9a3f8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_9d7305b1",
+        "filename": "packages/build.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-29T21:14:14Z",
+      "side": 1,
+      "message": "Maybe should raise a ValueError?",
+      "range": {
+        "startLine": 39,
+        "startChar": 4,
+        "endLine": 39,
+        "endChar": 8
+      },
+      "revId": "362f64185ce65d3b5cb24f211fe4ef17dce9a3f8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_7d9bb1c9",
+        "filename": "packages/build.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-06-29T21:14:14Z",
+      "side": 1,
+      "message": "I can\u0027t think of a reason to accept these, vs always using our helper fns to derive them",
+      "range": {
+        "startLine": 61,
+        "startChar": 1,
+        "endLine": 65,
+        "endChar": 33
+      },
+      "revId": "362f64185ce65d3b5cb24f211fe4ef17dce9a3f8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
