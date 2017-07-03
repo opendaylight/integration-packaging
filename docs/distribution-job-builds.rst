@@ -1,3 +1,5 @@
+.. _distribution-job-builds:
+
 Distribution Job Builds
 =======================
 

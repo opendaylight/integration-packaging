@@ -1,3 +1,5 @@
+.. _autorelease-builds:
+
 Autorelease Builds
 ==================
 
