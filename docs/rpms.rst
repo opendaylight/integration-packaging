@@ -26,26 +26,25 @@ packaging-build-rpm
 ^^^^^^^^^^^^^^^^^^^
 
 The `packaging-build-rpm job`_ is the primary way to build an RPM from an
-OpenDaylight distribution (built by `autorelease <autorelease-builds.html>`_
-or the `snapshot distribution <distribution-job-builds.html>` job). It accepts
-a set of `parameters`_ that can be used to configure the build and passes them
-to the `RPM build logic in Integration/Packaging's repo`_. The resulting
-artifacts are hosted on Jenkins for up to a week. The job actually produces
-both a noarch RPM and source RPM. The noarch RPM can be passed to test jobs for
-validation. The source RPM can be downloaded to a system with the required
-credentials and then pushed to the CentOS Community Build system to be built
-into a noarch RPM on their servers and hosted in their repos.
+OpenDaylight distribution (built by :ref:`autorelease <autorelease-builds>` or
+:ref:`snapshot distribution <distribution-job-builds>`). It accepts a set of `parameters`_ that can be
+used to configure the build and passes them to the `RPM build logic in
+Integration/Packaging's repo`_. The resulting artifacts are hosted on Jenkins
+for up to a week. The job actually produces both a noarch RPM and source RPM.
+The noarch RPM can be passed to test jobs for validation. The source RPM can be
+downloaded to a system with the required credentials and then pushed to the
+CentOS Community Build system to be built into a noarch RPM on their servers
+and hosted in their repos.
 
 packaging-build-rpm-snap
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-The `packaging-build-rpm-snap job`_ packages the most recent `snapshot
-distribution <distribution-job-builds.html>` build from a given branch as an
-RPM. This could be used by a developer to test code that was just merged, but
-which has not been included in an `autorelease build
-<autorelease-builds.html>`_ yet. The job is also triggered daily, to ensure
-that OpenDaylight's Continuous Delivery pipeline is fed new builds even if
-autorelease is broken.
+The `packaging-build-rpm-snap job`_ packages the most recent
+:ref:`distribution-job-builds` from a given branch as an RPM. This could be
+used by a developer to test code that was just merged, but which has not been
+included in an :ref:`autorelease-builds` yet. The job is also triggered daily,
+to ensure that OpenDaylight's Continuous Delivery pipeline is fed new builds
+even if autorelease is broken.
 
 Test Jobs
 ---------
