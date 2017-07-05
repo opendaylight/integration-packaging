@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da2a55be_ee035771",
+        "filename": "docs/rpms.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2017-07-05T13:50:36Z",
+      "side": 1,
+      "message": "Instead of linking to html pages that you assume will be generated. It\u0027s better to use RST internal linking so that if pages get renamed the links still work.\n\nhttp://docutils.sourceforge.net/docs/user/rst/quickref.html#internal-hyperlink-targets\n\nSo in this case if you put a tag at the top of distribution-job-builds.rst for example:\n\n .. _distribution-job-builds:\n\nYou can reuse that link later with:\n\n distribution-job-builds_",
+      "range": {
+        "startLine": 30,
+        "startChar": 31,
+        "endLine": 30,
+        "endChar": 59
+      },
+      "revId": "6a0d9dba9ac6684e53d9285a0ec6b316bf6334df",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
