@@ -111,6 +111,30 @@
     },
     {
       "key": {
+        "uuid": "da2a55be_f981634b",
+        "filename": "packages/build.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-07-06T11:12:38Z",
+      "side": 1,
+      "message": "deb/control_template.py explicitly defines the java dependency for the package. This is supplied by `java_version` var. The same is not with rpm.",
+      "parentUuid": "da2a55be_7d74519c",
+      "range": {
+        "startLine": 35,
+        "startChar": 8,
+        "endLine": 35,
+        "endChar": 59
+      },
+      "revId": "362f64185ce65d3b5cb24f211fe4ef17dce9a3f8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da2a55be_9d7305b1",
         "filename": "packages/build.py",
         "patchSetId": 3
@@ -145,6 +169,30 @@
       "writtenOn": "2017-06-29T21:14:14Z",
       "side": 1,
       "message": "I can\u0027t think of a reason to accept these, vs always using our helper fns to derive them",
+      "range": {
+        "startLine": 61,
+        "startChar": 1,
+        "endLine": 65,
+        "endChar": 33
+      },
+      "revId": "362f64185ce65d3b5cb24f211fe4ef17dce9a3f8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_3993fba4",
+        "filename": "packages/build.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-07-06T11:12:38Z",
+      "side": 1,
+      "message": "I left it considering that if we need to repackage earlier releases we could supply the old time and date data. Will that not be necessary?",
+      "parentUuid": "da2a55be_7d9bb1c9",
       "range": {
         "startLine": 61,
         "startChar": 1,
