@@ -202,6 +202,53 @@
       "revId": "362f64185ce65d3b5cb24f211fe4ef17dce9a3f8",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_3a6f6994",
+        "filename": "packages/build.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-07-06T11:54:43Z",
+      "side": 1,
+      "message": "If we wanted to repackage Boron, we\u0027d create a 5.0.0-2 RPM with the current dates.",
+      "parentUuid": "da2a55be_3993fba4",
+      "range": {
+        "startLine": 61,
+        "startChar": 1,
+        "endLine": 65,
+        "endChar": 33
+      },
+      "revId": "362f64185ce65d3b5cb24f211fe4ef17dce9a3f8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_fa5dd1ea",
+        "filename": "packages/rpm/specs/opendaylight.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-07-06T11:54:43Z",
+      "side": 1,
+      "message": "(regarding java version var comments elsewhere)\n\nI thought we had this as a var at one point, humm. I guess it should be, and it should be 1.8 by default.",
+      "range": {
+        "startLine": 21,
+        "startChar": 22,
+        "endLine": 21,
+        "endChar": 27
+      },
+      "revId": "362f64185ce65d3b5cb24f211fe4ef17dce9a3f8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
