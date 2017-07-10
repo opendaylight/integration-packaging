@@ -76,6 +76,14 @@ ignore_length_regex = Signed-off-by,
     http://,
     https://
 
+[language]
+bears = WriteGoodLintBear
+files = **/*.markdown,**/*.md,**/*.rst
+allow_so_beginning = False
+allow_repeated_words = False
+allow_extra_words = False
+allow_cliche_phrases = False
+
 [xml]
 bears = XMLBear
 files = **.xml
