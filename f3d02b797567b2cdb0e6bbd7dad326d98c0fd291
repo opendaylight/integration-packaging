@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da2a55be_cd4927d2",
+        "filename": "rpm/specs/opendaylight.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2017-07-11T18:10:10Z",
+      "side": 1,
+      "message": "I think this might be a case of unnecessary piping.\n\nFind has a -delete parameter.",
+      "revId": "f3d02b797567b2cdb0e6bbd7dad326d98c0fd291",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
