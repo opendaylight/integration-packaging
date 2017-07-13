@@ -186,11 +186,11 @@ def build_snapshot_rpm(build):
     # else, find the latest sub-directory
     sub_dir = ''
     snapshot_dir = ''
-    if build['version_minor']:
+    try:
         sub_dir = '0.' + build['version_major'] + '.' + \
                    build['version_minor'] + '-SNAPSHOT/'
         snapshot_dir = parent_dir + sub_dir
-    else:
+    except KeyError:
         subdir_url = urlopen(parent_dir)
         content = subdir_url.read().decode('utf-8')
         all_dirs = BeautifulSoup(content, 'html.parser')
@@ -256,19 +256,9 @@ def get_sysd_commit():
 
 # When run as a script, accept a set of builds and execute them
 if __name__ == "__main__":
-    # Load RPM build variables from a YAML config file
-    build_vars_path = os.path.join(project_root, "build_vars.yaml")
-    with open(build_vars_path) as rpm_var_file:
-        build_vars = yaml.load(rpm_var_file)
-
     # Accept the version(s) of the build(s) to perform as args
     # TODO: More docs on ArgParser and argument
     parser = argparse.ArgumentParser(conflict_handler='resolve')
-    existing_build_group = parser.add_argument_group("Existing build")
-    existing_build_group.add_argument(
-        "-v", "--version", action="append", metavar="major minor patch rpm",
-        nargs="*", help="RPM version(s) to build"
-    )
 
     new_build_group = parser.add_argument_group("New build")
     new_build_group.add_argument(
@@ -305,9 +295,8 @@ if __name__ == "__main__":
     # Parse the given args
     args = parser.parse_args()
 
-    # Build list of RPM builds to perform
-    builds = []
-
+    # A dictionary containing essential build variables
+    build = {}
     # Check if `changelog_date` has been passed as an arg
     # The current datetime should be the default date for RPM changelog date
     # but can still accept optional `changelog_date` param
@@ -323,54 +312,27 @@ if __name__ == "__main__":
     if not args.sysd_commit:
         args.sysd_commit = get_sysd_commit()
 
-    if args.version:
-        # Build a list of requested versions as dicts of version components
-        versions = []
-        version_keys = ["version_major", "version_minor", "version_patch",
-                        "rpm_release"]
-        # For each version arg, match all version components to build_vars name
-        for version in args.version:
-            versions.append(dict(zip(version_keys, version)))
+    # If download_url is given, update version info
+    if args.download_url:
+        build.update({"download_url" : args.download_url})
+        version = extract_version(args.download_url)
+        build.update(version)
 
-        # Find every RPM build that matches version arguments given to the
-        # version information extracted from download_url. Any version
-        # components that aren't passed are simply not checked, so they can't
-        # fail the match, effectively wild-carding them.
-        for build in build_vars["builds"]:
-            for version in versions:
-                # Extract version information from the download_url
-                version_info = extract_version(build['download_url'])
-                # Converts both dicts' key:value pairs to lists of tuples and
-                # checks that each tuple in the version list is present in the
-                # version_info list. If the extracted version_info matches the
-                # passed version arguments, update build dict.
-                if all(item in version_info.items()
-                       for item in version.items()):
-                    build.update(version_info)
-                    builds.append(build)
-    else:
-        build = {}
-        # Common parameters for all new and snapshot builds
-        build.update({"sysd_commit": args.sysd_commit,
-                      "changelog_name": args.changelog_name,
-                      "changelog_email": args.changelog_email,
-                      "changelog_date": args.changelog_date,
-                      "version_major": args.major,
-                      "version_minor": args.minor,
-                      "download_url": args.download_url
-                      })
-
-        # If download_url is given, update version info
-        if args.download_url:
-            version = extract_version(args.download_url)
-            build.update(version)
-
-        builds.append(build)
+    # Common parameters for all new and snapshot builds
+    build.update({"sysd_commit": args.sysd_commit,
+                  "changelog_name": args.changelog_name,
+                  "changelog_email": args.changelog_email,
+                  "changelog_date": args.changelog_date,
+                  })
 
     # If the flag `--build-latest-snap` is true, extract information
-    # from the snapshot URL, else directly build the RPM
-    for build in builds:
-        if args.build_latest_snap:
+    # from the snapshot URL using major version and minor version(optional)
+    # info, else proceed directly to build the RPM
+    if args.build_latest_snap:
+        if args.major:
+            build.update({'version_major': args.major})
+            if args.minor:
+                build.update({'version_minor': args.minor})
             build_snapshot_rpm(build)
-        else:
-            build_rpm(build)
+    else:
+        build_rpm(build)
