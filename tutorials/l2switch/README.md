@@ -29,7 +29,7 @@ sudo systemctl status opendaylight
 ssh -p 8101 karaf@localhost
 ```
 
-You can always destroy the VM and start from a clean slate:
+You can always destroy the VM and start again:
 
 ```
 vagrant destroy -f
@@ -52,7 +52,7 @@ features to load and start serving up the GUI.
 
 # Mininet
 
-Mininet is a network testing tool that is often used by network architects to emulate network
+It is a network testing tool that is often used by network architects to emulate network
 topologies and test them virtually before real-world deployment.
 
 ## Sample Mininet Topology

@@ -8,7 +8,7 @@ When new builds are defined, the new SRPMs are uploaded to the CentOS
 Community Build System's Koji-based RPM build system. From there they are
 built into ready-to-install noarch RPMs and hosted for consumption.
 
-Data that differs per-build is is defined in the `build_vars.yaml` YAML
+Data that differs per-build is defined in the `build_vars.yaml` YAML
 configuration file. The build logic consumes that dynamic data, uses
 JinJa2 templates to generate RPM spec files and builds the RPMs/SRPMs they
 define.
@@ -68,8 +68,8 @@ definition should define all supported variables.
 
 The OpenDaylight major (element) version number of the release to build.
 
-For example, Hydrogen is 1.x.x, Helium is 2.x.x, Lithium is 3.x.x and
-so on down the periodic table.
+For example, Hydrogen is 1.x.x, Helium is 2.x.x, Lithium is 3.x.x and so on
+down the periodic table.
 
 #### `version_minor`
 
