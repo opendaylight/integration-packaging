@@ -111,8 +111,8 @@ definition should define all supported variables.
 
 The OpenDaylight major (element) version number of the release to build.
 
-For example, Hydrogen is 1.x.x, Helium is 2.x.x, Lithium is 3.x.x and
-so on down the periodic table.
+For example, Hydrogen is 1.x.x, Helium is 2.x.x, Lithium is 3.x.x and so on
+down the periodic table.
 
 #### `version_minor`
 
