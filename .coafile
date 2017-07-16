@@ -50,6 +50,13 @@ bears = PyLintBear, PyFlakesBear
 enabled = False
 files = **.py
 
+[language]
+bears = WriteGoodLintBear
+files = **/*.markdown,**/*.md,**/*.rst
+allow_so_beginning = False
+allow_there_is = False
+allow_cliche_phrases = False
+
 [yaml]
 bears = YAMLLintBear
 yamllint_config = .yamllint
