@@ -1,74 +1,107 @@
-[default]
-ignore = .tox/**, .git/**, .gitignore, .gitreview, .gitmodules,
-    **/provisioning/roles/**, node_modules/**, **.sw?, **.orig,
-    ansible/ansible-opendaylight/**, puppet/puppet-opendaylight/**,
-    docs/conf.py, **/.vagrant/**, **.box, **postman_collection**,
-    **packer_cache**, **.tar.gz, **.rpm, **.pyc, deb/templates/rules_template
+[all]
+ignore = .tox/**,
+    .git/**,
+    .gitignore,
+    .gitreview,
+    .gitmodules,
+    **/provisioning/roles/**,
+    node_modules/**,
+    **.sw?,
+    **.orig,
+    ansible/ansible-opendaylight/**,
+    puppet/puppet-opendaylight/**,
+    docs/conf.py,
+    **/.vagrant/**,
+    **.box,
+    **postman_collection**,
+    **packer_cache**,
+    **.tar.gz,
+    **.rpm,
+    **.pyc,
+    deb/templates/rules_template
 
-[spacing]
+[all.spacing]
 bears = SpaceConsistencyBear
 use_spaces = True
 enforce_newline_at_EOF = False
 files = **
 default_actions = SpaceConsistencyBear: ApplyPatchAction
 
-[linelength]
+[all.linelength]
 bears = LineLengthBear
 enabled = False
 max_line_length = 100
 
-[rest]
-bears = RSTcheckBear, reSTLintBear
+[all.rest]
+bears = RSTcheckBear,
+    reSTLintBear
 files = **.rst
 
-[markdown]
+[all.markdown]
 bears = MarkdownBear
-files = **.markdown, **.md
+files = **.markdown,
+    **.md
 default_actions = MarkdownBear: ApplyPatchAction
 
-[dockerfile]
+[all.dockerfile]
 bears = DockerfileLintBear
 files = **Dockerfile
 
-[json]
+[all.json]
 bears = JSONFormatBear
 files = **.json
 default_actions = JSONFormatBear: ApplyPatchAction
 
-[shell]
+[all.shell]
 bears = ShellCheckBear
 files = **.sh
 
-[python]
-bears = PEP8Bear, PyUnusedCodeBear, PyImportSortBear
+[all.python]
+bears = PEP8Bear,
+    PyUnusedCodeBear,
+    PyImportSortBear
 files = **.py
 default_actions = PyUnusedCodeBear: ApplyPatchAction,
     PyImportSortBear: ApplyPatchAction
 
-[python-hard]
-bears = PyLintBear, PyFlakesBear
+[all.python-hard]
+bears = PyLintBear,
+    PyFlakesBear
 enabled = False
 files = **.py
 
-[yaml]
+[all.Documentation]
+bears = WriteGoodLintBear
+files = **.markdown,
+    **.md,
+    **.rst
+allow_so_beginning = False
+allow_there_is = False
+allow_cliche_phrases = False
+
+[all.yaml]
 bears = YAMLLintBear
 yamllint_config = .yamllint
-files = **.yaml, **.yml
+files = **.yaml,
+    **.yml
 
-[ruby]
-bears = RubySyntaxBear, RubySmellBear, RuboCopBear
+[all.ruby]
+bears = RubySyntaxBear,
+    RubySmellBear,
+    RuboCopBear
 files = **.rb
 enabled = False
 
-[puppet]
+[all.puppet]
 bears = PuppetLintBear
 enabled = False
 
-[jinja]
+[all.jinja]
 bears = Jinja2Bear
-files = rpm/specs/opendaylight.spec, deb/templates/**_template**
+files = rpm/specs/opendaylight.spec,
+    deb/templates/**_template**
 
-[git]
+[all.git]
 bears = GitCommitBear
 ignore_length_regex = Signed-off-by,
     Also-by,
@@ -76,6 +109,6 @@ ignore_length_regex = Signed-off-by,
     http://,
     https://
 
-[xml]
+[all.xml]
 bears = XMLBear
 files = **.xml

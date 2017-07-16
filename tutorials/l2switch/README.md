@@ -29,7 +29,7 @@ sudo systemctl status opendaylight
 ssh -p 8101 karaf@localhost
 ```
 
-You can always destroy the VM and start from a clean slate:
+You can always destroy the VM and start again:
 
 ```
 vagrant destroy -f
