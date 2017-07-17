@@ -1,0 +1,101 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da2a55be_0478232a",
+        "filename": ".coafile",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-07-17T19:21:15Z",
+      "side": 1,
+      "message": "Thanks for doing this too, this completes part of https://trello.com/c/JksfvE8s/509-use-new-coala-inheritance-semantics",
+      "revId": "fb628ab3fcfa7b29ed73c7f42d3fa00cf7661113",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_64775f3b",
+        "filename": ".coafile",
+        "patchSetId": 8
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-07-17T19:21:15Z",
+      "side": 1,
+      "message": "Agreed, better formatting",
+      "revId": "fb628ab3fcfa7b29ed73c7f42d3fa00cf7661113",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_44721b4a",
+        "filename": ".coafile",
+        "patchSetId": 8
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-07-17T19:21:15Z",
+      "side": 1,
+      "message": "I think this can be written **.md (as we do elsewhere)",
+      "range": {
+        "startLine": 76,
+        "startChar": 4,
+        "endLine": 76,
+        "endChar": 8
+      },
+      "revId": "fb628ab3fcfa7b29ed73c7f42d3fa00cf7661113",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_a4903744",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-07-17T19:21:15Z",
+      "side": 1,
+      "message": "May may want to note that you also fix the inheritance warning",
+      "revId": "fb628ab3fcfa7b29ed73c7f42d3fa00cf7661113",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da2a55be_247d671d",
+        "filename": "tutorials/l2switch/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-07-17T19:21:15Z",
+      "side": 1,
+      "message": "Humm, the first one is bad according to the linter? Imho it\u0027s better.",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 2
+      },
+      "revId": "fb628ab3fcfa7b29ed73c7f42d3fa00cf7661113",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
