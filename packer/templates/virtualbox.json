@@ -4,7 +4,6 @@
         "os_name": null,
         "os_version": null,
         "guest_os_type": null,
-        "docker_repo": null,
         "rpm_repo_file": null,
         "rpm_repo_url": null
     },
