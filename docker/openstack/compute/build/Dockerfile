@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM odl-registry:4000/s3p/systemd:v0.1
 
 # Schema: https://github.com/projectatomic/ContainerApplicationGenericLabels
 LABEL name="Int/Pack OpenStack Compute Node" \
@@ -8,40 +8,44 @@ LABEL name="Int/Pack OpenStack Compute Node" \
       vcs-url="https://git.opendaylight.org/gerrit/p/integration/packaging.git"
 
 ENV PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" \
-    DEBIAN_FRONTEND=noninteractive
+    DEBIAN_FRONTEND=noninteractive \
+    container=docker
 
 # Install devstack dependencies
 # Start ignoring DockerfileLintBear
-RUN apt-get install -y --no-install-recommends \
-    git \
-    openssh-server \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
+    git \
+    inetutils-ping \
+    iproute2 \
+    iptables \
+    lsb-release \
+    openssh-server \
     openvswitch-common \
     openvswitch-switch \
-    dbus && \
-    apt-get clean && \
+    sudo \
+    vim && \
     rm -rf /var/lib/apt/lists/*
 # Stop ignoring
 
 # Add stack user
 RUN groupadd stack && \
     useradd -g stack -s /bin/bash -m stack && \
-    echo "stack ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+    echo "stack ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
+    echo "stack:stack" | chpasswd
 
 # Get devstack
-USER stack
 RUN git clone https://git.openstack.org/openstack-dev/devstack /home/stack/devstack
 
-# Copy and chown local.conf to stack
+# copy local.conf & scripts
 COPY local.conf /home/stack/local.conf
-RUN sudo chown stack:stack /home/stack/local.conf
-
-# Copy start.sh and chown to stack
 COPY start.sh /home/stack/start.sh
-RUN sudo chown stack:stack /home/stack/start.sh && chmod 766 /home/stack/start.sh
+COPY restart.sh /home/stack/restart.sh
+RUN chown -R stack:stack /home/stack && \
+    chmod 766 /home/stack/start.sh && \
+    chmod 766 /home/stack/restart.sh
 
-# Open Horizon port
-EXPOSE 80
+WORKDIR /home/stack
 
 CMD ["/home/stack/start.sh"]
 
