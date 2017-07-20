@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da2a55be_5e4bfe86",
+        "filename": "rpm/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-07-20T18:13:18Z",
+      "side": 0,
+      "message": "Need this for the sys.stderr calls below",
+      "revId": "5620098274d3df4ec41fa0fc86d12f755d8f68c6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
