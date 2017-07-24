@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da2a55be_d677ce38",
+        "filename": "docker/openstack/compute/build/start.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-07-24T23:10:01Z",
+      "side": 1,
+      "message": "don\u0027t we want to first stop ovs, then rm this db, then start\nit? similar to what we do in robot land:\n\nhttps://github.com/opendaylight/integration-test/blob/master/csit/libraries/OVSDB.robot#L129-L131",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 36
+      },
+      "revId": "bfa5b8b196331982f4bd724d1874fcc4be00b9ec",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
