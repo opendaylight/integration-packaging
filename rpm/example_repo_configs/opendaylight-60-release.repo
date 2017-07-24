@@ -1,4 +1,4 @@
-[opendaylight-50-release]
+[opendaylight-60-release]
 name=CentOS CBS OpenDaylight Carbon repository
 baseurl=http://cbs.centos.org/repos/nfv7-opendaylight-60-release/$basearch/os/
 enabled=1
