@@ -5,7 +5,8 @@
         "os_version": null,
         "guest_os_type": null,
         "rpm_repo_file": null,
-        "rpm_repo_url": null
+        "rpm_repo_url": null,
+        "iso_urls": null
     },
     "builders": [
         {
