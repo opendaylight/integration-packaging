@@ -6,7 +6,8 @@
         "guest_os_type": null,
         "rpm_repo_file": null,
         "rpm_repo_url": null,
-        "iso_urls": null
+        "iso_urls": null,
+        "iso_checksum": null
     },
     "builders": [
         {
