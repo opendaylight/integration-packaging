@@ -1,0 +1,5 @@
+[opendaylight-6-devel]
+name=OpenDaylight Carbon development repository
+baseurl=https://nexus.opendaylight.org/content/repositories/opendaylight-carbon-epel-7-$basearch-devel
+enabled=1
+gpgcheck=0

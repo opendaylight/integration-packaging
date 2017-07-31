@@ -1,0 +1,5 @@
+[opendaylight-7]
+name=OpenDaylight Nitrogen release repository
+baseurl=https://nexus.opendaylight.org/content/repositories/opendaylight-nitrogen-epel-7-$basearch
+enabled=1
+gpgcheck=0

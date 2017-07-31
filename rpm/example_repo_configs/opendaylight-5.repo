@@ -1,0 +1,5 @@
+[opendaylight-5]
+name=OpenDaylight Boron release repository
+baseurl=https://nexus.opendaylight.org/content/repositories/opendaylight-boron-epel-7-$basearch
+enabled=1
+gpgcheck=0
