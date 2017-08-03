@@ -72,6 +72,15 @@ if __name__ == "__main__":
     if not args.sysd_commit:
         args.sysd_commit = vars.get_sysd_commit()
 
+    # If the flag `--build-latest-snap` is true, extract information
+    # from the snapshot URL using major version and minor version(optional)
+    if args.build_latest_snap:
+        if args.major:
+            build.update({'version_major': args.major})
+            if args.minor:
+                build.update({'version_minor': args.minor})
+            args.download_url = vars.get_snap_url(args.major, args.minor)
+
     # If download_url is given, update version info
     if args.download_url:
         build.update({"download_url": args.download_url})
@@ -79,20 +88,11 @@ if __name__ == "__main__":
         build.update(version)
 
     # Common parameters for all new and snapshot builds
-    build.update({"sysd_commit": args.sysd_commit,
+    build.update({"download_url": args.download_url,
+                  "sysd_commit": args.sysd_commit,
                   "changelog_name": args.changelog_name,
                   "changelog_email": args.changelog_email,
                   "changelog_date": args.changelog_date,
                   })
 
-    # If the flag `--build-latest-snap` is true, extract information
-    # from the snapshot URL using major version and minor version(optional)
-    # info, else proceed directly to build the RPM
-    if args.build_latest_snap:
-        if args.major:
-            build.update({'version_major': args.major})
-            if args.minor:
-                build.update({'version_minor': args.minor})
-            build_rpm.build_snapshot_rpm(build)
-    else:
-        build_rpm.build_rpm(build)
+    build_rpm.build_rpm(build)
