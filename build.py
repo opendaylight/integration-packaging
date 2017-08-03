@@ -13,6 +13,7 @@ import datetime
 import sys
 
 from rpm import build as build_rpm
+import vars
 
 if __name__ == "__main__":
     # Accept the version(s) of the build(s) to perform as args
@@ -69,12 +70,12 @@ if __name__ == "__main__":
     # Use latest Int/Pack repo commit hash as sysd_commit var
     # unless passed by param
     if not args.sysd_commit:
-        args.sysd_commit = build_rpm.get_sysd_commit()
+        args.sysd_commit = vars.get_sysd_commit()
 
     # If download_url is given, update version info
     if args.download_url:
         build.update({"download_url": args.download_url})
-        version = build_rpm.extract_version(args.download_url)
+        version = vars.extract_version(args.download_url)
         build.update(version)
 
     # Common parameters for all new and snapshot builds
