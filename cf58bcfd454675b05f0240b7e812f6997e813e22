@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba1f61a0_6004a815",
+        "filename": "packer/vars/opendaylight-6.1.0.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 6794
+      },
+      "writtenOn": "2017-08-03T11:05:57Z",
+      "side": 1,
+      "message": "Do we still need this variable since https://git.opendaylight.org/gerrit/#/c/60815/ got merged",
+      "revId": "cf58bcfd454675b05f0240b7e812f6997e813e22",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
