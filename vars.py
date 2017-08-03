@@ -1,6 +1,27 @@
+#!/usr/bin/env python
+
+##############################################################################
+# Copyright (c) 2016 Daniel Farrell and Others.  All rights reserved.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Eclipse Public License v1.0 which accompanies this distribution,
+# and is available at http://www.eclipse.org/legal/epl-v10.html
+##############################################################################
+
 import datetime
 import re
 import subprocess
+import sys
+from urllib2 import urlopen
+
+try:
+    from bs4 import BeautifulSoup
+    import requests
+    from requests.exceptions import HTTPError
+except ImportError:
+    sys.stderr.write("We recommend using our included Vagrant env.\n")
+    sys.stderr.write("Else, do `pip install -r requirements.txt` in a venv.\n")
+    raise
 
 
 def extract_version(url):
@@ -67,6 +88,61 @@ def extract_version(url):
     version["rpm_release"] = rpm_release
     version["codename"] = odl_version.group(4)
     return version
+
+
+def get_snap_url(version_major, version_minor):
+    """Fetches tarball url for snapshot releases using version information
+
+    :arg str version_major: Major version for snapshot build
+    :arg str version_minor: Minor version for snapshot build(optional)
+    :return arg snapshot_url: URL of the snapshot release
+    """
+    parent_dir = "https://nexus.opendaylight.org/content/repositories/" \
+                 "opendaylight.snapshot/org/opendaylight/integration/"\
+                 "distribution-karaf/"
+
+    # If the minor verison is given, get the sub-directory directly
+    # else, find the latest sub-directory
+    sub_dir = ''
+    snapshot_dir = ''
+    if version_minor:
+        sub_dir = '0.' + version_major + '.' + version_minor + '-SNAPSHOT/'
+        snapshot_dir = parent_dir + sub_dir
+    else:
+        subdir_url = urlopen(parent_dir)
+        content = subdir_url.read().decode('utf-8')
+        all_dirs = BeautifulSoup(content, 'html.parser')
+
+        # Loops through all the sub-directories present and stores the
+        # latest sub directory as sub-directories are already sorted
+        # in early to late order.
+        for tag in all_dirs.find_all('a', href=True):
+            # Checks if the sub-directory name is of the form
+            # '0.<major_version>.<minor_version>-SNAPSHOT'.
+            dir = re.search(r'\/(\d)\.(\d)\.(\d).(.*)\/', tag['href'])
+            # If the major version matches the argument provided
+            # store the minor version, else ignore.
+            if dir:
+                if dir.group(2) == version_major:
+                    snapshot_dir = tag['href']
+                    version_minor = dir.group(3)
+
+    try:
+        req = requests.get(snapshot_dir)
+        req.raise_for_status()
+    except HTTPError:
+        print "Could not find the snapshot directory"
+    else:
+        urlpath = urlopen(snapshot_dir)
+        content = urlpath.read().decode('utf-8')
+        html_content = BeautifulSoup(content, 'html.parser')
+        # Loops through all the files present in `snapshot_dir`
+        # and stores the url of latest tarball because files are
+        # already sorted in early to late order.
+        for tag in html_content.find_all('a', href=True):
+            if tag['href'].endswith('tar.gz'):
+                snapshot_url = tag['href']
+    return snapshot_url
 
 
 def get_sysd_commit():

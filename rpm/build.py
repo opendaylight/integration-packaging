@@ -14,21 +14,9 @@ import os
 import shutil
 from string import Template
 import subprocess
-import sys
-from urllib2 import urlopen
 
 import cache.cache as cache
 import specs.build_specs as build_specs
-
-try:
-    from bs4 import BeautifulSoup
-    import requests
-    from requests.exceptions import HTTPError
-except ImportError:
-    sys.stderr.write("We recommend using our included Vagrant env.\n")
-    sys.stderr.write("Else, do `pip install -r requirements.txt` in a venv.\n")
-    raise
-
 
 # Common paths used in this script
 # This file is assumed to be in the root of the RPM build logic's dir structure
@@ -99,71 +87,3 @@ def build_rpm(build):
     # Copy the RPMs/SRPMs from their output dir to the cache dir
     shutil.copy(rpm_out_path, cache_dir)
     shutil.copy(srpm_out_path, cache_dir)
-
-
-def build_snapshot_rpm(build):
-    """Build latest snapshot RPMs fetching information from URL.
-
-    :param build: Description of an RPM build, from parent_dir URL
-    :type build: dict
-
-    """
-    parent_dir = "https://nexus.opendaylight.org/content/repositories/" \
-                 "opendaylight.snapshot/org/opendaylight/integration/"\
-                 "distribution-karaf/"
-
-    # If the minor verison is given, get the sub-directory directly
-    # else, find the latest sub-directory
-    sub_dir = ''
-    snapshot_dir = ''
-    try:
-        sub_dir = '0.' + build['version_major'] + '.' + \
-                   build['version_minor'] + '-SNAPSHOT/'
-        snapshot_dir = parent_dir + sub_dir
-    except KeyError:
-        subdir_url = urlopen(parent_dir)
-        content = subdir_url.read().decode('utf-8')
-        all_dirs = BeautifulSoup(content, 'html.parser')
-
-        # Loops through all the sub-directories present and stores the
-        # latest sub directory as sub-directories are already sorted
-        # in early to late order.
-        for tag in all_dirs.find_all('a', href=True):
-            # Checks if the sub-directory name is of the form
-            # '0.<major_version>.<minor_version>-SNAPSHOT'.
-            dir = re.search(r'\/(\d)\.(\d)\.(\d).(.*)\/', tag['href'])
-            # If the major version matches the argument provided
-            # store the minor version, else ignore.
-            if dir:
-                if dir.group(2) == build['version_major']:
-                    snapshot_dir = tag['href']
-                    build['version_minor'] = dir.group(3)
-
-    try:
-        req = requests.get(snapshot_dir)
-        req.raise_for_status()
-    except HTTPError:
-        print "Could not find the snapshot directory"
-    else:
-        urlpath = urlopen(snapshot_dir)
-        content = urlpath.read().decode('utf-8')
-        html_content = BeautifulSoup(content, 'html.parser')
-        # Loops through all the files present in `snapshot_dir`
-        # and stores the url of latest tarball because files are
-        # already sorted in early to late order.
-        for tag in html_content.find_all('a', href=True):
-            if tag['href'].endswith('tar.gz'):
-                snapshot_url = tag['href']
-
-        # Get download_url
-        build['download_url'] = snapshot_url
-
-        # Call `extract_version` function to get version information
-        # except Major and Minor version which are already present
-        version = extract_version(build['download_url'])
-        build['version_patch'] = version['version_patch']
-        build['rpm_release'] = version['rpm_release']
-        build['codename'] = version['codename']
-        urlpath.close()
-
-        build_rpm(build)
