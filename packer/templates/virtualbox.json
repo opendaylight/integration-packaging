@@ -4,7 +4,6 @@
         "os_name": null,
         "os_version": null,
         "guest_os_type": null,
-        "rpm_repo_file": null,
         "rpm_repo_url": null,
         "iso_urls": null,
         "iso_checksum": null
@@ -57,8 +56,7 @@
             "playbook_file": "provision/install_odl.yml",
             "extra_arguments": [
                 "--extra-vars",
-                "\"rpm_repo_file={{ user `rpm_repo_file` }}",
-                "rpm_repo_url={{ user `rpm_repo_url` }}\""
+                "\"rpm_repo_url={{ user `rpm_repo_url` }}\""
             ]
         }
     ],

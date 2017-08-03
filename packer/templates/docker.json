@@ -4,7 +4,6 @@
         "os_name": null,
         "os_version": null,
         "docker_repo": null,
-        "rpm_repo_file": null,
         "rpm_repo_url": null
     },
     "builders": [
@@ -30,8 +29,7 @@
             "playbook_file": "provision/install_odl.yml",
             "extra_arguments": [
                 "--extra-vars",
-                "\"rpm_repo_file={{ user `rpm_repo_file` }}",
-                "rpm_repo_url={{ user `rpm_repo_url` }}\""
+                "\"rpm_repo_url={{ user `rpm_repo_url` }}\""
             ]
         }
     ],
