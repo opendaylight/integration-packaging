@@ -16,6 +16,24 @@
       "revId": "cf58bcfd454675b05f0240b7e812f6997e813e22",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_c0fe346b",
+        "filename": "packer/vars/opendaylight-6.1.0.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-03T12:58:19Z",
+      "side": 1,
+      "message": "No, good point, thanks:)",
+      "parentUuid": "ba1f61a0_6004a815",
+      "revId": "cf58bcfd454675b05f0240b7e812f6997e813e22",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
