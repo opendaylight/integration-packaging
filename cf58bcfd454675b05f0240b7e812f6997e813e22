@@ -52,6 +52,24 @@
       "revId": "cf58bcfd454675b05f0240b7e812f6997e813e22",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_607e68e6",
+        "filename": "packer/vars/opendaylight-6.1.0.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-03T13:07:03Z",
+      "side": 1,
+      "message": "Okay, now based on a patch that removes var elsewhere and updated this patch to remove it here",
+      "parentUuid": "ba1f61a0_40f2449b",
+      "revId": "cf58bcfd454675b05f0240b7e812f6997e813e22",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
