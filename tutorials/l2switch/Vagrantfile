@@ -23,8 +23,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Box that installs the L2switch Tutorial
   config.vm.define "l2switch" do |l2switch|
-    # Build Vagrant box based on Fedora 23
-    l2switch.vm.box = "fedora/23-cloud-base"
+    # Build Vagrant box based on Fedora 26
+    l2switch.vm.box = "fedora/26-cloud-base"
 
     # Forward ODL's web GUI (DLUX) port so it's accessible on the host machine
     l2switch.vm.network "forwarded_port", guest: 8181, host: 8181
@@ -44,12 +44,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Install git and sshpass
     l2switch.vm.provision "shell", inline: "dnf install -y git sshpass"
-
-    # NB: Recent versions of OpenSSH, shipped with Fedora, don't support ssh-dss
-    # as an auth protocol. ODL seems offers ssh-dss by default. To SSH to the
-    # Karaf shell, tell SSH to accept ssh-dss or set this default.
-    #    ssh -p 8101 -oHostKeyAlgorithms=+ssh-dss karaf@localhost
-    l2switch.vm.provision "shell", inline: "echo 'HostKeyAlgorithms=+ssh-dss' >> /etc/ssh/ssh_config"
 
     # Install ODL Karaf features required for DLUX and L2Switch
     # Config management tools do this by adding features to featuresBoot in
