@@ -34,7 +34,7 @@ sudo yum install -y ansible git
 ansible_version="origin/master"
 cat > /tmp/requirements.yml << EOM
 - name: opendaylight
-  src: https://github.com/dfarrell07/ansible-opendaylight
+  src: https://github.com/opendaylight/integration-packaging-ansible-opendaylight.git
   version: $ansible_version
 EOM
 sudo ansible-galaxy install -r /tmp/requirements.yml

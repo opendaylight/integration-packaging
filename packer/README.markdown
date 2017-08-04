@@ -204,7 +204,7 @@ $ docker run -ti opendaylight/odl:4.1.0 /opt/opendaylight/bin/karaf
 
 [2]: https://www.packer.io/intro/getting-started/setup.html
 
-[3]: https://github.com/dfarrell07/ansible-opendaylight
+[3]: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging/ansible-opendaylight.git
 
 [4]: https://atlas.hashicorp.com/opendaylight/boxes/odl
 
