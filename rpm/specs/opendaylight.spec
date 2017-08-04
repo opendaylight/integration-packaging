@@ -8,13 +8,13 @@ Version:    {{ version_major }}.{{ version_minor }}.{{ version_patch }}
 #   unnecessary and unused in our case, but both the docs and the pros (apevec)
 #   agree that we should include it.
 # See: https://fedoraproject.org/wiki/Packaging:DistTag
-Release:    {{ rpm_release }}.el7
+Release:    {{ pkg_version }}.el7
 BuildArch:  noarch
 Summary:    OpenDaylight SDN Controller
 Group:      Applications/Communications
 License:    EPL-1.0
 URL:        http://www.opendaylight.org
-Source0:    %name-{{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ rpm_release }}.tar.gz
+Source0:    %name-{{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ pkg_version }}.tar.gz
 Source1:    %name-{{ sysd_commit }}.service.tar.gz
 Buildroot:  /tmp
 # Required for ODL at run time
@@ -65,5 +65,5 @@ fi
 %attr(0644,root,root) %{_unitdir}/%name.service
 
 %changelog
-* {{ changelog_date }} {{ changelog_name }} <{{ changelog_email }}> - {{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ rpm_release }}
-- Create {{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ rpm_release }} RPM
+* {{ changelog_date }} {{ changelog_name }} <{{ changelog_email }}> - {{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ pkg_version }}
+- Create {{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ pkg_version }} RPM

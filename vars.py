@@ -54,7 +54,7 @@ def extract_version(url):
         #  org/opendaylight/integration/distribution-karaf/0.4.4-Beryllium-SR4/
         # build_id = 1533
         build_id = re.search(r'\/(autorelease)-([0-9]+)\/', url).group(2)
-        rpm_release = "0.1." + date + "rel" + build_id
+        pkg_version = "0.1." + date + "rel" + build_id
     elif "snapshot" in url:
         # Search the ODL snapshot build URL to match the date and the Build ID
         # that are between "distribution-karaf" and ".tar.gz".
@@ -68,9 +68,9 @@ def extract_version(url):
             r'\/(distribution-karaf)-'
             r'([0-9]\.[0-9]\.[0-9])-([0-9]+)\.([0-9]+)-([0-9]+)\.(tar\.gz)',
             url)
-        rpm_release = "0.1." + odl_rpm.group(3) + "snap" + odl_rpm.group(5)
+        pkg_version = "0.1." + odl_rpm.group(3) + "snap" + odl_rpm.group(5)
     elif "public" or "opendaylight.release" in url:
-        rpm_release = "1"
+        pkg_version = "1"
     else:
         raise ValueError("Unrecognized URL {}".format(url))
 
@@ -85,7 +85,7 @@ def extract_version(url):
     version["version_major"] = odl_version.group(2)
     version["version_minor"] = odl_version.group(3)
     version["version_patch"] = "0"
-    version["rpm_release"] = rpm_release
+    version["pkg_version"] = pkg_version
     version["codename"] = odl_version.group(4)
     return version
 

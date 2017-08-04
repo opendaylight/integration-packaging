@@ -28,7 +28,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_major"], "4")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["rpm_release"], "1")
+        self.assertEqual(version["pkg_version"], "1")
 
     def test_beryllium_sr4_release_url(self):
         """Test URL of ODL Beryllium SR4 release."""
@@ -38,7 +38,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_major"], "4")
         self.assertEqual(version["version_minor"], "4")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["rpm_release"], "1")
+        self.assertEqual(version["pkg_version"], "1")
 
     def test_boron_release_url(self):
         """Test URL of ODL Boron release."""
@@ -48,7 +48,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_major"], "5")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["rpm_release"], "1")
+        self.assertEqual(version["pkg_version"], "1")
 
     def test_boron_sr1_release_url(self):
         """Test URL of ODL Boron SR1 release."""
@@ -58,7 +58,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_major"], "5")
         self.assertEqual(version["version_minor"], "1")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["rpm_release"], "1")
+        self.assertEqual(version["pkg_version"], "1")
 
     def test_boron_sr3_autorelease_url(self):
         """Test URL of ODL Boron SR3 autorelease."""
@@ -68,7 +68,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_major"], "5")
         self.assertEqual(version["version_minor"], "3")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["rpm_release"], "0.1.20170324rel1734")
+        self.assertEqual(version["pkg_version"], "0.1.20170324rel1734")
 
     @unittest.skip("No current Carbon autorelease examples")
     def test_carbon_autorelease_url(self):
@@ -79,7 +79,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["rpm_release"], "0.1.20161117rel1582")
+        self.assertEqual(version["pkg_version"], "0.1.20161117rel1582")
 
     def test_boron_sr2_snapshot_url(self):
         """Test URL of ODL Boron SR2 snapshot."""
@@ -89,7 +89,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_major"], "5")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["rpm_release"], "0.1.20161212snap530")
+        self.assertEqual(version["pkg_version"], "0.1.20161212snap530")
 
     def test_carbon_snapshot_url(self):
         """Test URL of ODL Carbon snapshot."""
@@ -99,4 +99,4 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["rpm_release"], "0.1.20161212snap2486")
+        self.assertEqual(version["pkg_version"], "0.1.20161212snap2486")

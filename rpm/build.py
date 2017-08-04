@@ -31,14 +31,14 @@ rpm_out_dir = os.path.join(rpmbuild_dir, "RPMS", "noarch")
 
 # Templates that can be specialized into common artifact names per-build
 odl_template = Template("opendaylight-$version_major.$version_minor."
-                        "$version_patch-$rpm_release.tar.gz")
+                        "$version_patch-$pkg_version.tar.gz")
 specfile_template = Template("opendaylight-$version_major.$version_minor."
-                             "$version_patch-$rpm_release.spec")
+                             "$version_patch-$pkg_version.spec")
 unitfile_tb_template = Template("opendaylight-$sysd_commit.service.tar.gz")
 rpm_template = Template("opendaylight-$version_major.$version_minor."
-                        "$version_patch-$rpm_release.el7.noarch.rpm")
+                        "$version_patch-$pkg_version.el7.noarch.rpm")
 srpm_template = Template("opendaylight-$version_major.$version_minor."
-                         "$version_patch-$rpm_release.el7.src.rpm")
+                         "$version_patch-$pkg_version.el7.src.rpm")
 
 
 def build_rpm(build):
