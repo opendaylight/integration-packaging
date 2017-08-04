@@ -24,7 +24,7 @@ template = env.get_template("opendaylight.spec")
 
 # Python string Template, specialized into a specfile file name per-build
 specfile_template = Template("opendaylight-$version_major.$version_minor."
-                             "$version_patch-$rpm_release.spec")
+                             "$version_patch-$pkg_version.spec")
 
 
 def build_spec(build):
