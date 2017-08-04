@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba1f61a0_cf781f2e",
+        "filename": "build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-04T10:12:38Z",
+      "side": 1,
+      "message": "I\u0027m guessing you have patches inbound to do this, but reminder that this and vars.py need to make it into the new packages/ dir vs the root of the repo.",
+      "revId": "af6c16711acafe843ffa251951812181f5b0e550",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
