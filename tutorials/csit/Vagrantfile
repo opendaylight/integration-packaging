@@ -29,8 +29,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       c.name = "CSIT"
     end
 
-    # Build Vagrant box based on Fedora 24
-    csit.vm.box = "fedora/24-cloud-base"
+    # Build Vagrant box based on Fedora 26
+    csit.vm.box = "fedora/26-cloud-base"
 
     # Set prompt for vagrant user to match the default/expected prompt for upstream ODL CSIT
     # Note: upstream CSIT has the ability to modify expected prompts dynamically, but this
@@ -42,11 +42,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     csit.vm.network "forwarded_port", guest: 8080, host: 8080
     csit.vm.network "forwarded_port", guest: 8181, host: 8181
 
-    # NB: Recent versions of OpenSSH, shipped with Fedora, don't support ssh-dss
-    # as an auth protocol. ODL seems offers ssh-dss by default. To SSH to the
-    # Karaf shell, tell SSH to accept ssh-dss or set this default.
-    csit.vm.provision "shell", inline: "echo 'HostKeyAlgorithms=+ssh-dss' >> /etc/ssh/ssh_config"
-
     # Install dependencies and tools from dnf
     csit.vm.provision "shell",
       inline: "dnf install -y --nogpgcheck git git-review gcc libffi-devel openssl-devel \
@@ -56,7 +51,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Give vagrant user permission to sniff interfaces
     csit.vm.provision "shell", inline: "usermod -a -G wireshark vagrant"
-    csit.vm.provision "shell", inline: "setcap cap_net_raw,cap_net_admin=eip /usr/sbin/dumpcap"
+    csit.vm.provision "shell", inline: "setcap cap_net_raw,cap_net_admin=eip /usr/bin/dumpcap"
 
     # Install dependencies and tools from pip
     csit.vm.provision "shell",
@@ -117,7 +112,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     csit.vm.provision "shell",
           inline: "sed -i 's/SELINUX=\\(enforcing\\|permissive\\)/SELINUX=disabled/g' /etc/selinux/config"
     csit.vm.provision "shell", inline: "reboot now"
-
   end
-
 end
