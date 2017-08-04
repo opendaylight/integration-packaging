@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "ba1f61a0_f4f7b68a",
+        "filename": "rpm/specs/opendaylight.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 6464
+      },
+      "writtenOn": "2017-08-04T06:50:03Z",
+      "side": 1,
+      "message": "Also add org.apache.karaf.features.cfg and org.ops4j.pax.logging.cfg to preserve features and logging info",
+      "range": {
+        "startLine": 56,
+        "startChar": 2,
+        "endLine": 56,
+        "endChar": 71
+      },
+      "revId": "f3d02b797567b2cdb0e6bbd7dad326d98c0fd291",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da2a55be_cd4927d2",
         "filename": "rpm/specs/opendaylight.spec",
         "patchSetId": 1
