@@ -158,3 +158,16 @@ def get_sysd_commit():
                                           shell=False).strip()
 
     return sysd_commit
+
+
+def get_java_version(version_major):
+    """Get the java_version dependency for ODL builds
+
+       :arg str version_major: OpenDaylight major version number
+       :return int java_version: Java version required by given ODL version
+    """
+    if version_major < 5:
+        java_version = 7
+    else:
+        java_version = 8
+    return java_version
