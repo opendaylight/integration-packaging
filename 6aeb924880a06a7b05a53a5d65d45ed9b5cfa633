@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba1f61a0_98f2e198",
+        "filename": "vars.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-08T12:53:08Z",
+      "side": 1,
+      "message": "OpenDaylight major version number",
+      "range": {
+        "startLine": 166,
+        "startChar": 31,
+        "endLine": 166,
+        "endChar": 58
+      },
+      "revId": "6aeb924880a06a7b05a53a5d65d45ed9b5cfa633",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_78d8cd1d",
+        "filename": "vars.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-08T12:53:08Z",
+      "side": 1,
+      "message": "Java version required by given ODL version",
+      "range": {
+        "startLine": 167,
+        "startChar": 33,
+        "endLine": 167,
+        "endChar": 70
+      },
+      "revId": "6aeb924880a06a7b05a53a5d65d45ed9b5cfa633",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
