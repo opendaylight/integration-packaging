@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba1f61a0_59a34b9e",
+        "filename": "vars.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-08-08T17:50:54Z",
+      "side": 1,
+      "message": "could also be like, if you wanted to reduce LOC... but\nbetter readability your way.\n\nif version_major \u003c 5:\n    return 7\n\nreturn 8",
+      "range": {
+        "startLine": 169,
+        "startChar": 0,
+        "endLine": 173,
+        "endChar": 23
+      },
+      "revId": "f90c318d82dcfbe3756f35a2c45af798706ba270",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
