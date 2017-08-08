@@ -18,7 +18,7 @@ Source0:    %name-{{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{
 Source1:    %name-{{ sysd_commit }}.service.tar.gz
 Buildroot:  /tmp
 # Required for ODL at run time
-Requires:   java >= 1:1.8.0
+Requires:   java >= 1:1.{{ java_version }}.0
 # Required for creating odl group
 Requires(pre): shadow-utils
 # Required for configuring systemd
