@@ -158,3 +158,16 @@ def get_sysd_commit():
                                           shell=False).strip()
 
     return sysd_commit
+
+
+def get_java_version(version_major):
+    """Get the java_version dependency for ODL builds
+
+       :arg str version_major: Major version for ODL build
+       :return int java_version: java_version dependency for ODL build
+    """
+    if version_major < 5:
+        java_version = 7
+    else:
+        java_version = 8
+    return java_version
