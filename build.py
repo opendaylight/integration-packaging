@@ -87,9 +87,12 @@ if __name__ == "__main__":
         version = vars.extract_version(args.download_url)
         build.update(version)
 
+    java_version_required = vars.get_java_version(build['version_major'])
+
     # Common parameters for all new and snapshot builds
     build.update({"download_url": args.download_url,
                   "sysd_commit": args.sysd_commit,
+                  "java_version": java_version_required,
                   "changelog_name": args.changelog_name,
                   "changelog_email": args.changelog_email,
                   "changelog_date": args.changelog_date,
