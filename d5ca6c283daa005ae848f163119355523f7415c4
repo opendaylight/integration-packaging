@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ba1f61a0_d0a42559",
+        "filename": "build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-08-09T20:57:24Z",
+      "side": 1,
+      "message": "Yes, that\u0027s a typo. Will fix this.",
+      "parentUuid": "ba1f61a0_95f3bf72",
+      "range": {
+        "startLine": 22,
+        "startChar": 45,
+        "endLine": 22,
+        "endChar": 52
+      },
+      "revId": "d5ca6c283daa005ae848f163119355523f7415c4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba1f61a0_f5e83b7e",
         "filename": "build.py",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "ba1f61a0_105b5d55",
+        "filename": "build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-08-09T20:57:24Z",
+      "side": 1,
+      "message": "--rpm and --deb are arguments in a mutually exclusive group so both rpm and deb arguments cannot be given together. This script shall be used by individual Jenkins build-* job\u0027s, so keeping the possibility of creating both rpms and debs together seems unncessesary.",
+      "parentUuid": "ba1f61a0_f5e83b7e",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 63
+      },
+      "revId": "d5ca6c283daa005ae848f163119355523f7415c4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba1f61a0_d5ed378d",
         "filename": "build.py",
         "patchSetId": 2
@@ -59,6 +107,30 @@
       "writtenOn": "2017-08-09T17:39:48Z",
       "side": 1,
       "message": "maybe to answer my question above, this wont build both.\nBut, if this changes to if from elif, it should right?\n\nwhy not?",
+      "range": {
+        "startLine": 133,
+        "startChar": 4,
+        "endLine": 133,
+        "endChar": 8
+      },
+      "revId": "d5ca6c283daa005ae848f163119355523f7415c4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_90362d02",
+        "filename": "build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 6902
+      },
+      "writtenOn": "2017-08-09T20:57:24Z",
+      "side": 1,
+      "message": "Adding to my answer above, it would also be difficult to create an environment where both rpm and deb packages can be created and tested easily.",
+      "parentUuid": "ba1f61a0_d5ed378d",
       "range": {
         "startLine": 133,
         "startChar": 4,
