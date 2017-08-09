@@ -2,3 +2,4 @@ pyyaml
 jinja2
 bs4
 requests
+tzlocal
