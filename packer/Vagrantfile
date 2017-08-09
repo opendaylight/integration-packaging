@@ -41,14 +41,14 @@ Vagrant.configure(2) do |config|
   end
 
   #
-  # VirtualBox and Fedora 25
+  # VirtualBox and Fedora 26
   #
 
   (5..6).each do |major|
     (0..4).each do |minor|
-      config.vm.define "f25_odl#{major}#{minor}_vb" do |f25_vb|
-        f25_vb.vm.box = "f25_odl#{major}#{minor}_vb"
-        f25_vb.vm.box_url = "file://opendaylight-#{major}.#{minor}.0-fedora-25-virtualbox.box"
+      config.vm.define "f26_odl#{major}#{minor}_vb" do |f26_vb|
+        f26_vb.vm.box = "f26_odl#{major}#{minor}_vb"
+        f26_vb.vm.box_url = "file://opendaylight-#{major}.#{minor}.0-fedora-26-virtualbox.box"
       end
     end
   end
@@ -71,14 +71,14 @@ Vagrant.configure(2) do |config|
   end
 
   #
-  # LibVirt and Fedora 25
+  # LibVirt and Fedora 26
   #
 
   (5..6).each do |major|
     (0..4).each do |minor|
-      config.vm.define "f25_odl#{major}#{minor}_lv" do |f25_lv|
-        f25_lv.vm.box = "f25_odl#{major}#{minor}_lv"
-        f25_lv.vm.box_url = "file://opendaylight-#{major}.#{minor}.0-fedora-25-libvirt.box"
+      config.vm.define "f26_odl#{major}#{minor}_lv" do |f26_lv|
+        f26_lv.vm.box = "f26_odl#{major}#{minor}_lv"
+        f26_lv.vm.box_url = "file://opendaylight-#{major}.#{minor}.0-fedora-26-libvirt.box"
       end
     end
   end
