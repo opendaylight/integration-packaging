@@ -1,18 +1,10 @@
 #!/usr/bin/env python
-"""Read YAML description of RPM builds and cache the required artifacts."""
+"""Cache the required artifacts for building RPM packages."""
 
 import os
 from string import Template
-import sys
 import tarfile
 import urllib
-
-try:
-    import yaml
-except ImportError:
-    sys.stderr.write("We recommend using our included Vagrant env.\n")
-    sys.stderr.write("Else, do `pip install -r requirements.txt` in a venv.\n")
-    raise
 
 # Path to the directory that contains this file is assumed to be the cache dir
 cache_dir = os.path.dirname(os.path.abspath(__file__))
@@ -31,7 +23,7 @@ unitfile_tb_template = Template("opendaylight-$sysd_commit.service.tar.gz")
 def cache_build(build):
     """Cache the artifacts required for the given RPM build.
 
-    :param build: Description of an RPM build, typically from build_vars.yaml
+    :param build: Description of an RPM build
     :type build: dict
 
     """
@@ -76,13 +68,3 @@ def cache_build(build):
         print("Cached: {}".format(unitfile_tarball))
     else:
         print("Already cached: {}".format(unitfile_tarball))
-
-
-# If run as a script, cache artifacts required for all builds
-if __name__ == "__main__":
-    # Load RPM build variables from a YAML config file
-    with open(os.path.join(cache_dir, os.pardir, "build_vars.yaml")) as var_fd:
-        build_vars = yaml.load(var_fd)
-
-    for build in build_vars["builds"]:
-        cache_build(build)

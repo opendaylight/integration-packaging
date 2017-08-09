@@ -8,7 +8,7 @@
 # and is available at http://www.eclipse.org/legal/epl-v10.html
 ##############################################################################
 
-"""Build OpenDaylight's RPMs using YAML build configs and Jinja2 templates."""
+"""Build OpenDaylight's RPMs using build description and Jinja2 templates."""
 
 import os
 import shutil
@@ -44,7 +44,7 @@ srpm_template = Template("opendaylight-$version_major.$version_minor."
 def build_rpm(build):
     """Build the RPMs described by the given build description
 
-    :param build: Description of an RPM build, typically from build_vars.yaml
+    :param build: Description of an RPM build
     :type build: dict
 
     """
