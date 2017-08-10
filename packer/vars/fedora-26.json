@@ -3,5 +3,6 @@
     "os_version": "26",
     "guest_os_type": "Fedora_64",
     "iso_urls": "http://mirror.math.princeton.edu/pub/fedora/linux/releases/26/Server/x86_64/iso/Fedora-Server-dvd-x86_64-26-1.5.iso",
-    "iso_checksum": "fad18a43b9cec152fc8a1fd368950eaf59be66b1a15438149a0c3a509c56cf2f"
+    "iso_checksum": "fad18a43b9cec152fc8a1fd368950eaf59be66b1a15438149a0c3a509c56cf2f",
+    "docker_repo": "opendaylight/fedora"
 }
