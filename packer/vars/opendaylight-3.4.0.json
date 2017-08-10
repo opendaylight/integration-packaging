@@ -1,5 +1,4 @@
 {
     "odl_version": "3.4.0",
-    "docker_repo": "opendaylight/odl",
     "rpm_repo_url": "'https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=rpm/example_repo_configs/opendaylight-34-release.repo'"
 }
