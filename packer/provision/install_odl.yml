@@ -1,5 +1,5 @@
 ---
 - hosts: localhost
-  sudo: yes
+  become: yes
   roles:
     - opendaylight
