@@ -21,6 +21,9 @@
             "http_directory": ".",
             "boot_command": [
                 "<tab>text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/provision/{{ user `os_name` }}_kickstart.cfg<enter>"
+            ],
+            "qemuargs": [
+              [ "-L", "/usr/share/qemu/" ]
             ]
         }
     ],
