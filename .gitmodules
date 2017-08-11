@@ -1,6 +1,0 @@
-[submodule "puppet/puppet-opendaylight"]
-    path = puppet/puppet-opendaylight
-    url = https://github.com/dfarrell07/puppet-opendaylight.git
-[submodule "ansible/ansible-opendaylight"]
-	path = ansible/ansible-opendaylight
-	url = https://github.com/dfarrell07/ansible-opendaylight.git
