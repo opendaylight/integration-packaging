@@ -69,7 +69,8 @@ def extract_version(url):
         # Docs:
         #   https://wiki.opendaylight.org/view/Integration/Packaging/Versioning
         # Substitute the part of the build URL not required with empty string
-        date_url = re.sub('distribution-karaf-.*\.tar\.gz$', '', url)
+        # FIXME: Boron uses distribution-karaf vs karaf, fails
+        date_url = re.sub('karaf-.*\.tar\.gz$', '', url)
         # Set date_url as an environment variable for it to be used in
         # a subprocess
         os.environ["date_url"] = date_url
@@ -84,21 +85,22 @@ def extract_version(url):
         # Search the ODL autorelease build URL to match the Build ID that
         # follows "autorelease-". eg:
         # https://nexus.opendaylight.org/content/repositories/autorelease-1533/
-        #  org/opendaylight/integration/distribution-karaf/0.4.4-Beryllium-SR4/
+        #  org/opendaylight/integration/karaf/0.4.4-Beryllium-SR4/
         # build_id = 1533
         build_id = re.search(r'\/(autorelease)-([0-9]+)\/', url).group(2)
         rpm_release = "0.1." + date + "rel" + build_id
     elif "snapshot" in url:
         # Search the ODL snapshot build URL to match the date and the Build ID
-        # that are between "distribution-karaf" and ".tar.gz".
+        # that are between "karaf" and ".tar.gz".
         # eg: https://nexus.opendaylight.org/content/repositories/
         #      opendaylight.snapshot/org/opendaylight/integration/
-        #      distribution-karaf/0.6.0-SNAPSHOT/
-        #      distribution-karaf-0.6.0-20161201.031047-2242.tar.gz
+        #      karaf/0.6.0-SNAPSHOT/
+        #      karaf-0.6.0-20161201.031047-2242.tar.gz
         # build_id = 2242
         # date = 20161201
+        # FIXME: Boron uses distribution-karaf vs karaf, fails
         odl_rpm = re.search(
-            r'\/(distribution-karaf)-'
+            r'\/(karaf)-'
             r'([0-9]\.[0-9]\.[0-9])-([0-9]+)\.([0-9]+)-([0-9]+)\.(tar\.gz)',
             url)
         rpm_release = "0.1." + odl_rpm.group(3) + "snap" + odl_rpm.group(5)
@@ -111,8 +113,8 @@ def extract_version(url):
     # Search the ODL build URL to match 0.major.minor-codename-SR and extract
     # version information. eg: release:
     # https://nexus.opendaylight.org/content/repositories/public/org/
-    #  opendaylight/integration/distribution-karaf/0.3.3-Lithium-SR3/
-    #  distribution-karaf-0.3.3-Lithium-SR3.tar.gz
+    #  opendaylight/integration/karaf/0.3.3-Lithium-SR3/
+    #  karaf-0.3.3-Lithium-SR3.tar.gz
     #     match: 0.3.3-Lithium-SR3
     odl_version = re.search(r'\/(\d)\.(\d)\.(\d).(.*)\/', url)
     version["version_major"] = odl_version.group(2)
@@ -179,8 +181,7 @@ def build_snapshot_rpm(build):
 
     """
     parent_dir = "https://nexus.opendaylight.org/content/repositories/" \
-                 "opendaylight.snapshot/org/opendaylight/integration/"\
-                 "distribution-karaf/"
+                 "opendaylight.snapshot/org/opendaylight/integration/karaf/"
 
     # If the minor verison is given, get the sub-directory directly
     # else, find the latest sub-directory
@@ -214,6 +215,7 @@ def build_snapshot_rpm(build):
         req.raise_for_status()
     except HTTPError:
         print "Could not find the snapshot directory"
+        print "Tried: {}".format(snapshot_dir)
     else:
         urlpath = urlopen(snapshot_dir)
         content = urlpath.read().decode('utf-8')

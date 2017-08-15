@@ -36,7 +36,7 @@ OpenDaylight {{ codename }}
 
 %prep
 # Extract Source0 (ODL archive)
-%autosetup -n distribution-karaf-0.{{ version_major }}.{{ version_minor }}-{{ codename }}
+%autosetup -n karaf-0.{{ version_major }}.{{ version_minor }}-{{ codename }}
 # Extract Source1 (systemd config)
 %autosetup -T -D -b 1 -c -n %name-{{ sysd_commit }}.service
 
@@ -44,7 +44,7 @@ OpenDaylight {{ codename }}
 # Create directory in build root for ODL
 mkdir -p $RPM_BUILD_ROOT/opt/%name
 # Copy ODL from archive to its dir in build root
-cp -r ../distribution-karaf-0.{{ version_major }}.{{ version_minor }}-{{ codename }}/* $RPM_BUILD_ROOT/opt/%name
+cp -r ../karaf-0.{{ version_major }}.{{ version_minor }}-{{ codename }}/* $RPM_BUILD_ROOT/opt/%name
 # Create directory in build root for systemd .service file
 mkdir -p $RPM_BUILD_ROOT/%{_unitdir}
 # Copy ODL's systemd .service file to correct dir in build root
