@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "ba1f61a0_62af5095",
+        "filename": "build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-16T18:48:09Z",
+      "side": 1,
+      "message": "It\u0027s a little strange now that the Vagrantfiles are in subdirs, but can address that later",
+      "parentUuid": "ba1f61a0_d0a42559",
+      "range": {
+        "startLine": 22,
+        "startChar": 45,
+        "endLine": 22,
+        "endChar": 52
+      },
+      "revId": "d5ca6c283daa005ae848f163119355523f7415c4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba1f61a0_f5e83b7e",
         "filename": "build.py",
         "patchSetId": 2
@@ -108,6 +132,30 @@
       "side": 1,
       "message": "ok.",
       "parentUuid": "ba1f61a0_105b5d55",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 63
+      },
+      "revId": "d5ca6c283daa005ae848f163119355523f7415c4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_22a558b5",
+        "filename": "build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-16T18:48:09Z",
+      "side": 1,
+      "message": "I think the main reason we wouldn\u0027t want to allow both is that the deps are very different - the software installed on each job VM wouldn\u0027t support the other",
+      "parentUuid": "ba1f61a0_70c1f27f",
       "range": {
         "startLine": 33,
         "startChar": 0,
