@@ -92,6 +92,30 @@
       "revId": "7898de3183ebe1fcbadf4d3ffb106717e54b5367",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_d6ed1ab9",
+        "filename": "rpm/specs/opendaylight.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-17T14:31:22Z",
+      "side": 1,
+      "message": "%config(noreplace) seems cool, I\u0027m fine with using that method (/me didn\u0027t know about it). Can you try doing the journal/snapshot preservation the same way?",
+      "parentUuid": "ba1f61a0_f6765e3d",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 35
+      },
+      "revId": "7898de3183ebe1fcbadf4d3ffb106717e54b5367",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
