@@ -68,6 +68,30 @@
       "revId": "7898de3183ebe1fcbadf4d3ffb106717e54b5367",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_f6765e3d",
+        "filename": "rpm/specs/opendaylight.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 6464
+      },
+      "writtenOn": "2017-08-17T14:15:31Z",
+      "side": 1,
+      "message": "I tried adding \"-not -name \u0027etc*\u0027 at L58 but it didnot work for me. Maybe because my system was messed up?? Also doing this is a common/spec-file way to not edit config files. %config(noreplace) is intelligent enough to detect any changes and manage the files accordingly.\n\nI tested this locally by manually adding \"netvirt-openstack\" in *features.cfg file and moving to \"conntrack\" for snat in etc/../natservice-config-file. Both the information didnot change after update.",
+      "parentUuid": "ba1f61a0_16d7b224",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 35
+      },
+      "revId": "7898de3183ebe1fcbadf4d3ffb106717e54b5367",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
