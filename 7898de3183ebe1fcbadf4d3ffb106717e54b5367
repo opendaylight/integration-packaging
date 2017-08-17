@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba1f61a0_56e12afd",
+        "filename": "rpm/specs/opendaylight.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-17T13:58:12Z",
+      "side": 1,
+      "message": "\"Don\u0027t\"",
+      "range": {
+        "startLine": 67,
+        "startChar": 2,
+        "endLine": 67,
+        "endChar": 7
+      },
+      "revId": "7898de3183ebe1fcbadf4d3ffb106717e54b5367",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_f6f13ece",
+        "filename": "rpm/specs/opendaylight.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-17T13:58:12Z",
+      "side": 1,
+      "message": "Maybe \"SNAT, ACLService, etc.\"",
+      "range": {
+        "startLine": 67,
+        "startChar": 73,
+        "endLine": 67,
+        "endChar": 92
+      },
+      "revId": "7898de3183ebe1fcbadf4d3ffb106717e54b5367",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_16d7b224",
+        "filename": "rpm/specs/opendaylight.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-17T13:58:12Z",
+      "side": 1,
+      "message": "Seems like we should handle not-nuking journal/snapshot and etc files in the same way",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 35
+      },
+      "revId": "7898de3183ebe1fcbadf4d3ffb106717e54b5367",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
