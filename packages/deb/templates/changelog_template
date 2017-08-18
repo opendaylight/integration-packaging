@@ -2,5 +2,5 @@ opendaylight ({{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ pkg
 
   * Release: OpenDaylight {{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ codename }}
 
- -- {{ changelog_name }} <{{ changelog_email }}>  {{ changelog_date }} {{ changelog_time }}
+ -- {{ changelog_name }} <{{ changelog_email }}>  {{ changelog_date }}
 
