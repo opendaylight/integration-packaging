@@ -9,18 +9,11 @@
 ##############################################################################
 
 import argparse
-import datetime
 import sys
 
 from deb import build as build_deb
 from rpm import build as build_rpm
 import vars
-
-try:
-    from tzlocal import get_localzone
-except ImportError:
-    sys.stderr.write("we recommend using our include Vagrant env.\n")
-    sys.stderr.write("Else, do `pip install -r requirements.txt` in a venv")
 
 if __name__ == "__main__":
     # Accept the version(s) of the build(s) to perform as args
@@ -40,8 +33,6 @@ if __name__ == "__main__":
         "--download_url", help="Tarball to repackage into package")
     new_build_group.add_argument(
         "--sysd_commit", help="Version of ODL unitfile to package")
-    new_build_group.add_argument(
-        "--changelog_date", help="Date this package was defined")
     new_build_group.add_argument(
         "--changelog_name", help="Name of person who defined package")
     new_build_group.add_argument(
@@ -73,29 +64,11 @@ if __name__ == "__main__":
     # A dictionary containing essential build variables
     build = {}
 
-    # Check if the package to be created is rpm or deb and initialize timestamp
-    # details with current time for packages accordingly. For details on
-    # strftime please refer : https://docs.python.org/2/library/datetime.html#
-    # strftime-and-strptime-behavior. For details on get_localzone refer :
-    # https://pypi.python.org/pypi/tzlocal
+    # Depending on package type, create an appropriate changelog datetime
     if args.rpm:
-        # Building RPM only requires `changelog_date` in the format
-        # "Day Month Date Year" For ex - Mon Jun 21 2017
-        if not args.changelog_date:
-            args.changelog_date = datetime.date.today().strftime("%a %b %d %Y")
+        build.update({"changelog_date": vars.get_changelog_date("rpm")})
     if args.deb:
-        if not args.changelog_date:
-            # Building Deb requires `changelog_date` and 'changelog_time' in
-            # the format "Day, Date Month Year" For ex - Mon, 21 Jun 2017 and
-            # time along with Time Zone information as UTC offset in format
-            # HH:MM:SS +HHMM". For ex - 15:01:16 +0530
-            args.changelog_date = datetime.date.today().\
-                                                strftime("%a, %d %b %Y")
-            local_tz = get_localzone()
-            args.changelog_time = datetime.datetime.now(local_tz).\
-                strftime("%H:%M:%S %z")
-            # Add comment
-            build.update({"changelog_time": args.changelog_time})
+        build.update({"changelog_date": vars.get_changelog_date("deb")})
 
     # Check if `sysd_commit` has been passed as an arg
     # Use latest Int/Pack repo commit hash as sysd_commit var
@@ -126,7 +99,6 @@ if __name__ == "__main__":
                   "java_version": java_version_required,
                   "changelog_name": args.changelog_name,
                   "changelog_email": args.changelog_email,
-                  "changelog_date": args.changelog_date,
                   })
     if args.rpm:
         build_rpm.build_rpm(build)

@@ -18,6 +18,7 @@ try:
     from bs4 import BeautifulSoup
     import requests
     from requests.exceptions import HTTPError
+    import tzlocal
 except ImportError:
     sys.stderr.write("We recommend using our included Vagrant env.\n")
     sys.stderr.write("Else, do `pip install -r requirements.txt` in a venv.\n")
@@ -171,3 +172,27 @@ def get_java_version(version_major):
     else:
         java_version = 8
     return java_version
+
+
+def get_changelog_date(pkg_type):
+    """Get the changelog datetime formatted for the given package type
+
+    :arg str pkg_type: Type of datetime formatting (rpm, deb)
+    :return int changelog_date: Date or datetime formatted for given pkg_type
+    """
+    if pkg_type == "rpm":
+        # RPMs require a date of the format "Day Month Date Year". For example:
+        # Mon Jun 21 2017
+        return datetime.date.today().strftime("%a %b %d %Y")
+    elif pkg_type == "deb":
+        # Debs require both a date and time.
+        # Date must be of the format "Day, Date Month Year". For example:
+        # Mon, 21 Jun 2017
+        date = datetime.date.today().strftime("%a, %d %b %Y")
+        # Time must be of the format "HH:MM:SS +HHMM". For example:
+        # 15:01:16 +0530
+        time = datetime.datetime.now(tzlocal.get_localzone()).\
+            strftime("%H:%M:%S %z")
+        return "{} {}".format(date, time)
+    else:
+        raise ValueError("Unknown package type: {}".format(pkg_type))
