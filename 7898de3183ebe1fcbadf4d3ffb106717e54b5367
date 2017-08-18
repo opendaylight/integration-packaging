@@ -116,6 +116,30 @@
       "revId": "7898de3183ebe1fcbadf4d3ffb106717e54b5367",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_e920404b",
+        "filename": "rpm/specs/opendaylight.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 6464
+      },
+      "writtenOn": "2017-08-18T09:12:02Z",
+      "side": 1,
+      "message": "That wont\u0027 work because journal and snapshots dirs are created after ODL is started. So the spec-file will error out and a package won\u0027t be created. I tried.\n\nSpec-file changes:\n%config(noreplace) /opt/%name/etc/*\n%config(noreplace) /opt/%name/journal/*\n%config(noreplace) /opt/%name/snapshots/*\n\nError:\nProcessing files: opendaylight-6.1.0-1.el7.noarch\nerror: File not found by glob: /home/centos/rpmbuild/BUILDROOT/opendaylight-6.1.0-1.el7.x86_64/opt/opendaylight/journal/*\nerror: File not found by glob: /home/centos/rpmbuild/BUILDROOT/opendaylight-6.1.0-1.el7.x86_64/opt/opendaylight/snapshots/*\n\n\nRPM build errors:\n    File not found by glob: /home/centos/rpmbuild/BUILDROOT/opendaylight-6.1.0-1.el7.x86_64/opt/opendaylight/journal/*\n    File not found by glob: /home/centos/rpmbuild/BUILDROOT/opendaylight-6.1.0-1.el7.x86_64/opt/opendaylight/snapshots/*\nTraceback (most recent call last):\n  File \"./build.py\", line 338, in \u003cmodule\u003e\n    build_rpm(build)\n  File \"./build.py\", line 170, in build_rpm\n    shutil.copy(rpm_out_path, cache_dir)\n  File \"/usr/lib64/python2.7/shutil.py\", line 119, in copy\n    copyfile(src, dst)\n  File \"/usr/lib64/python2.7/shutil.py\", line 82, in copyfile\n    with open(src, \u0027rb\u0027) as fsrc:\nIOError: [Errno 2] No such file or directory: \u0027/home/centos/rpmbuild/RPMS/noarch/opendaylight-6.1.0-1.el7.noarch.rpm\u0027",
+      "parentUuid": "ba1f61a0_d6ed1ab9",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 35
+      },
+      "revId": "7898de3183ebe1fcbadf4d3ffb106717e54b5367",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
