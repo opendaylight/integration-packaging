@@ -39,6 +39,24 @@
       "revId": "f3d02b797567b2cdb0e6bbd7dad326d98c0fd291",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_6c057e79",
+        "filename": "rpm/specs/opendaylight.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-18T12:20:10Z",
+      "side": 1,
+      "message": "Also we should address this feedback from Thanh that I somehow missed",
+      "parentUuid": "da2a55be_cd4927d2",
+      "revId": "f3d02b797567b2cdb0e6bbd7dad326d98c0fd291",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
