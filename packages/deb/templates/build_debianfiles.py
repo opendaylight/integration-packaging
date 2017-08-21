@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Build debian files from YAML debian config and Jinja2 debian templates."""
+"""Build debian files from build descriptionand Jinja2 debian templates."""
 
 import os
 import re
@@ -9,7 +9,6 @@ import sys
 import urllib
 
 try:
-    import yaml
     from jinja2 import Environment, FileSystemLoader
 except ImportError:
     sys.stderr.write("We recommend using our included Vagrant env.\n")
@@ -45,7 +44,7 @@ def build_debfiles(build):
     specializes templates with build-spicific vars to create dynamic files,
     downloads build-specific systemd unitfile based on commit hash.
 
-    :param build: Description of a debian build, typically from build_vars.yaml
+    :param build: Description of a debian build
     :type build: dict
 
     """
@@ -102,13 +101,3 @@ def build_debfiles(build):
     # Download ODL's systemd unitfile
     if not os.path.isfile(unitfile_path):
         urllib.urlretrieve(unitfile_url, unitfile_path)
-
-
-# If run as a script, build debian files for all builds
-if __name__ == "__main__":
-    # Load debian build variables from a YAML config file
-    with open(os.path.join(templates_dir, os.pardir, "build_vars.yaml")) as var_fd:
-        build_vars = yaml.load(var_fd)
-
-    for build in build_vars["builds"]:
-        build_debfiles(build)
