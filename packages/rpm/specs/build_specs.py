@@ -6,7 +6,7 @@ from string import Template
 import sys
 
 try:
-    from jinja2 import Environment, FileSystemLoader
+    import jinja2
 except ImportError:
     sys.stderr.write("We recommend using our included Vagrant env.\n")
     sys.stderr.write("Else, do `pip install -r requirements.txt` in a venv.\n")
@@ -16,7 +16,7 @@ except ImportError:
 spec_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Create the Jinja2 Environment
-env = Environment(loader=FileSystemLoader(spec_dir))
+env = jinja2.Environment(loader=jinja2.FileSystemLoader(spec_dir))
 
 # Load the OpenDaylight RPM .spec file Jinja2 template
 template = env.get_template("opendaylight.spec")
@@ -27,9 +27,9 @@ specfile_template = Template("opendaylight-$version_major.$version_minor."
 
 
 def build_spec(build):
-    """Build the RPM .spec file from a template for the given build description.
+    """Build RPM .spec file for the given build description using a template.
 
-    :param build: Description of an RPM build
+    :param build: Description of an RPM build, typically from build.py
     :type build: dict
 
     """

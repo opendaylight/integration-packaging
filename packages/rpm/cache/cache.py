@@ -12,33 +12,33 @@ cache_dir = os.path.dirname(os.path.abspath(__file__))
 # Templates that can be specialized into artifact names/paths per-build
 odl_template = Template("opendaylight-$version_major.$version_minor."
                         "$version_patch-$pkg_version.tar.gz")
+unitfile_tb_template = Template("opendaylight-$sysd_commit.service.tar.gz")
 unitfile_template = Template("opendaylight-$sysd_commit.service")
 unitfile_url_template = Template("https://git.opendaylight.org/gerrit/"
                                  "gitweb?p=integration/packaging.git;a="
                                  "blob_plain;f=rpm/unitfiles/opendaylight."
                                  "service;hb=$sysd_commit")
-unitfile_tb_template = Template("opendaylight-$sysd_commit.service.tar.gz")
 
 
 def cache_build(build):
     """Cache the artifacts required for the given RPM build.
 
-    :param build: Description of an RPM build, typically from build_vars.yaml
+    :param build: Description of an RPM build, typically from build.py
     :type build: dict
 
     """
     # Specialize a series of name/URL templates for the given build
     odl_tarball = odl_template.substitute(build)
     unitfile = unitfile_template.substitute(build)
-    unitfile_url = unitfile_url_template.substitute(build)
     unitfile_tarball = unitfile_tb_template.substitute(build)
+    unitfile_url = unitfile_url_template.substitute(build)
 
     # After building strings from the name templates, build their full path
     odl_tarball_path = os.path.join(cache_dir, odl_tarball)
     unitfile_path = os.path.join(cache_dir, unitfile)
     unitfile_tarball_path = os.path.join(cache_dir, unitfile_tarball)
 
-    # Cache appropriate version of OpenDaylight's release tarball
+    # Cache OpenDaylight tarball to be packaged
     if not os.path.isfile(odl_tarball_path):
         print("Downloading: {}".format(build["download_url"]))
         urllib.urlretrieve(build["download_url"], odl_tarball_path)
@@ -46,7 +46,7 @@ def cache_build(build):
     else:
         print("Already cached: {}".format(odl_tarball))
 
-    # Cache appropriate version of OpenDaylight's systemd unitfile as a tarball
+    # Cache OpenDaylight systemd unitfile to be packaged, convert to tarball
     if not os.path.isfile(unitfile_tarball_path):
         # Download ODL's systemd unitfile
         urllib.urlretrieve(unitfile_url, unitfile_path)

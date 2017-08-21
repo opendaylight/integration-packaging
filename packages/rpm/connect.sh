@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 # Connect to ODL Karaf shell. Mostly used for testing.
+# Can manually connect with `ssh -p 8101 karaf@localhost`, password "karaf"
 
 # Port that the Karaf shell listens on
 KARAF_SHELL_PORT=8101

@@ -19,7 +19,7 @@ cache_dir = os.path.dirname(os.path.abspath(__file__))
 def cache_build(build):
     """Cache the artifacts required for the given debian build.
 
-    :param build: Description of an ODL build, typically from build_vars.yaml
+    :param build: Description of a debian build, typically from build.py
     :type build: dict
 
     """
@@ -38,12 +38,3 @@ def cache_build(build):
         print("Already cached: {}".format(odl_tarball))
 
     return odl_tarball_path
-
-
-# If run as a script, cache artifacts required for all builds
-if __name__ == "__main__":
-    # Load debian build variables from a YAML config file
-    with open(os.path.join(cache_dir, os.pardir, "build_vars.yaml")) as var_fd:
-        build_vars = yaml.load(var_fd)
-    for build in build_vars["builds"]:
-        odl_tarball_path = cache_build(build)
