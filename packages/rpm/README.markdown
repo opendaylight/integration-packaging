@@ -453,7 +453,7 @@ other tools used by [Int/Pack][15], like Packer, Ansible and Puppet.
 
 [9]: http://cbs.centos.org/repos/
 
-[10]: https://github.com/opendaylight/integration-packaging/tree/master/rpm/example_repo_configs
+[10]: https://github.com/opendaylight/integration-packaging/tree/master/packages/rpm/example_repo_configs
 
 [11]: https://bugs.centos.org/view.php?id=9098#c23768
 

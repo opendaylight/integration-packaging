@@ -124,7 +124,7 @@ files placed in the /etc/yum.repos.d/ directory. Curl them into place with
 something like:
 
     sudo curl -o /etc/yum.repos.d/opendaylight-7-testing.repo \
-      "https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=rpm/example_repo_configs/opendaylight-7-testing.repo"
+      "https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=packages/rpm/example_repo_configs/opendaylight-7-testing.repo"
 
 Standard install commands will now find the repository as expected.
 
@@ -156,5 +156,5 @@ as an RPM. See the `packaging-build-rpm`_ section for docs.
 .. _nfv7-opendaylight-52-release: http://cbs.centos.org/repos/nfv7-opendaylight-52-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-53-release: http://cbs.centos.org/repos/nfv7-opendaylight-53-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-60-release: http://cbs.centos.org/repos/nfv7-opendaylight-60-release/x86_64/os/Packages/
-.. _example repo config files for each official repository: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=tree;f=rpm/example_repo_configs;hb=refs/heads/master
+.. _example repo config files for each official repository: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=tree;f=packages/rpm/example_repo_configs;hb=refs/heads/master
 .. _integration-multipatch-test: https://jenkins.opendaylight.org/releng/search/?q=integration-multipatch-test

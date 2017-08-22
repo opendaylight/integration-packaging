@@ -31,7 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Add ODL RPM repo config to correct location in box filesystem
     # Repo configs are provided by upstream OpenDaylight Integration/Packaging
-    l2switch.vm.provision "shell", inline: "curl --silent -o /etc/yum.repos.d/opendaylight-6-release.repo \"https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=rpm/example_repo_configs/opendaylight-6-release.repo;hb=refs/heads/master\""
+    l2switch.vm.provision "shell", inline: "curl --silent -o /etc/yum.repos.d/opendaylight-6-release.repo \"https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=packages/rpm/example_repo_configs/opendaylight-6-release.repo;hb=refs/heads/master\""
 
     # Install ODL using the RPM repo config added above
     l2switch.vm.provision "shell", inline: "dnf install -y opendaylight"
