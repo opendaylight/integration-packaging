@@ -1,4 +1,4 @@
 {
     "odl_version": "4.2.0",
-    "rpm_repo_url": "'https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=rpm/example_repo_configs/opendaylight-42-release.repo'"
+    "rpm_repo_url": "'https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=packages/rpm/example_repo_configs/opendaylight-42-release.repo'"
 }
