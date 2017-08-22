@@ -15,8 +15,8 @@ odl_template = Template("opendaylight-$version_major.$version_minor."
 unitfile_template = Template("opendaylight-$sysd_commit.service")
 unitfile_url_template = Template("https://git.opendaylight.org/gerrit/"
                                  "gitweb?p=integration/packaging.git;a="
-                                 "blob_plain;f=rpm/unitfiles/opendaylight."
-                                 "service;hb=$sysd_commit")
+                                 "blob_plain;f=packages/rpm/unitfiles/"
+                                 "opendaylight.service;hb=$sysd_commit")
 unitfile_tb_template = Template("opendaylight-$sysd_commit.service.tar.gz")
 
 
