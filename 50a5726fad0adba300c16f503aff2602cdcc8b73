@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba1f61a0_de7a37f0",
+        "filename": "packages/vars.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-23T22:10:19Z",
+      "side": 1,
+      "message": "Just noticed that this package import isn\u0027t just needed for tests, it\u0027s causing build-rpm jobs on RelEng Jenkins to fail\n\nhttps://jenkins.opendaylight.org/releng/job/packaging-build-rpm-carbon/30/console",
+      "revId": "50a5726fad0adba300c16f503aff2602cdcc8b73",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
