@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba1f61a0_3d9b9c68",
+        "filename": "packages/rpm/cache/cache.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 5089
+      },
+      "writtenOn": "2017-08-23T12:52:51Z",
+      "side": 1,
+      "message": "convert",
+      "range": {
+        "startLine": 53,
+        "startChar": 58,
+        "endLine": 53,
+        "endChar": 64
+      },
+      "revId": "6d39fddd18dd1bc8b5c9d862ee507117e9afc473",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_ddba40bf",
+        "filename": "packages/rpm/cache/cache.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 5089
+      },
+      "writtenOn": "2017-08-23T12:52:51Z",
+      "side": 1,
+      "message": "is it possible for what you have cached to be updated on the server later?  If so you can use: https://stackoverflow.com/questions/31105606/downloading-files-based-on-timestamp-in-python\n\nto pull if newer",
+      "range": {
+        "startLine": 58,
+        "startChar": 16,
+        "endLine": 58,
+        "endChar": 64
+      },
+      "revId": "6d39fddd18dd1bc8b5c9d862ee507117e9afc473",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_1db5f8cc",
+        "filename": "packages/rpm/cache/cache.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 5089
+      },
+      "writtenOn": "2017-08-23T12:52:51Z",
+      "side": 1,
+      "message": "to me os.walk would be easier here, but if this works then who cares",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 78
+      },
+      "revId": "6d39fddd18dd1bc8b5c9d862ee507117e9afc473",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_fd05847a",
+        "filename": "packages/rpm/cache/cache.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 5089
+      },
+      "writtenOn": "2017-08-23T12:52:51Z",
+      "side": 1,
+      "message": "https://stackoverflow.com/questions/2239655/how-can-files-be-added-to-a-tarfile-with-python-without-adding-the-directory-hi",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 80
+      },
+      "revId": "6d39fddd18dd1bc8b5c9d862ee507117e9afc473",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
