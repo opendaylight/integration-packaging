@@ -182,8 +182,6 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170821snap442")
 
-    # Karaf 4 karaf- vs distribution-karaf naming not supported
-    @unittest.expectedFailure
     def test_nitrogen_snapshot_url(self):
         """Test URL of an ODL Nitrogen snapshot build."""
         # noqa ShellCheckBear
@@ -194,8 +192,6 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170815snap1727")
 
-    # Karaf 4 karaf- vs distribution-karaf naming not supported
-    @unittest.expectedFailure
     def test_nitrogen_snapshot_zip_url(self):
         """Test URL of an ODL Nitrogen snapshot build zip archive."""
         # noqa ShellCheckBear
@@ -206,8 +202,6 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170815snap1727")
 
-    # Karaf 4 karaf- vs distribution-karaf naming not supported
-    @unittest.expectedFailure
     def test_oxygen_snapshot_url(self):
         """Test URL of an ODL Oxygen snapshot build."""
         # noqa ShellCheckBear
@@ -218,8 +212,6 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170815snap2")
 
-    # Karaf 4 karaf- vs distribution-karaf naming not supported
-    @unittest.expectedFailure
     def test_oxygen_snapshot_zip_url(self):
         """Test URL of an ODL Oxygen snapshot build zip archive."""
         # noqa ShellCheckBear
@@ -230,8 +222,6 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170815snap2")
 
-    # Multipatch Nexus repos are not currently supported
-    @unittest.expectedFailure
     def test_carbon_multipatch_zip_url(self):
         """Test URL of an ODL Carbon multipatch-test build zip archive."""
         # noqa ShellCheckBear
@@ -242,8 +232,6 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170822snap45")
 
-    # Multipatch Nexus repos are not currently supported
-    @unittest.expectedFailure
     def test_nitrogen_multipatch_zip_url(self):
         """Test URL of an ODL Nitrogen multipatch-test build zip archive."""
         # noqa ShellCheckBear
@@ -254,8 +242,6 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170822snap274")
 
-    # Multipatch Nexus repos are not currently supported
-    @unittest.expectedFailure
     def test_oxygen_multipatch_zip_url(self):
         """Test URL of an ODL Oxygen multipatch-test build zip archive."""
         # noqa ShellCheckBear

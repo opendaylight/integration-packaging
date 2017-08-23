@@ -67,10 +67,8 @@ def extract_version(url):
         # build_id = 2242
         # date = 20161201
         odl_rpm = re.search(
-            r'\/(distribution-karaf)-'
-            r'([0-9]\.[0-9]\.[0-9])-([0-9]+)\.([0-9]+)-([0-9]+)\.(tar\.gz)',
-            url)
-        pkg_version = "0.1." + odl_rpm.group(3) + "snap" + odl_rpm.group(5)
+            r'([0-9]\.[0-9]\.[0-9])-([0-9]+)\.([0-9]+)-([0-9]+)\.', url)
+        pkg_version = "0.1." + odl_rpm.group(2) + "snap" + odl_rpm.group(4)
     elif "public" or "opendaylight.release" in url:
         pkg_version = "1"
     else:
