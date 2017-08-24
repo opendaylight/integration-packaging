@@ -10,6 +10,7 @@ User=odl
 Group=odl
 SuccessExitStatus=143
 LimitNOFILE=102400
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
