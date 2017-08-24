@@ -46,6 +46,30 @@
       "revId": "efeea6a450efaf2f4b5ec93962ecdd92ec5782c5",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_38f563cb",
+        "filename": "packages/rpm/unitfiles/opendaylight.service",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5089
+      },
+      "writtenOn": "2017-08-24T21:20:58Z",
+      "side": 1,
+      "message": "The difference is with always it will restart even on a clean exit.  So is it possible a user could login to karaf shell and signal a clean shutdown that way?  We wouldn\u0027t want it to restart then.",
+      "parentUuid": "ba1f61a0_0dadc39c",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 14
+      },
+      "revId": "efeea6a450efaf2f4b5ec93962ecdd92ec5782c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
