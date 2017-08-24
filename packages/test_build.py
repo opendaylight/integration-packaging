@@ -251,3 +251,51 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170822snap6")
+
+
+class TestGetDistroNamePrefix(unittest.TestCase):
+
+    """Test logic to get Karaf 3/4 distro name prefix per ODL major version."""
+
+    k3_distro_prefix = "distribution-karaf"
+    k4_distro_prefix = "karaf"
+
+    def test_boron(self):
+        """Test Boron major version gives Karaf 3 prefix."""
+        distro_prefix = vars.get_distro_name_prefix("5")
+        self.assertEqual(distro_prefix, self.k3_distro_prefix)
+
+    def test_carbon(self):
+        """Test Carbon major version gives Karaf 3 prefix."""
+        distro_prefix = vars.get_distro_name_prefix("6")
+        self.assertEqual(distro_prefix, self.k3_distro_prefix)
+
+    def test_nitrogen(self):
+        """Test Nitrogen major version gives Karaf 4 prefix."""
+        distro_prefix = vars.get_distro_name_prefix("7")
+        self.assertEqual(distro_prefix, self.k4_distro_prefix)
+
+    def test_oxygen(self):
+        """Test Oxygen major version gives Karaf 4 prefix."""
+        distro_prefix = vars.get_distro_name_prefix("8")
+        self.assertEqual(distro_prefix, self.k4_distro_prefix)
+
+    def test_boron_int(self):
+        """Test Boron major version as int gives Karaf 3 prefix."""
+        distro_prefix = vars.get_distro_name_prefix(5)
+        self.assertEqual(distro_prefix, self.k3_distro_prefix)
+
+    def test_carbon_int(self):
+        """Test Carbon major version as int gives Karaf 3 prefix."""
+        distro_prefix = vars.get_distro_name_prefix(6)
+        self.assertEqual(distro_prefix, self.k3_distro_prefix)
+
+    def test_nitrogen_int(self):
+        """Test Nitrogen major version as int gives Karaf 4 prefix."""
+        distro_prefix = vars.get_distro_name_prefix(7)
+        self.assertEqual(distro_prefix, self.k4_distro_prefix)
+
+    def test_oxygen_int(self):
+        """Test Oxygen major version as int gives Karaf 4 prefix."""
+        distro_prefix = vars.get_distro_name_prefix(8)
+        self.assertEqual(distro_prefix, self.k4_distro_prefix)

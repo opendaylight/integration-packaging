@@ -93,6 +93,10 @@ if __name__ == "__main__":
 
     java_version_required = vars.get_java_version(build['version_major'])
 
+    # Karaf 3 distros use distribution-karaf-, Karaf 4 uses karaf-
+    build.update({"distro_name_prefix": vars.get_distro_name_prefix(
+        build['version_major'])})
+
     # Common parameters for all new and snapshot builds
     build.update({"download_url": args.download_url,
                   "sysd_commit": args.sysd_commit,

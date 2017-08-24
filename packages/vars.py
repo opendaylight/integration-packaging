@@ -37,8 +37,8 @@ def extract_version(url):
         # logic is needed for RPM versioning.
         # Docs:
         #   https://wiki.opendaylight.org/view/Integration/Packaging/Versioning
-        # Substitute the part of the build URL not required with empty string
-        date_url = re.sub('distribution-karaf-.*\.tar\.gz$', '', url)
+        # Srip distro part of URL, resulting in base URL
+        date_url = url.rpartition("/")[0]+url.rpartition("/")[1]
         # Set date_url as an environment variable for it to be used in
         # a subprocess
         os.environ["date_url"] = date_url
@@ -81,6 +81,7 @@ def extract_version(url):
     #  opendaylight/integration/distribution-karaf/0.3.3-Lithium-SR3/
     #  distribution-karaf-0.3.3-Lithium-SR3.tar.gz
     #     match: 0.3.3-Lithium-SR3
+    # FIXME: This will fail for Karaf 4 tarballs as they don't have a codename
     odl_version = re.search(r'\/(\d)\.(\d)\.(\d).(.*)\/', url)
     version["version_major"] = odl_version.group(2)
     version["version_minor"] = odl_version.group(3)
@@ -98,8 +99,8 @@ def get_snap_url(version_major, version_minor):
     :return arg snapshot_url: URL of the snapshot release
     """
     parent_dir = "https://nexus.opendaylight.org/content/repositories/" \
-                 "opendaylight.snapshot/org/opendaylight/integration/"\
-                 "distribution-karaf/"
+                 "opendaylight.snapshot/org/opendaylight/integration/{}/" \
+                 .format(get_distro_name_style())
 
     # If the minor verison is given, get the sub-directory directly
     # else, find the latest sub-directory
@@ -195,3 +196,18 @@ def get_changelog_date(pkg_type):
         return "{} {}".format(date, time)
     else:
         raise ValueError("Unknown package type: {}".format(pkg_type))
+
+
+def get_distro_name_prefix(major_version):
+    """Return Karaf 3 or 4-style distro name prefix based on ODL major version
+
+    :arg str major_version: OpenDaylight major version umber
+    :return str distro_name_style: Karaf 3 or 4-style distro name prefix
+
+    """
+    if int(major_version) < 7:
+        # ODL versions before Nitrogen use Karaf 3, distribution-karaf- names
+        return "distribution-karaf"
+    else:
+        # ODL versions Nitrogen and after use Karaf 4, karaf- names
+        return "karaf"
