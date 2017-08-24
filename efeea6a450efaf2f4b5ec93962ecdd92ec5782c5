@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba1f61a0_2d6407e4",
+        "filename": "packages/rpm/unitfiles/opendaylight.service",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5089
+      },
+      "writtenOn": "2017-08-24T15:59:58Z",
+      "side": 1,
+      "message": "I think we may want restart on-failure.  Looks like the othe openstack services use this:\nhttps://review.rdoproject.org/r/gitweb?p\u003dopenstack/neutron-distgit.git;a\u003dblob;f\u003dneutron-server.service;h\u003de68024cb9dc06e474b1ac9473bff93c3d892b4d6;hb\u003dHEAD#l12",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 14
+      },
+      "revId": "efeea6a450efaf2f4b5ec93962ecdd92ec5782c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
