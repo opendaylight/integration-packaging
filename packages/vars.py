@@ -32,62 +32,133 @@ def extract_version(url):
     :arg str url: URL of the ODL tarball build for building RPMs
 
     """
+    # Version components will be added below. Patch version is always 0.
+    version = {"version_patch": "0"}
+
+    # Parse URL to find major and minor versions. Eg:
+    # https://nexus.opendaylight.org/content/repositories/public/org/
+    #  opendaylight/integration/distribution-karaf/0.3.4-Lithium-SR4/
+    #  distribution-karaf-0.3.4-Lithium-SR4.tar.gz
+    # major_version = 3
+    # minor_version = 4
+    re_out = re.search(r'\d\.(\d)\.(\d)', url)
+    version["version_major"] = re_out.group(1)
+    version["version_minor"] = re_out.group(2)
+
+    # Add version components that need to be extracted based on type of build
     if "autorelease" in url:
-        # Autorelease URL does not include a date and hence date extraction
-        # logic is needed for RPM versioning.
-        # Docs:
-        #   https://wiki.opendaylight.org/view/Integration/Packaging/Versioning
-        # Strip distro archive part of URL, resulting in base URL
-        date_url = url.rpartition("/")[0]+url.rpartition("/")[1]
-        # Set date_url as an environment variable for it to be used in
-        # a subprocess
-        os.environ["date_url"] = date_url
-        # Extract ODL artifact's date by scraping data from the build URL
-        odl_date = subprocess.Popen(
-            "curl -s $date_url | grep tar.gz -A1 | tail -n1 |"
-            "sed \"s/<td>//g\" | sed \"s/\\n//g\" | awk '{print $3,$2,$6}' ",
-            shell=True, stdout=subprocess.PIPE,
-            stdin=subprocess.PIPE).stdout.read().rstrip().strip("</td>")
-        date = datetime.datetime.strptime(odl_date, "%d %b %Y").strftime(
-                                                                '%Y%m%d')
-        # Search the ODL autorelease build URL to match the Build ID that
-        # follows "autorelease-". eg:
-        # https://nexus.opendaylight.org/content/repositories/autorelease-1533/
-        #  org/opendaylight/integration/distribution-karaf/0.4.4-Beryllium-SR4/
-        # build_id = 1533
-        build_id = re.search(r'\/(autorelease)-([0-9]+)\/', url).group(2)
-        pkg_version = "0.1." + date + "rel" + build_id
+        version = extract_autorelease_version(url, version)
     elif "snapshot" in url:
-        # Search the ODL snapshot build URL to match the date and the Build ID
-        # that are between "distribution-karaf" and ".tar.gz".
-        # eg: https://nexus.opendaylight.org/content/repositories/
-        #      opendaylight.snapshot/org/opendaylight/integration/
-        #      distribution-karaf/0.6.0-SNAPSHOT/
-        #      distribution-karaf-0.6.0-20161201.031047-2242.tar.gz
-        # build_id = 2242
-        # date = 20161201
-        odl_rpm = re.search(
-            r'([0-9]\.[0-9]\.[0-9])-([0-9]+)\.([0-9]+)-([0-9]+)\.', url)
-        pkg_version = "0.1." + odl_rpm.group(2) + "snap" + odl_rpm.group(4)
+        version = extract_snapshot_version(url, version)
     elif "public" or "opendaylight.release" in url:
-        pkg_version = "1"
+        version = extract_release_version(url, version)
     else:
         raise ValueError("Unrecognized URL {}".format(url))
 
-    version = {}
-    # Search the ODL build URL to match 0.major.minor-codename-SR and extract
-    # version information. eg: release:
+    return version
+
+
+def extract_release_version(url, version):
+    """Extract package version components from release build URL
+
+    :arg str url: URL to release tarball
+    :arg dict version: Package version components for given distro
+    :return dict version: Version components, with additions
+    """
+    # If this version of ODL has a codename, parse it from URL. Eg:
     # https://nexus.opendaylight.org/content/repositories/public/org/
-    #  opendaylight/integration/distribution-karaf/0.3.3-Lithium-SR3/
-    #  distribution-karaf-0.3.3-Lithium-SR3.tar.gz
-    #     match: 0.3.3-Lithium-SR3
-    # FIXME: This will fail for Karaf 4 tarballs as they don't have a codename
-    odl_version = re.search(r'\/(\d)\.(\d)\.(\d).(.*)\/', url)
-    version["version_major"] = odl_version.group(2)
-    version["version_minor"] = odl_version.group(3)
-    version["version_patch"] = "0"
-    version["pkg_version"] = pkg_version
-    version["codename"] = odl_version.group(4)
+    #  opendaylight/integration/distribution-karaf/0.3.4-Lithium-SR4/
+    #  distribution-karaf-0.3.4-Lithium-SR4.tar.gz
+    # codename = Lithium-SR4
+    if int(version["version_major"]) < 7:
+        # ODL versions before Nitrogen use Karaf 3, have a codename
+        # Include "-" in codename to avoid hanging "-" when no codename
+        version["codename"] = "-" + re.search(r'0\.[0-9]+\.[0-9]+-(.*)\/',
+                                              url).group(1)
+    else:
+        # ODL versions Nitrogen and after use Karaf 4, don't have a codename
+        version["codename"] = ""
+
+    # Package version is assumed to be 1 for release builds
+    # TODO: Should be able to manually set this in case this is a rebuild
+    version["pkg_version"] = "1"
+
+    return version
+
+
+def extract_autorelease_version(url, version):
+    """Extract package version components from an autorelease build URL
+
+    :arg str url: URL to autorelease tarball
+    :arg dict version: Package version components for given distro
+    :return dict version: Version components, with additions
+    """
+    # If this version of ODL has a codename, parse it from URL. Eg:
+    # https://nexus.opendaylight.org/content/repositories/autorelease-1533/
+    #     org/opendaylight/integration/distribution-karaf/0.4.4-Beryllium-SR4/
+    # codename = Beryllium-SR4
+    if int(version["version_major"]) < 7:
+        # ODL versions before Nitrogen use Karaf 3, have a codename
+        # Include "-" in codename to avoid hanging "-" when no codename
+        version["codename"] = "-" + re.search(r'0\.[0-9]+\.[0-9]+-(.*)\/',
+                                              url).group(1)
+    else:
+        # ODL versions Nitrogen and after use Karaf 4, don't have a codename
+        version["codename"] = ""
+
+    # Autorelease URLs don't include a date, parse HTML to find build date
+    # Strip distro zip/tarball archive part of URL, resulting in base URL
+    base_url = url.rpartition("/")[0]+url.rpartition("/")[1]
+    # Using bash subprocess to parse HTML and find date of build
+    # TODO: Do all of this with Python, don't spawn a bash process
+    # Set base_url as an environment var to pass it to subprocess
+    os.environ["base_url"] = base_url
+    raw_date = subprocess.Popen(
+        "curl -s $base_url | grep tar.gz -A1 | tail -n1 |"
+        "sed \"s/<td>//g\" | sed \"s/\\n//g\" | awk '{print $3,$2,$6}' ",
+        shell=True, stdout=subprocess.PIPE,
+        stdin=subprocess.PIPE).stdout.read().rstrip().strip("</td>")
+    build_date = datetime.datetime.strptime(raw_date, "%d %b %Y").strftime(
+                                            '%Y%m%d')
+
+    # Parse URL to find unique build ID. Eg:
+    # https://nexus.opendaylight.org/content/repositories/autorelease-1533/
+    #     org/opendaylight/integration/distribution-karaf/0.4.4-Beryllium-SR4/
+    # build_id = 1533
+    build_id = re.search(r'\/autorelease-([0-9]+)\/', url).group(1)
+
+    # Combine build date and build ID into pkg_version
+    version["pkg_version"] = "0.1." + build_date + "rel" + build_id
+
+    return version
+
+
+def extract_snapshot_version(url, version):
+    """Extract package version components from a snapshot build URL
+
+    :arg str url: URL to snapshot tarball
+    :arg dict version: Package version components for given distro
+    :return dict version: Version components, with additions
+    """
+
+    # All snapshot builds use SNAPSHOT codename
+    # Include "-" in codename to avoid hanging "-" when no codename
+    version["codename"] = "-SNAPSHOT"
+
+    # Parse URL to find build date and build ID. Eg:
+    # https://nexus.opendaylight.org/content/repositories/
+    #     opendaylight.snapshot/org/opendaylight/integration/
+    #     distribution-karaf/0.6.0-SNAPSHOT/
+    #     distribution-karaf-0.6.0-20161201.031047-2242.tar.gz
+    # build_date = 20161201
+    # build_id = 2242
+    re_out = re.search(r'0.[0-9]+\.[0-9]+-([0-9]+)\.[0-9]+-([0-9]+)\.', url)
+    build_date = re_out.group(1)
+    build_id = re_out.group(2)
+
+    # Combine build date and build ID into pkg_version
+    version["pkg_version"] = "0.1." + build_date + "snap" + build_id
+
     return version
 
 
