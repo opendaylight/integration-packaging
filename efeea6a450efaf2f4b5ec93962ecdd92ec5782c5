@@ -70,6 +70,30 @@
       "revId": "efeea6a450efaf2f4b5ec93962ecdd92ec5782c5",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_788fdbcc",
+        "filename": "packages/rpm/unitfiles/opendaylight.service",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-08-25T06:21:42Z",
+      "side": 1,
+      "message": "I don\u0027t know this stuff expertly, but assuming Tim\u0027s explanation is accurate I give my +1 for \"on-failure\".\nOtherwise, how do I stop the damn thing if I need to?",
+      "parentUuid": "ba1f61a0_38f563cb",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 14
+      },
+      "revId": "efeea6a450efaf2f4b5ec93962ecdd92ec5782c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
