@@ -81,13 +81,18 @@ def extract_version(url):
     #  opendaylight/integration/distribution-karaf/0.3.3-Lithium-SR3/
     #  distribution-karaf-0.3.3-Lithium-SR3.tar.gz
     #     match: 0.3.3-Lithium-SR3
-    # FIXME: This will fail for Karaf 4 tarballs as they don't have a codename
     odl_version = re.search(r'\/(\d)\.(\d)\.(\d).(.*)\/', url)
     version["version_major"] = odl_version.group(2)
     version["version_minor"] = odl_version.group(3)
     version["version_patch"] = "0"
     version["pkg_version"] = pkg_version
-    version["codename"] = odl_version.group(4)
+    if int(version["version_major"]) < 7:
+        # ODL versions before Nitrogen use Karaf 3, have a codename
+        # Including "-" in codename to avoid hanging "-" when no codename
+        version["codename"] = "-" + odl_version.group(4)
+    else:
+        # ODL versions Nitrogen and after use Karaf 4, don't have a codename
+        version["codename"] = ""
     return version
 
 

@@ -28,6 +28,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "4")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "-Boron-SR4")
 
     def test_boron_sr4_release_zip_url(self):
         """Test URL of the ODL Boron SR4 release zip archive."""
@@ -38,6 +39,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "4")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "-Boron-SR4")
 
     def test_carbon_release_url(self):
         """Test URL of the ODL Carbon release."""
@@ -48,6 +50,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "-Carbon")
 
     def test_carbon_release_zip_url(self):
         """Test URL of the ODL Carbon release zip archive."""
@@ -58,6 +61,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "-Carbon")
 
     def test_carbon_sr1_release_url(self):
         """Test URL of the ODL Carbon SR1 release."""
@@ -68,6 +72,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "1")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "-Carbon")
 
     def test_carbon_sr1_release_zip_url(self):
         """Test URL of the ODL Carbon SR1 release zip archive."""
@@ -78,6 +83,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "1")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "-Carbon")
 
     def test_boron_autorelease_url(self):
         """Test URL of an ODL Boron autorelease build."""
@@ -88,6 +94,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "5")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170813rel1928")
+        self.assertEqual(version["codename"], "-Boron-SR5")
 
     @unittest.skip("Hangs, not sure why")
     def test_boron_autorelease_zip_url(self):
@@ -99,6 +106,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "5")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170813rel1928")
+        self.assertEqual(version["codename"], "-Boron-SR5")
 
     def test_carbon_autorelease_url(self):
         """Test URL of an ODL Carbon autorelease build."""
@@ -109,6 +117,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170823rel1940")
+        self.assertEqual(version["codename"], "-Carbon")
 
     def test_carbon_autorelease_zip_url(self):
         """Test URL of an ODL Carbon autorelease build zip archive."""
@@ -119,6 +128,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170823rel1940")
+        self.assertEqual(version["codename"], "-Carbon")
 
     @unittest.skip("Hangs, not sure why")
     def test_nitrogen_autorelease_url(self):
@@ -130,6 +140,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170723rel1916")
+        self.assertEqual(version["codename"], "")
 
     @unittest.skip("Hangs, not sure why")
     def test_nitrogen_autorelease_zip_url(self):
@@ -141,6 +152,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170723rel1916")
+        self.assertEqual(version["codename"], "")
 
     def test_boron_snapshot_url(self):
         """Test URL of an ODL Boron snapshot build."""
@@ -151,6 +163,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "5")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170813snap357")
+        self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_boron_snapshot_zip_url(self):
         """Test URL of an ODL Boron snapshot build zip archive."""
@@ -161,6 +174,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "5")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170813snap357")
+        self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_carbon_snapshot_url(self):
         """Test URL of an ODL Carbon snapshot build."""
@@ -171,6 +185,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170821snap442")
+        self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_carbon_snapshot_zip_url(self):
         """Test URL of an ODL Carbon snapshot build zip archive."""
@@ -181,6 +196,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170821snap442")
+        self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_nitrogen_snapshot_url(self):
         """Test URL of an ODL Nitrogen snapshot build."""
@@ -191,6 +207,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170815snap1727")
+        self.assertEqual(version["codename"], "")
 
     def test_nitrogen_snapshot_zip_url(self):
         """Test URL of an ODL Nitrogen snapshot build zip archive."""
@@ -201,6 +218,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170815snap1727")
+        self.assertEqual(version["codename"], "")
 
     def test_oxygen_snapshot_url(self):
         """Test URL of an ODL Oxygen snapshot build."""
@@ -211,6 +229,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170815snap2")
+        self.assertEqual(version["codename"], "")
 
     def test_oxygen_snapshot_zip_url(self):
         """Test URL of an ODL Oxygen snapshot build zip archive."""
@@ -221,6 +240,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170815snap2")
+        self.assertEqual(version["codename"], "")
 
     def test_carbon_multipatch_zip_url(self):
         """Test URL of an ODL Carbon multipatch-test build zip archive."""
@@ -231,6 +251,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170822snap45")
+        self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_nitrogen_multipatch_zip_url(self):
         """Test URL of an ODL Nitrogen multipatch-test build zip archive."""
@@ -241,6 +262,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170822snap274")
+        self.assertEqual(version["codename"], "")
 
     def test_oxygen_multipatch_zip_url(self):
         """Test URL of an ODL Oxygen multipatch-test build zip archive."""
@@ -251,6 +273,7 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20170822snap6")
+        self.assertEqual(version["codename"], "")
 
 
 class TestGetDistroNamePrefix(unittest.TestCase):

@@ -1,6 +1,6 @@
 opendaylight ({{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ pkg_version }}) stable; urgency=medium
 
-  * Release: OpenDaylight {{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ codename }}
+  * Release: OpenDaylight {{ version_major }}.{{ version_minor }}.{{ version_patch }}{{ codename }}
 
  -- {{ changelog_name }} <{{ changelog_email }}>  {{ changelog_date }}
 
