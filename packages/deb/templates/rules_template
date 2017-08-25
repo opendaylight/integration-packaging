@@ -5,7 +5,7 @@ VERSION_MINOR = {{ version_minor }}
 VERSION_PATCH = {{ version_patch }}
 PKG_VERSION = {{ pkg_version }}
 CODENAME = "{{ codename }}"
-VERSION = 0.$(VERSION_MAJOR).$(VERSION_MINOR)-$(CODENAME)
+VERSION = 0.$(VERSION_MAJOR).$(VERSION_MINOR)$(CODENAME)
 PACKAGEVERSION = $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)-$(PKG_VERSION)
 TARBALL = $(notdir {{ download_url }})
 

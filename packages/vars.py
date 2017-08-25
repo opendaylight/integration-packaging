@@ -32,6 +32,8 @@ def extract_version(url):
     :arg str url: URL of the ODL tarball build for building RPMs
 
     """
+    version = {}
+    # Based on the type of build, find date/build ID info required for pkg_Version
     if "autorelease" in url:
         # Autorelease URL does not include a date and hence date extraction
         # logic is needed for RPM versioning.
@@ -56,7 +58,7 @@ def extract_version(url):
         #  org/opendaylight/integration/distribution-karaf/0.4.4-Beryllium-SR4/
         # build_id = 1533
         build_id = re.search(r'\/(autorelease)-([0-9]+)\/', url).group(2)
-        pkg_version = "0.1." + date + "rel" + build_id
+        version["pkg_version"] = "0.1." + date + "rel" + build_id
     elif "snapshot" in url:
         # Search the ODL snapshot build URL to match the date and the Build ID
         # that are between "distribution-karaf" and ".tar.gz".
@@ -68,26 +70,34 @@ def extract_version(url):
         # date = 20161201
         odl_rpm = re.search(
             r'([0-9]\.[0-9]\.[0-9])-([0-9]+)\.([0-9]+)-([0-9]+)\.', url)
-        pkg_version = "0.1." + odl_rpm.group(2) + "snap" + odl_rpm.group(4)
+        version["pkg_version"] = pkg_version = "0.1." + odl_rpm.group(2) + \
+            "snap" + odl_rpm.group(4)
     elif "public" or "opendaylight.release" in url:
-        pkg_version = "1"
+        version["pkg_version"] = "1"
     else:
         raise ValueError("Unrecognized URL {}".format(url))
 
-    version = {}
     # Search the ODL build URL to match 0.major.minor-codename-SR and extract
     # version information. eg: release:
     # https://nexus.opendaylight.org/content/repositories/public/org/
     #  opendaylight/integration/distribution-karaf/0.3.3-Lithium-SR3/
     #  distribution-karaf-0.3.3-Lithium-SR3.tar.gz
     #     match: 0.3.3-Lithium-SR3
-    # FIXME: This will fail for Karaf 4 tarballs as they don't have a codename
     odl_version = re.search(r'\/(\d)\.(\d)\.(\d).(.*)\/', url)
     version["version_major"] = odl_version.group(2)
     version["version_minor"] = odl_version.group(3)
     version["version_patch"] = "0"
-    version["pkg_version"] = pkg_version
-    version["codename"] = odl_version.group(4)
+    if "snapshot" in url:
+        # All snapshot builds use SNAPSHOT codename
+        # Include "-" in codename to avoid hanging "-" when no codename
+        version["codename"] = "-SNAPSHOT"
+    elif int(version["version_major"]) < 7:
+        # ODL versions before Nitrogen use Karaf 3, have a codename
+        # Include "-" in codename to avoid hanging "-" when no codename
+        version["codename"] = "-" + odl_version.group(4)
+    else:
+        # ODL versions Nitrogen and after use Karaf 4, don't have a codename
+        version["codename"] = ""
     return version
 
 
