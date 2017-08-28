@@ -94,6 +94,30 @@
       "revId": "efeea6a450efaf2f4b5ec93962ecdd92ec5782c5",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_5e8f5ccc",
+        "filename": "packages/rpm/unitfiles/opendaylight.service",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5867
+      },
+      "writtenOn": "2017-08-28T11:18:54Z",
+      "side": 1,
+      "message": "@Jamo: IMHO the right thing to do to shutdown ODL (RPM install) is:\n\n   sudo systemctl stop opendaylight\n\n@Tim/Sridhar: I\u0027m not 100% convinced this really is right, specifically as I said in RH Bug 1479292 because I\u0027m not sure what return value the ODL process has when it does the \"suicide\" thing (which AFAIK is somewhere in Akka not ODL code), but... let\u0027s start by getting this in already, and see - having Restart\u003don-failure is probably much better than having no restart at all! And then if it still does not (always) restart when we want it to, we\u0027ll come back to this discussion... ;-)",
+      "parentUuid": "ba1f61a0_788fdbcc",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 14
+      },
+      "revId": "efeea6a450efaf2f4b5ec93962ecdd92ec5782c5",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
