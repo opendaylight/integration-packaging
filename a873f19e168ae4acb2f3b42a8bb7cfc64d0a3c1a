@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ba1f61a0_aaea920c",
+        "filename": "packages/deb/templates/rules_template",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-29T09:06:23Z",
+      "side": 1,
+      "message": "Yeah, exactly. I think I note that in the inline docs elsewhere.",
+      "parentUuid": "ba1f61a0_af4e246d",
+      "range": {
+        "startLine": 8,
+        "startChar": 45,
+        "endLine": 8,
+        "endChar": 56
+      },
+      "revId": "a873f19e168ae4acb2f3b42a8bb7cfc64d0a3c1a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba1f61a0_4f3048e8",
         "filename": "packages/vars.py",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2017-08-28T21:48:52Z",
       "side": 1,
       "message": "this should probably come after an if statement checking if re_out is None then raise exception",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 46
+      },
+      "revId": "a873f19e168ae4acb2f3b42a8bb7cfc64d0a3c1a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_8aed0e28",
+        "filename": "packages/vars.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-29T09:06:23Z",
+      "side": 1,
+      "message": "It can\u0027t be None, all URLs include versions that this matches. Also, if it could be None, it would raise an exception when it tries to call None.group. We could make it a more description exception, but I think that\u0027s unnecessary clutter since it can\u0027t happen per first sentence.",
+      "parentUuid": "ba1f61a0_4f3048e8",
       "range": {
         "startLine": 45,
         "startChar": 0,
