@@ -1,0 +1,8 @@
+Verified+1: jenkins-releng <jenkins-releng@opendaylight.org>
+Code-Review+2: Timothy Rozet <trozet@redhat.com>
+Code-Review+1: Sridhar Gaddam <sgaddam@redhat.com>
+Submitted-by: Timothy Rozet <trozet@redhat.com>
+Submitted-at: Tue, 29 Aug 2017 12:56:27 +0000
+Reviewed-on: https://git.opendaylight.org/gerrit/62258
+Project: integration/packaging
+Branch: refs/heads/master
