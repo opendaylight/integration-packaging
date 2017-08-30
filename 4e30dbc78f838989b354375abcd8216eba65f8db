@@ -22,6 +22,30 @@
       "revId": "4e30dbc78f838989b354375abcd8216eba65f8db",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_c77b78f3",
+        "filename": "packages/rpm/cache/cache.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-30T18:37:17Z",
+      "side": 1,
+      "message": "It seemed like it\u0027d be really non-obvious to someone reading the code why I didn\u0027t use a Python built-in, wanted to explain and provide a quick \"is this still broken\" link reference.",
+      "parentUuid": "ba1f61a0_e744bc1c",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 48
+      },
+      "revId": "4e30dbc78f838989b354375abcd8216eba65f8db",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
