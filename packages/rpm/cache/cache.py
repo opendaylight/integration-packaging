@@ -4,9 +4,9 @@
 import glob
 import os
 from string import Template
+import subprocess
 import tarfile
 import urllib
-import zipfile
 
 # Path to the directory that contains this file is assumed to be the cache dir
 cache_dir = os.path.dirname(os.path.abspath(__file__))
@@ -57,8 +57,9 @@ def cache_build(build):
             else:
                 print("Already cached: {}".format(odl_zip_path))
             # Extract zip archive
-            with zipfile.ZipFile(odl_zip_path) as zip_ref:
-                zip_ref.extractall(cache_dir)
+            # NB: zipfile.ZipFile.extractall doesn't preserve permissions
+            # https://bugs.python.org/issue15795
+            subprocess.call(["unzip", "-oq", odl_zip_path, "-d", cache_dir])
             # Get files in cache dir
             cache_dir_ls_all = glob.glob(os.path.join(cache_dir, "*"))
             # Remove pyc files that may be newer than just-extracted zip
