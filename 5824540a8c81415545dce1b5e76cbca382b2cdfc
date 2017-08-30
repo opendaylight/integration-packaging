@@ -16,6 +16,24 @@
       "revId": "5824540a8c81415545dce1b5e76cbca382b2cdfc",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_e73e7cd9",
+        "filename": "packages/test_build.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-08-30T19:45:34Z",
+      "side": 1,
+      "message": "Excellent idea, implemented in next patch",
+      "parentUuid": "ba1f61a0_e7b95c7a",
+      "revId": "5824540a8c81415545dce1b5e76cbca382b2cdfc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
