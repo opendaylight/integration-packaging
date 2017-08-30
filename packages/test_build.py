@@ -273,6 +273,45 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
 
+class TestGetSnapURL(unittest.TestCase):
+
+    """Test logic get URL to latest snapshot build of given major version."""
+
+    url_base = "https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/org/opendaylight/integration"
+
+    def test_boron(self):
+        """Test Boron major version gives sane snapshot URL."""
+        snap_url = vars.get_snap_url("5")
+        self.assertIn(self.url_base, snap_url)
+        self.assertIn("tar.gz", snap_url)
+        self.assertNotIn("release", snap_url)
+        self.assertNotIn("public", snap_url)
+
+    def test_carbon(self):
+        """Test Carbon major version gives sane snapshot URL."""
+        snap_url = vars.get_snap_url("6")
+        self.assertIn(self.url_base, snap_url)
+        self.assertIn("tar.gz", snap_url)
+        self.assertNotIn("release", snap_url)
+        self.assertNotIn("public", snap_url)
+
+    def test_nitrogen(self):
+        """Test Nitrogen major version gives sane snapshot URL."""
+        snap_url = vars.get_snap_url("7")
+        self.assertIn(self.url_base, snap_url)
+        self.assertIn("tar.gz", snap_url)
+        self.assertNotIn("release", snap_url)
+        self.assertNotIn("public", snap_url)
+
+    def test_oxygen(self):
+        """Test Oxygen major version gives sane snapshot URL."""
+        snap_url = vars.get_snap_url("8")
+        self.assertIn(self.url_base, snap_url)
+        self.assertIn("tar.gz", snap_url)
+        self.assertNotIn("release", snap_url)
+        self.assertNotIn("public", snap_url)
+
+
 class TestGetDistroNamePrefix(unittest.TestCase):
 
     """Test logic to get Karaf 3/4 distro name prefix per ODL major version."""

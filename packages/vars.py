@@ -162,7 +162,7 @@ def extract_snapshot_version(url, version):
     return version
 
 
-def get_snap_url(version_major, version_minor):
+def get_snap_url(version_major, version_minor=None):
     """Fetches tarball url for snapshot releases using version information
 
     :arg str version_major: Major version for snapshot build
@@ -171,7 +171,7 @@ def get_snap_url(version_major, version_minor):
     """
     parent_dir = "https://nexus.opendaylight.org/content/repositories/" \
                  "opendaylight.snapshot/org/opendaylight/integration/{}/" \
-                 .format(get_distro_name_style())
+                 .format(get_distro_name_prefix(version_major))
 
     # If the minor verison is given, get the sub-directory directly
     # else, find the latest sub-directory
@@ -269,14 +269,14 @@ def get_changelog_date(pkg_type):
         raise ValueError("Unknown package type: {}".format(pkg_type))
 
 
-def get_distro_name_prefix(major_version):
+def get_distro_name_prefix(version_major):
     """Return Karaf 3 or 4-style distro name prefix based on ODL major version
 
     :arg str major_version: OpenDaylight major version umber
     :return str distro_name_style: Karaf 3 or 4-style distro name prefix
 
     """
-    if int(major_version) < 7:
+    if int(version_major) < 7:
         # ODL versions before Nitrogen use Karaf 3, distribution-karaf- names
         return "distribution-karaf"
     else:
