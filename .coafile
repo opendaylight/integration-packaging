@@ -17,7 +17,9 @@ ignore = .tox/**,
     **.tar.gz,
     **.rpm,
     **.pyc,
-    packages/deb/templates/rules_template
+    packages/deb/templates/rules_template,
+    packages/**/cache/distribution-karaf-**,
+    packages/**/cache/karaf-**
 
 [all.spacing]
 bears = SpaceConsistencyBear
