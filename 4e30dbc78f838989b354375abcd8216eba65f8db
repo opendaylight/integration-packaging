@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba1f61a0_e744bc1c",
+        "filename": "packages/rpm/cache/cache.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-08-30T16:10:30Z",
+      "side": 1,
+      "message": "probably not even needed to add these comments. you could\nput it in the commit message if you want to have a record of\nwhy you moved to subprocess from zipfile",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 48
+      },
+      "revId": "4e30dbc78f838989b354375abcd8216eba65f8db",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
