@@ -5,31 +5,35 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # Configure VM RAM and CPU for VirtualBox. Change this to meet your needs.
+  config.vm.provider :virtualbox do |virtualbox, override|
+    virtualbox.memory = 2048
+    virtualbox.cpus = 2
+  end
 
+  # Configure VM RAM and CPU for LibVirt. Change this to meet your needs.
+  config.vm.provider :libvirt do |libvirt, override|
+    libvirt.memory = 2048
+    libvirt.cpus = 2
+  end
+
+  # NFS is fragile, use rsync
+  config.vm.synced_folder ".", "/home/vagrant/sync", disabled: true
+  config.vm.synced_folder ".", "/vagrant", type: "rsync",
+    rsync__exclude: [".git/", "*.rpm", "*.tar.gz", "*.zip", "karaf-*",
+                    "distribution-karaf-*"]
+
+  # Define RPM build env
   config.vm.define :centos do |centos|
-    # Configure VM RAM and CPU for VirtualBox. Change this to meet your needs.
-    centos.vm.provider :virtualbox do |virtualbox, override|
-        virtualbox.memory = 2048
-        virtualbox.cpus = 2
-        override.vm.box = "centos/7"
-    end
+    # Build Vagrant box based on CentOS 7
+    centos.vm.box = "centos/7"
 
-    # Configure VM RAM and CPU for LibVirt. Change this to meet your needs.
-    centos.vm.provider :libvirt do |libvirt, override|
-        libvirt.memory = 2048
-        libvirt.cpus = 2
-        override.vm.box = "centos/7"
-    end
-
+    # TODO: This doesn't work
     centos.vm.provider "docker" do |docker, override|
-        docker.build_dir = "."
-        docker.remains_running = false
-        override.vm.synced_folder ".", "/build"
+      docker.build_dir = "rpm"
+      docker.remains_running = false
+      override.vm.synced_folder ".", "/build"
     end
-
-    # NFS is fragile, use rsync
-    centos.vm.synced_folder ".", "/vagrant", type: "rsync"
-    centos.vm.synced_folder ".", "/home/vagrant/sync", disabled: true
 
     # Add EPEL for access to fedora-packager and maybe others
     centos.vm.provision "shell", inline: "yum install -y epel-release"
@@ -49,60 +53,34 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     centos.vm.provision "shell", inline: "sudo usermod -a -G mock vagrant"
   end
 
+  # Define .deb build env
   config.vm.define :debian do |debian|
-  debian.vm.provider :virtualbox do |virtualbox, override|
-        virtualbox.memory = 1024
-        # Two cores over default one for faster builds
-        virtualbox.cpus = 2
-        override.vm.box = "debian/stretch64"
-        override.vm.box_version = "> 9.0.0"
-   end
+    # Build Vagrant box based on Debian 9
+    debian.vm.box = "debian/stretch64"
 
-  # Configure VM RAM and CPU for LibVirt
-  debian.vm.provider :libvirt do |libvirt, override|
-        libvirt.memory = 1024
-        # Two cores over default one for faster builds
-        libvirt.cpus = 2
-        override.vm.box = "debian/stretch64"
-        override.vm.box_version = "> 9.0.0"
-  end
+    # TODO: This doesn't work
+    debian.vm.provider "docker" do |docker, override|
+      docker.build_dir = "deb"
+      docker.remains_running = false
+      override.vm.synced_folder ".", "/build"
+    end
 
-  debian.vm.provider "docker" do |docker, override|
-        docker.build_dir = "."
-        docker.remains_running = false
-        override.vm.synced_folder ".", "/build"
-  end
+    # Update package info to prevent old info from causing 404s during install
+    debian.vm.provision "shell", inline: "apt-get update"
 
-  # NFS is fragile, disable it and use rsync
-  debian.nfs.functional = false
+    # Install pkg dev tools, Python libs for build scripts, gdebi to test install
+    debian.vm.provision "shell", inline: "apt-get install -y build-essential \
+                                                             devscripts \
+                                                             equivs \
+                                                             dh-systemd \
+                                                             git \
+                                                             python-pip \
+                                                             gdebi"
 
-  # Sync folders /packaging/deb/ and /vagrant
-  debian.vm.synced_folder ".", "/vagrant"
+    # Use the distribution's version of pip to upgrade to the latest pip
+    debian.vm.provision "shell", inline: "pip install --upgrade pip"
 
-  # Update package info to prevent old info from causing 404s during install
-  debian.vm.provision "shell", inline: "apt-get update"
-
-  # Install pkg dev tools, Python libs for build scripts, gdebi to test install
-  debian.vm.provision "shell", inline: "apt-get install -y --force-yes \
-                                            build-essential \
-                                            devscripts \
-                                            equivs \
-                                            dh-systemd \
-                                            git \
-                                            python-pip \
-                                            gdebi"
-
-  # Use the distribution's version of pip to upgrade to the latest pip
-  debian.vm.provision "shell", inline: "pip install --upgrade pip"
-
-  # Install Python dependences system-wide via pip
-  debian.vm.provision "shell", inline: "pip install -r /vagrant/requirements.txt"
-
-  # Add jessie-oldstable repo for openjdk-7-jre-headless package
-  # Note openjdk-7-jre-headless requires tzdata (= 2017b-0+deb8u1) also present in jessie-oldstable
-  debian.vm.provision "shell", inline: <<-SHELL
-        echo "deb http://httpredir.debian.org/debian jessie main" > /etc/apt/sources.list.d/jessie-oldstable.list
-        apt-get update
-  SHELL
+    # Install Python dependences system-wide via pip
+    debian.vm.provision "shell", inline: "pip install -r /vagrant/requirements.txt"
   end
 end
