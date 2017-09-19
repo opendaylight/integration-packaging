@@ -10,7 +10,7 @@
 
 import unittest
 
-import vars
+import lib
 
 
 class TestExtractVersion(unittest.TestCase):
@@ -23,7 +23,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of the ODL Boron SR4 release."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.5.4-Boron-SR4/distribution-karaf-0.5.4-Boron-SR4.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "5")
         self.assertEqual(version["version_minor"], "4")
         self.assertEqual(version["version_patch"], "0")
@@ -34,7 +34,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of the ODL Boron SR4 release zip archive."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.5.4-Boron-SR4/distribution-karaf-0.5.4-Boron-SR4.zip" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "5")
         self.assertEqual(version["version_minor"], "4")
         self.assertEqual(version["version_patch"], "0")
@@ -45,7 +45,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of the ODL Carbon release."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.6.0-Carbon/distribution-karaf-0.6.0-Carbon.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
@@ -56,7 +56,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of the ODL Carbon release zip archive."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.6.0-Carbon/distribution-karaf-0.6.0-Carbon.zip" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
@@ -67,7 +67,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of the ODL Carbon SR1 release."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.6.1-Carbon/distribution-karaf-0.6.1-Carbon.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "1")
         self.assertEqual(version["version_patch"], "0")
@@ -78,7 +78,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of the ODL Carbon SR1 release zip archive."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.6.1-Carbon/distribution-karaf-0.6.1-Carbon.zip" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "1")
         self.assertEqual(version["version_patch"], "0")
@@ -89,7 +89,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Boron autorelease build."""
         # noqa ShellCheckBear
         url = "%s/autorelease-1928/org/opendaylight/integration/distribution-karaf/0.5.5-Boron-SR5/distribution-karaf-0.5.5-Boron-SR5.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "5")
         self.assertEqual(version["version_minor"], "5")
         self.assertEqual(version["version_patch"], "0")
@@ -100,7 +100,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Boron autorelease build zip archive."""
         # noqa ShellCheckBear
         url = "%s/autorelease-1928/org/opendaylight/integration/distribution-karaf/0.5.5-Boron-SR5/distribution-karaf-0.5.5-Boron-SR5.zip" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "5")
         self.assertEqual(version["version_minor"], "5")
         self.assertEqual(version["version_patch"], "0")
@@ -111,7 +111,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Carbon autorelease build."""
         # noqa ShellCheckBear
         url = "%s/autorelease-1940/org/opendaylight/integration/distribution-karaf/0.6.2-Carbon/distribution-karaf-0.6.2-Carbon.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
@@ -122,7 +122,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Carbon autorelease build zip archive."""
         # noqa ShellCheckBear
         url = "%s/autorelease-1940/org/opendaylight/integration/distribution-karaf/0.6.2-Carbon/distribution-karaf-0.6.2-Carbon.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
@@ -133,7 +133,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Nitrogen autorelease build."""
         # noqa ShellCheckBear
         url = "%s/autorelease-1939/org/opendaylight/integration/karaf/0.7.0/karaf-0.7.0.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
@@ -144,7 +144,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Nitrogen autorelease build zip archive."""
         # noqa ShellCheckBear
         url = "%s/autorelease-1939/org/opendaylight/integration/karaf/0.7.0/karaf-0.7.0.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
@@ -155,7 +155,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Boron snapshot build."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.5.5-SNAPSHOT/distribution-karaf-0.5.5-20170813.233539-357.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "5")
         self.assertEqual(version["version_minor"], "5")
         self.assertEqual(version["version_patch"], "0")
@@ -166,7 +166,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Boron snapshot build zip archive."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.5.5-SNAPSHOT/distribution-karaf-0.5.5-20170813.233539-357.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "5")
         self.assertEqual(version["version_minor"], "5")
         self.assertEqual(version["version_patch"], "0")
@@ -177,7 +177,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Carbon snapshot build."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.6.2-SNAPSHOT/distribution-karaf-0.6.2-20170821.001151-442.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
@@ -188,7 +188,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Carbon snapshot build zip archive."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.6.2-SNAPSHOT/distribution-karaf-0.6.2-20170821.001151-442.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
@@ -199,7 +199,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Nitrogen snapshot build."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.7.0-SNAPSHOT/karaf-0.7.0-20170815.162950-1727.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
@@ -210,7 +210,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Nitrogen snapshot build zip archive."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.7.0-SNAPSHOT/karaf-0.7.0-20170815.162950-1727.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
@@ -221,7 +221,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Oxygen snapshot build."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20170815.163312-2.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "8")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
@@ -232,7 +232,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Oxygen snapshot build zip archive."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20170815.163312-2.tar.gz" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "8")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
@@ -243,7 +243,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Carbon multipatch-test build zip archive."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/distribution-karaf/0.6.2-SNAPSHOT/distribution-karaf-0.6.2-20170822.142235-45.zip" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
@@ -254,7 +254,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Nitrogen multipatch-test build zip archive."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.7.0-SNAPSHOT/karaf-0.7.0-20170822.075207-274.zip" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
@@ -265,7 +265,7 @@ class TestExtractVersion(unittest.TestCase):
         """Test URL of an ODL Oxygen multipatch-test build zip archive."""
         # noqa ShellCheckBear
         url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20170822.072253-6.zip" % self.nexus_url
-        version = vars.extract_version(url)
+        version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "8")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
@@ -288,19 +288,19 @@ class TestGetSnapURL(unittest.TestCase):
 
     def test_boron(self):
         """Test Boron major version gives sane snapshot URL."""
-        self.validate_snap_url(vars.get_snap_url("5"))
+        self.validate_snap_url(lib.get_snap_url("5"))
 
     def test_carbon(self):
         """Test Carbon major version gives sane snapshot URL."""
-        self.validate_snap_url(vars.get_snap_url("6"))
+        self.validate_snap_url(lib.get_snap_url("6"))
 
     def test_nitrogen(self):
         """Test Nitrogen major version gives sane snapshot URL."""
-        self.validate_snap_url(vars.get_snap_url("7"))
+        self.validate_snap_url(lib.get_snap_url("7"))
 
     def test_oxygen(self):
         """Test Oxygen major version gives sane snapshot URL."""
-        self.validate_snap_url(vars.get_snap_url("8"))
+        self.validate_snap_url(lib.get_snap_url("8"))
 
 
 class TestGetDistroNamePrefix(unittest.TestCase):
@@ -312,40 +312,40 @@ class TestGetDistroNamePrefix(unittest.TestCase):
 
     def test_boron(self):
         """Test Boron major version gives Karaf 3 prefix."""
-        distro_prefix = vars.get_distro_name_prefix("5")
+        distro_prefix = lib.get_distro_name_prefix("5")
         self.assertEqual(distro_prefix, self.k3_distro_prefix)
 
     def test_carbon(self):
         """Test Carbon major version gives Karaf 3 prefix."""
-        distro_prefix = vars.get_distro_name_prefix("6")
+        distro_prefix = lib.get_distro_name_prefix("6")
         self.assertEqual(distro_prefix, self.k3_distro_prefix)
 
     def test_nitrogen(self):
         """Test Nitrogen major version gives Karaf 4 prefix."""
-        distro_prefix = vars.get_distro_name_prefix("7")
+        distro_prefix = lib.get_distro_name_prefix("7")
         self.assertEqual(distro_prefix, self.k4_distro_prefix)
 
     def test_oxygen(self):
         """Test Oxygen major version gives Karaf 4 prefix."""
-        distro_prefix = vars.get_distro_name_prefix("8")
+        distro_prefix = lib.get_distro_name_prefix("8")
         self.assertEqual(distro_prefix, self.k4_distro_prefix)
 
     def test_boron_int(self):
         """Test Boron major version as int gives Karaf 3 prefix."""
-        distro_prefix = vars.get_distro_name_prefix(5)
+        distro_prefix = lib.get_distro_name_prefix(5)
         self.assertEqual(distro_prefix, self.k3_distro_prefix)
 
     def test_carbon_int(self):
         """Test Carbon major version as int gives Karaf 3 prefix."""
-        distro_prefix = vars.get_distro_name_prefix(6)
+        distro_prefix = lib.get_distro_name_prefix(6)
         self.assertEqual(distro_prefix, self.k3_distro_prefix)
 
     def test_nitrogen_int(self):
         """Test Nitrogen major version as int gives Karaf 4 prefix."""
-        distro_prefix = vars.get_distro_name_prefix(7)
+        distro_prefix = lib.get_distro_name_prefix(7)
         self.assertEqual(distro_prefix, self.k4_distro_prefix)
 
     def test_oxygen_int(self):
         """Test Oxygen major version as int gives Karaf 4 prefix."""
-        distro_prefix = vars.get_distro_name_prefix(8)
+        distro_prefix = lib.get_distro_name_prefix(8)
         self.assertEqual(distro_prefix, self.k4_distro_prefix)
