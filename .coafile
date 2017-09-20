@@ -20,8 +20,8 @@ ignore = .tox/**,
     **.pyc,
     packages/deb/templates/rules_template,
     packages/deb/opendaylight**,
-    packages/**/cache/distribution-karaf-**,
-    packages/**/cache/karaf-**
+    packages/cache/distribution-karaf-**,
+    packages/cache/karaf-**
 
 [all.spacing]
 bears = SpaceConsistencyBear
