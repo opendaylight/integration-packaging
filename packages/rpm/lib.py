@@ -15,13 +15,12 @@ import shutil
 from string import Template
 import subprocess
 
-import cache.cache as cache
 import specs.build_specs as build_specs
 
 # Common paths used in this script
 # This file is assumed to be in the root of the RPM build logic's dir structure
 project_root = os.path.dirname(os.path.abspath(__file__))
-cache_dir = os.path.join(project_root, "cache")
+cache_dir = os.path.join(project_root, "../cache")
 specs_dir = os.path.join(project_root, "specs")
 rpmbuild_dir = os.path.join(os.path.expanduser("~"), "rpmbuild")
 src_in_dir = os.path.join(rpmbuild_dir, "SOURCES")
@@ -62,9 +61,6 @@ def build_rpm(build):
     spec_in_path = os.path.join(spec_in_dir, odl_specfile)
     rpm_out_path = os.path.join(rpm_out_dir, odl_rpm)
     srpm_out_path = os.path.join(srpm_out_dir, odl_srpm)
-
-    # Call a helper function to cache the artifacts required for each build
-    cache.cache_build(build)
 
     # Call helper script to build the required RPM .spec files
     build_specs.build_spec(build)
