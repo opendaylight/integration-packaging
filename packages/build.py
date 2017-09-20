@@ -116,6 +116,8 @@ if __name__ == "__main__":
 
     # Use package-specific helper logic to do the specified build
     if args.rpm:
+        lib.cache_distro(build)
+        lib.cache_sysd(build)
         rpm_lib.build_rpm(build)
     elif args.deb:
         deb_lib.build_deb(build)
