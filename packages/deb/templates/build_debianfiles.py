@@ -6,7 +6,6 @@ import re
 import shutil
 from string import Template
 import sys
-import urllib
 
 try:
     from jinja2 import Environment, FileSystemLoader
@@ -86,18 +85,3 @@ def build_debfiles(build):
         file_path = os.path.join(debian_dir_path, file_name)
         with open(file_path, "w") as debian_file:
             debian_file.write(template.render(build))
-
-    # Use specific systemd unitfile for each build
-    unitfile = "opendaylight.service"
-    unitfile_url_template = Template("https://git.opendaylight.org/gerrit/"
-                                     "gitweb?p=integration/packaging.git;a="
-                                     "blob_plain;f=rpm/unitfiles/opendaylight."
-                                     "service;hb=$sysd_commit")
-    unitfile_url = unitfile_url_template.substitute(build)
-
-    # Build the full path for unitfile
-    unitfile_path = os.path.join(debian_dir_path, unitfile)
-
-    # Download ODL's systemd unitfile
-    if not os.path.isfile(unitfile_path):
-        urllib.urlretrieve(unitfile_url, unitfile_path)
