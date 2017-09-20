@@ -12,8 +12,8 @@ import sys
 
 import lib
 
-from deb import build as build_deb
-from rpm import build as build_rpm
+from deb import lib as deb_lib
+from rpm import lib as rpm_lib
 
 if __name__ == "__main__":
     # Accept a build definition via args
@@ -116,6 +116,6 @@ if __name__ == "__main__":
 
     # Use package-specific helper logic to do the specified build
     if args.rpm:
-        build_rpm.build_rpm(build)
+        rpm_lib.build_rpm(build)
     elif args.deb:
-        build_deb.build_deb(build)
+        deb_lib.build_deb(build)
