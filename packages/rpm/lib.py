@@ -15,30 +15,30 @@ import shutil
 from string import Template
 import subprocess
 
-import cache.cache as cache
 import specs.build_specs as build_specs
 
-# Common paths used in this script
+from .. import lib as pkg_lib
+
 # This file is assumed to be in the root of the RPM build logic's dir structure
-project_root = os.path.dirname(os.path.abspath(__file__))
-cache_dir = os.path.join(project_root, "cache")
-specs_dir = os.path.join(project_root, "specs")
+rpm_root = os.path.dirname(os.path.abspath(__file__))
+
+# Common paths used in this script
 rpmbuild_dir = os.path.join(os.path.expanduser("~"), "rpmbuild")
 src_in_dir = os.path.join(rpmbuild_dir, "SOURCES")
 spec_in_dir = os.path.join(rpmbuild_dir, "SPECS")
-srpm_out_dir = os.path.join(rpmbuild_dir, "SRPMS")
-rpm_out_dir = os.path.join(rpmbuild_dir, "RPMS", "noarch")
 
-# Templates that can be specialized into common artifact names per-build
-odl_template = Template("opendaylight-$version_major.$version_minor."
-                        "$version_patch-$pkg_version.tar.gz")
-specfile_template = Template("opendaylight-$version_major.$version_minor."
-                             "$version_patch-$pkg_version.spec")
-unitfile_tb_template = Template("opendaylight-$sysd_commit.service.tar.gz")
+# Templates that can be specialized per-build
+spec_template = Template("opendaylight-$version_major.$version_minor."
+                         "$version_patch-$pkg_version.spec")
+spec_in_path_template = os.path.join(rpmbuild_dir, "SPECS", spec_template)
+spec_path_template = os.path.join(rpm_root, "specs", spec_template)
 rpm_template = Template("opendaylight-$version_major.$version_minor."
                         "$version_patch-$pkg_version.el7.noarch.rpm")
+rpm_out_path_template = os.path.join(rpmbuild_dir, "RPMS", "noarch",
+                                     rpm_template)
 srpm_template = Template("opendaylight-$version_major.$version_minor."
                          "$version_patch-$pkg_version.el7.src.rpm")
+srpm_out_path_template = os.path.join(rpmbuild_dir, "SRPMS", srpm_template)
 
 
 def build_rpm(build):
@@ -48,23 +48,13 @@ def build_rpm(build):
     :type build: dict
 
     """
-    # Specialize a series of name templates for the given build
-    odl_tarball = odl_template.substitute(build)
-    odl_rpm = rpm_template.substitute(build)
-    odl_srpm = srpm_template.substitute(build)
-    odl_specfile = specfile_template.substitute(build)
-    unitfile_tarball = unitfile_tb_template.substitute(build)
-
-    # After building strings from the name templates, build their full path
-    odl_tarball_path = os.path.join(cache_dir, odl_tarball)
-    unitfile_tarball_path = os.path.join(cache_dir, unitfile_tarball)
-    specfile_path = os.path.join(specs_dir, odl_specfile)
-    spec_in_path = os.path.join(spec_in_dir, odl_specfile)
-    rpm_out_path = os.path.join(rpm_out_dir, odl_rpm)
-    srpm_out_path = os.path.join(srpm_out_dir, odl_srpm)
-
-    # Call a helper function to cache the artifacts required for each build
-    cache.cache_build(build)
+    # Specialize a series of templates for the given build
+    distro_tar_path = pkg_lib.distro_tar_path_template.substitute(build)
+    unitfile_tar_path = pkg_lib.unitfile_tar_path_template.substitute(build)
+    spec_path = spec_path_template.substitute(build)
+    spec_in_path = spec_in_path_template.substitute(build)
+    rpm_out_path = rpm_out_path_template.substitute(build)
+    srpm_out_path = srpm_out_path_template.substitute(build)
 
     # Call helper script to build the required RPM .spec files
     build_specs.build_spec(build)
@@ -76,14 +66,14 @@ def build_rpm(build):
     # Create rpmbuild dir structure
     subprocess.call("rpmdev-setuptree")
 
-    # Move unitfile, tarball and specfile to correct rpmbuild dirs
-    shutil.copy(odl_tarball_path, src_in_dir)
-    shutil.copy(unitfile_tarball_path, src_in_dir)
-    shutil.copy(specfile_path, spec_in_dir)
+    # Move unit file, tarball and specfile to correct rpmbuild dirs
+    shutil.copy(distro_tar_path, src_in_dir)
+    shutil.copy(unitfile_tar_path, src_in_dir)
+    shutil.copy(spec_path, spec_in_dir)
 
     # Call rpmbuild, build both SRPMs/RPMs
     subprocess.call(["rpmbuild", "-ba", spec_in_path])
 
     # Copy the RPMs/SRPMs from their output dir to the cache dir
-    shutil.copy(rpm_out_path, cache_dir)
-    shutil.copy(srpm_out_path, cache_dir)
+    shutil.copy(rpm_out_path, pkg_lib.cache_dir)
+    shutil.copy(srpm_out_path, pkg_lib.cache_dir)

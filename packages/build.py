@@ -114,6 +114,10 @@ if __name__ == "__main__":
     build.update({"java_version": lib.get_java_version(
         build['version_major'])})
 
+    # Cache ODL distro and systemd unit file to package
+    lib.cache_distro(build)
+    lib.cache_sysd(build)
+
     # Use package-specific helper logic to do the specified build
     if args.rpm:
         rpm_lib.build_rpm(build)
