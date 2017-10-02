@@ -101,8 +101,8 @@ enabled = False
 
 [all.jinja]
 bears = Jinja2Bear
-files = rpm/specs/opendaylight.spec,
-    deb/templates/**_template**
+files = packages/rpm/specs/opendaylight.spec,
+    packages/deb/templates/**_template**
 
 [all.git]
 bears = GitCommitBear
