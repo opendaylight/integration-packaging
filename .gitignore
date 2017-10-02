@@ -26,3 +26,6 @@ report.html
 # Archives
 *.tar.gz
 *.zip
+
+# Other
+packages/deb/opendaylight/*

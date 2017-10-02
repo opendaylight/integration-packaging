@@ -19,6 +19,7 @@ ignore = .tox/**,
     **.rpm,
     **.pyc,
     packages/deb/templates/rules_template,
+    packages/deb/opendaylight**,
     packages/**/cache/distribution-karaf-**,
     packages/**/cache/karaf-**
 
