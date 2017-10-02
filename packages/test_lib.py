@@ -6,7 +6,7 @@
 # and is available at http://www.eclipse.org/legal/epl-v10.html
 ##############################################################################
 
-"""Tests for package build logic."""
+"""Tests for package build logic helper library."""
 
 import unittest
 
