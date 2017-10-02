@@ -135,7 +135,7 @@ Some `build.py` logic is covered by Python unit tests.
 To execute them:
 
 ```
-$ python -m unittest test_build
+$ python -m unittest test_lib
 ```
 
 ## Building SRPMs/RPMs
