@@ -19,28 +19,6 @@ class TestExtractVersion(unittest.TestCase):
 
     nexus_url = "https://nexus.opendaylight.org/content/repositories"
 
-    def test_boron_sr4_release_url(self):
-        """Test URL of the ODL Boron SR4 release."""
-        # noqa ShellCheckBear
-        url = "%s/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.5.4-Boron-SR4/distribution-karaf-0.5.4-Boron-SR4.tar.gz" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "5")
-        self.assertEqual(version["version_minor"], "4")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "1")
-        self.assertEqual(version["codename"], "-Boron-SR4")
-
-    def test_boron_sr4_release_zip_url(self):
-        """Test URL of the ODL Boron SR4 release zip archive."""
-        # noqa ShellCheckBear
-        url = "%s/opendaylight.release/org/opendaylight/integration/distribution-karaf/0.5.4-Boron-SR4/distribution-karaf-0.5.4-Boron-SR4.zip" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "5")
-        self.assertEqual(version["version_minor"], "4")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "1")
-        self.assertEqual(version["codename"], "-Boron-SR4")
-
     def test_carbon_release_url(self):
         """Test URL of the ODL Carbon release."""
         # noqa ShellCheckBear
@@ -85,191 +63,147 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["pkg_version"], "1")
         self.assertEqual(version["codename"], "-Carbon")
 
-    def test_boron_autorelease_url(self):
-        """Test URL of an ODL Boron autorelease build."""
-        # noqa ShellCheckBear
-        url = "%s/autorelease-1928/org/opendaylight/integration/distribution-karaf/0.5.5-Boron-SR5/distribution-karaf-0.5.5-Boron-SR5.tar.gz" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "5")
-        self.assertEqual(version["version_minor"], "5")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170813rel1928")
-        self.assertEqual(version["codename"], "-Boron-SR5")
-
-    def test_boron_autorelease_zip_url(self):
-        """Test URL of an ODL Boron autorelease build zip archive."""
-        # noqa ShellCheckBear
-        url = "%s/autorelease-1928/org/opendaylight/integration/distribution-karaf/0.5.5-Boron-SR5/distribution-karaf-0.5.5-Boron-SR5.zip" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "5")
-        self.assertEqual(version["version_minor"], "5")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170813rel1928")
-        self.assertEqual(version["codename"], "-Boron-SR5")
-
     def test_carbon_autorelease_url(self):
         """Test URL of an ODL Carbon autorelease build."""
         # noqa ShellCheckBear
-        url = "%s/autorelease-1940/org/opendaylight/integration/distribution-karaf/0.6.2-Carbon/distribution-karaf-0.6.2-Carbon.tar.gz" % self.nexus_url
+        url = "%s/autorelease-1996/org/opendaylight/integration/distribution-karaf/0.6.2-Carbon/distribution-karaf-0.6.2-Carbon.tar.gz" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170823rel1940")
+        self.assertEqual(version["pkg_version"], "0.1.20171002rel1996")
         self.assertEqual(version["codename"], "-Carbon")
 
     def test_carbon_autorelease_zip_url(self):
         """Test URL of an ODL Carbon autorelease build zip archive."""
         # noqa ShellCheckBear
-        url = "%s/autorelease-1940/org/opendaylight/integration/distribution-karaf/0.6.2-Carbon/distribution-karaf-0.6.2-Carbon.tar.gz" % self.nexus_url
+        url = "%s/autorelease-1996/org/opendaylight/integration/distribution-karaf/0.6.2-Carbon/distribution-karaf-0.6.2-Carbon.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170823rel1940")
+        self.assertEqual(version["pkg_version"], "0.1.20171002rel1996")
         self.assertEqual(version["codename"], "-Carbon")
 
     def test_nitrogen_autorelease_url(self):
         """Test URL of an ODL Nitrogen autorelease build."""
         # noqa ShellCheckBear
-        url = "%s/autorelease-1939/org/opendaylight/integration/karaf/0.7.0/karaf-0.7.0.tar.gz" % self.nexus_url
+        url = "%s/autorelease-1991/org/opendaylight/integration/karaf/0.7.0/karaf-0.7.0.tar.gz" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170823rel1939")
+        self.assertEqual(version["pkg_version"], "0.1.20170927rel1991")
         self.assertEqual(version["codename"], "")
 
     def test_nitrogen_autorelease_zip_url(self):
         """Test URL of an ODL Nitrogen autorelease build zip archive."""
         # noqa ShellCheckBear
-        url = "%s/autorelease-1939/org/opendaylight/integration/karaf/0.7.0/karaf-0.7.0.tar.gz" % self.nexus_url
+        url = "%s/autorelease-1991/org/opendaylight/integration/karaf/0.7.0/karaf-0.7.0.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170823rel1939")
+        self.assertEqual(version["pkg_version"], "0.1.20170927rel1991")
         self.assertEqual(version["codename"], "")
-
-    def test_boron_snapshot_url(self):
-        """Test URL of an ODL Boron snapshot build."""
-        # noqa ShellCheckBear
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.5.5-SNAPSHOT/distribution-karaf-0.5.5-20170813.233539-357.tar.gz" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "5")
-        self.assertEqual(version["version_minor"], "5")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170813snap357")
-        self.assertEqual(version["codename"], "-SNAPSHOT")
-
-    def test_boron_snapshot_zip_url(self):
-        """Test URL of an ODL Boron snapshot build zip archive."""
-        # noqa ShellCheckBear
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.5.5-SNAPSHOT/distribution-karaf-0.5.5-20170813.233539-357.tar.gz" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "5")
-        self.assertEqual(version["version_minor"], "5")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170813snap357")
-        self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_carbon_snapshot_url(self):
         """Test URL of an ODL Carbon snapshot build."""
         # noqa ShellCheckBear
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.6.2-SNAPSHOT/distribution-karaf-0.6.2-20170821.001151-442.tar.gz" % self.nexus_url
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.6.2-SNAPSHOT/distribution-karaf-0.6.2-20171003.084929-847.tar.gz" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170821snap442")
+        self.assertEqual(version["pkg_version"], "0.1.20171003snap847")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_carbon_snapshot_zip_url(self):
         """Test URL of an ODL Carbon snapshot build zip archive."""
         # noqa ShellCheckBear
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.6.2-SNAPSHOT/distribution-karaf-0.6.2-20170821.001151-442.tar.gz" % self.nexus_url
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.6.2-SNAPSHOT/distribution-karaf-0.6.2-20171003.084929-847.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170821snap442")
+        self.assertEqual(version["pkg_version"], "0.1.20171003snap847")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_nitrogen_snapshot_url(self):
         """Test URL of an ODL Nitrogen snapshot build."""
         # noqa ShellCheckBear
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.7.0-SNAPSHOT/karaf-0.7.0-20170815.162950-1727.tar.gz" % self.nexus_url
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.7.0-SNAPSHOT/karaf-0.7.0-20170927.033128-2013.tar.gz" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170815snap1727")
+        self.assertEqual(version["pkg_version"], "0.1.20170927snap2013")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_nitrogen_snapshot_zip_url(self):
         """Test URL of an ODL Nitrogen snapshot build zip archive."""
         # noqa ShellCheckBear
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.7.0-SNAPSHOT/karaf-0.7.0-20170815.162950-1727.tar.gz" % self.nexus_url
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.7.0-SNAPSHOT/karaf-0.7.0-20170927.033128-2013.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170815snap1727")
+        self.assertEqual(version["pkg_version"], "0.1.20170927snap2013")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_oxygen_snapshot_url(self):
         """Test URL of an ODL Oxygen snapshot build."""
         # noqa ShellCheckBear
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20170815.163312-2.tar.gz" % self.nexus_url
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20170928.142221-597.tar.gz" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "8")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170815snap2")
+        self.assertEqual(version["pkg_version"], "0.1.20170928snap597")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_oxygen_snapshot_zip_url(self):
         """Test URL of an ODL Oxygen snapshot build zip archive."""
         # noqa ShellCheckBear
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20170815.163312-2.tar.gz" % self.nexus_url
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20170928.142221-597.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "8")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170815snap2")
+        self.assertEqual(version["pkg_version"], "0.1.20170928snap597")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_carbon_multipatch_zip_url(self):
         """Test URL of an ODL Carbon multipatch-test build zip archive."""
         # noqa ShellCheckBear
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/distribution-karaf/0.6.2-SNAPSHOT/distribution-karaf-0.6.2-20170822.142235-45.zip" % self.nexus_url
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/distribution-karaf/0.6.2-SNAPSHOT/distribution-karaf-0.6.2-20171002.113256-59.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170822snap45")
+        self.assertEqual(version["pkg_version"], "0.1.20171002snap59")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_nitrogen_multipatch_zip_url(self):
         """Test URL of an ODL Nitrogen multipatch-test build zip archive."""
         # noqa ShellCheckBear
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.7.0-SNAPSHOT/karaf-0.7.0-20170822.075207-274.zip" % self.nexus_url
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.7.1-SNAPSHOT/karaf-0.7.1-20171003.134117-9.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
-        self.assertEqual(version["version_minor"], "0")
+        self.assertEqual(version["version_minor"], "1")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170822snap274")
+        self.assertEqual(version["pkg_version"], "0.1.20171003snap9")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_oxygen_multipatch_zip_url(self):
         """Test URL of an ODL Oxygen multipatch-test build zip archive."""
         # noqa ShellCheckBear
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20170822.072253-6.zip" % self.nexus_url
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20171003.122621-24.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "8")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20170822snap6")
+        self.assertEqual(version["pkg_version"], "0.1.20171003snap24")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
 
@@ -285,10 +219,6 @@ class TestGetSnapURL(unittest.TestCase):
         self.assertIn("tar.gz", snap_url)
         self.assertNotIn("release", snap_url)
         self.assertNotIn("public", snap_url)
-
-    def test_boron(self):
-        """Test Boron major version gives sane snapshot URL."""
-        self.validate_snap_url(lib.get_snap_url("5"))
 
     def test_carbon(self):
         """Test Carbon major version gives sane snapshot URL."""
@@ -310,11 +240,6 @@ class TestGetDistroNamePrefix(unittest.TestCase):
     k3_distro_prefix = "distribution-karaf"
     k4_distro_prefix = "karaf"
 
-    def test_boron(self):
-        """Test Boron major version gives Karaf 3 prefix."""
-        distro_prefix = lib.get_distro_name_prefix("5")
-        self.assertEqual(distro_prefix, self.k3_distro_prefix)
-
     def test_carbon(self):
         """Test Carbon major version gives Karaf 3 prefix."""
         distro_prefix = lib.get_distro_name_prefix("6")
@@ -329,11 +254,6 @@ class TestGetDistroNamePrefix(unittest.TestCase):
         """Test Oxygen major version gives Karaf 4 prefix."""
         distro_prefix = lib.get_distro_name_prefix("8")
         self.assertEqual(distro_prefix, self.k4_distro_prefix)
-
-    def test_boron_int(self):
-        """Test Boron major version as int gives Karaf 3 prefix."""
-        distro_prefix = lib.get_distro_name_prefix(5)
-        self.assertEqual(distro_prefix, self.k3_distro_prefix)
 
     def test_carbon_int(self):
         """Test Carbon major version as int gives Karaf 3 prefix."""
