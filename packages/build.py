@@ -77,9 +77,22 @@ if __name__ == "__main__":
     # Build definition, populated below
     build = {}
 
-    # Add changelog name/email to build definition
-    build.update({"changelog_name": args.changelog_name,
-                  "changelog_email": args.changelog_email})
+    # Add changelog name to build definition
+    if not args.changelog_name:
+        # If empty string passed, as happens when a bash script calls this
+        # script with unset var, use default
+        build.update({"changelog_name": "Jenkins"})
+    else:
+        build.update({"changelog_name": args.changelog_name})
+
+    # Add changelog email to build definition
+    if not args.changelog_email:
+        # If empty string passed, as happens when a bash script calls this
+        # script with unset var, use default
+        build.update(
+            {"changelog_email": "jenkins-donotreply@opendaylight.org"})
+    else:
+        build.update({"changelog_email": args.changelog_email})
 
     # Depending on pkg type, add appropriate-format changelog date to build def
     if args.rpm:
