@@ -22,6 +22,30 @@
       "revId": "07956f05fdd3dd28decb94eed964ca0020331fda",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_ff02fa09",
+        "filename": "packages/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-10-04T16:19:05Z",
+      "side": 1,
+      "message": "No, it\u0027s needed, this adds the var from argparse to the dict that describes the build, which we then pass around everywhere",
+      "parentUuid": "9a245df4_9f3bfeea",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 61
+      },
+      "revId": "07956f05fdd3dd28decb94eed964ca0020331fda",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
