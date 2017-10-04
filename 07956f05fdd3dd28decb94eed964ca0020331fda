@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_9f3bfeea",
+        "filename": "packages/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-10-04T16:08:25Z",
+      "side": 1,
+      "message": "is this block needed? It would have already been assigned\nright? just need the above logic in case it was assigned\nwith \"\"\n\napplies below if I\u0027m right?",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 61
+      },
+      "revId": "07956f05fdd3dd28decb94eed964ca0020331fda",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
