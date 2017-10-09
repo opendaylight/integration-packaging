@@ -249,7 +249,7 @@ def get_changelog_date(pkg_type):
     """Get the changelog datetime formatted for the given package type
 
     :arg str pkg_type: Type of datetime formatting (rpm, deb)
-    :return int changelog_date: Date or datetime formatted for given pkg_type
+    :return str changelog_date: Date or datetime formatted for given pkg_type
     """
     if pkg_type == "rpm":
         # RPMs require a date of the format "Day Month Date Year". For example:
