@@ -272,3 +272,56 @@ class TestGetDistroNamePrefix(unittest.TestCase):
         """Test Oxygen major version as int gives Karaf 4 prefix."""
         distro_prefix = lib.get_distro_name_prefix(8)
         self.assertEqual(distro_prefix, self.k4_distro_prefix)
+
+
+class TestGetChangelogDate(unittest.TestCase):
+
+    """Test lib fn that gives date for changelog in RPM or Deb format."""
+
+    def test_type_rpm(self):
+        """Test type of return object is correct given RPM arg."""
+        changelog_date = lib.get_changelog_date("rpm")
+        self.assertIsInstance(changelog_date, str)
+
+    def test_type_deb(self):
+        """Test type of return object is correct given Deb arg."""
+        changelog_date = lib.get_changelog_date("deb")
+        self.assertIsInstance(changelog_date, str)
+
+    def test_has_year_rpm(self):
+        """Test returned value has a year in it given RPM arg."""
+        changelog_date = lib.get_changelog_date("rpm")
+        self.assertRegexpMatches(changelog_date, "[20]\d\d")
+
+    def test_has_year_deb(self):
+        """Test returned value has a year in it given Deb arg."""
+        changelog_date = lib.get_changelog_date("deb")
+        self.assertRegexpMatches(changelog_date, "[20]\d\d")
+
+    def test_has_month_rpm(self):
+        """Test returned value has a month in it given RPM arg."""
+        changelog_date = lib.get_changelog_date("rpm")
+        self.assertRegexpMatches(
+            changelog_date,
+            "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec")
+
+    def test_has_month_deb(self):
+        """Test returned value has a month in it given Deb arg."""
+        changelog_date = lib.get_changelog_date("deb")
+        self.assertRegexpMatches(
+            changelog_date,
+            "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec")
+
+    def test_has_day_rpm(self):
+        """Test returned value has a day in it given RPM arg."""
+        changelog_date = lib.get_changelog_date("rpm")
+        self.assertRegexpMatches(
+            changelog_date,
+            "Mon|Tue|Wed|Thu|Fri|Sat|Sun")
+
+    def test_has_day_deb(self):
+        """Test returned value has a day in it given Deb arg."""
+        changelog_date = lib.get_changelog_date("deb")
+        self.assertRegexpMatches(
+            changelog_date,
+            "Mon|Tue|Wed|Thu|Fri|Sat|Sun")
