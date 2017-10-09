@@ -292,3 +292,58 @@ class TestGetSysdCommit(unittest.TestCase):
         """Check that returned value only contains typical commit hash chars."""
         sysd_hash = lib.get_sysd_commit()
         self.assertRegexpMatches(sysd_hash, "^[A-Za-z0-9-]+$")
+
+
+class TestGetJavaVersion(unittest.TestCase):
+
+    """Test fn to get Java version required for a given ODL version."""
+
+    def test_type_given_int(self):
+        """Pass int, check that returned value is of the right type."""
+        java_version = lib.get_java_version(6)
+        self.assertIsInstance(java_version, int)
+
+    def test_type_given_str(self):
+        """Pass int, check that returned value is of the right type."""
+        java_version = lib.get_java_version("6")
+        self.assertIsInstance(java_version, int)
+
+    def test_old_given_int(self):
+        """Pass old ODL major version, check that Java 7 returned."""
+        java_version = lib.get_java_version(4)
+        self.assertEqual(java_version, 7)
+
+    def test_old_given_str(self):
+        """Pass old ODL major version, check that Java 7 returned."""
+        java_version = lib.get_java_version("4")
+        self.assertEqual(java_version, 7)
+
+    def test_carbon_given_int(self):
+        """Pass Carbon major version, check that Java 8 returned."""
+        java_version = lib.get_java_version(6)
+        self.assertEqual(java_version, 8)
+
+    def test_carbon_given_str(self):
+        """Pass Carbon major version, check that Java 8 returned."""
+        java_version = lib.get_java_version("6")
+        self.assertEqual(java_version, 8)
+
+    def test_nitrogen_given_int(self):
+        """Pass Nitrogen major version, check that Java 8 returned."""
+        java_version = lib.get_java_version(7)
+        self.assertEqual(java_version, 8)
+
+    def test_nitrogen_given_str(self):
+        """Pass Nitrogen major version, check that Java 8 returned."""
+        java_version = lib.get_java_version("7")
+        self.assertEqual(java_version, 8)
+
+    def test_oxygen_given_int(self):
+        """Pass Oxygen major version, check that Java 8 returned."""
+        java_version = lib.get_java_version(8)
+        self.assertEqual(java_version, 8)
+
+    def test_oxygen_given_str(self):
+        """Pass Oxygen major version, check that Java 8 returned."""
+        java_version = lib.get_java_version("8")
+        self.assertEqual(java_version, 8)
