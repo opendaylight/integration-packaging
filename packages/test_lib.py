@@ -272,3 +272,23 @@ class TestGetDistroNamePrefix(unittest.TestCase):
         """Test Oxygen major version as int gives Karaf 4 prefix."""
         distro_prefix = lib.get_distro_name_prefix(8)
         self.assertEqual(distro_prefix, self.k4_distro_prefix)
+
+
+class TestGetSysdCommit(unittest.TestCase):
+
+    """Test fn to get most recent Int/Pack hash to use as sysd file version."""
+
+    def test_type(self):
+        """Check that returned value is of the right type."""
+        sysd_hash = lib.get_sysd_commit()
+        self.assertIsInstance(sysd_hash, str)
+
+    def test_len(self):
+        """Check that returned value the normal length for a commit hash."""
+        sysd_hash = lib.get_sysd_commit()
+        self.assertEqual(len(sysd_hash), 40)
+
+    def test_only_valid_chars(self):
+        """Check that returned value only contains typical commit hash chars."""
+        sysd_hash = lib.get_sysd_commit()
+        self.assertRegexpMatches(sysd_hash, "^[A-Za-z0-9-]+$")
