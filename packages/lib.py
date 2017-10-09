@@ -238,7 +238,7 @@ def get_java_version(version_major):
        :arg str version_major: OpenDaylight major version number
        :return int java_version: Java version required by given ODL version
     """
-    if version_major < 5:
+    if int(version_major) < 5:
         java_version = 7
     else:
         java_version = 8
