@@ -111,8 +111,7 @@ if __name__ == "__main__":
     # If doing a latest-snap build, find latest build tarball URL for given
     # major version and add to build definition. Else, add URL directly.
     if hasattr(args, "major"):
-        # FIXME: In the process of removing minor_version, pass None for now
-        build.update({"download_url": lib.get_snap_url(args.major, None)})
+        build.update({"download_url": lib.get_snap_url(args.major)})
     else:
         build.update({"download_url": args.download_url})
 

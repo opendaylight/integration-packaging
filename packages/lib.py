@@ -162,59 +162,35 @@ def extract_snapshot_version(url, version):
     return version
 
 
-def get_snap_url(version_major, version_minor=None):
-    """Fetches tarball url for snapshot releases using version information
+def get_snap_url(version_major):
+    """Get the most recent snapshot build of the given ODL major version
 
-    :arg str version_major: Major version for snapshot build
-    :arg str version_minor: Minor version for snapshot build(optional)
-    :return arg snapshot_url: URL of the snapshot release
+    :arg str version_major: ODL major version to get latest snapshot of
+    :return str snapshot_url: URL to latest snapshot tarball of ODL version
+
     """
-    parent_dir = "https://nexus.opendaylight.org/content/repositories/" \
-                 "opendaylight.snapshot/org/opendaylight/integration/{}/" \
-                 .format(get_distro_name_prefix(version_major))
+    # Dir that contains all shapshot build dirs, varies based on Karaf 3/4
+    parent_dir_url = "https://nexus.opendaylight.org/content/repositories/" \
+                     "opendaylight.snapshot/org/opendaylight/integration/{}/" \
+                     .format(get_distro_name_prefix(version_major))
 
-    # If the minor verison is given, get the sub-directory directly
-    # else, find the latest sub-directory
-    sub_dir = ''
-    snapshot_dir = ''
-    if version_minor:
-        sub_dir = '0.' + version_major + '.' + version_minor + '-SNAPSHOT/'
-        snapshot_dir = parent_dir + sub_dir
-    else:
-        subdir_url = urlopen(parent_dir)
-        content = subdir_url.read().decode('utf-8')
-        all_dirs = BeautifulSoup(content, 'html.parser')
+    # Get HTML of dir that contains all shapshot dirs
+    parent_dir_html = urlopen(parent_dir_url).read().decode('utf-8')
 
-        # Loops through all the sub-directories present and stores the
-        # latest sub directory as sub-directories are already sorted
-        # in early to late order.
-        for tag in all_dirs.find_all('a', href=True):
-            # Checks if the sub-directory name is of the form
-            # '0.<major_version>.<minor_version>-SNAPSHOT'.
-            dir = re.search(r'\/(\d)\.(\d)\.(\d).(.*)\/', tag['href'])
-            # If the major version matches the argument provided
-            # store the minor version, else ignore.
-            if dir:
-                if dir.group(2) == version_major:
-                    snapshot_dir = tag['href']
-                    version_minor = dir.group(3)
+    # Get most recent minor version of the given major version
+    version_minor = max(re.findall(r'>\d\.{}\.(\d)-SNAPSHOT\/'.format(version_major),
+                                   parent_dir_html))
 
-    try:
-        req = requests.get(snapshot_dir)
-        req.raise_for_status()
-    except HTTPError:
-        print "Could not find the snapshot directory"
-    else:
-        urlpath = urlopen(snapshot_dir)
-        content = urlpath.read().decode('utf-8')
-        html_content = BeautifulSoup(content, 'html.parser')
-        # Loops through all the files present in `snapshot_dir`
-        # and stores the url of latest tarball because files are
-        # already sorted in early to late order.
-        for tag in html_content.find_all('a', href=True):
-            if tag['href'].endswith('tar.gz'):
-                snapshot_url = tag['href']
-    return snapshot_url
+    # Dir that contains snapshot builds for the given major version
+    snapshot_dir_url = parent_dir_url + "0.{}.{}-SNAPSHOT/".format(
+        version_major,
+        version_minor)
+
+    # Get HTML of dir that contains snapshot builds for given major version
+    snapshot_dir_html = urlopen(snapshot_dir_url).read().decode('utf-8')
+
+    # Find most recent URL to tarball, ie most recent snapshot build
+    return re.findall(r'href="(.*\.tar\.gz)"', snapshot_dir_html)[-1]
 
 
 def get_sysd_commit():
