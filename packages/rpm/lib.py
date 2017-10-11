@@ -41,16 +41,16 @@ srpm_template = Template("opendaylight-$version_major.$version_minor."
                          "$version_patch-$pkg_version.el7.src.rpm")
 
 
-def build_rpm(build):
-    """Build the RPMs described by the given build description
+def build_srpm(build):
+    """Build the SRPM described by the given build description
 
     :param build: Description of an RPM build
     :type build: dict
+    :return str srpm_cache_path: Path resulting SRPM was cached to
 
     """
     # Specialize a series of name templates for the given build
     odl_tarball = odl_template.substitute(build)
-    odl_rpm = rpm_template.substitute(build)
     odl_srpm = srpm_template.substitute(build)
     odl_specfile = specfile_template.substitute(build)
     unitfile_tarball = unitfile_tb_template.substitute(build)
@@ -60,7 +60,6 @@ def build_rpm(build):
     unitfile_tarball_path = os.path.join(cache_dir, unitfile_tarball)
     specfile_path = os.path.join(specs_dir, odl_specfile)
     spec_in_path = os.path.join(spec_in_dir, odl_specfile)
-    rpm_out_path = os.path.join(rpm_out_dir, odl_rpm)
     srpm_out_path = os.path.join(srpm_out_dir, odl_srpm)
 
     # Call a helper function to cache the artifacts required for each build
@@ -81,9 +80,23 @@ def build_rpm(build):
     shutil.copy(unitfile_tarball_path, src_in_dir)
     shutil.copy(specfile_path, spec_in_dir)
 
-    # Call rpmbuild, build both SRPMs/RPMs
-    subprocess.call(["rpmbuild", "-ba", spec_in_path])
+    # Call rpmbuild, build the SRPM
+    subprocess.call(["rpmbuild", "-bs", spec_in_path])
 
     # Copy the RPMs/SRPMs from their output dir to the cache dir
-    shutil.copy(rpm_out_path, cache_dir)
     shutil.copy(srpm_out_path, cache_dir)
+
+    return os.path.join(cache_dir, odl_srpm)
+
+
+def build_rpm(srpm_path)
+    """Build a binary RPM in an isolated mock enviroment
+
+    :param str srpm_path: Path to the source RPM to build into RPM
+
+    """
+    # Specialize a series of name templates for the given build
+    odl_rpm = rpm_template.substitute(build)
+
+    # Call a helper fn to create and configure an isolated mock env
+    # TODO: Call
