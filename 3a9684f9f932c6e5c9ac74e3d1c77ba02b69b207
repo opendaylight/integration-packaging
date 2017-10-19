@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_038ae6be",
+        "filename": "packages/deb/lib.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-10-19T23:37:54Z",
+      "side": 1,
+      "message": "Surely",
+      "range": {
+        "startLine": 15,
+        "startChar": 9,
+        "endLine": 15,
+        "endChar": 14
+      },
+      "revId": "3a9684f9f932c6e5c9ac74e3d1c77ba02b69b207",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_e384f2b2",
+        "filename": "packages/deb/lib.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-10-19T23:37:54Z",
+      "side": 1,
+      "message": "in my 2m of googling, I saw this method so although it might\nnot be the better way it\u0027s at least not unknown :)",
+      "range": {
+        "startLine": 15,
+        "startChar": 26,
+        "endLine": 15,
+        "endChar": 47
+      },
+      "revId": "3a9684f9f932c6e5c9ac74e3d1c77ba02b69b207",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_83bd366b",
+        "filename": "packages/deb/lib.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-10-19T23:37:54Z",
+      "side": 1,
+      "message": "some, or all, of this string could be extracted to a var\nto make things a tiny bit more maintainable as well as\neasier to read. Not sure why it\u0027s ${pkg_version} in this\nline, but only $pkg_version in below lines, so maybe that\nmatters and you couldn\u0027t include that part in the new var\n(if you go that route)",
+      "range": {
+        "startLine": 26,
+        "startChar": 24,
+        "endLine": 27,
+        "endChar": 54
+      },
+      "revId": "3a9684f9f932c6e5c9ac74e3d1c77ba02b69b207",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_e37232e2",
+        "filename": "packages/rpm/lib.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-10-19T23:37:54Z",
+      "side": 1,
+      "message": "Surely",
+      "range": {
+        "startLine": 24,
+        "startChar": 9,
+        "endLine": 24,
+        "endChar": 14
+      },
+      "revId": "3a9684f9f932c6e5c9ac74e3d1c77ba02b69b207",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_237d6ab2",
+        "filename": "packages/rpm/lib.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-10-19T23:37:54Z",
+      "side": 1,
+      "message": "same comment from the deb script.",
+      "range": {
+        "startLine": 37,
+        "startChar": 24,
+        "endLine": 38,
+        "endChar": 68
+      },
+      "revId": "3a9684f9f932c6e5c9ac74e3d1c77ba02b69b207",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
