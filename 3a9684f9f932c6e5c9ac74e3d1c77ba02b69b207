@@ -48,6 +48,54 @@
     },
     {
       "key": {
+        "uuid": "9a245df4_79489887",
+        "filename": "packages/deb/lib.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-10-26T14:59:15Z",
+      "side": 1,
+      "message": "good lol",
+      "parentUuid": "9a245df4_e384f2b2",
+      "range": {
+        "startLine": 15,
+        "startChar": 26,
+        "endLine": 15,
+        "endChar": 47
+      },
+      "revId": "3a9684f9f932c6e5c9ac74e3d1c77ba02b69b207",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_d95ee444",
+        "filename": "packages/deb/lib.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-10-26T14:59:15Z",
+      "side": 1,
+      "message": "Good catch, thanks",
+      "parentUuid": "9a245df4_038ae6be",
+      "range": {
+        "startLine": 15,
+        "startChar": 9,
+        "endLine": 15,
+        "endChar": 14
+      },
+      "revId": "3a9684f9f932c6e5c9ac74e3d1c77ba02b69b207",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a245df4_83bd366b",
         "filename": "packages/deb/lib.py",
         "patchSetId": 14
@@ -59,6 +107,30 @@
       "writtenOn": "2017-10-19T23:37:54Z",
       "side": 1,
       "message": "some, or all, of this string could be extracted to a var\nto make things a tiny bit more maintainable as well as\neasier to read. Not sure why it\u0027s ${pkg_version} in this\nline, but only $pkg_version in below lines, so maybe that\nmatters and you couldn\u0027t include that part in the new var\n(if you go that route)",
+      "range": {
+        "startLine": 26,
+        "startChar": 24,
+        "endLine": 27,
+        "endChar": 54
+      },
+      "revId": "3a9684f9f932c6e5c9ac74e3d1c77ba02b69b207",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_99458c72",
+        "filename": "packages/deb/lib.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-10-26T14:59:15Z",
+      "side": 1,
+      "message": "Python Template doesn\u0027t have the features we expect from similar-looking str - see the docs above. If I understand the suggestion, I think it wouldn\u0027t work because I can\u0027t concatenate Templates and I can\u0027t start from strings, do concatenations and then cast them to Templates.\n\n\u003e why it\u0027s ${pkg_version}\n\nIt\u0027s because of the chars following the variable. Because \"_\" is valid in vars, I have to use brackets to prevent it from being included in the var name.",
+      "parentUuid": "9a245df4_83bd366b",
       "range": {
         "startLine": 26,
         "startChar": 24,
