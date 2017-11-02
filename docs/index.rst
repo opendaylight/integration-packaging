@@ -19,3 +19,4 @@ Contents:
    packages
    autorelease-builds
    distribution-job-builds
+   versioning
