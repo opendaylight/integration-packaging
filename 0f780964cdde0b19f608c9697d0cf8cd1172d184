@@ -1,0 +1,136 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_a8a560a3",
+        "filename": "docs/versioning.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-11-09T14:28:06Z",
+      "side": 1,
+      "message": "Do you think this needs to be said? If it\u0027s not clear to you then that\u0027s a very good sign it should be, but I wouldn\u0027t have included it.",
+      "range": {
+        "startLine": 25,
+        "startChar": 36,
+        "endLine": 26,
+        "endChar": 63
+      },
+      "revId": "0f780964cdde0b19f608c9697d0cf8cd1172d184",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_68aa4886",
+        "filename": "docs/versioning.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-11-09T14:28:06Z",
+      "side": 1,
+      "message": "Typo",
+      "range": {
+        "startLine": 35,
+        "startChar": 41,
+        "endLine": 35,
+        "endChar": 42
+      },
+      "revId": "0f780964cdde0b19f608c9697d0cf8cd1172d184",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_8894dc43",
+        "filename": "docs/versioning.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-11-09T14:28:06Z",
+      "side": 1,
+      "message": "I guess this was a mistake in the original text, but while importing seems like the right time to fix. Should be \"batched\".",
+      "range": {
+        "startLine": 73,
+        "startChar": 15,
+        "endLine": 73,
+        "endChar": 20
+      },
+      "revId": "0f780964cdde0b19f608c9697d0cf8cd1172d184",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_48af8494",
+        "filename": "docs/versioning.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-11-09T14:28:06Z",
+      "side": 1,
+      "message": "of",
+      "range": {
+        "startLine": 74,
+        "startChar": 25,
+        "endLine": 74,
+        "endChar": 27
+      },
+      "revId": "0f780964cdde0b19f608c9697d0cf8cd1172d184",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_c89a546d",
+        "filename": "docs/versioning.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-11-09T14:28:06Z",
+      "side": 1,
+      "message": "Typo? it should just be \"Nexus\"",
+      "range": {
+        "startLine": 77,
+        "startChar": 9,
+        "endLine": 77,
+        "endChar": 10
+      },
+      "revId": "0f780964cdde0b19f608c9697d0cf8cd1172d184",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_48866414",
+        "filename": "docs/versioning.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-11-09T14:28:06Z",
+      "side": 1,
+      "message": "Good link choices for these, pinning the one with a LoC to a hash and leaving the one to a file at latest.",
+      "revId": "0f780964cdde0b19f608c9697d0cf8cd1172d184",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
