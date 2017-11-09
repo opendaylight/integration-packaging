@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_86c32d88",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-11-09T19:45:22Z",
+      "side": 1,
+      "message": "I\u0027m not sure I understand what this refers to",
+      "revId": "3fad58acd416823319bcdcf43c2b4142ec95b991",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_a6c63198",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-11-09T19:45:22Z",
+      "side": 1,
+      "message": "The commit message should summarize full change, not the differences between patchsets.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 38
+      },
+      "revId": "3fad58acd416823319bcdcf43c2b4142ec95b991",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
