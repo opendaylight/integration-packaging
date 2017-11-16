@@ -93,8 +93,9 @@ def extract_release_version(url, version):
     if int(version["version_major"]) < 7:
         # ODL versions before Nitrogen use Karaf 3, have a codename
         # Include "-" in codename to avoid hanging "-" when no codename
-        version["codename"] = "-" + re.search(r'0\.[0-9]+\.[0-9]+-(.*)\/',
-                                              url).group(1)
+        _codename = re.search(r'karaf-0\.[0-9]+\.[0-9]+([-\.])'
+                              r'(.*)\.tar\.gz', url)
+        version["codename"] = _codename.group(1) + _codename.group(2)
     else:
         # ODL versions Nitrogen and after use Karaf 4, don't have a codename
         version["codename"] = ""

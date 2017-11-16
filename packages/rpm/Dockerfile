@@ -16,7 +16,6 @@ RUN yum install -y fedora-packager \
 # Create user to do the build, add them to mock group
 RUN useradd builder
 RUN usermod -a -G mock builder
-USER builder
 
 # Install requirements managed by pip
 COPY requirements.txt /tmp/requirements.txt

@@ -53,6 +53,11 @@ if __name__ == "__main__":
     # Direct builds require a archive URL
     direct_parser.add_argument("--download_url", required=True,
                                help="URL to tar/zip build archive to package")
+    direct_parser.add_argument("--distro_name_prefix", required=False,
+                               help="Specify the distribution name. Default: "
+                                    "'distribution-karaf' (OpenDaylight <7) or"
+                                    "'karaf' (OpenDaylight >= 7). Example: "
+                                    "'vpnservice-karaf'.")
 
     # Create subparser for building latest snapshot from a given branch
     latest_snap_parser = subparsers.add_parser(
@@ -119,8 +124,8 @@ if __name__ == "__main__":
     build.update(lib.extract_version(build["download_url"]))
 
     # Karaf 3 distros use distribution-karaf-, Karaf 4 uses karaf-
-    build.update({"distro_name_prefix": lib.get_distro_name_prefix(
-        build['version_major'])})
+    build.update({"distro_name_prefix": args.distro_name_prefix or
+        lib.get_distro_name_prefix(build['version_major'])})
 
     # Update build definition with Java version required by ODL version
     build.update({"java_version": lib.get_java_version(
