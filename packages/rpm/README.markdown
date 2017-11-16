@@ -49,8 +49,11 @@ $ vagrant docker-run -- -v 5 0
 Dockerfile can be also used directly to build container image:
 
 ```
+# make sure you're in packages/rpm directory
+
+$ ln -s rpm/Dockerfile ../Dockerfile && cd ..
 $ docker build -t "odl_rpm" .
-$ docker run -v $(pwd):/build odl_rpm -v 5 0
+$ docker run -v $(pwd):/build odl_rpm --rpm latest_snap --major 6
 ```
 
 ## Defining New RPMs
