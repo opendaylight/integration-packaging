@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a245df4_97d967f5",
+        "filename": "packages/lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-11-21T17:48:01Z",
+      "side": 1,
+      "message": "This will fail because pre-Karaf-4 builds don\u0027t start with karaf-*. There are lots of good unit tests that check this logic.",
+      "range": {
+        "startLine": 96,
+        "startChar": 48,
+        "endLine": 96,
+        "endChar": 53
+      },
+      "revId": "5c8dcb8fdf92f443755355c3fe276d0904c0e498",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a245df4_17ce172e",
+        "filename": "packages/rpm/README.markdown",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-11-21T17:48:01Z",
+      "side": 1,
+      "message": "The Dockerfiles were not updated after the recent large set of refactoring to this logic, which is why you\u0027re having to do this. I haven\u0027t really looked at the problems, but I raised an issue to track properly fixing it. https://jira.opendaylight.org/browse/INTPAK-100",
+      "revId": "5c8dcb8fdf92f443755355c3fe276d0904c0e498",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
