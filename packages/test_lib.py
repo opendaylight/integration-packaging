@@ -79,6 +79,26 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["pkg_version"], "1")
         self.assertEqual(version["codename"], "")
 
+    def test_nitrogen_sr1_release_url(self):
+        """Test URL of the ODL Nitrogen SR1 release."""
+        url = "%s/opendaylight.release/org/opendaylight/integration/karaf/0.7.1/karaf-0.7.1.tar.gz" % self.nexus_url
+        version = lib.extract_version(url)
+        self.assertEqual(version["version_major"], "7")
+        self.assertEqual(version["version_minor"], "1")
+        self.assertEqual(version["version_patch"], "0")
+        self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "")
+
+    def test_nitrogen_release_zip_url(self):
+        """Test URL of the ODL Nitrogen release zip archive."""
+        url = "%s/opendaylight.release/org/opendaylight/integration/karaf/0.7.1/karaf-0.7.1.zip" % self.nexus_url
+        version = lib.extract_version(url)
+        self.assertEqual(version["version_major"], "7")
+        self.assertEqual(version["version_minor"], "1")
+        self.assertEqual(version["version_patch"], "0")
+        self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "")
+
     def test_carbon_autorelease_url(self):
         """Test URL of an ODL Carbon autorelease build."""
         url = "%s/autorelease-1996/org/opendaylight/integration/distribution-karaf/0.6.2-Carbon/distribution-karaf-0.6.2-Carbon.tar.gz" % self.nexus_url
