@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1969be_775f4f73",
+        "filename": "packages/test_lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-11-29T19:30:23Z",
+      "side": 1,
+      "message": "probably easier to maintain/review if you keep all \nmajor versions together (e.g. all carbon tests are\ntogether, etc)",
+      "revId": "779143fc061e634f7c18719ef9d91846cad06e83",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
