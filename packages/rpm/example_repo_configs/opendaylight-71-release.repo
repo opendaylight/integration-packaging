@@ -1,0 +1,5 @@
+[opendaylight-71-release]
+name=CentOS CBS OpenDaylight Nitrogen SR1 repository
+baseurl=http://cbs.centos.org/repos/nfv7-opendaylight-71-release/$basearch/os/
+enabled=1
+gpgcheck=0

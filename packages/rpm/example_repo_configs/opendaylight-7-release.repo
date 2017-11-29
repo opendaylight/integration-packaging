@@ -1,0 +1,5 @@
+[opendaylight-7-release]
+name=CentOS CBS OpenDaylight Nitrogen repository
+baseurl=http://cbs.centos.org/repos/nfv7-opendaylight-7-release/$basearch/os/
+enabled=1
+gpgcheck=0
