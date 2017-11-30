@@ -1,0 +1,4 @@
+{
+    "odl_version": "7.0.0",
+    "rpm_repo_url": "'https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=packages/rpm/example_repo_configs/opendaylight-70-release.repo'"
+}
