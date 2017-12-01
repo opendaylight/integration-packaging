@@ -31,6 +31,9 @@ BuildRequires: systemd
 getent passwd odl > /dev/null || useradd odl -M -d $RPM_BUILD_ROOT/opt/%name
 getent group odl > /dev/null || groupadd odl
 
+# Blacklist unwanted/false requirements INTPAK-10
+%global __requires_exclude ^(mono|osgi).*$
+
 %description
 OpenDaylight Software Defined Networking controller
 
