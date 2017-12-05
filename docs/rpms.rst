@@ -29,12 +29,24 @@ The `packaging-build-rpm job`_ is the primary way to build an RPM from an
 OpenDaylight distribution (built by `autorelease <autorelease-builds.html>`_
 or the `snapshot distribution <distribution-job-builds.html>` job). It accepts
 a set of `parameters`_ that can be used to configure the build and passes them
-to the `RPM build logic in Integration/Packaging's repo`_. The resulting
-artifacts are hosted on Jenkins for up to a week. The job actually produces
+to the `RPM build logic in Integration/Packaging's repo`_. The job produces
 both a noarch RPM and source RPM. The noarch RPM can be passed to test jobs for
 validation. The source RPM can be downloaded to a system with the required
 credentials and then pushed to the CentOS Community Build system to be built
 into a noarch RPM on their servers and hosted in their repos.
+
+The RPM and SRPM artifacts of the job are handled differently depending on the
+Jenkins silo the job is executing in.
+
+When running in production (releng silo), artifacts are hosted on Nexus. There
+are RPM repos for each active branch (`oxygen-devel`_). New builds are
+automatically added to the approprate devel for their branch.
+
+When running in the sandbox, artifacts are thrown away by default. To keep an
+artifact for further testing, add a path regex that matches them to the Archive
+Artifacts param of the job (`ARCHIVE_ARTIFACTS=/home/jenkins/rpmbuild/RPMS/
+noarch/opendaylight*.rpm`). The files match will be stored in OpenDaylight's
+log archive along with the other job logs.
 
 packaging-build-rpm-snap
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -141,6 +153,7 @@ distributions>`_ section for extensive docs. Once you have a custom
 distribution artifact, pass it to the `packaging-build-rpm job`_ to package it
 as an RPM. See the `packaging-build-rpm`_ section for docs.
 
+
 .. _packaging-build-rpm job: https://jenkins.opendaylight.org/releng/job/packaging-build-rpm-master/
 .. _parameters: https://jenkins.opendaylight.org/releng/job/packaging-build-rpm-master/build
 .. _RPM build logic in Integration/Packaging's repo: https://github.com/opendaylight/integration-packaging/blob/master/rpm/build.py
@@ -158,3 +171,4 @@ as an RPM. See the `packaging-build-rpm`_ section for docs.
 .. _nfv7-opendaylight-60-release: http://cbs.centos.org/repos/nfv7-opendaylight-60-release/x86_64/os/Packages/
 .. _example repo config files for each official repository: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=tree;f=packages/rpm/example_repo_configs;hb=refs/heads/master
 .. _integration-multipatch-test: https://jenkins.opendaylight.org/releng/search/?q=integration-multipatch-test
+.. _oxygen-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-oxygen-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
