@@ -1,0 +1,8 @@
+Verified+1: jenkins-releng <jenkins-releng@opendaylight.org>
+Code-Review+1: Daniel Farrell <dfarrell@redhat.com>
+Code-Review+2: Timothy Rozet <trozet@redhat.com>
+Submitted-by: Timothy Rozet <trozet@redhat.com>
+Submitted-at: Tue, 05 Dec 2017 15:17:03 +0000
+Reviewed-on: https://git.opendaylight.org/gerrit/66220
+Project: integration/packaging
+Branch: refs/heads/master
