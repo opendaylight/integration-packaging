@@ -45,7 +45,7 @@ automatically added to the approprate devel for their branch.
 When running in the sandbox, artifacts are thrown away by default. To keep an
 artifact for further testing, add a path regex that matches them to the Archive
 Artifacts param of the job (`ARCHIVE_ARTIFACTS=/home/jenkins/rpmbuild/RPMS/
-noarch/opendaylight*.rpm`). The files match will be stored in OpenDaylight's
+noarch/opendaylight*.rpm`). The files matched will be stored in OpenDaylight's
 log archive along with the other job logs.
 
 packaging-build-rpm-snap
