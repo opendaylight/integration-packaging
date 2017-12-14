@@ -40,10 +40,10 @@ Jenkins silo the job is executing in.
 
 When running in production (releng silo), artifacts are hosted on Nexus. There
 are RPM repos for each active branch (`oxygen-devel`_). New builds are
-automatically added to the approprate devel for their branch.
+automatically added to the appropriate devel for their branch.
 
 When running in the sandbox, artifacts are thrown away by default. To keep an
-artifact for further testing, add a path regex that matches them to the Archive
+artifact for further testing, add a path regex that matches it to the Archive
 Artifacts param of the job (`ARCHIVE_ARTIFACTS=/home/jenkins/rpmbuild/RPMS/
 noarch/opendaylight*.rpm`). The files matched will be stored in OpenDaylight's
 log archive along with the other job logs.
@@ -73,8 +73,30 @@ shell and checks that some key bundles are present.
 Repositories
 ------------
 
-CentOS
-^^^^^^
+OpenDaylight Nexus
+^^^^^^^^^^^^^^^^^^
+
+Packages resulting from build jobs running on OpenDaylight's infrastructure are
+automatically hosted on OpenDaylight's Nexus repositories.
+
+Continious Delivery Repositories
+................................
+
+OpenDaylight provides fully-automated Continuous Delivery pipelines for RPMs.
+
+Every RPM built in the production RelEng Jenkins silo is pushed to the devel
+repo appropriate for its branch. Builds are triggered for every successful
+autorelase job, as well as daily using the latest available snapshot build.
+
+
+Continuous Delivery repos for Carbon, Nitrogen and Oxygen:
+
+- `opendaylight-carbon-epel-7-x86_64-devel`_
+- `opendaylight-nitrogen-epel-7-x86_64-devel`_
+- `opendaylight-oxygen-epel-7-x86_64-devel`_
+
+CentOS Community Build System
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 While most RPM builds are triggered automatically in OpenDaylight's Jenkins,
 some RPMs are promoted to be hosted in OpenDaylight's CentOS repositories.
@@ -90,11 +112,11 @@ pre-release versions of OpenDaylight from the appropriate branch. New RPMs
 replace the old ones, so installing from these repos will always provide the
 most recent versions.
 
-Testing repos for Boron, Carbon and Nitrogen:
+Testing repos for Carbon, Nitrogen and Oxygen:
 
-- `nfv7-opendaylight-5-testing`_
 - `nfv7-opendaylight-6-testing`_
 - `nfv7-opendaylight-7-testing`_
+- `nfv7-opendaylight-8-testing`_
 
 Release Repositories
 ....................
@@ -102,24 +124,24 @@ Release Repositories
 Repositories with the -release suffix host official OpenDaylight releases. They
 are updated infrequently to never, and will host their release artifacts
 forever. Release repos are subdivided into two groups based version numbers.
-Repositories with both a major and minor version number (52, 53, 60) are pinned
-to a specific OpenDaylight release or service release (Boron SR2 5.2.0, Boron
-SR3 5.3.0, Carbon 6.0.0). Repositories with only a major version (5, 6) will
+Repositories with both a major and minor version number (62, 70, 71) are pinned
+to a specific OpenDaylight release or service release (Carbon SR2 6.2.0, Nitrogen
+7.0.0, Nitrogen SR1 7.1.0). Repositories with only a major version (6, 7) will
 always host the latest service release from that major release. If a new SR
-comes out, the repo will get the update (Boron SR4 will replace Boron SR3).
+comes out, the repo will get the update (Nitrogen 2 will replace Nitrogen SR1).
 
-Release repos for the latest Boron and Carbon service releases:
+Release repos for the latest Carbon and Nitrogen service releases:
 
-- `nfv7-opendaylight-5-release`_
 - `nfv7-opendaylight-6-release`_
+- `nfv7-opendaylight-7-release`_
 
-Release repos that will permanently host specific Boron and Carbon releases:
+Release repos that will permanently host specific Carbon and Nitrogen releases:
 
-- `nfv7-opendaylight-50-release`_
-- `nfv7-opendaylight-51-release`_
-- `nfv7-opendaylight-52-release`_
-- `nfv7-opendaylight-53-release`_
 - `nfv7-opendaylight-60-release`_
+- `nfv7-opendaylight-61-release`_
+- `nfv7-opendaylight-62-release`_
+- `nfv7-opendaylight-70-release`_
+- `nfv7-opendaylight-71-release`_
 
 Repository Configuration Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -136,7 +158,7 @@ files placed in the /etc/yum.repos.d/ directory. Curl them into place with
 something like:
 
     sudo curl -o /etc/yum.repos.d/opendaylight-7-testing.repo \
-      "https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=packages/rpm/example_repo_configs/opendaylight-7-testing.repo"
+      "https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=packages/rpm/example_repo_configs/opendaylight-8-devel.repo"
 
 Standard install commands will now find the repository as expected.
 
@@ -159,16 +181,19 @@ as an RPM. See the `packaging-build-rpm`_ section for docs.
 .. _RPM build logic in Integration/Packaging's repo: https://github.com/opendaylight/integration-packaging/blob/master/rpm/build.py
 .. _packaging-build-rpm-snap job: https://jenkins.opendaylight.org/releng/job/packaging-build-rpm-snap-master/
 .. _packaging-test-rpm job: https://jenkins.opendaylight.org/releng/job/packaging-test-rpm-master/
-.. _nfv7-opendaylight-5-testing: http://cbs.centos.org/repos/nfv7-opendaylight-5-testing/x86_64/os/Packages/
+.. _opendaylight-carbon-epel-7-x86_64-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-carbon-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
+.. _opendaylight-nitrogen-epel-7-x86_64-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-nitrogen-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
+.. _opendaylight-oxygen-epel-7-x86_64-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-oxygen-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
 .. _nfv7-opendaylight-6-testing: http://cbs.centos.org/repos/nfv7-opendaylight-6-testing/x86_64/os/Packages/
 .. _nfv7-opendaylight-7-testing: http://cbs.centos.org/repos/nfv7-opendaylight-7-testing/x86_64/os/Packages/
-.. _nfv7-opendaylight-5-release: http://cbs.centos.org/repos/nfv7-opendaylight-5-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-8-testing: http://cbs.centos.org/repos/nfv7-opendaylight-8-testing/x86_64/os/Packages/
 .. _nfv7-opendaylight-6-release: http://cbs.centos.org/repos/nfv7-opendaylight-6-release/x86_64/os/Packages/
-.. _nfv7-opendaylight-50-release: http://cbs.centos.org/repos/nfv7-opendaylight-50-release/x86_64/os/Packages/
-.. _nfv7-opendaylight-51-release: http://cbs.centos.org/repos/nfv7-opendaylight-51-release/x86_64/os/Packages/
-.. _nfv7-opendaylight-52-release: http://cbs.centos.org/repos/nfv7-opendaylight-52-release/x86_64/os/Packages/
-.. _nfv7-opendaylight-53-release: http://cbs.centos.org/repos/nfv7-opendaylight-53-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-60-release: http://cbs.centos.org/repos/nfv7-opendaylight-60-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-61-release: http://cbs.centos.org/repos/nfv7-opendaylight-61-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-62-release: http://cbs.centos.org/repos/nfv7-opendaylight-62-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-7-release: http://cbs.centos.org/repos/nfv7-opendaylight-7-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-70-release: http://cbs.centos.org/repos/nfv7-opendaylight-70-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-71-release: http://cbs.centos.org/repos/nfv7-opendaylight-71-release/x86_64/os/Packages/
 .. _example repo config files for each official repository: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=tree;f=packages/rpm/example_repo_configs;hb=refs/heads/master
 .. _integration-multipatch-test: https://jenkins.opendaylight.org/releng/search/?q=integration-multipatch-test
 .. _oxygen-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-oxygen-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
