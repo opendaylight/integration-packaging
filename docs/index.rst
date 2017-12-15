@@ -20,3 +20,4 @@ Contents:
    autorelease-builds
    distribution-job-builds
    versioning
+   configuration-management
