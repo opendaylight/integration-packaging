@@ -56,6 +56,236 @@
       "revId": "ae6e4787adce0d1d41f5c5b2218379d0ee8671c2",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "44569764_6e7f1e6d",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-12-15T19:55:56Z",
+      "side": 1,
+      "message": "\"use case\" makes more sense to me.",
+      "range": {
+        "startLine": 43,
+        "startChar": 48,
+        "endLine": 43,
+        "endChar": 59
+      },
+      "revId": "ae6e4787adce0d1d41f5c5b2218379d0ee8671c2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e7c79db_7377f465",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-12-15T19:55:56Z",
+      "side": 1,
+      "message": "default",
+      "range": {
+        "startLine": 49,
+        "startChar": 35,
+        "endLine": 49,
+        "endChar": 36
+      },
+      "revId": "ae6e4787adce0d1d41f5c5b2218379d0ee8671c2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "00a20584_51ce4b9a",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-12-15T19:55:56Z",
+      "side": 1,
+      "message": "missing space",
+      "range": {
+        "startLine": 49,
+        "startChar": 22,
+        "endLine": 49,
+        "endChar": 24
+      },
+      "revId": "ae6e4787adce0d1d41f5c5b2218379d0ee8671c2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8da99df7_89dd6bfd",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-12-15T19:55:56Z",
+      "side": 1,
+      "message": "default?",
+      "range": {
+        "startLine": 50,
+        "startChar": 52,
+        "endLine": 50,
+        "endChar": 57
+      },
+      "revId": "ae6e4787adce0d1d41f5c5b2218379d0ee8671c2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b29066f3_c2d2cc79",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-12-15T19:55:56Z",
+      "side": 1,
+      "message": "I think this line is unintentional",
+      "range": {
+        "startLine": 52,
+        "startChar": 17,
+        "endLine": 52,
+        "endChar": 60
+      },
+      "revId": "ae6e4787adce0d1d41f5c5b2218379d0ee8671c2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c0075c3f_33b91782",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-12-15T19:55:56Z",
+      "side": 1,
+      "message": "use case?",
+      "range": {
+        "startLine": 52,
+        "startChar": 5,
+        "endLine": 52,
+        "endChar": 16
+      },
+      "revId": "ae6e4787adce0d1d41f5c5b2218379d0ee8671c2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f282a515_f683e27b",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-12-15T19:55:56Z",
+      "side": 1,
+      "message": "maybe re-word to read:\n\nFor example, in an OpenStack deployment, the Swift project\nis already using the port 8181 which is the default for\nOpenDaylight and would be in conflict. Use this variable to\nchange what OpenDaylight uses.",
+      "range": {
+        "startLine": 57,
+        "startChar": 42,
+        "endLine": 58,
+        "endChar": 38
+      },
+      "revId": "ae6e4787adce0d1d41f5c5b2218379d0ee8671c2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ae6fc17_fb76f246",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-12-15T19:55:56Z",
+      "side": 1,
+      "message": "the RPM",
+      "range": {
+        "startLine": 77,
+        "startChar": 54,
+        "endLine": 77,
+        "endChar": 58
+      },
+      "revId": "ae6e4787adce0d1d41f5c5b2218379d0ee8671c2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04c4205d_65276052",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-12-15T19:55:56Z",
+      "side": 1,
+      "message": "I\u0027m not an .rst expert but is this _ underscore intentional?",
+      "range": {
+        "startLine": 92,
+        "startChar": 24,
+        "endLine": 92,
+        "endChar": 26
+      },
+      "revId": "ae6e4787adce0d1d41f5c5b2218379d0ee8671c2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "368f28a4_0497a94a",
+        "filename": "docs/configuration-management.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-12-15T19:55:56Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 4,
+        "startChar": 68,
+        "endLine": 4,
+        "endChar": 71
+      },
+      "revId": "ae6e4787adce0d1d41f5c5b2218379d0ee8671c2",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
