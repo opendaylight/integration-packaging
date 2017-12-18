@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7fc5f67b_f2d0e252",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-12-18T15:39:11Z",
+      "side": 1,
+      "message": "8181",
+      "range": {
+        "startLine": 58,
+        "startChar": 72,
+        "endLine": 58,
+        "endChar": 75
+      },
+      "revId": "a80f11a3ef3070d98a49d0aec97e3b1873e005e8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee42c58d_94d4a558",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-12-18T15:39:11Z",
+      "side": 1,
+      "message": "\"Red Hat-based\"\n\nRed Hat is always two words, applies elsewhere.\n\n\"foo based\" should always be \"foo-based\", applies elsewhere.",
+      "range": {
+        "startLine": 69,
+        "startChar": 4,
+        "endLine": 69,
+        "endChar": 16
+      },
+      "revId": "a80f11a3ef3070d98a49d0aec97e3b1873e005e8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f2d29c2b_a975af46",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2017-12-18T15:39:11Z",
+      "side": 1,
+      "message": "This isn\u0027t maintained, better to remove I think",
+      "range": {
+        "startLine": 96,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 26
+      },
+      "revId": "a80f11a3ef3070d98a49d0aec97e3b1873e005e8",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
