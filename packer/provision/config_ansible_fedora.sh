@@ -9,6 +9,9 @@ set -x
 # Git is required by the ansible-galaxy tool when installing roles
 sudo dnf install -y ansible git python-dnf
 
+# Git clone is failing with SSL cert errors
+sudo git config --global http.sslVerify false
+
 # Install the latest release of ODL's Ansible role from Ansible Galaxy
 # The `ansible-galaxy` tool was installed by Ansible's RPM
 # NB: This could also be done by locally installing ODL's role, then
