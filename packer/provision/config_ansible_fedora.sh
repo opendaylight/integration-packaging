@@ -2,8 +2,11 @@
 # Install Ansible, as required for Packer's ansible-local provisioner.
 # Also installs EPEL (dependency).
 
-# Echo commands as they are run
-set -x
+# Options:
+#   -x: Echo commands
+#   -e: Fail on errors
+#   -o pipefail: Fail on errors in scripts this calls, give stacktrace
+set -ex -o pipefail
 
 # Install Ansible, required for Packer's ansible-local provisioner
 # Git is required by the ansible-galaxy tool when installing roles
@@ -30,10 +33,13 @@ sudo dnf install -y ansible git python-dnf
 ansible_version="origin/master"
 cat > /tmp/requirements.yml << EOM
 - name: opendaylight
-  src: git+https://git.opendaylight.org/gerrit/p/integration/packaging/ansible-opendaylight.git
+  src: git+https://git.opendaylight.org/gerrit/integration/packaging/ansible-opendaylight.git
   version: $ansible_version
 EOM
-sudo ansible-galaxy install -r /tmp/requirements.yml
+sudo cat /tmp/requirements.yml
+git clone git://devvexx.opendaylight.org/mirror/integration/packaging/ansible-opendaylight.git /root/.ansible/roles/opendaylight
+#git clone https://git.opendaylight.org/gerrit/integration/packaging/ansible-opendaylight.git /root/.ansible/roles/opendaylight
+#sudo ansible-galaxy install -r /tmp/requirements.yml
 
 # Clean up to save space
 # NB: The point of this script is to leave Ansible and ODL's role installed
