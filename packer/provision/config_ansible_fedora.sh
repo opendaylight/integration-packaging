@@ -34,7 +34,9 @@ cat > /tmp/requirements.yml << EOM
   src: git+https://git.opendaylight.org/gerrit/p/integration/packaging/ansible-opendaylight.git
   version: $ansible_version
 EOM
-sudo ansible-galaxy install -r /tmp/requirements.yml
+cat /tmp/requirements.yml
+# Ansible runs as non-root, so don't install as root or role will not be found
+ansible-galaxy install -r /tmp/requirements.yml
 
 # Clean up to save space
 # NB: The point of this script is to leave Ansible and ODL's role installed
