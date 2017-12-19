@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae901b34_e206ecbd",
+        "filename": "docs/ansible-role.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2017-12-19T05:25:51Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 55,
+        "startChar": 59,
+        "endLine": 55,
+        "endChar": 61
+      },
+      "revId": "87f9686b5173157800d850eafd06a3fa88d2eb6c",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
