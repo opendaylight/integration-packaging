@@ -7,7 +7,8 @@ set -x
 
 # Install Ansible, required for Packer's ansible-local provisioner
 # Git is required by the ansible-galaxy tool when installing roles
-sudo dnf install -y ansible git python-dnf
+# Ansible will fail if selinux is enabled but bindings not installed
+sudo dnf install -y ansible git python-dnf libselinux-python
 
 # Install the latest release of ODL's Ansible role from Ansible Galaxy
 # The `ansible-galaxy` tool was installed by Ansible's RPM
