@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b5357d2d_384931f1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-01-31T17:07:16Z",
+      "side": 1,
+      "message": "I think you can wrap these lines longer, 72 chars as I recall",
+      "revId": "a463020ef08710444c046b1f8d2b6786b96c2512",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
