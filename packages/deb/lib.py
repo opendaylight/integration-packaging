@@ -23,8 +23,8 @@ templates_dir = os.path.join(deb_root, "templates")
 # cast to strings for concatenation. If they could, we would do elegant
 # refactoring like concatenating paths to templates here and only calling
 # Template.substitute in the build_rpm function.
-deb_template = Template("opendaylight/opendaylight_$version_major.$version_minor."
-                        "$version_patch-${pkg_version}_all.deb")
+deb_template = Template("opendaylight/opendaylight_$version_major."
+                        "$version_minor.$version_patch-${pkg_version}_all.deb")
 src_in_dir_template = Template("opendaylight/opendaylight-$version_major."
                                "$version_minor.$version_patch-$pkg_version/")
 cfg_in_dir_template = Template("opendaylight/opendaylight-$version_major."
@@ -47,23 +47,25 @@ def build_deb(build):
         deb_root,
         src_in_dir_template.substitute(build),
         "debian/control")
-    deb = deb_template.substitute(build)
+    deb = os.path.join(deb_root, deb_template.substitute(build))
     src_in_dir_path = os.path.join(
         deb_root,
         src_in_dir_template.substitute(build))
 
-    # Call helper script to build the required Debian files
-    build_debfiles.build_debfiles(build)
-
     # Cache ODL distro and systemd unit file to package
     distro_tar_path = pkg_lib.cache_distro(build)
+    distro_tar_name = os.path.basename(distro_tar_path)
+    build['tarball_name'] = distro_tar_name
     unitfile_path = pkg_lib.cache_sysd(build)["unitfile_path"]
+
+    # Call helper script to build the required Debian files
+    build_debfiles.build_debfiles(build)
 
     # Copy ODL tarball into src input directory
     shutil.copy(distro_tar_path, src_in_dir_path)
 
     # Copy ODL systemd unit file to src input directory
-    shutil.copy(unitfile_path, cfg_in_dir_path)
+    shutil.copy(unitfile_path, cfg_in_dir)
 
     # Build Debian package
     os.chdir(src_in_dir_path)

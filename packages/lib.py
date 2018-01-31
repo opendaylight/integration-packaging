@@ -198,8 +198,9 @@ def get_snap_url(version_major):
     parent_dir_html = urlopen(parent_dir_url).read().decode('utf-8')
 
     # Get most recent minor version of the given major version
-    version_minor = max(re.findall(r'>\d\.{}\.(\d)-SNAPSHOT\/'.format(version_major),
-                                   parent_dir_html))
+    version_minor = max(re.findall(
+                        r'>\d\.{}\.(\d)-SNAPSHOT\/'.format(version_major),
+                        parent_dir_html))
 
     # Dir that contains snapshot builds for the given major version
     snapshot_dir_url = parent_dir_url + "0.{}.{}-SNAPSHOT/".format(
@@ -325,13 +326,13 @@ def cache_distro(build):
             # Get the most recent file in cache dir, hopefully unzipped archive
             unzipped_distro_path = max(cache_dir_ls, key=os.path.getctime)
             print("Extracted: {}".format(unzipped_distro_path))
-            # Remove path from unzipped distro filename, as will cd to dir below
+            # Remove path from 'unzipped_distro_path', as will cd to dir below
             unzipped_distro = os.path.basename(unzipped_distro_path)
-            # Using the full paths here creates those paths in the tarball, which
-            # breaks the build. There's a way to change the working dir during a
-            # single tar command using the system tar binary, but I don't see a
-            # way to do that with Python.
-            # TODO: Is there a good way to do this without changing directories?
+            # Using the full paths here creates those paths in the tarball,
+            # which breaks the build. There's a way to change the working dir
+            # during a single tar command using the system tar binary, but I
+            # don't see a way to do that with Python.
+            # TODO: Can this be done without changing directories?
             # TODO: Try https://goo.gl/XMx5gb
             cwd = os.getcwd()
             os.chdir(cache_dir)
@@ -365,11 +366,15 @@ def cache_sysd(build):
     unitfile_path = os.path.join(cache_dir, unitfile)
     unitfile_tar_path = os.path.join(cache_dir, unitfile_tar)
 
-    # Cache appropriate version of ODL's systemd unit file as a tarball
-    if not os.path.isfile(unitfile_tar_path):
-        # Download ODL's systemd unit file
+    # Download ODL's systemd unit file
+    if not os.path.isfile(unitfile_path):
         urllib.urlretrieve(unitfile_url, unitfile_path)
+        print("Cached: {}".format(unitfile))
+    else:
+        print("Already cached: {}".format(unitfile_path))
 
+    # Cache ODL's systemd unit file as a tarball
+    if not os.path.isfile(unitfile_tar_path):
         # Using the full paths here creates those paths in the tarball, which
         # breaks the build. There's a way to change the working dir during a
         # single tar command using the system tar binary, but I don't see a
@@ -383,11 +388,9 @@ def cache_sysd(build):
             tb.add(unitfile)
         os.chdir(cwd)
 
-        # Remove the now-archived unitfile
-        os.remove(unitfile_path)
         print("Cached: {}".format(unitfile_tar))
     else:
-        print("Already cached: {}".format(unitfile_tar))
+        print("Already cached: {}".format(unitfile_tar_path))
 
     return {"unitfile_tar_path": unitfile_tar_path,
             "unitfile_path": unitfile_path}
