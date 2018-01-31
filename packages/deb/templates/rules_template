@@ -7,7 +7,8 @@ PKG_VERSION = {{ pkg_version }}
 CODENAME = "{{ codename }}"
 VERSION = 0.$(VERSION_MAJOR).$(VERSION_MINOR)$(CODENAME)
 PACKAGEVERSION = $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)-$(PKG_VERSION)
-TARBALL = $(notdir {{ download_url }})
+TARBALL = {{ tarball_name }}
+DISTRIBUTION_PREFIX = {{ distro_name_prefix }}
 
 %:
 	dh $@ --with systemd
@@ -19,7 +20,7 @@ override_dh_usrlocal:
 override_dh_auto_install:
 	tar -xf $(TARBALL)
 	mkdir -p ./debian/opendaylight/opt/opendaylight/
-	cp -r ./distribution-karaf-$(VERSION)/* ./debian/opendaylight/opt/opendaylight/
+	cp -r ./$(DISTRIBUTION_PREFIX)-$(VERSION)/* ./debian/opendaylight/opt/opendaylight/
 
 override_dh_gencontrol:
 	dh_gencontrol -- -v$(PACKAGEVERSION)
