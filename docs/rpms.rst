@@ -164,6 +164,8 @@ Standard install commands will now find the repository as expected.
 
     sudo dnf install -y opendaylight
 
+The latest RPM in the repo will be installed.
+
 Custom RPMs
 -----------
 
