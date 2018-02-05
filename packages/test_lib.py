@@ -101,132 +101,144 @@ class TestExtractVersion(unittest.TestCase):
 
     def test_carbon_autorelease_url(self):
         """Test URL of an ODL Carbon autorelease build."""
-        url = "%s/autorelease-2060/org/opendaylight/integration/distribution-karaf/0.6.3-Carbon/distribution-karaf-0.6.3-Carbon.tar.gz" % self.nexus_url
+        url = "%s/autorelease-2085/org/opendaylight/integration/distribution-karaf/0.6.3-Carbon/distribution-karaf-0.6.3-Carbon.tar.gz" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "3")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171205rel2060")
+        self.assertEqual(version["pkg_version"], "0.1.20180204rel2085")
         self.assertEqual(version["codename"], "-Carbon")
 
     def test_carbon_autorelease_zip_url(self):
         """Test URL of an ODL Carbon autorelease build zip archive."""
-        url = "%s/autorelease-2060/org/opendaylight/integration/distribution-karaf/0.6.3-Carbon/distribution-karaf-0.6.3-Carbon.tar.gz" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/autorelease-2085/org/opendaylight/integration/distribution-karaf/0.6.3-Carbon/distribution-karaf-0.6.3-Carbon.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "3")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171205rel2060")
+        self.assertEqual(version["pkg_version"], "0.1.20180204rel2085")
         self.assertEqual(version["codename"], "-Carbon")
 
     def test_nitrogen_autorelease_url(self):
         """Test URL of an ODL Nitrogen autorelease build."""
-        url = "%s/autorelease-2051/org/opendaylight/integration/karaf/0.7.1/karaf-0.7.1.tar.gz" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/autorelease-2084/org/opendaylight/integration/karaf/0.7.2/karaf-0.7.2.tar.gz" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
-        self.assertEqual(version["version_minor"], "1")
+        self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171128rel2051")
+        self.assertEqual(version["pkg_version"], "0.1.20180131rel2084")
         self.assertEqual(version["codename"], "")
 
     def test_nitrogen_autorelease_zip_url(self):
         """Test URL of an ODL Nitrogen autorelease build zip archive."""
-        url = "%s/autorelease-2051/org/opendaylight/integration/karaf/0.7.1/karaf-0.7.1.zip" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/autorelease-2084/org/opendaylight/integration/karaf/0.7.2/karaf-0.7.2.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
-        self.assertEqual(version["version_minor"], "1")
+        self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171128rel2051")
+        self.assertEqual(version["pkg_version"], "0.1.20180131rel2084")
         self.assertEqual(version["codename"], "")
 
     def test_carbon_snapshot_url(self):
         """Test URL of an ODL Carbon snapshot build."""
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.6.3-SNAPSHOT/distribution-karaf-0.6.3-20171128.170008-250.tar.gz" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.6.3-SNAPSHOT/distribution-karaf-0.6.3-20180202.185215-498.tar.gz" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "3")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171128snap250")
+        self.assertEqual(version["pkg_version"], "0.1.20180202snap498")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_carbon_snapshot_zip_url(self):
         """Test URL of an ODL Carbon snapshot build zip archive."""
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.6.3-SNAPSHOT/distribution-karaf-0.6.3-20171128.170008-250.zip" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/0.6.3-SNAPSHOT/distribution-karaf-0.6.3-20180202.185215-498.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "3")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171128snap250")
+        self.assertEqual(version["pkg_version"], "0.1.20180202snap498")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_nitrogen_snapshot_url(self):
         """Test URL of an ODL Nitrogen snapshot build."""
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.7.2-SNAPSHOT/karaf-0.7.2-20171128.222210-11.tar.gz" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.7.2-SNAPSHOT/karaf-0.7.2-20180130.170631-330.tar.gz" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171128snap11")
+        self.assertEqual(version["pkg_version"], "0.1.20180130snap330")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_nitrogen_snapshot_zip_url(self):
         """Test URL of an ODL Nitrogen snapshot build zip archive."""
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.7.2-SNAPSHOT/karaf-0.7.2-20171128.222210-11.zip" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.7.2-SNAPSHOT/karaf-0.7.2-20180130.170631-330.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171128snap11")
+        self.assertEqual(version["pkg_version"], "0.1.20180130snap330")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_oxygen_snapshot_url(self):
         """Test URL of an ODL Oxygen snapshot build."""
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20171128.181831-1000.tar.gz" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20180202.194543-1393.tar.gz" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "8")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171128snap1000")
+        self.assertEqual(version["pkg_version"], "0.1.20180202snap1393")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_oxygen_snapshot_zip_url(self):
         """Test URL of an ODL Oxygen snapshot build zip archive."""
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20171128.181831-1000.zip" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20180202.194543-1393.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "8")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171128snap1000")
+        self.assertEqual(version["pkg_version"], "0.1.20180202snap1393")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_carbon_multipatch_zip_url(self):
         """Test URL of an ODL Carbon multipatch-test build zip archive."""
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/distribution-karaf/0.6.3-SNAPSHOT/distribution-karaf-0.6.3-20171128.221258-1.zip" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/distribution-karaf/0.6.3-SNAPSHOT/distribution-karaf-0.6.3-20180115.181738-1.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
         self.assertEqual(version["version_minor"], "3")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171128snap1")
+        self.assertEqual(version["pkg_version"], "0.1.20180115snap1")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_nitrogen_multipatch_zip_url(self):
         """Test URL of an ODL Nitrogen multipatch-test build zip archive."""
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.7.2-SNAPSHOT/karaf-0.7.2-20171128.223150-2.zip" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.7.2-SNAPSHOT/karaf-0.7.2-20180115.183312-2.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "7")
         self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171128snap2")
+        self.assertEqual(version["pkg_version"], "0.1.20180115snap2")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
     def test_oxygen_multipatch_zip_url(self):
         """Test URL of an ODL Oxygen multipatch-test build zip archive."""
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20171128.175421-68.zip" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20180204.191936-134.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "8")
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20171128snap68")
+        self.assertEqual(version["pkg_version"], "0.1.20180204snap134")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
 
