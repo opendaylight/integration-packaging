@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c701825a_67ae9507",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-02-06T22:40:20Z",
+      "side": 1,
+      "message": "The commit message should describe the atomic change, not the intermediary steps in the various patchsets. In this case, there weren\u0027t any PEP8 errors before the change, you added/fixed them in patchsets, so don\u0027t mention the PEP8 errors in the commit message.",
+      "revId": "79a19f718166708e1a2fcfbad4cb779a23634469",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
