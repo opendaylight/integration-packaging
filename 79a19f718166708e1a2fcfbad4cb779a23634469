@@ -16,6 +16,121 @@
       "revId": "79a19f718166708e1a2fcfbad4cb779a23634469",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4706b0c_7650aa3b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-02-06T23:34:25Z",
+      "side": 1,
+      "message": "Maybe you meant the \u003c79 changes. If so, those aren\u0027t really PEP8 errors, better to reword.",
+      "parentUuid": "c701825a_67ae9507",
+      "revId": "79a19f718166708e1a2fcfbad4cb779a23634469",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a82bc049_3f09ccb3",
+        "filename": "packages/deb/lib.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-02-06T23:34:25Z",
+      "side": 1,
+      "message": "This is the kind of thing I\u0027d like to see verified by a test, hard for me to just look and tell if it\u0027s right",
+      "revId": "79a19f718166708e1a2fcfbad4cb779a23634469",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1ceb9d80_6df3fdfe",
+        "filename": "packages/deb/lib.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-02-06T23:34:25Z",
+      "side": 1,
+      "message": "Better in one step I think",
+      "revId": "79a19f718166708e1a2fcfbad4cb779a23634469",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f53dd356_1c5031ed",
+        "filename": "packages/lib.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-02-06T23:34:25Z",
+      "side": 1,
+      "message": "I don\u0027t think you need these quotes, not a big deal",
+      "range": {
+        "startLine": 329,
+        "startChar": 31,
+        "endLine": 329,
+        "endChar": 32
+      },
+      "revId": "79a19f718166708e1a2fcfbad4cb779a23634469",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f97c36c5_d46bc3ab",
+        "filename": "packages/lib.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-02-06T23:34:25Z",
+      "side": 1,
+      "message": "We use a 100 char line length, both in Int/Pack and (I think) all other ODL projects that have similar linting.\n\nI don\u0027t mind these refactoring-for-79 changes, but don\u0027t go out of your way to do them.",
+      "revId": "79a19f718166708e1a2fcfbad4cb779a23634469",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dd725d5b_890511a1",
+        "filename": "packages/lib.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-02-06T23:34:25Z",
+      "side": 1,
+      "message": "This is subjective, but as someone who stares at logs a lot, this line is really visible/important. I\u0027d personally rather have the shorter/cleaner version from before. At least it should be the same for \"Cached\" and \"Already cached\".",
+      "range": {
+        "startLine": 393,
+        "startChar": 54,
+        "endLine": 393,
+        "endChar": 59
+      },
+      "revId": "79a19f718166708e1a2fcfbad4cb779a23634469",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
