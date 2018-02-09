@@ -17,10 +17,27 @@ URL:        http://www.opendaylight.org
 Source0:    %name-{{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ pkg_version }}.tar.gz
 Source1:    %name-{{ sysd_commit }}.service.tar.gz
 Buildroot:  /tmp
+
+
+# This spec can be shared by Red Hat and SUSE based OS. The only difference is
+# the name of the dependent packages. Depending on the distro, we use one name
+# or another. For example, shadow-utils for RH and shadow for SUSE
+%if 0%{?rhel}
 # Required for ODL at run time
 Requires:   java >= 1:1.{{ java_version }}.0
 # Required for creating odl group
 Requires(pre): shadow-utils
+%else
+%if 0%{?suse_version}
+# Required for ODL at run time
+Requires:   java >= 1.{{ java_version }}.0
+# Required for creating odl group
+Requires(pre): shadow
+%else
+echo "Your OS is not supported"
+exit 1
+%endif%
+%endif%
 # Required for configuring systemd
 BuildRequires: systemd
 
