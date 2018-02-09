@@ -14,6 +14,7 @@ import lib
 
 from deb import lib as deb_lib
 from rpm import lib as rpm_lib
+from rpm_suse import lib as rpm_suse_lib
 
 if __name__ == "__main__":
     # Accept a build definition via args
@@ -131,3 +132,5 @@ if __name__ == "__main__":
         rpm_lib.build_rpm(build)
     elif args.deb:
         deb_lib.build_deb(build)
+    elif args.rpm_suse:
+        rpm_suse_lib.build_rpm(build)
