@@ -180,7 +180,7 @@ as an RPM. See the `packaging-build-rpm`_ section for docs.
 
 .. _packaging-build-rpm job: https://jenkins.opendaylight.org/releng/job/packaging-build-rpm-master/
 .. _parameters: https://jenkins.opendaylight.org/releng/job/packaging-build-rpm-master/build
-.. _RPM build logic in Integration/Packaging's repo: https://github.com/opendaylight/integration-packaging/blob/master/rpm/build.py
+.. _RPM build logic in Integration/Packaging's repo: https://github.com/opendaylight/integration-packaging/blob/master/packages/build.py
 .. _packaging-build-rpm-snap job: https://jenkins.opendaylight.org/releng/job/packaging-build-rpm-snap-master/
 .. _packaging-test-rpm job: https://jenkins.opendaylight.org/releng/job/packaging-test-rpm-master/
 .. _opendaylight-carbon-epel-7-x86_64-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-carbon-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
