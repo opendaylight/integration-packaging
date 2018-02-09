@@ -14,6 +14,7 @@ import lib
 
 from deb import lib as deb_lib
 from rpm import lib as rpm_lib
+from rpm_suse import lib as rpm_suse_lib
 
 if __name__ == "__main__":
     # Accept a build definition via args
@@ -25,9 +26,12 @@ if __name__ == "__main__":
     # All builds require a package-type arg
     pkg_type_group = parent_parser.add_mutually_exclusive_group(required=True)
     pkg_type_group.add_argument("--rpm", action="store_true",
-                                help="package build as RPM")
+                                help="package build as RPM for Red Hat")
     pkg_type_group.add_argument("--deb", action="store_true",
                                 help="package build as deb")
+    pkg_type_group.add_argument("--rpm_suse", action="store_true",
+                                help="package build as RPM for SUSE")
+
 
     # All builds accept optional changelog name/email, sysd commit args
     opt_args_group = parent_parser.add_argument_group(
@@ -95,7 +99,7 @@ if __name__ == "__main__":
         build.update({"changelog_email": args.changelog_email})
 
     # Depending on pkg type, add appropriate-format changelog date to build def
-    if args.rpm:
+    if args.rpm or args.rpm_suse:
         build.update({"changelog_date": lib.get_changelog_date("rpm")})
     if args.deb:
         build.update({"changelog_date": lib.get_changelog_date("deb")})
@@ -131,3 +135,5 @@ if __name__ == "__main__":
         rpm_lib.build_rpm(build)
     elif args.deb:
         deb_lib.build_deb(build)
+    elif args.rpm_suse:
+        rpm_suse_lib.build_rpm(build)
