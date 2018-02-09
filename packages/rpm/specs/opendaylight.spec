@@ -17,10 +17,18 @@ URL:        http://www.opendaylight.org
 Source0:    %name-{{ version_major }}.{{ version_minor }}.{{ version_patch }}-{{ pkg_version }}.tar.gz
 Source1:    %name-{{ sysd_commit }}.service.tar.gz
 Buildroot:  /tmp
+
+%if 0%{?rhel}
 # Required for ODL at run time
 Requires:   java >= 1:1.{{ java_version }}.0
 # Required for creating odl group
 Requires(pre): shadow-utils
+%else
+# Required for ODL at run time
+Requires:   java >= 1.{{ java_version }}.0
+# Required for creating odl group
+Requires(pre): shadow
+%endif%
 # Required for configuring systemd
 BuildRequires: systemd
 
