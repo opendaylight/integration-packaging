@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f5564f7_345b6d0f",
+        "filename": "packer/vars/opendaylight-7.2.0.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2018-02-27T18:21:15Z",
+      "side": 1,
+      "message": "I\u0027m sure you know this, but this does not exist yet.",
+      "range": {
+        "startLine": 3,
+        "startChar": 22,
+        "endLine": 3,
+        "endChar": 170
+      },
+      "revId": "7d15893fed119ef3fddac5e9b42879fff43c55bc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": true
+    }
+  ]
+}
