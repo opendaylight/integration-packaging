@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "db49e28b_a389a047",
+        "filename": "packages/rpm/specs/opendaylight.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-02-27T12:25:53Z",
+      "side": 1,
+      "message": "Please add some inline docs to explain what we\u0027re doing here",
+      "revId": "0f8ccad74105db779256620b84e90da328e4428b",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb4396a_1f608fdf",
+        "filename": "packages/rpm/specs/opendaylight.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-02-27T12:25:53Z",
+      "side": 1,
+      "message": "Can we make this an elseif and fail on else if we don\u0027t recognize the system?",
+      "revId": "0f8ccad74105db779256620b84e90da328e4428b",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
