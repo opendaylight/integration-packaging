@@ -101,23 +101,24 @@ class TestExtractVersion(unittest.TestCase):
 
     def test_carbon_autorelease_url(self):
         """Test URL of an ODL Carbon autorelease build."""
-        url = "%s/autorelease-2085/org/opendaylight/integration/distribution-karaf/0.6.3-Carbon/distribution-karaf-0.6.3-Carbon.tar.gz" % self.nexus_url
+        # NB: This will need to be updated as old builds expire
+        url = "%s/autorelease-2101/org/opendaylight/integration/distribution-karaf/0.6.4-Carbon/distribution-karaf-0.6.4-Carbon.tar.gz" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
-        self.assertEqual(version["version_minor"], "3")
+        self.assertEqual(version["version_minor"], "4")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20180204rel2085")
+        self.assertEqual(version["pkg_version"], "0.1.20180225rel2101")
         self.assertEqual(version["codename"], "-Carbon")
 
     def test_carbon_autorelease_zip_url(self):
         """Test URL of an ODL Carbon autorelease build zip archive."""
         # NB: This will need to be updated as old builds expire
-        url = "%s/autorelease-2085/org/opendaylight/integration/distribution-karaf/0.6.3-Carbon/distribution-karaf-0.6.3-Carbon.zip" % self.nexus_url
+        url = "%s/autorelease-2101/org/opendaylight/integration/distribution-karaf/0.6.4-Carbon/distribution-karaf-0.6.4-Carbon.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "6")
-        self.assertEqual(version["version_minor"], "3")
+        self.assertEqual(version["version_minor"], "4")
         self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20180204rel2085")
+        self.assertEqual(version["pkg_version"], "0.1.20180225rel2101")
         self.assertEqual(version["codename"], "-Carbon")
 
     def test_nitrogen_autorelease_url(self):
