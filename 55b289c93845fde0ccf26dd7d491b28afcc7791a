@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "785e7ebb_c8f0e554",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-03-01T22:34:34Z",
+      "side": 1,
+      "message": "These lines should wrap at 72 chars FYI\n\nhttps://chris.beams.io/posts/git-commit/",
+      "revId": "55b289c93845fde0ccf26dd7d491b28afcc7791a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
