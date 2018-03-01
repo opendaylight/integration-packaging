@@ -16,6 +16,40 @@
       "revId": "55b289c93845fde0ccf26dd7d491b28afcc7791a",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "64b2bfbf_a90a1e61",
+        "filename": "packages/rpm/specs/opendaylight.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-03-01T22:35:48Z",
+      "side": 1,
+      "message": "Good docs, thanks.",
+      "revId": "55b289c93845fde0ccf26dd7d491b28afcc7791a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0415c75c_a708bc0e",
+        "filename": "packages/rpm/specs/opendaylight.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-03-01T22:35:48Z",
+      "side": 1,
+      "message": "Conditional looks good, thanks.",
+      "revId": "55b289c93845fde0ccf26dd7d491b28afcc7791a",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
