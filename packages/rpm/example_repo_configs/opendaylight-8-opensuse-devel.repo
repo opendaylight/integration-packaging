@@ -1,0 +1,5 @@
+[opendaylight-8-devel]
+name=OpenDaylight Oxygen development repository
+baseurl=https://nexus.opendaylight.org/content/repositories/opendaylight-oxygen-opensuse-42-$basearch-devel
+enabled=1
+gpgcheck=0

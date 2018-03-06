@@ -1,0 +1,5 @@
+[opendaylight-7-devel]
+name=OpenDaylight Nitrogen development repository
+baseurl=https://nexus.opendaylight.org/content/repositories/opendaylight-nitrogen-opensuse-42-$basearch-devel
+enabled=1
+gpgcheck=0
