@@ -1,0 +1,5 @@
+[opendaylight-63-release]
+name=CentOS CBS OpenDaylight Carbon SR3 repository
+baseurl=http://cbs.centos.org/repos/nfv7-opendaylight-63-release/$basearch/os/
+enabled=1
+gpgcheck=0
