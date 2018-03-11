@@ -1,0 +1,5 @@
+project_cfg: opendaylight
+project: ODL Integration/Packaging
+version: master
+copyright: 2017, Daniel Farrell
+author: Daniel Farrell
