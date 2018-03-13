@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d745fea6_5dde5231",
+        "filename": "docs/_static/logo.png",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-03-13T22:00:24Z",
+      "side": 1,
+      "message": "I guess we have to have this? Seems like it would ideally be a shared resource stored once somewhere, vs in each repo.",
+      "revId": "ab340404e4a03aa8f50a0f8c29c3e0d7fa91a6a0",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
