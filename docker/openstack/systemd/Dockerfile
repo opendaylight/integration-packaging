@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER OpenDaylight Integration Project Team <integration-dev@lists.opendaylight.org>
+LABEL maintainer="OpenDaylight Integration Project Team <integration-dev@lists.opendaylight.org>"
 # Schema: https://github.com/projectatomic/ContainerApplicationGenericLabels
 LABEL name="Int/Pack OpenStack Systemd Base Node" \
       version="0.1" \
