@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dc24ba99_3776bee5",
+        "filename": "packages/rpm/example_repo_configs/opendaylight-8-devel.repo",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-04-03T17:17:49Z",
+      "side": 0,
+      "message": "This 7 refers to EPEL version, not ODL version. It should be 7 for all current versions.",
+      "range": {
+        "startLine": 3,
+        "startChar": 85,
+        "endLine": 3,
+        "endChar": 86
+      },
+      "revId": "dacea111f5051f27009ea3d47175c68f71dd6a7d",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
