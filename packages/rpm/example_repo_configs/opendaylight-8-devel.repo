@@ -1,5 +1,5 @@
 [opendaylight-8-devel]
 name=OpenDaylight Oxygen development repository
-baseurl=https://nexus.opendaylight.org/content/repositories/opendaylight-oxygen-epel-7-$basearch-devel
+baseurl=https://nexus.opendaylight.org/content/repositories/opendaylight-oxygen-epel-8-$basearch-devel
 enabled=1
 gpgcheck=0
