@@ -1,0 +1,5 @@
+[opendaylight-9-devel]
+name=OpenDaylight Fluorine development repository
+baseurl=https://nexus.opendaylight.org/content/repositories/opendaylight-fluorine-opensuse-42-x86_64-devel
+enabled=1
+gpgcheck=0
