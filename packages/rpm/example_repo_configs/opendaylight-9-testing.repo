@@ -1,0 +1,5 @@
+[opendaylight-9-testing]
+name=CentOS CBS OpenDaylight Fluorine testing repository
+baseurl=http://cbs.centos.org/repos/nfv7-opendaylight-9-testing/$basearch/os/
+enabled=1
+gpgcheck=0
