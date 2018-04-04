@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "63361f35_174c83c0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 6016
+      },
+      "writtenOn": "2018-04-04T07:32:32Z",
+      "side": 1,
+      "message": "Good idea. Sorry for the messy patch! and thanks for the review",
+      "parentUuid": "8f947f91_17e2ad59",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 26
+      },
+      "revId": "e2e0c064c98e9959f5f3e0049f674eadd5fcf0a1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f26e67ca_0c1a17bd",
         "filename": "packages/rpm/example_repo_configs/opendaylight-9-devel.repo",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2018-04-04T02:58:42Z",
       "side": 1,
       "message": "9",
+      "range": {
+        "startLine": 1,
+        "startChar": 14,
+        "endLine": 1,
+        "endChar": 15
+      },
+      "revId": "e2e0c064c98e9959f5f3e0049f674eadd5fcf0a1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5d3e5a9a_24e14623",
+        "filename": "packages/rpm/example_repo_configs/opendaylight-9-devel.repo",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6016
+      },
+      "writtenOn": "2018-04-04T07:32:32Z",
+      "side": 1,
+      "message": "right, copy/paste problem",
+      "parentUuid": "f26e67ca_0c1a17bd",
       "range": {
         "startLine": 1,
         "startChar": 14,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "a64863d9_97016fd1",
+        "filename": "packages/rpm/example_repo_configs/opendaylight-9-devel.repo",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 6016
+      },
+      "writtenOn": "2018-04-04T07:32:32Z",
+      "side": 1,
+      "message": "Right, same as before",
+      "parentUuid": "eec99795_e8418565",
+      "range": {
+        "startLine": 2,
+        "startChar": 18,
+        "endLine": 2,
+        "endChar": 24
+      },
+      "revId": "e2e0c064c98e9959f5f3e0049f674eadd5fcf0a1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "703a14fd_e50d3bdd",
         "filename": "packages/rpm/example_repo_configs/opendaylight-9-devel.repo",
         "patchSetId": 2
@@ -82,6 +154,30 @@
       "writtenOn": "2018-04-04T02:58:42Z",
       "side": 1,
       "message": "This should be 7",
+      "range": {
+        "startLine": 3,
+        "startChar": 85,
+        "endLine": 3,
+        "endChar": 86
+      },
+      "revId": "e2e0c064c98e9959f5f3e0049f674eadd5fcf0a1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eab9d97_2ab3ad99",
+        "filename": "packages/rpm/example_repo_configs/opendaylight-9-devel.repo",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 6016
+      },
+      "writtenOn": "2018-04-04T07:32:32Z",
+      "side": 1,
+      "message": "Yep, I got confused. Thanks!",
+      "parentUuid": "703a14fd_e50d3bdd",
       "range": {
         "startLine": 3,
         "startChar": 85,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "e64f7bac_1d948f74",
+        "filename": "packages/rpm/example_repo_configs/opendaylight-9-opensuse-devel.repo",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6016
+      },
+      "writtenOn": "2018-04-04T07:32:32Z",
+      "side": 1,
+      "message": "yes",
+      "parentUuid": "66abcb13_0918afa2",
+      "range": {
+        "startLine": 1,
+        "startChar": 14,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "e2e0c064c98e9959f5f3e0049f674eadd5fcf0a1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2d48836e_30caede8",
         "filename": "packages/rpm/example_repo_configs/opendaylight-9-opensuse-devel.repo",
         "patchSetId": 2
@@ -128,6 +248,30 @@
       "writtenOn": "2018-04-04T02:58:42Z",
       "side": 1,
       "message": "Fluorine",
+      "range": {
+        "startLine": 2,
+        "startChar": 18,
+        "endLine": 2,
+        "endChar": 24
+      },
+      "revId": "e2e0c064c98e9959f5f3e0049f674eadd5fcf0a1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "21deb6b4_ffb576aa",
+        "filename": "packages/rpm/example_repo_configs/opendaylight-9-opensuse-devel.repo",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 6016
+      },
+      "writtenOn": "2018-04-04T07:32:32Z",
+      "side": 1,
+      "message": "right",
+      "parentUuid": "2d48836e_30caede8",
       "range": {
         "startLine": 2,
         "startChar": 18,
@@ -163,6 +307,30 @@
     },
     {
       "key": {
+        "uuid": "fc86c725_7d441e2d",
+        "filename": "packages/rpm/example_repo_configs/opendaylight-9-testing.repo",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6016
+      },
+      "writtenOn": "2018-04-04T07:32:32Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "c0f4266e_3dbbbbc5",
+      "range": {
+        "startLine": 1,
+        "startChar": 14,
+        "endLine": 1,
+        "endChar": 15
+      },
+      "revId": "e2e0c064c98e9959f5f3e0049f674eadd5fcf0a1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "02a2782e_85ed513c",
         "filename": "packages/rpm/example_repo_configs/opendaylight-9-testing.repo",
         "patchSetId": 2
@@ -174,6 +342,30 @@
       "writtenOn": "2018-04-04T02:58:42Z",
       "side": 1,
       "message": "Fluorine",
+      "range": {
+        "startLine": 2,
+        "startChar": 29,
+        "endLine": 2,
+        "endChar": 35
+      },
+      "revId": "e2e0c064c98e9959f5f3e0049f674eadd5fcf0a1",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a8276d59_933ea42e",
+        "filename": "packages/rpm/example_repo_configs/opendaylight-9-testing.repo",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 6016
+      },
+      "writtenOn": "2018-04-04T07:32:32Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "02a2782e_85ed513c",
       "range": {
         "startLine": 2,
         "startChar": 29,
