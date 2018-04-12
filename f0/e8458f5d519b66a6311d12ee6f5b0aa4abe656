@@ -1,0 +1,8 @@
+Verified+1: jenkins-releng <jenkins-releng@opendaylight.org>
+Code-Review+1: Dimitrios Markou <mardim@intracom-telecom.com>
+Code-Review+2: Jamo Luhrsen <jluhrsen@redhat.com>
+Submitted-by: Jamo Luhrsen <jluhrsen@redhat.com>
+Submitted-at: Thu, 12 Apr 2018 16:27:09 +0000
+Reviewed-on: https://git.opendaylight.org/gerrit/70823
+Project: integration/packaging
+Branch: refs/heads/master
