@@ -17,7 +17,7 @@ except ImportError:
 debian_files_dynamic = ["changelog", "rules", "control"]
 debian_files_static = ["compat", "karaf", "opendaylight.install",
                        "opendaylight.postrm", "opendaylight.postinst",
-                       "opendaylight.upstart"]
+                       "opendaylight.upstart", "opendaylight.service"]
 
 # Path to the directory that contains this file is assumed to be the
 # debian templates dir
