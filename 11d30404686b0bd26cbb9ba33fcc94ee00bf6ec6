@@ -46,6 +46,30 @@
       "revId": "11d30404686b0bd26cbb9ba33fcc94ee00bf6ec6",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9e328362_f72f2084",
+        "filename": "packages/deb/templates/opendaylight.service",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7924
+      },
+      "writtenOn": "2018-04-12T11:18:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b8e7da3b_6e882f72",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 87
+      },
+      "revId": "11d30404686b0bd26cbb9ba33fcc94ee00bf6ec6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
