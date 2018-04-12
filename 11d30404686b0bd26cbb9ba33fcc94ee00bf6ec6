@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d96c0a2_f2624ec8",
+        "filename": "packages/deb/templates/opendaylight.service",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 6258
+      },
+      "writtenOn": "2018-04-12T09:26:19Z",
+      "side": 1,
+      "message": "You could use multiple lines here, and point to ODL docs instead:\n\nDocumentation\u003dhttps://wiki.opendaylight.org/view/Main_Page Documentation\u003dhttp://docs.opendaylight.org/",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 87
+      },
+      "revId": "11d30404686b0bd26cbb9ba33fcc94ee00bf6ec6",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
