@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e70c38be_1fe78ad8",
+        "filename": "packages/deb/templates/build_debianfiles.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-04-16T18:19:34Z",
+      "side": 1,
+      "message": "Does this \"just work\"? Is the Debian packaging tooling doing lots of magic to find/understand/handle it? Have you seen it cause a failing deployment to start working?",
+      "revId": "f0e8458f5d519b66a6311d12ee6f5b0aa4abe656",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6793b783_d248bec1",
+        "filename": "packages/deb/templates/opendaylight.service",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-04-16T18:19:34Z",
+      "side": 1,
+      "message": "We should ideally use the existing version of this file and share it between RPM/Deb logic, vs duplicating. The logic related to it is in the common lib.py already, in cache_sysd function.",
+      "revId": "f0e8458f5d519b66a6311d12ee6f5b0aa4abe656",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
