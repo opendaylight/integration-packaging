@@ -18,29 +18,49 @@ Daily Releases
 `Autorelease's Jenkins jobs`_ run daily for every active branch, including
 master.
 
-- `Boron autorelease job`_
 - `Carbon autorelease job`_
 - `Nitrogen autorelease job`_
+- `Oxygen autorelease job`_
+- `Fluorine autorelease job`_
 
 Each of those jobs, when the build is successful, produces build artifacts that
-include an OpenDaylight distribution. To download the distribution, pick an
-autorelease job that completed successfully (yellow or blue dot) and access its
-logged console output. Logs are hosted on logs.opendaylight.org, at URLs like
-`https://logs.opendaylight.org/releng/jenkins092/autorelease-release-<stream>/
-<build_number>/`, where stream could be "boron" build_number "228". There will
-be a link at the top of build's Jenkins page. Open `console.log.gz` in browser
-and search for "staging repository with ID". Find the repositoiry ID, which
-will be of the form "autorelease-1432". Navigate to `OpenDaylight's Nexus`_ and
-find the staging repository with the same name. Drill down into the directory
-tree org/opendaylight/integration/distribution-karaf/ to find the build
-artifacts. Autorelease build artifacts are persevered for 60 days.
+include an OpenDaylight distribution.
+
+*To download the distribution*
+
+#. Pick an autorelease job that completed successfully (yellow or blue dot)
+#. Access its logged console output
+
+   Logs are hosted on logs.opendaylight.org, at URLs like
+   `https://logs.opendaylight.org/releng/vex-yul-odl-jenkins-1/autorelease-release-<stream>/
+   <build_number>/`, where stream could be "Fluorine" build_number "52".
+
+   There will be a link at the top of build's Jenkins page.
+
+#. Open `deploy-staged-repository.log.gz` in browser
+
+   Search for "staging repository with ID" to find the repository ID, which
+   will be of the form "autorelease-1432".
+
+#. Navigate to `OpenDaylight's Nexus`_ and find the staging repository with the same name
+#. Drill down into one of these directories to find the build artifacts:
+
+   * Carbon or older: org/opendaylight/integration/distribution-karaf/
+   * Nitrogen or newer: org/opendaylight/integration/karaf/
+
+.. note:: Autorelease build artifacts are persevered for 60 days.
 
 Autorelease jobs trigger OpenDaylight's distribution tests when they complete.
-To see the test results, go to integration-distribution-test-<branch> job's
-Jenkins page and find the job that started after the autorelease in question
-finished. Open it and explore the subprojects section for test results of all
-the jobs triggered. For example, in case of Nitrogen, you can find the list and
-the results of jobs triggered `here`_.
+
+*To see the test results*
+
+#. Go to integration-distribution-test-<branch> job's Jenkins page
+#. Find the job that started after the autorelease in question finished
+#. Open it and explore the subprojects section for test results of all
+   the jobs triggered.
+
+   For example, in case of Nitrogen, you can find the list and
+   the results of jobs triggered `here`_.
 
 The latest successful autorelease builds can also be easily found in Nexus at
 `staging/org/opendaylight/integration/distribution-karaf/`_. Look for
@@ -72,9 +92,10 @@ For more information about OpenDaylight releases, including timelines, see the
 
 .. _RelEng/Autorelease: https://git.opendaylight.org/gerrit/gitweb?p=releng/autorelease.git;a=tree;h=refs/heads/master;hb=refs/heads/master
 .. _Autorelease's Jenkins jobs: https://jenkins.opendaylight.org/releng/view/autorelease/
-.. _Boron autorelease job: https://jenkins.opendaylight.org/releng/view/autorelease/job/autorelease-release-boron/
 .. _Carbon autorelease job: https://jenkins.opendaylight.org/releng/view/autorelease/job/autorelease-release-carbon/
 .. _Nitrogen autorelease job: https://jenkins.opendaylight.org/releng/view/autorelease/job/autorelease-release-nitrogen/
+.. _Oxygen autorelease job: https://jenkins.opendaylight.org/releng/view/autorelease/job/autorelease-release-oxygen/
+.. _Fluorine autorelease job: https://jenkins.opendaylight.org/releng/view/autorelease/job/autorelease-release-fluorine/
 .. _OpenDaylight's Nexus: https://nexus.opendaylight.org/content/repositories/
 .. _here: https://jenkins.opendaylight.org/releng/job/integration-distribution-test-nitrogen/
 .. _staging/org/opendaylight/integration/distribution-karaf/: https://nexus.opendaylight.org/content/repositories/staging/org/opendaylight/integration/distribution-karaf/
