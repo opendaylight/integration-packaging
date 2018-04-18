@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7d96d0e8_17070f73",
+        "filename": "packages/deb/templates/build_debianfiles.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 7924
+      },
+      "writtenOn": "2018-04-18T07:07:39Z",
+      "side": 1,
+      "message": "I found out that this file was missing becaue I created some patches to install the debian packages after they were built (same logic as the RPMs jobs). And when I ran the jobs in sandbox to test those patches I found out that the jobs where failing because the ODL was not active. After some investigation I realized that this file was missing I added it and the things just worked normally. Yes the debian packages do a lot of magic and they can just found the file if exists in the right folder.",
+      "parentUuid": "e70c38be_1fe78ad8",
+      "revId": "f0e8458f5d519b66a6311d12ee6f5b0aa4abe656",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6793b783_d248bec1",
         "filename": "packages/deb/templates/opendaylight.service",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2018-04-16T18:19:34Z",
       "side": 1,
       "message": "We should ideally use the existing version of this file and share it between RPM/Deb logic, vs duplicating. The logic related to it is in the common lib.py already, in cache_sysd function.",
+      "revId": "f0e8458f5d519b66a6311d12ee6f5b0aa4abe656",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae50f898_10d4de2a",
+        "filename": "packages/deb/templates/opendaylight.service",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7924
+      },
+      "writtenOn": "2018-04-18T07:07:39Z",
+      "side": 1,
+      "message": "Yes maybe you are right but to be honest I would like to keep the RPM and Deb procedures uncorrelated and in diffrent places. The deb procedures are way different from RPM procedures so it would be easier in debugging too to keep them in as far awway as possible from each other.",
+      "parentUuid": "6793b783_d248bec1",
       "revId": "f0e8458f5d519b66a6311d12ee6f5b0aa4abe656",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
