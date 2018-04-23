@@ -69,6 +69,24 @@
       "revId": "f0e8458f5d519b66a6311d12ee6f5b0aa4abe656",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4877ea23_3534c4cd",
+        "filename": "packages/deb/templates/opendaylight.service",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-04-23T13:57:24Z",
+      "side": 1,
+      "message": "They should be the same for systemd config. If not, that\u0027d be a really interesting thing to discover. I think using the same logic when possible makes it easier to debug/maintain things.",
+      "parentUuid": "ae50f898_10d4de2a",
+      "revId": "f0e8458f5d519b66a6311d12ee6f5b0aa4abe656",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
