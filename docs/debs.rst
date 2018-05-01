@@ -18,6 +18,6 @@ build description`_, using build.py inside the deb directory.
 
 
 .. _build.py: https://github.com/opendaylight/integration-packaging/blob/master/packages/build.py
-.. _here: https://github.com/opendaylight/integration-packaging/blob/master/deb/README.markdown
+.. _here: https://github.com/opendaylight/integration-packaging/blob/master/packages/deb/README.markdown
 .. _build_deb job: https://jenkins.opendaylight.org/releng/job/packaging-build-deb-master/
 .. _given build description: https://jenkins.opendaylight.org/releng/job/packaging-build-deb-master/
