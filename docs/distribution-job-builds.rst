@@ -90,4 +90,4 @@ source that defines it`_.
 
 .. _opendaylight.snapshot/org/opendaylight/integration /distribution-karaf/: https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/
 .. _integration-multipatch-test-<branch>: https://jenkins.opendaylight.org/releng/search/?q=integration-multipatch-test
-.. _JJB source that defines it: https://github.com/opendaylight/releng-builder/blob/master/jjb/integration/include-raw-integration-multipatch-distribution-test.sh
+.. _JJB source that defines it: https://github.com/opendaylight/releng-builder/blob/master/jjb/integration/multipatch-distribution.sh
