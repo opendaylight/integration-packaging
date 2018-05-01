@@ -115,5 +115,5 @@ Author Information
 ------------------
 The `OpenDaylight Integration/Packaging project`_ maintains this role.
 
-.. _OpenDaylight SDN controller: https://www.opendaylight.org/project/technical-overview
+.. _OpenDaylight SDN controller: https://www.opendaylight.org/what-we-do/odl-platform-overview
 .. _OpenDaylight Integration/Packaging project: https://wiki.opendaylight.org/view/Integration/Packaging
