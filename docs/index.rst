@@ -21,3 +21,4 @@ Contents:
    distribution-job-builds
    versioning
    configuration-management
+   packaging-releases
