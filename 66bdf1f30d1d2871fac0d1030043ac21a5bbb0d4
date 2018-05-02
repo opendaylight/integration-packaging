@@ -22,6 +22,30 @@
       "revId": "66bdf1f30d1d2871fac0d1030043ac21a5bbb0d4",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "68b29add_0e4ef00d",
+        "filename": "packages/rpm/example_repo_configs/opendaylight-64-release.repo",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-05-02T09:43:52Z",
+      "side": 1,
+      "message": "We don\u0027t sign RPMs",
+      "parentUuid": "a8bcb2bc_c28ee7af",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 10
+      },
+      "revId": "66bdf1f30d1d2871fac0d1030043ac21a5bbb0d4",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
