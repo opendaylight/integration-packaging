@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf860ace_ae8dcfe6",
+        "filename": "packages/test_lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2018-05-02T02:18:00Z",
+      "side": 1,
+      "message": "This should be zip not tar.gz",
+      "range": {
+        "startLine": 76,
+        "startChar": 87,
+        "endLine": 76,
+        "endChar": 94
+      },
+      "revId": "8bf562d1f8b16fd43f89eba5cf742b32e92ebffc",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
