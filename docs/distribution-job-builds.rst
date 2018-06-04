@@ -88,6 +88,6 @@ projects are built (NetVirt depends on Genius, so Genius is listed first).
 For the definitive explination of how the multipatch job works, see the `JJB
 source that defines it`_.
 
-.. _opendaylight.snapshot/org/opendaylight/integration /distribution-karaf/: https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/org/opendaylight/integration/distribution-karaf/
+.. _opendaylight.snapshot/org/opendaylight/integration /distribution-karaf/: https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/org/opendaylight/integration/karaf/
 .. _integration-multipatch-test-<branch>: https://jenkins.opendaylight.org/releng/search/?q=integration-multipatch-test
 .. _JJB source that defines it: https://github.com/opendaylight/releng-builder/blob/master/jjb/integration/multipatch-distribution.sh
