@@ -39,6 +39,26 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["pkg_version"], "1")
         self.assertEqual(version["codename"], "")
 
+    def test_oxygen_sr1_url(self):
+        """Test URL of the ODL Oxygen SR1."""
+        url = "%s/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.8.1/karaf-0.8.1.tar.gz" % self.nexus_url
+        version = lib.extract_version(url)
+        self.assertEqual(version["version_major"], "8")
+        self.assertEqual(version["version_minor"], "1")
+        self.assertEqual(version["version_patch"], "0")
+        self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "")
+
+    def test_oxygen_sr1_zip_url(self):
+        """Test URL of the ODL Oxygen SR1 zip archive."""
+        url = "%s/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.8.1/karaf-0.8.1.zip" % self.nexus_url
+        version = lib.extract_version(url)
+        self.assertEqual(version["version_major"], "8")
+        self.assertEqual(version["version_minor"], "1")
+        self.assertEqual(version["version_patch"], "0")
+        self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "")
+
     def test_oxygen_snapshot_url(self):
         """Test URL of an ODL Oxygen snapshot build."""
         # NB: This will need to be updated as old builds expire
@@ -94,6 +114,17 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["pkg_version"], "0.1.20180204snap134")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
+    def test_fluorine_multipatch_zip_url(self):
+        """Test URL of an ODL Fluorine multipatch-test build zip archive."""
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.9.0-SNAPSHOT/karaf-0.9.0-20180531.192226-59.zip" % self.nexus_url
+        version = lib.extract_version(url)
+        self.assertEqual(version["version_major"], "9")
+        self.assertEqual(version["version_minor"], "0")
+        self.assertEqual(version["version_patch"], "0")
+        self.assertEqual(version["pkg_version"], "0.1.20180531snap59")
+        self.assertEqual(version["codename"], "-SNAPSHOT")
+
 
 class TestGetSnapURL(unittest.TestCase):
 
@@ -112,6 +143,10 @@ class TestGetSnapURL(unittest.TestCase):
         """Test Oxygen major version gives sane snapshot URL."""
         self.validate_snap_url(lib.get_snap_url("8"))
 
+    def test_fluorine(self):
+        """Test Fluorine major version gives sane snapshot URL."""
+        self.validate_snap_url(lib.get_snap_url("9"))
+
 
 class TestGetDistroNamePrefix(unittest.TestCase):
 
@@ -128,6 +163,16 @@ class TestGetDistroNamePrefix(unittest.TestCase):
     def test_oxygen_int(self):
         """Test Oxygen major version as int gives Karaf 4 prefix."""
         distro_prefix = lib.get_distro_name_prefix(8)
+        self.assertEqual(distro_prefix, self.k4_distro_prefix)
+
+    def test_fluorine(self):
+        """Test Fluorine major version gives Karaf 4 prefix."""
+        distro_prefix = lib.get_distro_name_prefix("9")
+        self.assertEqual(distro_prefix, self.k4_distro_prefix)
+
+    def test_fluorine_int(self):
+        """Test Fluorine major version as int gives Karaf 4 prefix."""
+        distro_prefix = lib.get_distro_name_prefix(9)
         self.assertEqual(distro_prefix, self.k4_distro_prefix)
 
 
@@ -183,6 +228,16 @@ class TestGetJavaVersion(unittest.TestCase):
     def test_oxygen_given_str(self):
         """Pass Oxygen major version, check that Java 8 returned."""
         java_version = lib.get_java_version("8")
+        self.assertEqual(java_version, 8)
+
+    def test_fluorine_given_int(self):
+        """Pass Fluorine major version, check that Java 8 returned."""
+        java_version = lib.get_java_version(9)
+        self.assertEqual(java_version, 8)
+
+    def test_fluorine_given_str(self):
+        """Pass Fluorine major version, check that Java 8 returned."""
+        java_version = lib.get_java_version("9")
         self.assertEqual(java_version, 8)
 
 
