@@ -104,20 +104,6 @@ There are a series of repos that are updated at varying frequencies, from
 testing repos that are updated with pre-release versions very frequently to
 release repos that are the permanent home of official OpenDaylight releases.
 
-Testing Repositories
-....................
-
-Repositories with the -testing suffix are updated very frequently with
-pre-release versions of OpenDaylight from the appropriate branch. New RPMs
-replace the old ones, so installing from these repos will always provide the
-most recent versions.
-
-Testing repos for Carbon, Nitrogen and Oxygen:
-
-- `nfv7-opendaylight-6-testing`_
-- `nfv7-opendaylight-7-testing`_
-- `nfv7-opendaylight-8-testing`_
-
 Release Repositories
 ....................
 
@@ -157,8 +143,8 @@ Package managers like Yum and DNF will automatically find repo configuration
 files placed in the /etc/yum.repos.d/ directory. Curl them into place with
 something like:
 
-    sudo curl -o /etc/yum.repos.d/opendaylight-7-testing.repo \
-      "https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=packages/rpm/example_repo_configs/opendaylight-8-devel.repo"
+    sudo curl -o /etc/yum.repos.d/opendaylight-9-devel.repo \
+      "https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=packages/rpm/example_repo_configs/opendaylight-9-devel.repo"
 
 Standard install commands will now find the repository as expected.
 
@@ -186,9 +172,6 @@ as an RPM. See the `packaging-build-rpm`_ section for docs.
 .. _opendaylight-carbon-epel-7-x86_64-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-carbon-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
 .. _opendaylight-nitrogen-epel-7-x86_64-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-nitrogen-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
 .. _opendaylight-oxygen-epel-7-x86_64-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-oxygen-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
-.. _nfv7-opendaylight-6-testing: http://cbs.centos.org/repos/nfv7-opendaylight-6-testing/x86_64/os/Packages/
-.. _nfv7-opendaylight-7-testing: http://cbs.centos.org/repos/nfv7-opendaylight-7-testing/x86_64/os/Packages/
-.. _nfv7-opendaylight-8-testing: http://cbs.centos.org/repos/nfv7-opendaylight-8-testing/x86_64/os/Packages/
 .. _nfv7-opendaylight-6-release: http://cbs.centos.org/repos/nfv7-opendaylight-6-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-60-release: http://cbs.centos.org/repos/nfv7-opendaylight-60-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-61-release: http://cbs.centos.org/repos/nfv7-opendaylight-61-release/x86_64/os/Packages/
