@@ -75,6 +75,8 @@ installs the package with the system's package manager, starts OpenDaylight's
 systemd service, verifies that it's reported as active, connects to the Karaf
 shell and checks that some key bundles are present.
 
+.. _intpak-rpm-repos:
+
 Repositories
 ------------
 
