@@ -43,10 +43,15 @@ are RPM repos for each active branch (`oxygen-devel`_). New builds are
 automatically added to the appropriate devel for their branch.
 
 When running in the sandbox, artifacts are thrown away by default. To keep an
-artifact for further testing, add a path regex that matches it to the Archive
-Artifacts param of the job (`ARCHIVE_ARTIFACTS=/home/jenkins/rpmbuild/RPMS/
-noarch/opendaylight*.rpm`). The files matched will be stored in OpenDaylight's
-log archive along with the other job logs.
+artifact for further testing, either:
+
+* Set the DEPLOY_TO_REPO parameter to opendaylight-epel-7-x86_64-devel. This is
+  a scratch repo that sandbox packaging jobs have permission to push to.
+  Packages will land in the `scratch repo on Nexus`_.
+* Add a path regex that matches it to the Archive Artifacts param of the job
+  (`ARCHIVE_ARTIFACTS=/home/jenkins/rpmbuild/RPMS/ noarch/opendaylight*.rpm`).
+  The files matched will be stored in OpenDaylight's log archive along with the
+  other job logs.
 
 packaging-build-rpm-snap
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -170,13 +175,23 @@ Custom RPMs
 -----------
 
 It's possible for developers to build custom RPMs, typically with unmerged
-patches that need system testing. First, use the `integration-multipatch-test`_
-job to create a custom distribution that includes the set of unmerged patches.
-See the `Custom Distributions <distribution-job-builds.html#custom-
-distributions>`_ section for extensive docs. Once you have a custom
-distribution artifact, pass it to the `packaging-build-rpm job`_ to package it
-as an RPM. See the `packaging-build-rpm`_ section for docs.
+patches that need system testing.
 
+Most developers will want to run these jobs in the ODL Jenkins sandbox
+instance, as only a few community members have permission to manually trigger
+jobs on the releng Jenkins instance. See the `Jenkins sandbox`_ docs for
+details about how to get permissions to trigger sandbox jobs, required
+configuration and normal usage.
+
+To build an custom distribution with unmerged code, first use the
+`integration-multipatch-test`_ job to create distribution that includes the set
+of unmerged patches.  See the `Custom Distributions
+<distribution-job-builds.html#custom- distributions>`_ section for extensive
+docs.
+
+Once you have the distribution you want to package as an RPM, pass it to the
+`packaging-build-rpm job`_ to do the build. Use the See the `packaging-build-rpm`_
+section for docs.
 
 .. _packaging-build-rpm job: https://jenkins.opendaylight.org/releng/job/packaging-build-rpm-master/
 .. _parameters: https://jenkins.opendaylight.org/releng/job/packaging-build-rpm-master/build
@@ -199,3 +214,5 @@ as an RPM. See the `packaging-build-rpm`_ section for docs.
 .. _example repo config files for each official repository: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=tree;f=packages/rpm/example_repo_configs;hb=refs/heads/master
 .. _integration-multipatch-test: https://jenkins.opendaylight.org/releng/search/?q=integration-multipatch-test
 .. _oxygen-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-oxygen-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
+.. _Jenkins sandbox: https://docs.opendaylight.org/en/stable-carbon/submodules/releng/builder/docs/jenkins.html#jenkins-sandbox
+.. _scratch repo on Nexus: https://docs.opendaylight.org/en/stable-carbon/submodules/releng/builder/docs/jenkins.html#jenkins-sandbox
