@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6206c75f_85e38607",
+        "filename": "docs/packaging-releases.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 2759
+      },
+      "writtenOn": "2018-06-27T19:28:47Z",
+      "side": 1,
+      "message": "For docs that are local to your own project use labels.\n\nhttp://www.sphinx-doc.org/en/stable/markup/inline.html\n\nThis way if you move a section to another page Sphinx will automatically figure that out for you without you have to manually update the links.",
+      "revId": "71003b42d44744da297f96b5a8e82010cc362b54",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
