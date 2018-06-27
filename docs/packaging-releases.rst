@@ -154,3 +154,8 @@ added for each new major release.
     rpm_<new devel branch major version>_devel.yml
 
     rpm_<just-released major version>_release.yml
+
+Update the playbook used in test-ansible-rpm script for each new major version
+devel CD repo.
+
+https://git.opendaylight.org/gerrit/gitweb?p=releng/builder.git;a=blob;f=jjb/packaging/test-ansible-rpm.sh
