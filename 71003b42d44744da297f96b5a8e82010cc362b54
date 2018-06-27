@@ -34,6 +34,24 @@
       "revId": "71003b42d44744da297f96b5a8e82010cc362b54",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "810677c8_76d0f064",
+        "filename": "docs/packaging-releases.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-06-27T20:47:03Z",
+      "side": 1,
+      "message": "Actually, this is the only place we ref Int/Pack docs using HTML link (surprisingly for me). So I\u0027ll fix here\n\n./docs/packaging-releases.rst:76:http://docs.opendaylight.org/en/latest/downloads.html\n./docs/packaging-releases.rst:87:https://docs.opendaylight.org/projects/integration-packaging/en/latest/rpms.html#repositories",
+      "parentUuid": "1eaa2b4b_67c71166",
+      "revId": "71003b42d44744da297f96b5a8e82010cc362b54",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
