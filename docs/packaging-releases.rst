@@ -73,9 +73,13 @@ https://jenkins.opendaylight.org/releng/job/packaging-test-rpm-master/
 Updating Docs
 -------------
 
-Update the readthedocs downloads page to point at the new RPM.
+Update the downloads page to point at the new RPM.
 
 https://git.opendaylight.org/gerrit/gitweb?p=docs.git;a=blob;f=docs/downloads.rst
+
+Update the Int/Pack repositories docs with any repo additions/removals.
+
+:ref:`intpak-rpm-repos`
 
 Adding Example Configuration Files
 ----------------------------------
