@@ -78,9 +78,13 @@ http://docs.opendaylight.org/en/latest/downloads.html
 Updating Docs
 -------------
 
-Update the readthedocs downloads page to point at the new RPM.
+Update the downloads page to point at the new RPM.
 
 https://git.opendaylight.org/gerrit/gitweb?p=docs.git;a=blob;f=docs/downloads.rst
+
+Update the Int/Pack repositories docs with any repo additions/removals.
+
+https://docs.opendaylight.org/projects/integration-packaging/en/latest/rpms.html#repositories
 
 Adding Example Configuration Files
 ----------------------------------
