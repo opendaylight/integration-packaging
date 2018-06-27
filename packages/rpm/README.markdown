@@ -395,7 +395,7 @@ You can monitor the build using the Koji CLI `watch-logs` and `watch-task`
 commands, or the [Koji web UI's][1] output of the same information.
 
 If the RPM build is successful, it will appear [on the CBS][9] under the
-appropriate `nfv7-opendaylight-<major version>-testing` repo. The resulting
+appropriate `nfv7-opendaylight-<major version>` repo. The resulting
 RPM can be installed directly or via a [package manager config file][10].
 
 ```

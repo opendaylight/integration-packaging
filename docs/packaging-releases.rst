@@ -45,9 +45,10 @@ you'll also need to add the package to the tag.
 
 Releases should typically be tagged to three related tags.
 
-* Testing tag for this major version
+* Candidate tag for this major version
 
-    cbs tag-build nfv7-opendaylight-8-testing opendaylight-8.1.0-1.el7
+    cbs add-pkg nfv7-opendaylight-8-candidate opendaylight --owner=dfarrell07
+    cbs tag-build nfv7-opendaylight-8-candidate opendaylight-8.1.0-1.el7
 
 * Release tag for this major.minor version
 
@@ -58,22 +59,16 @@ Releases should typically be tagged to three related tags.
 
     cbs tag-build nfv7-opendaylight-8-release opendaylight-8.1.0-1.el7
 
-It may be advisable to fully do the testing tag first, and only once everything
+It may be advisable to fully do the candidate tag first, and only once everything
 is verified working do the release tags.
 
 Wait for the repository to regenerate and show the new package.
 
-http://cbs.centos.org/repos/nfv7-opendaylight-8-testing/x86_64/os/Packages/
+http://cbs.centos.org/repos/nfv7-opendaylight-8-candidate/x86_64/os/Packages/
 
 Once the RPM is available on the CBS, test it with the test-rpm-master job.
 
 https://jenkins.opendaylight.org/releng/job/packaging-test-rpm-master/
-
-If everything passes, link the main downloads documentation to the RPM in the
-major.minor release repository. This is the permanent home for this version,
-will not be overridden by later versions.
-
-http://docs.opendaylight.org/en/latest/downloads.html
 
 Updating Docs
 -------------
