@@ -16,6 +16,24 @@
       "revId": "71003b42d44744da297f96b5a8e82010cc362b54",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1eaa2b4b_67c71166",
+        "filename": "docs/packaging-releases.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-06-27T20:43:30Z",
+      "side": 1,
+      "message": "Maybe I can do this for all the links in a different change?\n\nhttps://jira.opendaylight.org/browse/INTPAK-184",
+      "parentUuid": "6206c75f_85e38607",
+      "revId": "71003b42d44744da297f96b5a8e82010cc362b54",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
