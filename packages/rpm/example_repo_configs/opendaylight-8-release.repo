@@ -1,0 +1,5 @@
+[opendaylight-8-release]
+name=CentOS CBS OpenDaylight Oxygen repository
+baseurl=http://cbs.centos.org/repos/nfv7-opendaylight-8-release/$basearch/os/
+enabled=1
+gpgcheck=0
