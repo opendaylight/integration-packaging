@@ -42,11 +42,20 @@ exit 1
 BuildRequires: systemd
 
 %pre
-# Create `odl` user/group
-# Short circuits if the user/group already exists
-# Home dir must be a valid path for various files to be created in it
-getent passwd odl > /dev/null || useradd odl -M -d $RPM_BUILD_ROOT/opt/%name
-getent group odl > /dev/null || groupadd odl
+# TODO: Check if doing install or upgrade and handle appropriately
+if [ $1 -gt 1 ]; then
+  # This is an upgrade
+  echo "This is an upgrade"
+else
+  # This is an install
+  echo "This is an install"
+
+  # Create `odl` user/group
+  # Short circuits if the user/group already exists
+  # Home dir must be a valid path for various files to be created in it
+  getent passwd odl > /dev/null || useradd odl -M -d $RPM_BUILD_ROOT/opt/%name
+  getent group odl > /dev/null || groupadd odl
+fi
 
 # Blacklist unwanted/false requirements INTPAK-10
 %global __requires_exclude ^(mono|osgi).*$
@@ -61,6 +70,7 @@ OpenDaylight Software Defined Networking controller
 %autosetup -T -D -b 1 -c -n %name-{{ sysd_commit }}.service
 
 %install
+# TODO: Check if doing install or upgrade and handle appropriately
 # Create directory in build root for ODL
 mkdir -p $RPM_BUILD_ROOT/opt/%name
 # Copy ODL from archive to its dir in build root
@@ -71,11 +81,12 @@ mkdir -p $RPM_BUILD_ROOT/%{_unitdir}
 cp ../../BUILD/%name-{{ sysd_commit }}.service/%name-{{ sysd_commit }}.service $RPM_BUILD_ROOT/%{_unitdir}/%name.service
 
 %postun
+# TODO: Check if doing install or upgrade and handle appropriately
 # When the RPM is removed, the subdirs containing new files wouldn't normally
 #   be deleted. Manually clean them up.
 #   Warning: This does assume there's no data there that should be preserved
 if [ $1 -eq 0 ]; then
-    rm -rf $RPM_BUILD_ROOT/opt/%name
+  rm -rf $RPM_BUILD_ROOT/opt/%name
 fi
 
 %files
