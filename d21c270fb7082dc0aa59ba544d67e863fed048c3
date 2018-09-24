@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a5ca9c1d_97bbea31",
+        "filename": "packages/build.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-09-24T00:40:42Z",
+      "side": 1,
+      "message": "This part if the change is interesting. We\u0027re currently hitting issues with the \"common\" karaf distro for Managed Release not having a normal prefix. This could help.",
+      "revId": "d21c270fb7082dc0aa59ba544d67e863fed048c3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
