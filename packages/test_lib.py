@@ -183,10 +183,14 @@ class TestGetSnapURL(unittest.TestCase):
 
 class TestGetDistroNamePrefix(unittest.TestCase):
 
-    """Test logic to get Karaf 3/4 distro name prefix per ODL major version."""
+    """Test logic to get Karaf 3/4 or Managed Release Common distro prefixes."""
 
-    k3_distro_prefix = "distribution-karaf"
+    mrel_distro_prefix = "opendaylight"
     k4_distro_prefix = "karaf"
+    k3_distro_prefix = "distribution-karaf"
+    mrel_distro_url = "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/opendaylight/0.9.0/opendaylight-0.9.0.tar.gz"
+    k4_distro_url = "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/karaf/0.8.3/karaf-0.8.3.tar.gz"
+    k3_distro_url = "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/0.6.4-Carbon/distribution-karaf-0.6.4-Carbon.tar.gz"
 
     def test_oxygen(self):
         """Test Oxygen major version gives Karaf 4 prefix."""
@@ -207,6 +211,21 @@ class TestGetDistroNamePrefix(unittest.TestCase):
         """Test Fluorine major version as int gives Karaf 4 prefix."""
         distro_prefix = lib.get_distro_name_prefix(9)
         self.assertEqual(distro_prefix, self.k4_distro_prefix)
+
+    def test_managed_release_fluorine(self):
+        """Test Managed Release URL gives MR distro prefix."""
+        distro_prefix = lib.get_distro_name_prefix(9, self.mrel_distro_url)
+        self.assertEqual(distro_prefix, self.mrel_distro_prefix)
+
+    def test_k4_norm_release_oxygen(self):
+        """Test normal K4 URL gives distro prefix based on Karaf version."""
+        distro_prefix = lib.get_distro_name_prefix(9, self.k4_distro_url)
+        self.assertEqual(distro_prefix, self.k4_distro_prefix)
+
+    def test_k3_norm_release_carbon(self):
+        """Test normal K3 URL gives distro prefix based on Karaf version."""
+        distro_prefix = lib.get_distro_name_prefix(6, self.k3_distro_url)
+        self.assertEqual(distro_prefix, self.k3_distro_prefix)
 
 
 class TestGetSysdCommit(unittest.TestCase):
