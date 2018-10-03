@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
     direct_parser._optionals.title = "Options"
 
-    # Direct builds require a archive URL
+    # Direct builds require an archive URL
     direct_parser.add_argument("--download_url", required=True,
                                help="URL to tar/zip build archive to package")
 
@@ -120,7 +120,7 @@ if __name__ == "__main__":
 
     # Karaf 3 distros use distribution-karaf-, Karaf 4 uses karaf-
     build.update({"distro_name_prefix": lib.get_distro_name_prefix(
-        build['version_major'])})
+        build['version_major'], build['download_url'])})
 
     # Update build definition with Java version required by ODL version
     build.update({"java_version": lib.get_java_version(
