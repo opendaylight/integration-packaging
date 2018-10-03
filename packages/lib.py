@@ -61,7 +61,7 @@ def extract_version(url):
     #  distribution-karaf-0.3.4-Lithium-SR4.tar.gz
     # major_version = 3
     # minor_version = 4
-    re_out = re.search(r'\d\.(\d)\.(\d)', url)
+    re_out = re.search(r'\d+\.(\d)\.(\d)', url)
     version["version_major"] = re_out.group(1)
     version["version_minor"] = re_out.group(2)
 
@@ -266,19 +266,34 @@ def get_changelog_date(pkg_type):
         raise ValueError("Unknown package type: {}".format(pkg_type))
 
 
-def get_distro_name_prefix(version_major):
-    """Return Karaf 3 or 4-style distro name prefix based on ODL major version
+def get_distro_name_prefix(version_major, download_url=""):
+    """Return distro name prefix based on ODL major version or distro URL.
 
-    :arg str major_version: OpenDaylight major version umber
-    :return str distro_name_style: Karaf 3 or 4-style distro name prefix
+    :arg str version_major: OpenDaylight major version number
+    :arg str download_url: URL to ODL distribution
+    :return str distro_prefix: MR, Karaf 3 or 4-style distro name prefix
 
     """
+    mrel_prefix = "opendaylight"
+    k3_prefix = "distribution-karaf"
+    k4_prefix = "karaf"
+    mrel_url_base = "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/opendaylight/"
+    k3_url_base = "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/"
+    k4_url_base = "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/karaf/"
+
+    if mrel_url_base in download_url:
+        return mrel_prefix
+    elif k3_url_base in download_url:
+        return k3_prefix
+    elif k4_url_base in download_url:
+        return k4_prefix
+
     if int(version_major) < 7:
         # ODL versions before Nitrogen use Karaf 3, distribution-karaf- names
-        return "distribution-karaf"
+        return k3_prefix
     else:
         # ODL versions Nitrogen and after use Karaf 4, karaf- names
-        return "karaf"
+        return k4_prefix
 
 
 def cache_distro(build):
