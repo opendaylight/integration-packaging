@@ -61,7 +61,7 @@ def extract_version(url):
     #  distribution-karaf-0.3.4-Lithium-SR4.tar.gz
     # major_version = 3
     # minor_version = 4
-    re_out = re.search(r'\d\.(\d)\.(\d)', url)
+    re_out = re.search(r'\d\.(\d+)\.(\d)', url)
     version["version_major"] = re_out.group(1)
     version["version_minor"] = re_out.group(2)
 
