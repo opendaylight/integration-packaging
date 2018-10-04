@@ -103,6 +103,28 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["pkg_version"], "0.1.20180411snap563")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
+    def test_neon_snapshot_url(self):
+        """Test URL of an ODL Neon snapshot build."""
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.10.0-SNAPSHOT/karaf-0.10.0-20181004.142605-697.tar.gz" % self.nexus_url
+        version = lib.extract_version(url)
+        self.assertEqual(version["version_major"], "10")
+        self.assertEqual(version["version_minor"], "0")
+        self.assertEqual(version["version_patch"], "0")
+        self.assertEqual(version["pkg_version"], "0.1.20181004snap697")
+        self.assertEqual(version["codename"], "-SNAPSHOT")
+
+    def test_neon_snapshot_zip_url(self):
+        """Test URL of an ODL Neon snapshot build zip archive."""
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.10.0-SNAPSHOT/karaf-0.10.0-20181004.142605-697.zip" % self.nexus_url
+        version = lib.extract_version(url)
+        self.assertEqual(version["version_major"], "10")
+        self.assertEqual(version["version_minor"], "0")
+        self.assertEqual(version["version_patch"], "0")
+        self.assertEqual(version["pkg_version"], "0.1.20181004snap697")
+        self.assertEqual(version["codename"], "-SNAPSHOT")
+
     def test_oxygen_multipatch_zip_url(self):
         """Test URL of an ODL Oxygen multipatch-test build zip archive."""
         # NB: This will need to be updated as old builds expire
@@ -123,6 +145,17 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["version_minor"], "0")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "0.1.20180531snap59")
+        self.assertEqual(version["codename"], "-SNAPSHOT")
+
+    def test_neon_multipatch_zip_url(self):
+        """Test URL of an ODL Neon multipatch-test build zip archive."""
+        # NB: This will need to be updated as old builds expire
+        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.10.0-SNAPSHOT/karaf-0.10.0-20180925.093600-5.zip" % self.nexus_url
+        version = lib.extract_version(url)
+        self.assertEqual(version["version_major"], "10")
+        self.assertEqual(version["version_minor"], "0")
+        self.assertEqual(version["version_patch"], "0")
+        self.assertEqual(version["pkg_version"], "0.1.20180925snap5")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
 
