@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "112ff9d1_4c301812",
+        "filename": "packages/test_lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 2264
+      },
+      "writtenOn": "2018-10-05T16:34:21Z",
+      "side": 1,
+      "message": "since you are so methodical here, I\u0027d suggest adding \"as int\" in this description block. but, that would apply everywhere\nas well as it\u0027s not in the other tests. maybe another patch,\nor maybe never. nbd\n\noh, and then \"as string\" in the other tests",
+      "revId": "dd4e22869fdf18c5568c8256403a2bf636aab154",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
+    }
+  ]
+}
