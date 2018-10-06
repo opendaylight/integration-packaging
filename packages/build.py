@@ -33,6 +33,8 @@ if __name__ == "__main__":
     opt_args_group = parent_parser.add_argument_group(
         "Additional config (optional)")
     opt_args_group.add_argument(
+        "--pkg_version", help="version of package itself (not ODL version)")
+    opt_args_group.add_argument(
         "--sysd_commit", help="version of ODL systemd unit file to package")
     opt_args_group.add_argument("--changelog_name", default="Jenkins",
                                 help="name of person who defined package")
@@ -117,6 +119,10 @@ if __name__ == "__main__":
 
     # Use download_url to find pkg version, add to build def
     build.update(lib.extract_version(build["download_url"]))
+
+    # Override automatically extracted package version with param if passed
+    if args.pkg_version:
+        build['pkg_version'] = args.pkg_version
 
     # Karaf 3 distros use distribution-karaf-, Karaf 4 uses karaf-
     build.update({"distro_name_prefix": lib.get_distro_name_prefix(
