@@ -53,6 +53,8 @@ if __name__ == "__main__":
     # Direct builds require an archive URL
     direct_parser.add_argument("--download_url", required=True,
                                help="URL to tar/zip build archive to package")
+    direct_parser.add_argument(
+        "--pkg_version", help="Override autodetected package component of RPM version (maj.min.pat-pkg)'")
 
     # Create subparser for building latest snapshot from a given branch
     latest_snap_parser = subparsers.add_parser(
@@ -117,6 +119,10 @@ if __name__ == "__main__":
 
     # Use download_url to find pkg version, add to build def
     build.update(lib.extract_version(build["download_url"]))
+
+    # Override automatically extracted package version with param if passed
+    if args.pkg_version:
+        build['pkg_version'] = args.pkg_version
 
     # Karaf 3 distros use distribution-karaf-, Karaf 4 uses karaf-
     build.update({"distro_name_prefix": lib.get_distro_name_prefix(
