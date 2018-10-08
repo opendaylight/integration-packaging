@@ -22,6 +22,30 @@
       "revId": "b8ecbbb9e1cfdbb7909d582d58d09601db37be98",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ab7ddbc1_90043bb1",
+        "filename": "packages/build.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1723
+      },
+      "writtenOn": "2018-10-08T13:59:28Z",
+      "side": 1,
+      "message": "I\u0027d still have to have the first part, because it\u0027s not an attribute on args at all if you\u0027re doing snapshot builds.\n\nIt will already default to None I think, just by not setting a default.\n\nHaving either of these None or \"\" checks alone fails (as tested in last few patchsets).",
+      "parentUuid": "2f1f8f51_f0758174",
+      "range": {
+        "startLine": 124,
+        "startChar": 0,
+        "endLine": 125,
+        "endChar": 40
+      },
+      "revId": "b8ecbbb9e1cfdbb7909d582d58d09601db37be98",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": false
     }
   ]
 }
