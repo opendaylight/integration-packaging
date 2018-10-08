@@ -263,47 +263,47 @@ class TestGetJavaVersion(unittest.TestCase):
         self.assertIsInstance(java_version, int)
 
     def test_type_given_str(self):
-        """Pass int, check that returned value is of the right type."""
+        """Pass str, check that returned value is of the right type."""
         java_version = lib.get_java_version("6")
         self.assertIsInstance(java_version, int)
 
     def test_old_given_int(self):
-        """Pass old ODL major version, check that Java 7 returned."""
+        """Pass old ODL major version as int, check that Java 7 returned."""
         java_version = lib.get_java_version(4)
         self.assertEqual(java_version, 7)
 
     def test_old_given_str(self):
-        """Pass old ODL major version, check that Java 7 returned."""
+        """Pass old ODL major version as str, check that Java 7 returned."""
         java_version = lib.get_java_version("4")
         self.assertEqual(java_version, 7)
 
     def test_oxygen_given_int(self):
-        """Pass Oxygen major version, check that Java 8 returned."""
+        """Pass Oxygen major version as int, check that Java 8 returned."""
         java_version = lib.get_java_version(8)
         self.assertEqual(java_version, 8)
 
     def test_oxygen_given_str(self):
-        """Pass Oxygen major version, check that Java 8 returned."""
+        """Pass Oxygen major version as str, check that Java 8 returned."""
         java_version = lib.get_java_version("8")
         self.assertEqual(java_version, 8)
 
     def test_fluorine_given_int(self):
-        """Pass Fluorine major version, check that Java 8 returned."""
+        """Pass Fluorine major version as int, check that Java 8 returned."""
         java_version = lib.get_java_version(9)
         self.assertEqual(java_version, 8)
 
     def test_fluorine_given_str(self):
-        """Pass Fluorine major version, check that Java 8 returned."""
+        """Pass Fluorine major version as str, check that Java 8 returned."""
         java_version = lib.get_java_version("9")
         self.assertEqual(java_version, 8)
 
     def test_neon_given_int(self):
-        """Pass Neon major version, check that Java 8 returned."""
+        """Pass Neon major version as int, check that Java 8 returned."""
         java_version = lib.get_java_version(10)
         self.assertEqual(java_version, 8)
 
     def test_neon_given_str(self):
-        """Pass Neon major version, check that Java 8 returned."""
+        """Pass Neon major version as str, check that Java 8 returned."""
         java_version = lib.get_java_version("10")
         self.assertEqual(java_version, 8)
 
