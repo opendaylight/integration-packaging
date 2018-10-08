@@ -130,12 +130,14 @@ Updating Puppet
 ---------------
 
 The puppet-opendaylight Rakefile, which drives our functional Beaker tests,
-needs to be updated when a new ODL major release comes out. It pulls the latest
-from the <release>-devel Nexus repo (for a diffrent value for <release> on each
-puppet-opendaylight branch), so it does not need to be updated for new SRs.
+needs to be updated when a new ODL major release comes out. It does not need to
+be updated for SRs because it pulls the latest from the <release>-devel Nexus
+repo (for a diffrent value for <release> on each puppet-opendaylight branch).
 
-The default param in manafests/params.pp and rspec-puppet unit/acceptance tests
-throughout the repo also need to be updated only for major versions, not SRs.
+The default rpm_repo param in manafests/params.pp and rspec-puppet
+unit/acceptance tests throughout the repo also need to be updated. They track
+the latest CD pipelines, so they need to be updated when new branches are cut
+and CD repos initiated.
 
 Updating Ansible
 ----------------
@@ -144,13 +146,12 @@ The default vars in vars/main.yml need to be updated for each major release and
 SR. Grep around to find the places to update.
 
 New example playbooks in the ansible-opendaylight/examples directory need to be
-added for each new major release.
+added for each new branch-cutting/CD pipeline and major release.
 
     rpm_<new devel branch major version>_devel.yml
 
     rpm_<just-released major version>_release.yml
 
-Update the playbook used in test-ansible-rpm script for each new major version
-devel CD repo.
+Also update the playbook used in test-ansible-rpm script for each new CD repo.
 
 https://git.opendaylight.org/gerrit/gitweb?p=releng/builder.git;a=blob;f=jjb/packaging/test-ansible-rpm.sh
