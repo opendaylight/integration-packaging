@@ -1,0 +1,5 @@
+[opendaylight-10-devel]
+name=OpenDaylight Neon development repository
+baseurl=https://nexus.opendaylight.org/content/repositories/opendaylight-neon-epel-7-$basearch-devel
+enabled=1
+gpgcheck=0
