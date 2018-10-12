@@ -12,13 +12,10 @@ Puppet) and pre-built images (containers, Vagrant base boxes).
 
 Contents:
 
-.. noqa
 .. toctree::
+   :glob:
    :maxdepth: 5
+   :caption: Table of Contents
+   :name: mastertoc
 
-   packages
-   autorelease-builds
-   distribution-job-builds
-   versioning
-   configuration-management
-   packaging-releases
+   **
