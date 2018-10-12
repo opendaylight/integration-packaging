@@ -39,8 +39,9 @@ The RPM and SRPM artifacts of the job are handled differently depending on the
 Jenkins silo the job is executing in.
 
 When running in production (releng silo), artifacts are hosted on Nexus. There
-are RPM repos for each active branch (`oxygen-devel`_). New builds are
-automatically added to the appropriate devel for their branch.
+are RPM repos for each active branch (`oxygen-devel`_, `fluorine-devel`_,
+`neon-devel`_). New builds are automatically added to the appropriate devel for
+their branch.
 
 When running in the sandbox, artifacts are thrown away by default. To keep an
 artifact for further testing, either:
@@ -98,6 +99,7 @@ Continuous Delivery repos for Oxygen and Fluorine:
 
 - `opendaylight-oxygen-epel-7-x86_64-devel`_
 - `opendaylight-fluorine-epel-7-x86_64-devel`_
+- `opendaylight-neon-epel-7-x86_64-devel`_
 
 CentOS Community Build System
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -114,21 +116,24 @@ Release Repositories
 Repositories with the -release suffix host official OpenDaylight releases. They
 are updated infrequently to never, and will host their release artifacts
 forever. Release repos are subdivided into two groups based version numbers.
-Repositories with both a major and minor version number (81, 82) are pinned to
-a specific OpenDaylight release or service release (Oxygen 8.0.0, Oxygen SR1
-8.1.0). Repositories with only a major version (8, 9) will always host the
+Repositories with both a major and minor version number (80, 83) are pinned to
+a specific OpenDaylight release or service release (Oxygen 8.0.0, Oxygen SR3
+8.3.0). Repositories with only a major version (8, 9) will always host the
 latest service release from that major release. If a new SR comes out, the repo
-will get the update (Oxygen 3 will replace Oxygen SR2).
+will get the update (Oxygen SR4 will replace Oxygen SR3).
 
-Release repo for the latest Oxygen service release:
+Release repo for the latest Oxygen and Fluorine service releases:
 
 - `nfv7-opendaylight-8-release`_
+- `nfv7-opendaylight-9-release`_
 
-Release repos that will permanently host specific Carbon and Nitrogen releases:
+Release repos that will permanently host specific Oxygen and Fluorine releases:
 
 - `nfv7-opendaylight-80-release`_
 - `nfv7-opendaylight-81-release`_
 - `nfv7-opendaylight-82-release`_
+- `nfv7-opendaylight-83-release`_
+- `nfv7-opendaylight-90-release`_
 
 Repository Configuration Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -144,8 +149,8 @@ Package managers like Yum and DNF will automatically find repo configuration
 files placed in the /etc/yum.repos.d/ directory. Curl them into place with
 something like:
 
-    sudo curl -o /etc/yum.repos.d/opendaylight-9-devel.repo \
-      "https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=packages/rpm/example_repo_configs/opendaylight-9-devel.repo"
+    sudo curl -o /etc/yum.repos.d/opendaylight-10-devel.repo \
+      "https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=packages/rpm/example_repo_configs/opendaylight-10-devel.repo"
 
 Standard install commands will now find the repository as expected.
 
@@ -181,12 +186,18 @@ section for docs.
 .. _packaging-build-rpm-snap job: https://jenkins.opendaylight.org/releng/job/packaging-build-rpm-snap-master/
 .. _packaging-test-rpm job: https://jenkins.opendaylight.org/releng/job/packaging-test-rpm-master/
 .. _opendaylight-oxygen-epel-7-x86_64-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-oxygen-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
-.. _oxygen-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-oxygen-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
 .. _opendaylight-fluorine-epel-7-x86_64-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-fluorine-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
+.. _opendaylight-neon-epel-7-x86_64-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-neon-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
+.. _oxygen-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-oxygen-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
+.. _fluorine-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-fluorine-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
+.. _neon-devel: https://nexus.opendaylight.org/content/repositories/opendaylight-fluorine-epel-7-x86_64-devel/org/opendaylight/integration-packaging/opendaylight/
 .. _nfv7-opendaylight-80-release: http://cbs.centos.org/repos/nfv7-opendaylight-80-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-81-release: http://cbs.centos.org/repos/nfv7-opendaylight-81-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-82-release: http://cbs.centos.org/repos/nfv7-opendaylight-82-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-83-release: http://cbs.centos.org/repos/nfv7-opendaylight-83-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-90-release: http://cbs.centos.org/repos/nfv7-opendaylight-90-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-8-release: http://cbs.centos.org/repos/nfv7-opendaylight-8-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-9-release: http://cbs.centos.org/repos/nfv7-opendaylight-9-release/x86_64/os/Packages/
 .. _example repo config files for each official repository: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=tree;f=packages/rpm/example_repo_configs
 .. _integration-multipatch-test: https://jenkins.opendaylight.org/releng/search/?q=integration-multipatch-test
 .. _Jenkins sandbox: https://docs.opendaylight.org/en/stable-carbon/submodules/releng/builder/docs/jenkins.html#jenkins-sandbox
