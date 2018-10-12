@@ -35,11 +35,6 @@ bears = LineLengthBear
 enabled = False
 max_line_length = 100
 
-[all.rest]
-bears = RSTcheckBear,
-    reSTLintBear
-files = **.rst
-
 [all.markdown]
 bears = MarkdownBear
 files = **.markdown,
