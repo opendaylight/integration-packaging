@@ -175,7 +175,7 @@ configuration and normal usage.
 To build an custom distribution with unmerged code, first use the
 `integration-multipatch-test`_ job to create distribution that includes the set
 of unmerged patches.  See the `Custom Distributions
-<distribution-job-builds.html#custom- distributions>`_ section for extensive
+<distribution-job-builds.html#custom-distributions>`_ section for extensive
 docs.
 
 Once you have the distribution you want to package as an RPM, pass it to the
