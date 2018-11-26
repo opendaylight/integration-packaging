@@ -136,6 +136,7 @@ Release repos that will permanently host specific Oxygen and Fluorine releases:
 - `nfv7-opendaylight-82-release`_
 - `nfv7-opendaylight-83-release`_
 - `nfv7-opendaylight-90-release`_
+- `nfv7-opendaylight-91-release`_
 
 Repository Configuration Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -198,6 +199,7 @@ section for docs.
 .. _nfv7-opendaylight-82-release: http://cbs.centos.org/repos/nfv7-opendaylight-82-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-83-release: http://cbs.centos.org/repos/nfv7-opendaylight-83-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-90-release: http://cbs.centos.org/repos/nfv7-opendaylight-90-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-91-release: http://cbs.centos.org/repos/nfv7-opendaylight-91-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-8-release: http://cbs.centos.org/repos/nfv7-opendaylight-8-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-9-release: http://cbs.centos.org/repos/nfv7-opendaylight-9-release/x86_64/os/Packages/
 .. _example repo config files for each official repository: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=tree;f=packages/rpm/example_repo_configs
