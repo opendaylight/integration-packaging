@@ -120,11 +120,31 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["codename"], "")
 
     def test_fluorine_sr1_zip_url(self):
-        """Test URL of the ODL Oxygen SR3 zip archive."""
+        """Test URL of the ODL Fluorine SR1 zip archive."""
         url = "%s/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.9.1/karaf-0.9.1.zip" % self.nexus_url
         version = lib.extract_version(url)
         self.assertEqual(version["version_major"], "9")
         self.assertEqual(version["version_minor"], "1")
+        self.assertEqual(version["version_patch"], "0")
+        self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "")
+
+    def test_fluorine_sr1_url(self):
+        """Test URL of the ODL Fluorine SR2."""
+        url = "%s/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.9.2/karaf-0.9.2.tar.gz" % self.nexus_url
+        version = lib.extract_version(url)
+        self.assertEqual(version["version_major"], "9")
+        self.assertEqual(version["version_minor"], "2")
+        self.assertEqual(version["version_patch"], "0")
+        self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "")
+
+    def test_fluorine_sr1_zip_url(self):
+        """Test URL of the ODL Fluorine SR2 zip archive."""
+        url = "%s/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.9.2/karaf-0.9.1.zip" % self.nexus_url
+        version = lib.extract_version(url)
+        self.assertEqual(version["version_major"], "9")
+        self.assertEqual(version["version_minor"], "2")
         self.assertEqual(version["version_patch"], "0")
         self.assertEqual(version["pkg_version"], "1")
         self.assertEqual(version["codename"], "")
