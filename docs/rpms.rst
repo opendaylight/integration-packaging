@@ -128,6 +128,7 @@ Release repo for the latest Oxygen and Fluorine service releases:
 
 - `nfv7-opendaylight-8-release`_
 - `nfv7-opendaylight-9-release`_
+- `nfv7-opendaylight-10-release`_
 
 Release repos that will permanently host specific Oxygen and Fluorine releases:
 
@@ -139,6 +140,7 @@ Release repos that will permanently host specific Oxygen and Fluorine releases:
 - `nfv7-opendaylight-90-release`_
 - `nfv7-opendaylight-91-release`_
 - `nfv7-opendaylight-92-release`_
+- `nfv7-opendaylight-100-release`_
 
 Repository Configuration Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -204,8 +206,10 @@ section for docs.
 .. _nfv7-opendaylight-90-release: http://cbs.centos.org/repos/nfv7-opendaylight-90-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-91-release: http://cbs.centos.org/repos/nfv7-opendaylight-91-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-92-release: http://cbs.centos.org/repos/nfv7-opendaylight-92-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-100-release: http://cbs.centos.org/repos/nfv7-opendaylight-100-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-8-release: http://cbs.centos.org/repos/nfv7-opendaylight-8-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-9-release: http://cbs.centos.org/repos/nfv7-opendaylight-9-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-10-release: http://cbs.centos.org/repos/nfv7-opendaylight-10-release/x86_64/os/Packages/
 .. _example repo config files for each official repository: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=tree;f=packages/rpm/example_repo_configs
 .. _integration-multipatch-test: https://jenkins.opendaylight.org/releng/search/?q=integration-multipatch-test
 .. _Jenkins sandbox: https://docs.opendaylight.org/en/stable-carbon/submodules/releng/builder/docs/jenkins.html#jenkins-sandbox
