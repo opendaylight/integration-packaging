@@ -19,76 +19,6 @@ class TestExtractVersion(unittest.TestCase):
 
     nexus_url = "https://nexus.opendaylight.org/content/repositories"
 
-    def test_oxygen_release_url(self):
-        """Test URL of the ODL Oxygen release."""
-        url = "%s/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.8.0/karaf-0.8.0.tar.gz" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "8")
-        self.assertEqual(version["version_minor"], "0")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "1")
-        self.assertEqual(version["codename"], "")
-
-    def test_oxygen_release_zip_url(self):
-        """Test URL of the ODL Oxygen release zip archive."""
-        url = "%s/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.8.0/karaf-0.8.0.zip" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "8")
-        self.assertEqual(version["version_minor"], "0")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "1")
-        self.assertEqual(version["codename"], "")
-
-    def test_oxygen_sr3_url(self):
-        """Test URL of the ODL Oxygen SR3."""
-        url = "%s/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.8.3/karaf-0.8.3.tar.gz" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "8")
-        self.assertEqual(version["version_minor"], "3")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "1")
-        self.assertEqual(version["codename"], "")
-
-    def test_oxygen_sr3_zip_url(self):
-        """Test URL of the ODL Oxygen SR3 zip archive."""
-        url = "%s/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.8.3/karaf-0.8.3.zip" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "8")
-        self.assertEqual(version["version_minor"], "3")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "1")
-        self.assertEqual(version["codename"], "")
-
-    def test_oxygen_snapshot_url(self):
-        """Test URL of an ODL Oxygen snapshot build."""
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.8.0-SNAPSHOT/araf-0.8.0-20180202.194543-1393.tar.gz" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "8")
-        self.assertEqual(version["version_minor"], "0")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20180202snap1393")
-        self.assertEqual(version["codename"], "-SNAPSHOT")
-
-    def test_oxygen_snapshot_zip_url(self):
-        """Test URL of an ODL Oxygen snapshot build zip archive."""
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20180202.194543-1393.zip" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "8")
-        self.assertEqual(version["version_minor"], "0")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20180202snap1393")
-        self.assertEqual(version["codename"], "-SNAPSHOT")
-
-    def test_oxygen_multipatch_zip_url(self):
-        """Test URL of an ODL Oxygen multipatch-test build zip archive."""
-        url = "%s/opendaylight.snapshot/org/opendaylight/integration/integration/distribution/karaf/0.8.0-SNAPSHOT/karaf-0.8.0-20180204.191936-134.zip" % self.nexus_url
-        version = lib.extract_version(url)
-        self.assertEqual(version["version_major"], "8")
-        self.assertEqual(version["version_minor"], "0")
-        self.assertEqual(version["version_patch"], "0")
-        self.assertEqual(version["pkg_version"], "0.1.20180204snap134")
-        self.assertEqual(version["codename"], "-SNAPSHOT")
-
     def test_fluorine_release_url(self):
         """Test URL of the ODL Fluorine release."""
         url = "%s/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.9.0/karaf-0.9.0.tar.gz" % self.nexus_url
@@ -223,10 +153,6 @@ class TestGetSnapURL(unittest.TestCase):
         self.assertNotIn("release", snap_url)
         self.assertNotIn("public", snap_url)
 
-    def test_oxygen(self):
-        """Test Oxygen major version gives sane snapshot URL."""
-        self.validate_snap_url(lib.get_snap_url("8"))
-
     def test_fluorine(self):
         """Test Fluorine major version gives sane snapshot URL."""
         self.validate_snap_url(lib.get_snap_url("9"))
@@ -246,16 +172,6 @@ class TestGetDistroNamePrefix(unittest.TestCase):
     mrel_distro_url = "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/opendaylight/0.9.0/opendaylight-0.9.0.tar.gz"
     k4_distro_url = "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/karaf/0.8.3/karaf-0.8.3.tar.gz"
     k3_distro_url = "https://nexus.opendaylight.org/content/repositories/public/org/opendaylight/integration/distribution-karaf/0.6.4-Carbon/distribution-karaf-0.6.4-Carbon.tar.gz"
-
-    def test_oxygen(self):
-        """Test Oxygen major version gives Karaf 4 prefix."""
-        distro_prefix = lib.get_distro_name_prefix("8")
-        self.assertEqual(distro_prefix, self.k4_distro_prefix)
-
-    def test_oxygen_int(self):
-        """Test Oxygen major version as int gives Karaf 4 prefix."""
-        distro_prefix = lib.get_distro_name_prefix(8)
-        self.assertEqual(distro_prefix, self.k4_distro_prefix)
 
     def test_fluorine(self):
         """Test Fluorine major version gives Karaf 4 prefix."""
@@ -336,16 +252,6 @@ class TestGetJavaVersion(unittest.TestCase):
         """Pass old ODL major version as str, check that Java 7 returned."""
         java_version = lib.get_java_version("4")
         self.assertEqual(java_version, 7)
-
-    def test_oxygen_given_int(self):
-        """Pass Oxygen major version as int, check that Java 8 returned."""
-        java_version = lib.get_java_version(8)
-        self.assertEqual(java_version, 8)
-
-    def test_oxygen_given_str(self):
-        """Pass Oxygen major version as str, check that Java 8 returned."""
-        java_version = lib.get_java_version("8")
-        self.assertEqual(java_version, 8)
 
     def test_fluorine_given_int(self):
         """Pass Fluorine major version as int, check that Java 8 returned."""
