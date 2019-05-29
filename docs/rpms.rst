@@ -97,7 +97,7 @@ repo appropriate for its branch. Builds are triggered for every successful
 autorelase job, as well as daily using the latest available snapshot build.
 
 
-Continuous Delivery repos for Oxygen and Fluorine:
+Continuous Delivery repos for Oxygen, Fluorine and Neon:
 
 - `opendaylight-oxygen-epel-7-x86_64-devel`_
 - `opendaylight-fluorine-epel-7-x86_64-devel`_
@@ -124,13 +124,14 @@ a specific OpenDaylight release or service release (Oxygen 8.0.0, Oxygen SR3
 latest service release from that major release. If a new SR comes out, the repo
 will get the update (Oxygen SR4 will replace Oxygen SR3).
 
-Release repo for the latest Oxygen and Fluorine service releases:
+Release repo for the latest Oxygen, Fluorine and Neon service releases:
 
 - `nfv7-opendaylight-8-release`_
 - `nfv7-opendaylight-9-release`_
 - `nfv7-opendaylight-10-release`_
 
-Release repos that will permanently host specific Oxygen and Fluorine releases:
+Release repos that will permanently host specific Oxygen, Fluorine and Neon
+releases:
 
 - `nfv7-opendaylight-80-release`_
 - `nfv7-opendaylight-81-release`_
@@ -141,6 +142,7 @@ Release repos that will permanently host specific Oxygen and Fluorine releases:
 - `nfv7-opendaylight-91-release`_
 - `nfv7-opendaylight-92-release`_
 - `nfv7-opendaylight-100-release`_
+- `nfv7-opendaylight-101-release`_
 
 Repository Configuration Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -207,6 +209,7 @@ section for docs.
 .. _nfv7-opendaylight-91-release: http://cbs.centos.org/repos/nfv7-opendaylight-91-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-92-release: http://cbs.centos.org/repos/nfv7-opendaylight-92-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-100-release: http://cbs.centos.org/repos/nfv7-opendaylight-100-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-101-release: http://cbs.centos.org/repos/nfv7-opendaylight-101-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-8-release: http://cbs.centos.org/repos/nfv7-opendaylight-8-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-9-release: http://cbs.centos.org/repos/nfv7-opendaylight-9-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-10-release: http://cbs.centos.org/repos/nfv7-opendaylight-10-release/x86_64/os/Packages/
