@@ -219,6 +219,25 @@ class TestExtractVersion(unittest.TestCase):
         self.assertEqual(version["pkg_version"], "0.1.20180925snap5")
         self.assertEqual(version["codename"], "-SNAPSHOT")
 
+    def test_sodium_release_url(self):
+        """Test URL of the ODL Sodium release."""
+        url = "%s/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.11.0/karaf-0.11.0.tar.gz" % self.nexus_url
+        version = lib.extract_version(url)
+        self.assertEqual(version["version_major"], "11")
+        self.assertEqual(version["version_minor"], "0")
+        self.assertEqual(version["version_patch"], "0")
+        self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "")
+
+    def test_sodium_release__zip_url(self):
+        """Test URL of the ODL Sodium release zip archive."""
+        url = "%s/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.11.0/karaf-0.11.0.zip" % self.nexus_url
+        version = lib.extract_version(url)
+        self.assertEqual(version["version_major"], "11")
+        self.assertEqual(version["version_minor"], "0")
+        self.assertEqual(version["version_patch"], "0")
+        self.assertEqual(version["pkg_version"], "1")
+        self.assertEqual(version["codename"], "")
 
 class TestGetSnapURL(unittest.TestCase):
 
