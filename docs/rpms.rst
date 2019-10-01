@@ -124,14 +124,14 @@ a specific OpenDaylight release or service release (Oxygen 8.0.0, Oxygen SR3
 latest service release from that major release. If a new SR comes out, the repo
 will get the update (Oxygen SR4 will replace Oxygen SR3).
 
-Release repo for the latest Oxygen, Fluorine and Neon service releases:
+Release repo for the latest Fluorine, Neon and Sodium service releases:
 
-- `nfv7-opendaylight-8-release`_
 - `nfv7-opendaylight-9-release`_
 - `nfv7-opendaylight-10-release`_
+- `nfv7-opendaylight-110-release`_
 
-Release repos that will permanently host specific Oxygen, Fluorine and Neon
-releases:
+Release repos that will permanently host specific Oxygen, Fluorine, Neon and
+Sodium releases:
 
 - `nfv7-opendaylight-80-release`_
 - `nfv7-opendaylight-81-release`_
@@ -145,6 +145,7 @@ releases:
 - `nfv7-opendaylight-100-release`_
 - `nfv7-opendaylight-101-release`_
 - `nfv7-opendaylight-102-release`_
+- `nfv7-opendaylight-110-release`_
 
 Repository Configuration Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -214,9 +215,11 @@ section for docs.
 .. _nfv7-opendaylight-100-release: http://cbs.centos.org/repos/nfv7-opendaylight-100-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-101-release: http://cbs.centos.org/repos/nfv7-opendaylight-101-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-102-release: http://cbs.centos.org/repos/nfv7-opendaylight-102-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-102-release: http://cbs.centos.org/repos/nfv7-opendaylight-110-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-8-release: http://cbs.centos.org/repos/nfv7-opendaylight-8-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-9-release: http://cbs.centos.org/repos/nfv7-opendaylight-9-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-10-release: http://cbs.centos.org/repos/nfv7-opendaylight-10-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-11-release: http://cbs.centos.org/repos/nfv7-opendaylight-11-release/x86_64/os/Packages/
 .. _example repo config files for each official repository: https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=tree;f=packages/rpm/example_repo_configs
 .. _integration-multipatch-test: https://jenkins.opendaylight.org/releng/search/?q=integration-multipatch-test
 .. _Jenkins sandbox: https://docs.opendaylight.org/en/stable-carbon/submodules/releng/builder/docs/jenkins.html#jenkins-sandbox
