@@ -22,6 +22,30 @@
       "revId": "0f4330b4127ec47b5c4547ce97dc1d8d59d0611d",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cddf8756_7cf7be78",
+        "filename": "packages/test_lib.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 6258
+      },
+      "writtenOn": "2019-10-02T02:44:57Z",
+      "side": 1,
+      "message": "unintended typo, harmless.",
+      "parentUuid": "4c3f9a9d_d26d3010",
+      "range": {
+        "startLine": 232,
+        "startChar": 27,
+        "endLine": 232,
+        "endChar": 29
+      },
+      "revId": "0f4330b4127ec47b5c4547ce97dc1d8d59d0611d",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81",
+      "unresolved": true
     }
   ]
 }
