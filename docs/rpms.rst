@@ -145,6 +145,7 @@ releases:
 - `nfv7-opendaylight-100-release`_
 - `nfv7-opendaylight-101-release`_
 - `nfv7-opendaylight-102-release`_
+- `nfv7-opendaylight-103-release`_
 
 Repository Configuration Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -214,6 +215,7 @@ section for docs.
 .. _nfv7-opendaylight-100-release: http://cbs.centos.org/repos/nfv7-opendaylight-100-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-101-release: http://cbs.centos.org/repos/nfv7-opendaylight-101-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-102-release: http://cbs.centos.org/repos/nfv7-opendaylight-102-release/x86_64/os/Packages/
+.. _nfv7-opendaylight-103-release: http://cbs.centos.org/repos/nfv7-opendaylight-103-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-8-release: http://cbs.centos.org/repos/nfv7-opendaylight-8-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-9-release: http://cbs.centos.org/repos/nfv7-opendaylight-9-release/x86_64/os/Packages/
 .. _nfv7-opendaylight-10-release: http://cbs.centos.org/repos/nfv7-opendaylight-10-release/x86_64/os/Packages/
