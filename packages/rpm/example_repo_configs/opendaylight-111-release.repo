@@ -1,0 +1,5 @@
+[opendaylight-111-release]
+name=CentOS CBS OpenDaylight Sodium SR1 repository
+baseurl=http://cbs.centos.org/repos/nfv7-opendaylight-111-release/$basearch/os/
+enabled=1
+gpgcheck=0
