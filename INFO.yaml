@@ -1,0 +1,63 @@
+---
+project: 'integration_packaging'
+project_creation_date: '2015-08-20'
+project_category: ''
+lifecycle_state: 'Incubation'
+project_lead: &odl_integration_packaging_ptl
+    name: 'Anil Belur'
+    email: 'abelur@linuxfoundation.org'
+    company: 'Linux Foundation'
+    id: 'askb'
+    timezone: 'Unknown/Unknown'
+primary_contact: *odl_integration_packaging_ptl
+issue_tracking:
+    type: 'jira'
+    url: 'https://jira.opendaylight.org/projects/'
+    key: 'integration_packaging'
+mailing_list:
+    type: 'groups.io'
+    url: 'release@lists.opendaylight.org'
+    tag: '[]'
+realtime_discussion:
+    type: 'irc'
+    server: 'freenode.net'
+    channel: '#opendaylight'
+meetings:
+    - type: 'gotomeeting+irc'
+      agenda: 'https://wiki.opendaylight.org/display/'
+      url: ''
+      server: 'freenode.net'
+      channel: '#opendaylight'
+      repeats: ''
+      time: ''
+repositories:
+    - integration/packaging
+committers:
+    - <<: *odl_integration_packaging_ptl
+    - name: 'Jamo Luhrsen'
+      email: 'jluhrsen@gmail.com'
+      company: 'Lumina Networks'
+      id: 'jluhrsen'
+      timezone: 'Americas/Los_Angeles'
+    - name: 'Thanh Ha (zxiiro)'
+      email: 'zxiiro@gmail.com'
+      company: 'Lumina Networks'
+      id: 'zxiiro'
+      timezone: 'Americas/Toronto'
+    - name: 'Tim Rozet'
+      email: 'trozet@redhat.com'
+      company: 'Redhat'
+      id: 'trozet'
+      timezone: 'Unknown/Unknown'
+    - name: 'Daniel Farrell'
+      email: 'dfarrell07@gmail.com'
+      company: 'gmail'
+      id: 'dfarrell07'
+      timezone: 'Unknown/Unknown'
+tsc:
+    # yamllint disable rule:line-length
+    approval: 'https://meetings.opendaylight.org/meetings/opendaylight-meeting/2015/tsc/opendaylight-meeting-tsc.2015-08-20-17.00.html'
+    changes:
+        - type: ''
+          name: ''
+          link: ''
