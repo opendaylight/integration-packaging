@@ -8,5 +8,16 @@
 # http://www.eclipse.org/legal/epl-v10.html
 ##############################################################################
 
-FROM alpine
-CMD ["echo", "Hello StackOverflow!"]
+FROM openjdk:11
+
+WORKDIR /opt/opendaylight
+
+ADD opendaylight .
+
+RUN groupadd -r karaf --gid=8181 && \
+    useradd -rm -g karaf --uid=8181 karaf && \
+    chown -R karaf:karaf .
+
+USER karaf
+EXPOSE 8101 8181
+CMD ["bin/karaf", "run"]
