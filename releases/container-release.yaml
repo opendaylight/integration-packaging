@@ -1,0 +1,11 @@
+---
+
+distribution_type: container
+container_release_tag: 14.2.0
+container_pull_registry: nexus3.opendaylight.org:10003
+container_push_registry: nexus3.opendaylight.org:10004
+project: packaging
+ref: f79911d90f38a823caaf3f074c39d3066dc2bf3d
+containers:
+- name: opendaylight
+version: 14.2.0
