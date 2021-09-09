@@ -11,7 +11,7 @@
 
 set -x
 
-VERSION="14.1.0"
+VERSION="14.2.0"
 BASEDIR=$(dirname "$0")
 
 wget --progress=dot:mega -P /tmp https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/opendaylight/${VERSION}/opendaylight-${VERSION}.tar.gz
