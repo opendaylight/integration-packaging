@@ -1,0 +1,7 @@
+Verified+1: jenkins-releng
+Code-Review+2: Luis Gomez <ecelgp@gmail.com>
+Submitted-by: Andrew Hsia <andrew.hsia@verizonwireless.com>
+Submitted-at: Wed, 06 Oct 2021 17:42:29 +0000
+Reviewed-on: https://git.opendaylight.org/gerrit/c/integration/packaging/+/97788
+Project: integration/packaging
+Branch: refs/heads/stable/silicon
