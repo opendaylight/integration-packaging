@@ -1,0 +1,10 @@
+---
+distribution_type: container
+container_release_tag: 15.0.0
+container_pull_registry: nexus3.opendaylight.org:10003
+container_push_registry: nexus3.opendaylight.org:10002
+project: packaging
+ref: 6cb383f977326cb0583f132f852c8210c28655c6
+containers:
+    - name: opendaylight
+      version: 15.0.0
