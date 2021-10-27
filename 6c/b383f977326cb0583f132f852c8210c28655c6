@@ -1,0 +1,7 @@
+Verified+1: jenkins-releng
+Code-Review+2: Luis Gomez <ecelgp@gmail.com>
+Submitted-by: Luis Gomez <ecelgp@gmail.com>
+Submitted-at: Wed, 27 Oct 2021 02:02:14 +0000
+Reviewed-on: https://git.opendaylight.org/gerrit/c/integration/packaging/+/97916
+Project: integration/packaging
+Branch: refs/heads/stable/phosphorus
