@@ -1,0 +1,110 @@
+{{/*
+# SPDX-License-Identifier: EPL-1.0
+##############################################################################
+# Copyright (c) 2021 The Linux Foundation and others.
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+##############################################################################
+*/}}
+
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "opendaylight.fullname" . }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  serviceName: {{ include "opendaylight.fullname" . }}
+  selector:
+    matchLabels:
+      {{- include "opendaylight.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "opendaylight.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "opendaylight.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      initContainers:
+        - name: updatevolperm
+          image: busybox
+          command: ['chown','8181','/data']
+          volumeMounts:
+          - name: {{ .Values.persistence.volName }}
+            mountPath: {{ .Values.persistence.mountPath }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ['bash','-c','bash -x /scripts/startodl.sh']
+          env:
+          - name: FEATURES
+            value: "{{ .Values.config.features }}"
+          - name: JAVA_HOME
+            value: "{{ .Values.config.javaHome}}"
+          - name: JAVA_OPTS
+            value: "-Xms{{.Values.config.javaOptions.minMemory}} -Xmx{{.Values.config.javaOptions.maxMemory}}"
+          - name: EXTRA_JAVA_OPTS
+            value: "-XX:+UseG1GC -XX:MaxGCPauseMillis={{.Values.config.javaOptions.maxGCPauseMillis}} -XX:ParallelGCThreads={{.Values.config.javaOptions.parallelGCThreads}} -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication {{.Values.config.javaOptions.gcLogOptions}}"
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          readinessProbe:
+            tcpSocket:
+              port: {{ .Values.service.port }}
+            initialDelaySeconds: {{ .Values.readiness.initialDelaySeconds }}
+            periodSeconds: {{ .Values.readiness.periodSeconds }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+          - name: {{ .Values.persistence.volName }}
+            mountPath: {{ .Values.persistence.mountPath }}
+          - name: scripts
+            mountPath: /scripts
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      volumes:
+        - name: scripts
+          configMap:
+            name: {{ include "opendaylight.fullname" . }}
+  {{ if not .Values.persistence.enabled }}
+        - name: {{ .Values.persistence.volName }} 
+          emptyDir: {}
+  {{ else }}
+  volumeClaimTemplates:
+  - metadata:
+      name: {{ .Values.persistence.volName }} 
+    spec:
+      accessModes:
+      - {{ .Values.persistence.accessMode }}
+      storageClassName: {{ .Values.persistence.storageClass }}
+      resources:
+        requests:
+          storage: {{ .Values.persistence.size }}
+  {{- end }}

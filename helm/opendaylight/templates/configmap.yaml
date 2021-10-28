@@ -1,0 +1,58 @@
+{{/*
+# SPDX-License-Identifier: EPL-1.0
+##############################################################################
+# Copyright (c) 2021 The Linux Foundation and others.
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+##############################################################################
+*/}}
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "opendaylight.fullname" . }}
+data:
+  startodl.sh: |
+    #!/bin/bash
+    mountpath="{{ .Values.persistence.mountPath }}"
+    BASEDIR="{{ .Values.config.odl_basedir }}"
+    odl_prefix="/opt/opendaylight"
+
+    if [[ ! -d "$mountpath/snapshots" ]];then
+      mkdir -p $mountpath/snapshots
+    fi
+
+    if [[ ! -d "$mountpath/data" ]];then
+      mkdir -p $mountpath/data
+    fi
+
+    if [[ ! -d "$mountpath/segmented-journal" ]];then
+      mkdir -p $mountpath/segmented-journal
+    fi
+
+    if [[ ! -d "$mountpath/daexim" ]];then
+      mkdir -p $mountpath/daexim
+    fi
+
+    if [[ ! -L "$odl_prefix/snapshots" ]];then
+      rm -rf $odl_prefix/snapshots && ln -s $mountpath/snapshots $odl_prefix/snapshots
+    fi
+
+    if [[ ! -L "$odl_prefix/data" ]];then
+      rm -rf $odl_prefix/data && ln -s $mountpath/data $odl_prefix/data
+    fi
+
+    if [[ ! -L "$odl_prefix/segmented-journal" ]];then
+      rm -rf $odl_prefix/segmented-journal && ln -s $mountpath/segmented-journal $odl_prefix/segmented-journal
+    fi
+
+    if [[ ! -L "$odl_prefix/daexim" ]];then
+      rm -rf $odl_prefix/daexim && ln -s $mountpath/daexim $odl_prefix/daexim
+    fi
+
+    sed -i "s/\(featuresBoot= \|featuresBoot = \)/featuresBoot = ${FEATURES},/g" ${BASEDIR}/etc/org.apache.karaf.features.cfg
+    cat ${BASEDIR}/etc/org.apache.karaf.features.cfg
+    ${BASEDIR}/bin/karaf run
