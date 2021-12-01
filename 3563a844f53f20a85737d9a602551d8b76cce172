@@ -17,6 +17,23 @@
       "message": "tested this change on sandbox: \nhttps://jenkins.opendaylight.org/sandbox/view/All/job/packaging-master-verify-helm3.7/2/console\n\n08:20:22 + helm lint --strict .\n08:20:22 \u003d\u003d\u003e Linting .\n08:20:22 [ERROR] Chart.yaml: apiVersion \u0027v2\u0027 is not valid. The value must be \"v1\"\n08:20:22 [INFO] Chart.yaml: icon is recommended\n08:20:22 [ERROR] templates/: apiVersion \u0027v2\u0027 is not valid. The value must be \"v1\"\n08:20:22 \n08:20:22 Error: 1 chart(s) linted, 1 chart(s) failed",
       "revId": "3563a844f53f20a85737d9a602551d8b76cce172",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "21a02271_5f8c4838",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6258
+      },
+      "writtenOn": "2021-12-01T10:24:18Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "3563a844f53f20a85737d9a602551d8b76cce172",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81"
     }
   ]
 }
