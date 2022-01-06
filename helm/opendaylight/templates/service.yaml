@@ -16,6 +16,8 @@ metadata:
   name: {{ include "opendaylight.fullname" . }}
   labels:
     {{- include "opendaylight.labels" . | nindent 4 }}
+  annotations:
+    service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -23,6 +25,21 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+      {{- if eq .Values.service.type "NodePort" }}
+      nodePort: {{ .Values.service.nodePortHttp }}
+      {{- end }}
+    {{- if .Values.config.isClusterDeployment }}
+    - port: {{ .Values.service.clusterPort }}
+      targetPort: cluster
+      protocol: TCP
+      name: cluster
+      {{- if eq .Values.service.type "NodePort" }}
+      nodePort: {{ .Values.service.nodePortCluster }}
+      {{- end }}
+    {{- end }}
+  {{- if eq .Values.service.type "ClusterIP" }}
   clusterIP: None
+  {{- end }}
   selector:
     {{- include "opendaylight.selectorLabels" . | nindent 4 }}
+  publishNotReadyAddresses: true

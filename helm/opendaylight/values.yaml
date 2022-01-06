@@ -28,6 +28,7 @@ config:
   odl_basedir: /opt/opendaylight
   #features: odl-restconf,odl-restconf-all,odl-bgpcep-pcep,odl-bgpcep-bgp,odl-bgpcep-bgp-config-example,odl-bgpcep-bmp,odl-bgpcep-bmp-config-example,odl-jolokiaa,odl-daexim-all
   features: odl-restconf,odl-restconf-all
+  isClusterDeployment: false
   javaHome: /opt/openjdk-11/
   javaOptions:
     maxGCPauseMillis: 100
@@ -36,6 +37,17 @@ config:
     minMemory: 512m
     maxMemory: 2048m
     gcLogOptions: ""
+
+cluster:
+  salConfigDir: /opt/opendaylight/system/org/opendaylight/controller/sal-clustering-config
+  salConfigVersion: 3.0.10
+  akka:
+    seedNodeTimeout: 15s
+    circuitBreaker:
+      maxFailures: 10
+      callTimeout: 90s
+      resetTimeout: 30s
+    recoveryEventTimeout: 90s
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -60,12 +72,15 @@ securityContext: {}
   # runAsUser: 1000
 
 readiness:
-  initialDelaySeconds: 30
+  initialDelaySeconds: 60
   periodSeconds: 10
 
 service:
   type: ClusterIP
   port: 8181
+  nodePortHttp: 30281
+  clusterPort: 2550
+  nodePortCluster: 30250
 
 ingress:
   enabled: false

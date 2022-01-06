@@ -192,4 +192,35 @@ base on the notes output from heml install, set up port forwarding to first inst
   kubectl --namespace default port-forward $POD_NAME 8080:$CONTAINER_PORT
 ```
 
-from browser, go to `http://127.0.0.1:8080/apidoc/explorer/index.html` then login with `admin/admin` 
+from browser, go to `http://127.0.0.1:8080/apidoc/explorer/index.html` then login with `admin/admin`
+
+## Clustering
+
+Opendaylight can be started as an Akka based cluster.
+To start Opendaylight as a cluster, following parametes in values.yaml need to be updated:
+```
+1. replicaCount : The value should be at least 3 or higher number (need to be an odd number).
+2. config.isClusterDeployment: The value should be set to true
+3. autoscaling.enabled: This should be disabled (i.e.; enabled: false)
+```
+Once set, you can run helm install as above:
+
+```
+helm install sdnc opendaylight
+
+Output:
+/home/rahul/packaging/helm$ kubectl  get pods
+NAME                  READY   STATUS    RESTARTS   AGE
+sdnc-opendaylight-1   1/1     Running     0                25m
+sdnc-opendaylight-2   1/1     Running     0                25m
+sdnc-opendaylight-0   1/1     Running     0                25m
+```
+
+NOTE: If the variable `config.isClusterDeployment` is set to `false` with replicaCount set to 3, you will have 3 independent ODL instances deployed (but not clustered). 
+
+### Cluster specific APIs
+Once the cluster is up, you can use jolokia APIs to query the status of cluster:
+- `http://{{vm-ip}}:{{odl-restconf-port}}/jolokia/read/org.opendaylight.controller:Category=Shards,name=member-<leader-id>-shard-default-operational,type=DistributedOperationalDatastore`
+-- NOTE: To know the leader-id in the above query, use: `http://{{vm-ip}}:{{odl-restconf-port}}/jolokia/read/org.opendaylight.controller:type=DistributedOperationalDatastore,Category=ShardManager,name=shard-manager-operational`
+
+For more details, refer here: https://docs.opendaylight.org/en/stable-phosphorus/getting-started-guide/clustering.html#cluster-monitoring
