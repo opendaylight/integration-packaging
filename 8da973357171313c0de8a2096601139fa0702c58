@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1d263f2_008b6f66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 9069
+      },
+      "writtenOn": "2022-01-10T21:39:33Z",
+      "side": 1,
+      "message": "Chart changes for enabling Akka based Clustering in ODL pods",
+      "revId": "8da973357171313c0de8a2096601139fa0702c58",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81"
+    }
+  ]
+}
