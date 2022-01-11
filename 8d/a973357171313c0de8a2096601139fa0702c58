@@ -1,0 +1,7 @@
+Verified+1: jenkins-releng
+Code-Review+2: Andrew Hsia <andrew.hsia@verizonwireless.com>
+Submitted-by: Andrew Hsia <andrew.hsia@verizonwireless.com>
+Submitted-at: Tue, 11 Jan 2022 07:36:28 +0000
+Reviewed-on: https://git.opendaylight.org/gerrit/c/integration/packaging/+/99261
+Project: integration/packaging
+Branch: refs/heads/master
