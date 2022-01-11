@@ -16,6 +16,23 @@
       "message": "Chart changes for enabling Akka based Clustering in ODL pods",
       "revId": "8da973357171313c0de8a2096601139fa0702c58",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4a6e9dc_426b9925",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6258
+      },
+      "writtenOn": "2022-01-11T07:44:56Z",
+      "side": 1,
+      "message": "Thanks Rahul 😊\n\nMinor nit: we do follow Git commit subject line conventional commit specification for most of the other projects would be good if we did for for ODL packaging repo as well.(Refer to: https://www.conventionalcommits.org/ and https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)\n\nWith that looking at the git histroy we can identify if the CR was \"Feat\" or \"Fix\" etc. ",
+      "revId": "8da973357171313c0de8a2096601139fa0702c58",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81"
     }
   ]
 }
