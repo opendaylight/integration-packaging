@@ -33,6 +33,24 @@
       "message": "The container tag release file needs to be in this format. \n\nhttps://git.opendaylight.org/gerrit/c/integration/packaging/+/98155/1/releases/15.0.0-container.yaml",
       "revId": "05a9caf72b1c2914d5a92a3389982cb512bb56b3",
       "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ffe040c_3bfb2a7d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 797
+      },
+      "writtenOn": "2022-04-10T23:01:22Z",
+      "side": 1,
+      "message": "Yeah, but I think we have to do this in another change: first we have to publish docker image (this change), after we have to release it (the file you mention), right?",
+      "parentUuid": "88b95885_e8dff2fb",
+      "revId": "05a9caf72b1c2914d5a92a3389982cb512bb56b3",
+      "serverId": "7fc14799-209e-464c-9743-7a06c2c21a81"
     }
   ]
 }
