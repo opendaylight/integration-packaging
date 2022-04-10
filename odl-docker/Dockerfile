@@ -34,10 +34,10 @@ WORKDIR /opt/opendaylight
 COPY --from=stage0 / /
 
 RUN set -eux \
-    && curl https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/opendaylight/14.2.0/opendaylight-14.2.0.tar.gz | tar zxf - -C /opt/opendaylight/ --strip-components 1 \
+    && curl https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/opendaylight/14.4.0/opendaylight-14.4.0.tar.gz | tar zxf - -C /opt/opendaylight/ --strip-components 1 \
     && groupadd -r karaf --gid=8181 \
     && useradd -rm -g karaf --uid=8181 karaf \
-    && chown -R karaf:karaf /opt/opendaylight 
+    && chown -R karaf:karaf /opt/opendaylight
 
 USER karaf
 
