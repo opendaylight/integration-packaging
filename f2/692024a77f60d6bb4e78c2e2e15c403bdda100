@@ -1,0 +1,7 @@
+Verified+1: jenkins-releng ODL
+Code-Review+2: Andrew Hsia <andrew.hsia@verizonwireless.com>
+Submitted-by: Anil Belur <abelur@linuxfoundation.org>
+Submitted-at: Tue, 19 Apr 2022 21:35:28 +0000
+Reviewed-on: https://git.opendaylight.org/gerrit/c/integration/packaging/+/100640
+Project: integration/packaging
+Branch: refs/heads/stable/phosphorus
